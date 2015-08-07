@@ -28,7 +28,7 @@ public class assignment1test {
 
 	@Test
 	public void test() {
-		assignment1 test1=new assignment1();
+		Assignment1 test1=new Assignment1();
 		int output=test1.convertBinaryToOctal(110101);
 		assertEquals("",65,output);
 	}
