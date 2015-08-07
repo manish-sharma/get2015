@@ -1,5 +1,12 @@
+import java.util.Scanner;
+
 public class Assignment3 { 
 	
+	/**longestSequence is a function which return the longest sequence in the given array.
+	 * 
+	 * @param input is an array of integer elements.
+	 * @return This function return an integer array which consist of the longest sequence of given input array.
+	 */
 	int []longestSequence(int input[])
 	{ 
 		int fristindex=0;
@@ -51,11 +58,19 @@ public class Assignment3 {
 	}
 	public static void main(String args[])
 	{
-		int input[]={1,2,3,2,3,4,5,3,4,2,2,3,4,5,6,7,8,1,2,4,5,6,7,8,9};
+		
+		Scanner sc=new Scanner(System.in);
+		int input[]=new int[20];
+		System.out.println("enter the elements in array");
+		for(int count=0;count<20;count++)
+		{
+			input[count]=sc.nextInt();
+		}
 		Assignment3 assignment3=new Assignment3();
 		int expetedOutput[]=assignment3.longestSequence(input);
+		System.out.println("longest sequence in array is");
 		for(int i=0;i<expetedOutput.length;i++)
-		System.out.print(expetedOutput[i]);
+		System.out.print(expetedOutput[i]+",");
 
 
 	}

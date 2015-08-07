@@ -1,7 +1,20 @@
+import java.util.Scanner;
+
 
 public class Assignment6
 {
-	public  int[] join(int[] a,int asize, int[] b,int bsize, int[] c) {
+	/**join is a function which take two sorted array, their size and an output array as parameter and return the
+	 * concatenate of the given two array.  
+	 * 
+	 * @param a is an array of sorted integer.
+	 * @param asize is the size of array a.
+	 * @param b is an array of sorted array.
+	 * @param bsize is the size of b array.
+	 * @param c is an array which size is equal to the sum of size of a and b respectively.
+	 * @return It return a sorted integer array which consist of all the elements of array passes in parameter to function.
+	 */
+	public  int[] join(int[] a,int asize, int[] b,int bsize, int[] c)
+	{
 
 	    int i = 0, j = 0, k = 0;
 
@@ -24,14 +37,29 @@ public class Assignment6
 	
 	public static void main(String args[])
 	{
-		int[] a={2,5,7,9,11};
-		int[] b={3,4,6,8};
-		int[] c=new int[a.length+b.length];
-		Assignment6 obj=new Assignment6();
-		c=obj.join(a,5,b,4,c);
-		for(int count=0;count<c.length;count++)
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the no of elements in array1");
+		int n=sc.nextInt();
+		int inputArray1[]=new int[n];
+		System.out.println("enter the sorted elements in array one");
+		for(int count=0;count<n;count++)
 		{
-			System.out.println(c[count]);
+			inputArray1[count]=sc.nextInt();
+		}
+		System.out.println("enter the no of elements in array two");
+		int m=sc.nextInt();
+		int inputArray2[]=new int[m];
+		System.out.println("enter the sorted elements in array one");
+		for(int count=0;count<m;count++)
+		{
+			inputArray2[count]=sc.nextInt();
+		}
+		int[] output=new int[n+m];
+		Assignment6 obj=new Assignment6();
+		output=obj.join(inputArray1,n,inputArray2,m,output);
+		for(int count=0;count<m+n;count++)
+		{
+			System.out.println(output[count]);
 		}
 	}
 }
