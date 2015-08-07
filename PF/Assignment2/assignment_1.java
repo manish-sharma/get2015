@@ -1,14 +1,12 @@
-package programing_fundamental;
-
-public class assignment_2_1 
+public class assignment_1 
 {
 public static void main(String args[])
    {
-	assignment_2_1 as1=new assignment_2_1();
+	assignment_1 as1=new assignment_1();
 	int row=9,n=5;
-	String pyramid[]=new String[9];
-	pyramid=as1.pyramid(row, n);
-	for(int i=0;i<9;i++)
+	String pyramid[]=new String[row];
+	pyramid=as1.printPyramid(row, n);
+	for(int i=0;i<row;i++)
 	{
 		System.out.print(pyramid[i]);
 	    System.out.println();
@@ -17,9 +15,9 @@ public static void main(String args[])
    }
 String spaces(int row,int n)
     {
-	  int k=row;
+	  int k=row+1;
 	  String space="";
-	  if(k<5)
+	  if(k<=4)
 	  {
 	  for(int i=0;i<5-k;i++)
 		  space=space+" ";
@@ -36,21 +34,26 @@ String spaces(int row,int n)
 String numbers(int row,int n)
     {
 	 int k=row;
+	 int l=row;
 	 String num="";
 	 if(k<5)
 	 {
 	   for(int i=0;i<k+1;i++)
 		num=num+(i+1);
+	   for(int i=0;i<k;i++)
+		   num=num+l--;
 	 }
 	 else
 	 { 
 		 k=2*n-k;
-		 for(int i=0;i<k;i++)
+		 for(int i=0;i<k-1;i++)
 			 num=num+(i+1);
+		 for(int i=0;i<9-l-1;i++)
+			 num=num+((k--)-2);
 	 }
 	 return num;
 	}
-String[] pyramid(int row,int n)
+String[] printPyramid(int row,int n)
     {
 	 String pyramid[]=new String[9];
 	 for(int i=0;i<9;i++)
@@ -61,9 +64,9 @@ String[] pyramid(int row,int n)
 		 num=numbers(i,n);
 	     
 		 pyramid[i]=space+num;
-		 row--;n--;
 	 }
 	 return pyramid;
 	}
 
 }
+
