@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class testclass5 {
+public class testclass2 {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,11 +27,22 @@ public class testclass5 {
 	}
 
 	@Test
-	public void test() {
-		Assignment5 a1=new Assignment5();
-		int input[]={1,2,4,3,2};
-		int ans=a1.checkSort(input);
-		assertEquals("",0,ans);
+	public void test1() {
+		Assignment2 aa1=new Assignment2();
+		String s1="  ";
+		assertEquals("",s1,aa1.patternSpace(2,5));
+	}
+	@Test
+	public void test2() {
+		Assignment2 aa1=new Assignment2();
+		String s1="123";
+		assertEquals("",s1,aa1.patternNumber(2,5));
+	}
+	@Test
+	public void test3() {
+		Assignment2 aa1=new Assignment2();
+		String f[]={"12345"," 1234","  123","   12","    1"};
+		assertArrayEquals(f,aa1.printWholePattern(5));
 	}
 
 }
