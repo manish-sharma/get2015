@@ -1,7 +1,7 @@
 package programing_fundamental;
 import java.util.*;
 
-public class assignment1 {
+public class Assignment1 {
 	
 	public int convertBinaryToOctal(int n)
 	{
@@ -42,7 +42,7 @@ public class assignment1 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		assignment1 a1=new assignment1();
+		Assignment1 a1=new Assignment1();
 		Scanner sc=new Scanner(System.in);
 		int binaryNumber;
 		System.out.println("Enter a Binary Number");
