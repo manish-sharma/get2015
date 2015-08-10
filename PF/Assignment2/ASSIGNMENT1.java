@@ -1,7 +1,15 @@
+	/*************************
+	 * @author Babalu Patidar
+	 * Program to draw a pyramid pattern
+	 * spaces method is used for return space string
+	 * numbers method is used for return number string  
+	 * drawpyramid method is used for draw pattern with the help of spaces and numbers method
+	 ***********/
 
+/* Starting of class*/
 public class ASSIGNMENT1 {
 	
-	
+	/* Starting of spaces method*/
 	public String  spaces(int row, int n)// it will calculate no. of spaces in row
 	{
 				if(row>n)
@@ -16,8 +24,9 @@ public class ASSIGNMENT1 {
 		
 		return outputspace;
 		
-	}
+	}/* Ending of spaces method*/
 	
+	/* Starting of numbers method*/
 	public String numbers(int row, int n) // it will calculate number string in row
 	{
 		if(row>n)
@@ -37,8 +46,10 @@ public class ASSIGNMENT1 {
 			}
 		
 		return output;	
-	}
+	}/* Ending of numbers method*/
 	
+	
+	/* Starting of drawpyramid method*/
 	public String[] drawpyramid(int n)
 	{
 		
@@ -54,8 +65,10 @@ public class ASSIGNMENT1 {
 		}
 		return output;
 
-	}
+	}/* Ending of drawpyramid method*/
 	
+	
+	/* Starting of main method*/
 	public static void main (String arg[])
 	{
 		ASSIGNMENT1 b1=new ASSIGNMENT1();
@@ -64,9 +77,9 @@ public class ASSIGNMENT1 {
 		System.out.println(out[i]);
 		
 	
-	}
+	}/* Ending of main method*/
 
-}
+}/*Ending of class*/
 
 
 
