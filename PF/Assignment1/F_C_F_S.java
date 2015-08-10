@@ -23,7 +23,9 @@ public class F_C_F_S {
 	            		job_Size[index1]=Integer.parseInt(sc.next());
 	            	}
 	            	
-	            	int output_job_schedule[][]= new int[size+1][size+1];
+	            	sc.close();
+	            	
+	            	int output_job_schedule[][]= new int[size][5];
 	            	F_C_F_S object=new F_C_F_S();
 	            	output_job_schedule=object.jobSchedule(arrival_Time,job_Size,size);
 	            	System.out.print("Job ArrivalTime WaitTime Start At Finish At");
@@ -31,14 +33,14 @@ public class F_C_F_S {
 	            	{
 	            		// print job schedule
 	            		System.out.println();   
-	            		for(index2=0;index2<size+1;index2++)  
+	            		for(index2=0;index2<5;index2++)  
 	            		System.out.print(output_job_schedule[index1][index2]+"\t ");
 	            	}
 		}
 		
 		int[][] jobSchedule(int arrival_time[],int job_size[],int size)
 		{
-		            int array[][]= new int[size][size+1];
+		            int array[][]= new int[size][5];
 		            int index1,index2;
 		            index2=0;
 		            int wait_time=0,start_time=1;
