@@ -6,50 +6,34 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- * 
- */
-
-/**
- * @author Kajal
- *
- */
-public class BinaryToOctalTest {
-
-	/**
-	 * @throws java.lang.Exception
-	 */
+public class BinaryToOctalTest 
+{
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() throws Exception 
+	{
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+	public static void tearDownAfterClass() throws Exception
+	{
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception 
+	{
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception 
+	{
 	}
 
 	@Test
-	public void test() {
-		//fail("Not yet implemented");
-		BinaryToOctal bto=new BinaryToOctal();
-		int op=bto.getVal(110101);
-		assertEquals("Octal Matched ",65,op);
+	public void testMatched() 
+	{
+		BinaryToOctal obj = new BinaryToOctal();
+		int result = obj.convertBinaryToOctal(110101);
+		assertEquals("Octal Matched ",65,result);
 	}
 
 }

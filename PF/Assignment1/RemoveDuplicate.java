@@ -1,49 +1,69 @@
+// program to remove duplicates from an array
 import java.util.Scanner;
-
 
 public class RemoveDuplicate
  {
 	public static void main(String[] args) 
 	{
-		int i,size;
-	    Scanner sc=new Scanner(System.in);
-	    System.out.println("Enter the size of array :");   //14
-		   size = Integer.parseInt(sc.nextLine());
-		int ip[]=new int[size];	
-		System.out.println("Enter the array :");
-	    for(i=0;i<ip.length;i++)
-	    	ip[i]=Integer.parseInt(sc.next());
-	    RemoveDuplicate obj = new RemoveDuplicate();
-		int op[]=obj.getVal(ip);
-		for(i=0;i<op.length;i++)//op[i]!='\0'
-		    System.out.print(op[i]);
-		//2 5 4 6 3 8 5 9 3 3 6 3 9 0
+		int index, arrSize, arrInput[]=null, arrOutput[]=null;
+	    Scanner sc = new Scanner(System.in);
+	    RemoveDuplicate obj = null;
+	    try
+	    {
+		    System.out.println("Enter the size of array :");   
+			   arrSize = Integer.parseInt(sc.nextLine());
+			   
+			arrInput = new int[arrSize];	
+			System.out.println("Enter the array :");
+		    for(index=0; index<arrInput.length; index++)
+		    	arrInput[index] = Integer.parseInt(sc.next());
+		    
+		    obj = new RemoveDuplicate();
+			
+		    arrOutput = obj.removeDuplicate(arrInput);
+			for(index=0; index<arrOutput.length; index++)
+			    System.out.println(arrOutput[index]);
+	    }
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+		finally
+		{
+			if(sc!=null)
+				sc = null;
+			if(obj!=null)
+				obj = null;
+			if(arrInput!=null)
+				arrInput = null;
+		}
 	}
 	
-    int[] getVal(int arr[])
+	
+    int[] removeDuplicate(int input[])
     {
-    	int i,j,count=0,l=arr.length;
-	    for(i=0;i<arr.length;i++)
+    	int index1, index2, countOfDuplicates=0, inputLength=input.length ;
+	    for(index1=0; index1<input.length; index1++)
 	    {
-	    	for(j=i+1;j<arr.length;j++)
+	    	for(index2=index1+1; index2<input.length; index2++)
 		    {
-	    		if((arr[j]==arr[i])&&(arr[i]!='\0'))
+	    		if( (input[index2]==input[index1]) && (input[index1]!=' ') )
 	    		{	
-	    			arr[j]='\0';
-	    			count=count+1;
+	    			input[index2] = ' ';   // duplicate is replaced by space
+	    			countOfDuplicates = countOfDuplicates + 1;  //when duplicate is found countOfDuplicates is increased by 1
 	    		}
 		    }
 	    }
 
-	    int arr1[]=new int[l-count];
-	    for(i=0,j=-1;i<l;i++)
+	    int output[] = new int[inputLength - countOfDuplicates];
+	    for(index1=0, index2=-1; index1<inputLength; index1++)
 	    {
-	    	if(arr[i]!='\0')
+	    	if(input[index1] != ' ') 
 	    	{
-	    		j=j+1;
-	    		arr1[j]=arr[i];
+	    		index2 = index2 + 1;
+	    		output[index2] = input[index1];    
 	        }
 	    }
-	    return arr1;
+	    return output;
     }
 }

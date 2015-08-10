@@ -1,39 +1,55 @@
+//program to convert Binary To Octal
+
 import java.util.Scanner;
 import java.lang.Math;
 public class BinaryToOctal 
 {
-	int getVal(int binNo)
+	int convertBinaryToOctal(int binaryNum)
 	{	
-		int r,R=0,decNo=0,j=1,i=0;
-		while(binNo!=0)
+		int mod, octalNum=0, decimalNum=0, index=0;
+		while(binaryNum!=0)          // converts binary to decimal
 		{
-			r=binNo%10;
-			decNo=decNo+r*(int)Math.pow(2,i);
-			binNo=binNo/10;
-			i++;
+			mod = binaryNum % 10; 
+			decimalNum = decimalNum + mod*(int)Math.pow(2,index);
+			binaryNum = binaryNum/10;
+			index++;
 		}
 		
-		i=0;
-		while(decNo!=0)
+		index=0;
+		while(decimalNum!=0)         // converts decimal to octal
 		{
-		  	r=decNo%8;
-		   	R=R+r*(int)Math.pow(10,i);
-		   	decNo=decNo/8;
-		   	i++;
+		  	mod = decimalNum%8;
+		  	octalNum = octalNum + mod*(int)Math.pow(10,index);
+		   	decimalNum = decimalNum/8;
+		   	index++;
 		}
-		return R;
+		return octalNum;             // returns octal number
 	}
+	
 	
 	public static void main(String[] args) 
 	{
-		int binNo,octNo;
-		Scanner sc= new Scanner(System.in);
-		
-		System.out.println("Enter the binary number :");
-		binNo = Integer.parseInt(sc.nextLine());
-		
-		BinaryToOctal obj = new BinaryToOctal();
-		octNo=obj.getVal(binNo);
-		System.out.println("Octal no: "+octNo);
+		int binaryNum, octalNum;
+		Scanner sc = new Scanner(System.in);
+		BinaryToOctal obj = null;
+		try
+		{		
+			System.out.println("Enter the binary number :");
+			binaryNum = Integer.parseInt(sc.nextLine());			
+			obj = new BinaryToOctal();
+			octalNum = obj.convertBinaryToOctal(binaryNum);
+			System.out.println("Octal no: "+octalNum);
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+		finally
+		{
+			if(sc!=null)
+				sc = null;
+			if(obj!=null)
+				obj = null;
+		}
 	}
 }

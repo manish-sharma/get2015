@@ -10,41 +10,47 @@ public class ArraySortOrderTest {
 
 
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() throws Exception 
+	{
 	}
 
 	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+	public static void tearDownAfterClass() throws Exception 
+	{
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception 
+	{
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception
+	{
 	}
 
 	@Test
-	public void test1() {
-		//fail("Not yet implemented");
-		ArraySortOrder as=new ArraySortOrder();
-		int ip[]={1,5,7};
-		assertEquals("Series is : ",1,as.getVal(ip));
+	public void testIncreasingArray()         // test case for increasing array
+	{
+		ArraySortOrder obj = new ArraySortOrder();
+		int arrInput[] = {1,5,7};
+		assertEquals("Matched : ", 1, obj.sortOrderOfArray(arrInput));
 	}
 	
-	public void test2() {
-		//fail("Not yet implemented");
-		ArraySortOrder as=new ArraySortOrder();
-		int ip[]={11,9,7};
-		assertEquals("Series is : ",2,as.getVal(ip));
+	@Test
+	public void testDecreasingArray()         // test case for decreasing array
+	{
+		ArraySortOrder obj = new ArraySortOrder();
+		int arrInput[] = {11,9,7};
+		assertEquals("Matched : ", 2, obj.sortOrderOfArray(arrInput));
 	}
 	
-	public void test() {
-		//fail("Not yet implemented");
-		ArraySortOrder as=new ArraySortOrder();
-		int ip[]={5,2,9};
-		assertEquals("Series is : ",0,as.getVal(ip));
+	@Test
+	public void testUnsortedArray()           // test case for unsorted array
+	{
+		ArraySortOrder obj = new ArraySortOrder();
+		int arrInput[] = {5,2,9};
+		assertEquals("Matched : ", 0, obj.sortOrderOfArray(arrInput));
 	}
 
 }
