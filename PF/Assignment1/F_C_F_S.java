@@ -1,9 +1,10 @@
 import java.util.Scanner;
 public class F_C_F_S {
 
+	public static int numberOfColumn=5;
 	public static void main(String[] args) {
 		
-	            	int index1,index2,size,numberOfColumn=5;
+	            	int index1,index2,size;
 	            	
 	            	Scanner sc= new Scanner(System.in);	
 	            	System.out.println("Enter the number of job :");
