@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class removeDuplicatesTest {
+public class binaryToOctal_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,12 +26,11 @@ public class removeDuplicatesTest {
 	}
 
 	@Test
-	public void test() {
-		removeduplicates rd=new removeduplicates();
-		int op[]={2,5,4,6,3,8,9,0};
-		int ip[]={2,5,4,6,3,8,5,9,3,3,6,3,9,0};
-		int[] output=rd.removeDuplicateElement(ip);
-		assertArrayEquals("pass",op,output);
-	
+	public void test_binary_octal_conversion()
+	{
+		binaryToOctal object=new binaryToOctal();
+		int actual_output=object.convert_binay_tooctal(1010);
+		int expected_output=12;
+		assertEquals("match",expected_output,actual_output);
 	}
 }

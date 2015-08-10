@@ -5,49 +5,47 @@ public class printPattern
 	{
 		int row,n=5;
 		printPattern p=new printPattern();
-		for(row=0;row<5;row++)
+		for(row=1;row<=5;row++)
 		{
-			String output[]=p.pattern(row, n);
-			  for(int f=0;f<output.length;f++)
-				  System.out.print(output[f]);
-			  System.out.println();
+			// printng each row of pattern
+			String output_array[]=p.pattern(row, n);
+		    System.out.println(output_array[row]);
+			  
 		}
 	}
-	String[] spaces(int row,int n)
+	String spaces(int row,int n)
 	{
-		String arr[]=new String[row];
-		for(int i=0;i<arr.length;i++)
+		//define space string
+		String string_spaces=new String();
+		for(int index=1;index<row;index++)
 		{
-		   arr[i]=" ";
+			string_spaces=string_spaces.concat(" ");
 		}
-		return arr;
+		return string_spaces;
 	}
 
-	String[] numbers(int row,int n)
+	String numbers(int row,int n)
 	{
-		String arr1[]=new String[n-row];
-		for(int i=0;i<arr1.length;i++)
+		// define number string
+		String string_numbers=new String();
+		for(int index=1;index<=n-row+1;index++)
 		{
-		   arr1[i]=i+1+"";
+		   string_numbers=string_numbers+index;
 		}
-		return arr1;
+		return string_numbers;
 	}
-	String [] pattern(int row,int n)
+	String[] pattern(int row,int n)
 	{
-		//printPattern p=new printPattern();
-		 String b[]=spaces(row,n);
-		  
-		String a[]=numbers(row,n);
-        String c[]= new String[a.length+b.length];
-        for(int i=0;i<b.length;i++)
+		//addition of spaces string and number string 
+		 
+        String string_numbers_spaces[]= new String[n+1];
+        for(int index=0;index<=n;index++)
         {
-        	c[i]=b[i];
+        	String space_string=spaces(index,n);
+    		String number_string=numbers(index,n);
+    		string_numbers_spaces[index]=space_string+number_string;
         }
-        for(int i=0;i<a.length;i++)
-        {
-        	c[i+b.length]=a[i];
-        }
-        return c;
+        return string_numbers_spaces;
 	}
 }
 

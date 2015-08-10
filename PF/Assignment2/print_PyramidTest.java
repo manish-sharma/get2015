@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class printPatternTest {
+public class print_PyramidTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,8 +28,8 @@ public class printPatternTest {
 	@Test
 	public void test_spaces() 
 	{
-		printPattern object=new printPattern();
-		String expected_output="";
+		print_Pyramid object=new print_Pyramid();
+		String expected_output="    ";
 		String actual_output=object.spaces(1,5);
 		boolean flag=expected_output.equals(actual_output);
 		assertTrue("Match",flag);
@@ -37,8 +37,8 @@ public class printPatternTest {
 	@Test
 	public void test_numbers() 
 	{
-		printPattern object=new printPattern();
-		String expected_output="12345";
+		print_Pyramid object=new print_Pyramid();
+		String expected_output="1";
 		String actual_output=object.numbers(1,5);
 		boolean flag=expected_output.equals(actual_output);
 		assertTrue("Match",flag);
@@ -46,10 +46,10 @@ public class printPatternTest {
 	@Test
 	public void test_pyramid() 
 	{
-		printPattern object=new printPattern();
-		String expected_output="12345";
-		String actual_output[]=object.pattern(1,5);
-		boolean flag=expected_output.equals(actual_output[1]);
+		print_Pyramid object=new print_Pyramid();
+		String expected_output="    1";
+		String actual_output[]=object.pyramid(1,5);
+		boolean flag=expected_output.equals(actual_output[0]);
 		assertTrue("Match",flag);
 
 	}

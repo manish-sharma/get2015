@@ -1,42 +1,46 @@
 import java.io.*;
 import java.util.*;
-public class BinarytoOctal {
+public class binaryToOctal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	    {
 		// TODO Auto-generated method stub
 
+	            int number,output;
+	            Scanner sc=new Scanner(System.in);
+	            System.out.println("Enter Binay Number");
+	            number=Integer.parseInt(sc.nextLine());
+	            binaryToOctal object=new binaryToOctal();
+	            output=object.convert_binay_tooctal(number);
+	            System.out.println("Octal of Given Binary Number is");
+	            System.out.println(output);
 	
-	int num,op;
-	Scanner sc=new Scanner(System.in);
-	num=Integer.parseInt(sc.nextLine());
-	BinarytoOctal x=new BinarytoOctal();
-	op=x.convertbinaytooctal(num);
-	System.out.println(op);
-	
-	}
-	
-	int convertbinaytooctal(int num)
-	{
-		int decimal=0,octal=0;
-		int i =0;
-		while(num!=0)
-		{
-			decimal+=(num%10)*(int)Math.pow(2,i);
-			i++;
-			num/=10;
-		}
-	    i=1;
-	    while(decimal!=0)
-	    {
-	    	octal+=(decimal%8)*i;
-	        decimal/=10;
-	    	i*=10;
-	   
-	    	
 	    }
-		return octal;
+	
+		int convert_binay_tooctal(int number)
+		{
+			int decimal=0,octal=0,remainder1=0,remainder2=0;
+			int index =0;
+			while(number!=0)
+			{
+				// converting binary number into decimal number
+				
+				remainder1=number%10;
+				decimal=decimal+((remainder1)*(int)Math.pow(2,index));
+				index++;
+				number/=10;
+			}
+			index=1;
+			while(decimal!=0)
+			{
+				// converting decimal number into octal number
+				
+				remainder2=decimal%8;
+				octal=octal+((remainder2)*index);
+				decimal/=8;
+				index=index*10; 
+			}
+			return octal;
+		}	
 	}
-	
-	
-}
 
