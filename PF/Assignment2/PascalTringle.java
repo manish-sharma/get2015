@@ -1,78 +1,62 @@
+public class PascalTringle
+{
 
-public class PascalTringle {
-
-	public String spaces(int row, int n)
+	public static String spaces(int row, int n)
 	{
-		String spaceOutput="";
+		String spaceOutput = "";
 		int space;
-		 if(row > n)
-		 {
-	
-				space=row-n;
-		 }else
-		 {
-	
+		if (row > n) {
+			space = row - n;
+		} else {
+			space = n - row;
+		}
 
-			    space=n-row;
-		 }
+		for (int count = 0; count < space; count++) {
 
-		 for(int count=0;count<space;count++)
-		 {
-	
-		 spaceOutput=spaceOutput.concat(" ");
-		 }
+			spaceOutput = spaceOutput.concat(" ");
+		}
 
-		 return spaceOutput;
+		return spaceOutput;
 	}
-	
-	
-	public String numbers(int row, int n)
+
+	public static String numbers(int row, int n) 
 	{
-	
-		String numberOutput="";
+		String numberOutput = "";
 		int counter;
-		if(row > n)
-		{
-	
-			counter=2*n-row;
-		}else
-		{
-	
-			counter=row;
+		if (row > n) {
+
+			counter = 2 * n - row;
+		} else {
+
+			counter = row;
 		}
 
-		for(int count=1;count<=counter;count++)
-		{
-	
-			numberOutput=numberOutput.concat(""+count);
+		for (int count = 1; count <= counter; count++) {
+
+			numberOutput = numberOutput.concat("" + count);
 
 		}
-		for(int count2=counter-1;count2>0;count2--)
-		{
+		for (int count2 = counter - 1; count2 > 0; count2--) {
 
-			numberOutput=numberOutput.concat(""+count2);
-
+			numberOutput = numberOutput.concat("" + count2);
 
 		}
 		return numberOutput;
 	}
 
-	public String[] pascalTringle(int n)
-	{
-	
-		String tringle[]=new String[2*n-1];
+	public static String[] pascalTringle(int n) {
 
-		int count=1;
-		PascalTringle pascalTringle= new PascalTringle();
-		for(count=0;count<2*n-1;count++)
-		{
-			tringle[count]=pascalTringle.spaces(count+1, n).concat(pascalTringle.numbers(count+1, n));
-	
+		String tringle[] = new String[2 * n - 1];
+
+		int count = 1;
+		
+		for (count = 0; count < 2 * n - 1; count++) {
+			tringle[count] = PascalTringle.spaces(count + 1, n).concat(
+					PascalTringle.numbers(count + 1, n));
+			
 		}
-
 
 		return tringle;
 	}
-
 
 }

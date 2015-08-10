@@ -22,31 +22,30 @@ public class PascalTringleTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-	PascalTringle pascalTringle= new PascalTringle();
-	
+
 	@Test
 	public void testSpaces() {
-		assertEquals("    ", pascalTringle.spaces(1, 5));
-		assertEquals("", pascalTringle.spaces(5, 5));
-		assertEquals(" ", pascalTringle.spaces(6, 5));
-		assertEquals("    ", pascalTringle.spaces(9, 5));
+		assertEquals("    ", PascalTringle.spaces(1, 5));
+		assertEquals("", PascalTringle.spaces(5, 5));
+		assertEquals(" ", PascalTringle.spaces(6, 5));
+		assertEquals("    ", PascalTringle.spaces(9, 5));
 	}
 
 	@Test
 	public void testNumbers() {
-		assertEquals("121", pascalTringle.numbers(2, 5));
-		assertEquals("1", pascalTringle.numbers(1, 5));
-		assertEquals("1234321", pascalTringle.numbers(6, 5));
-		assertEquals("1", pascalTringle.numbers(9, 5));
+		assertEquals("121", PascalTringle.numbers(2, 5));
+		assertEquals("1", PascalTringle.numbers(1, 5));
+		assertEquals("1234321", PascalTringle.numbers(6, 5));
+		assertEquals("1", PascalTringle.numbers(9, 5));
 	}
-    
+
 	@Test
 	public void testPascalTringle() {
-		String expected[]={"  1"," 121","12321"," 121","  1"};
-		assertArrayEquals(expected, pascalTringle.pascalTringle(3));
-		
-		String expected1[]={"1"};
-		assertArrayEquals(expected1, pascalTringle.pascalTringle(1));
+		String expected[] = { "  1", " 121", "12321", " 121", "  1" };
+		assertArrayEquals(expected, PascalTringle.pascalTringle(3));
+
+		String expected1[] = { "1" };
+		assertArrayEquals(expected1, PascalTringle.pascalTringle(1));
 	}
 
 }
