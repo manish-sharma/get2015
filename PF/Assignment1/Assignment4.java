@@ -1,6 +1,16 @@
+import java.util.Scanner;
+
 
 public class Assignment4 
 {
+	/**FCFS is a function which calculates the wait time, start time, and finished time of the jobs.
+	 * 
+	 * @param arrival_time is the array of the arrival time of all the jobs.
+	 * @param job_size is the array of job size of all the jobs.
+	 * @param n is the number of jobs.
+	 * @return This function return a 2D array which consist of jobNo, arrival time, wait time, start time and 
+	 *         finished time of all the jobs respectively.
+	 */
 	public  int[][] FCFS( int arrival_time [], int job_size[] ,int n)
 	{
 		int[] job_wait_time= new int[n];
@@ -40,10 +50,22 @@ public class Assignment4
 	public static void main(String args[])
 	{
 		Assignment4 obj=new Assignment4();
-		int a[]={1,5,9,25};
-		int s[]={12,7,2,5};
-		int n=4;
-		int out[][]=obj.FCFS(a,s,n);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the no. of jobs");
+		int n=sc.nextInt();
+		int arrival[]=new int[n];
+		System.out.println("enter the arrival time of jobs");
+		for(int count=0;count<n;count++)
+		{
+			arrival[count]=sc.nextInt();
+		}
+		int size[]=new int[n];
+		System.out.println("enter the size of jobs");
+		for(int count=0;count<n;count++)
+		{
+			size[count]=sc.nextInt();
+		}
+		int out[][]=obj.FCFS(arrival,size,n);
 		System.out.println("job\t"+"job arrived time "+" job waited time "+" job start at "+" job finished a");
 		for(int count=0;count<n;count++)
 		{

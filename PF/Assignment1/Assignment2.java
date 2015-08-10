@@ -1,5 +1,11 @@
+import java.util.Scanner;
 public class Assignment2 
 {
+	/**remove duplicate  is function which remove the duplicate elements in an array it works only only for the integer array.
+	 * 
+	 * @param input is an array which is pass as the parameter. It may consist of duplicate elements.
+	 * @return This function return a integer array which is the reduced form of the input array.In this array there is no duplicacy of elements.
+	 */
 	public int[] removeDuplicate(int input[])
 	{
 		int[] output=new int[input.length];
@@ -32,10 +38,18 @@ public class Assignment2
 	}
 	public static void main(String args[])
 	{
-		int a[]={2,5,4,6,8,5,9,3,3,6,3,3,9,1};
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int[15];
+		System.out.println("enter the elements in array with duplicacy");
+		for(int count=0;count<15;count++)
+		{
+			a[count]=sc.nextInt();
+		}
+		
 		Assignment2 obj= new Assignment2();
 		int out[]=obj.removeDuplicate(a);
+		System.out.println("distinct elements of array are");
 		for(int count=0;count<out.length;count++)
-			System.out.println(out[count]);
+			System.out.print(out[count]+",");
 	}
 }
