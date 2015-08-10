@@ -1,3 +1,7 @@
+/*************************
+ * @author Babalu Patidar
+ * Program to test draw a pyramid pattern
+ ***********/
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -24,7 +28,7 @@ public class Assignment2Test {
 	@After
 	public void tearDown() throws Exception {
 	}
-	@Test
+	@Test   /*Test2 will test drawpyramid method */ 
 	public void testpyramid() {
 		String expected[]={"12345"," 1234","  123","   12","    1"};
 		Assignment2 p=new Assignment2();
@@ -35,7 +39,7 @@ public class Assignment2Test {
 			assertEquals(expected[i],output[i]);
 		}
 	}
-	@Test
+	@Test  /*Test1 will test spaces method */ 
 	public void testspace() {
 		String expected="    ";
 		Assignment2 p=new Assignment2();
@@ -43,7 +47,7 @@ public class Assignment2Test {
 		assertEquals(expected,output);
 		}
 	
-	@Test
+	@Test  /*Test2 will test numbers method */
 	public void testnumber() {
 		String expected="123";
 		Assignment2 p=new Assignment2();
