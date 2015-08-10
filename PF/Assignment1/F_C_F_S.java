@@ -3,7 +3,8 @@ public class F_C_F_S {
 
 	public static void main(String[] args) {
 		
-	            	int index1,index2,size;
+	            	int index1,index2,size,numberOfColumn=5;
+	            	
 	            	Scanner sc= new Scanner(System.in);	
 	            	System.out.println("Enter the number of job :");
 	            	size = Integer.parseInt(sc.nextLine());
@@ -25,7 +26,7 @@ public class F_C_F_S {
 	            	
 	            	sc.close();
 	            	
-	            	int output_job_schedule[][]= new int[size][5];
+	            	int output_job_schedule[][]= new int[size][numberOfColumn];
 	            	F_C_F_S object=new F_C_F_S();
 	            	output_job_schedule=object.jobSchedule(arrival_Time,job_Size,size);
 	            	System.out.print("Job ArrivalTime WaitTime Start At Finish At");
@@ -33,14 +34,14 @@ public class F_C_F_S {
 	            	{
 	            		// print job schedule
 	            		System.out.println();   
-	            		for(index2=0;index2<5;index2++)  
+	            		for(index2=0;index2<numberOfColumn;index2++)  
 	            		System.out.print(output_job_schedule[index1][index2]+"\t ");
 	            	}
 		}
 		
 		int[][] jobSchedule(int arrival_time[],int job_size[],int size)
 		{
-		            int array[][]= new int[size][5];
+		            int array[][]= new int[size][numberOfColumn];
 		            int index1,index2;
 		            index2=0;
 		            int wait_time=0,start_time=1;
