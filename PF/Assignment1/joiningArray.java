@@ -2,12 +2,12 @@ package assignment;
 
 import java.lang.reflect.Array;
 
-public class joiningArray 
+public class joiningArray //class to join the sorted array
 {
-	public  int[] join(int[] a,int asize, int[] b,int bsize, int[] c) 
+	public  int[] join(int[] a,int asize, int[] b,int bsize, int[] c)//method to join the sorted array 
 	{
 
-	    int i = 0, j = 0, k = 0;
+	    int i = 0, j = 0, k = 0;//initial values
 
 	    while (i < asize && j < bsize )
 	    {
@@ -24,20 +24,21 @@ public class joiningArray
 	    while (j <bsize)    
 	        c[k++] = b[j++];
 	   
-	    return c;
+	    return c;//return the sorted array
 	}
-	public static void main(String[] args) 
+	public static void main(String[] args) //main method
 	{
 		// TODO Auto-generated method stub
 		joiningArray ob=new joiningArray();
-		int m[]={2,3,4};
-		int n[]={1,2,3};
-		int[] o=new int[10];
-		int[] d=ob.join(m,3,n,3,o);
-		for(int i=0;i<d.length;i++)
+		int firstArray[]={2,4,5};//first array
+		int secondArray[]={2,3,4};//second array
+		int[] thirdArray=new int[firstArray.length+secondArray.length];//initialize the third  array where the sorted array is stored
+		int[] outputArray=ob.join(firstArray,firstArray.length,secondArray,secondArray.length,thirdArray);
+		System.out.println("The joined sorted array is:");
+		for(int i=0;i<outputArray.length;i++)
 		{
-			if(d[i]!='\0')
-			System.out.print(d[i]);
+			if(outputArray[i]!='\0')
+			System.out.print(outputArray[i]);//print the sorted array
 		}
 		
 

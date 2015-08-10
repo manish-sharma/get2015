@@ -42,17 +42,17 @@ public class fcfs
 	{
 		// TODO Auto-generated method stub
 		fcfs obj=new fcfs();
-		int a[]={1,5,9,25};
-		int s[]={12,7,2,5};
-		int n=4;
-		int out[][]=obj.FCFS(a,s,n);
+		int arrivalTime[]={1,5,9,25};
+		int jobSize[]={12,7,2,5};
+		int totalJobs=4;
+		int schedule[][]=obj.FCFS(arrivalTime,jobSize,totalJobs);
 		System.out.println("job\t"+"job arrived time "+" job waited time "+" job start at "+" job finished a");
-		for(int count=0;count<n;count++)
+		for(int count=0;count<totalJobs;count++)
 		{
 			System.out.println("\n");
 			for(int count1=0;count1<5;count1++)
 			{
-				System.out.print(out[count][count1]+"\t\t");
+				System.out.print(schedule[count][count1]+"\t\t");
 			}
 		}
 	}

@@ -12,8 +12,8 @@ public class binaryToOctalTest {
 	@Test
 	public void test1() {
 		binaryToOctal obj=new binaryToOctal();
-		int u=obj.convertBinarytoOctal(110101);
-		assertEquals( "correct",65, u);
+		int octalNumber=obj.convertBinarytoOctal(110101);
+		assertEquals( "this is correct",65, octalNumber);//check the expected and actual value
 		
 	}
 

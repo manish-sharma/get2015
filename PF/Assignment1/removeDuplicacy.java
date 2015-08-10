@@ -3,6 +3,7 @@ import java.util.*;
 public class removeDuplicacy
 {
 	public int[] removeDuplicate(int input[])
+	//function to remove duplicacy in the given array
 	{
 		int end = input.length;
 
@@ -37,6 +38,7 @@ public class removeDuplicacy
 	{
 		
 				Scanner sc=new Scanner(System.in);
+				//scanner class to make input
 				int input[]=new int[10];
 				System.out.println("Enter the elements of array");
 				for(int i=0;i<10;i++)
@@ -44,12 +46,16 @@ public class removeDuplicacy
 					input[i]=sc.nextInt();
 				}
 				removeDuplicacy object1=new removeDuplicacy();
+				// obj is removeDuplicat class
 				int output[];
 				output=object1.removeDuplicate(input);
-				for(int i=0;i<10;i++)
+				// function called to remove duplicacy
+				for(int i=0;i<output.length;i++)
 				{
 					if(output[i]!='\0')
 					System.out.print(output[i]);
+					
+			// to print new array without duplicacy
 				}
 
 			}

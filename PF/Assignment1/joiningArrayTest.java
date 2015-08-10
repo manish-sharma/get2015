@@ -12,12 +12,12 @@ public class joiningArrayTest
 	public void test()
 	{
 		joiningArray obj=new joiningArray();
-		int[] a={2,3,4};
-		int[] b={1,2,3};
-		int[] c=new int[10];
-		int[] d={1,2,2,3,3,4};
-		int[] e=obj.join(a, 3, b, 3, c);
-		assertArrayEquals("correct",d,e);
+		int[] firstArray={2,4,5};//first array
+		int[] secondArray={1,2,3};//second array
+		int[] thirdArray=new int[firstArray.length+secondArray.length];
+		int[] expected={1,2,2,3,4,5};//expected value
+		int[] actual=obj.join(firstArray,3,secondArray,3,thirdArray);
+		assertArrayEquals("correct",expected,actual);//check the expected and actual value
 	}
 
 }

@@ -18,10 +18,10 @@ public class removeDuplicacyTest {
 		removeDuplicacy obj=new removeDuplicacy();
 		
 		
-		int a[]={1,2,3,4,5,1,2,3,4,5,1};
-		int b[]={1,2,3,4,5};
-		int c[]=obj.removeDuplicate(a);
-		assertArrayEquals("correct",b, c);
+		int inputArray[]={1,2,3,4,5,1,2,3,4,5,1};//input array
+		int expected[]={1,2,3,4,5};//expected output
+		int actual[]=obj.removeDuplicate(inputArray);//method calling
+		assertArrayEquals("correct",expected, actual);//check the expected and actual value
 		
 	}
 
