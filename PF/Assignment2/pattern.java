@@ -1,14 +1,17 @@
 // Program to display a pattern using modular approach
-
+import java.util.*;
 public class pattern
 {
 	public static void main(String[] args)
 	{
-		int row, col=5;
+		int row, col;
+		System.out.println("Enter Max no of columns in pattern : ");
+		Scanner sc = new Scanner (System.in);
+		col = Integer.parseInt(sc.next());
 		pattern obj = new pattern();
 		try
 		{
-			for(row=0; row<5; row++)
+			for(row=0; row<col; row++)
 			{
 				String output[] = obj.printPattern(row, col);
 				for(int index=0; index<output.length; index++)

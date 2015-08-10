@@ -1,16 +1,19 @@
 // Program to display a pyramid using modular approach
-
+import java.util.*;
 public class pyramid 
 {
 	public static void main(String[] args) 
 	{
-		int row, col = 5;
+		int row, center;
 		pyramid obj = new pyramid();
+		System.out.println("Enter center no of pyramid : ");
+		Scanner sc = new Scanner (System.in);
+		center = Integer.parseInt(sc.next());
 		try
 		{
-			for(row=0; row<=8; row++)
+			for(row=0; row<(center*2-1); row++) 
 			{
-				String output[] = obj.printPyramid(row, col);
+				String output[] = obj.printPyramid(row, center);
 				for(int index=0; index<output.length; index++)
 					System.out.print(output[index]);    // displays complete pattern using values of all rows
 				System.out.println();
@@ -29,14 +32,14 @@ public class pyramid
 	
 	
 	// returns spaces in given row of pattern.
-	String[] spaces(int row, int col)        
+	String[] spaces(int row, int center)        
 	{
 		String arrSpaces[]=null; ;
 		try
 		{
-			if(row < col)
+			if(row < center)
 			{
-			    arrSpaces = new String[col-row-1];
+			    arrSpaces = new String[center-row-1];
 			    for(int index=0; index<arrSpaces.length; index++)
 			    {
 			    	arrSpaces[index] = " ";
@@ -45,7 +48,7 @@ public class pyramid
 			}	
 			else
 			{
-				arrSpaces = new String[row-col+1];
+				arrSpaces = new String[row-center+1];
 				for(int index=0; index<arrSpaces.length; index++)
 				{
 					arrSpaces[index] = " ";
@@ -67,12 +70,12 @@ public class pyramid
 	
 	
 	// returns numbers in given row of pattern.
-	String[] numbers(int row, int col)       
+	String[] numbers(int row, int center)       
 	{	
 		String arrNumbers[] = null;
 		try
 		{
-			if(row < col)
+			if(row < center)
 			{    
 				arrNumbers = new String[2*row+1];
 				for(int index=0; index<=row; index++)
@@ -83,7 +86,7 @@ public class pyramid
 		    } 
 			else
 			{   
-				row	= 8-row;   // 8 = max no. of rows in pyramid - 1
+				row	= (2*center-2)-row;  
 				arrNumbers = new String[2*row+1];
 				for(int index=0; index<=row; index++)
 					arrNumbers[index]	= index+1+"";		
@@ -107,10 +110,10 @@ public class pyramid
 	
 	
 	// returns spaces & numbers in given row of pattern.
-	String[] printPyramid(int row, int col)  
+	String[] printPyramid(int row, int center)  
 	{
-		String strSpaces[] = spaces(row, col);	
-		String strNumbers[] = numbers(row, col);
+		String strSpaces[] = spaces(row, center);	
+		String strNumbers[] = numbers(row, center);
 		String strPyramid[] = new String[strSpaces.length + strNumbers.length];
 		try
 		{
