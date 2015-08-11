@@ -12,9 +12,12 @@ public class QuickSort
 		{
 			System.out.println("Enter the size of array :");
 		    arrSize = Integer.parseInt(sc.next());
+		    if(arrSize==0)
+		    	throw new ArrayIndexOutOfBoundsException();
 		    
 		    System.out.println("Enter the array :");
 		    arr = new int[arrSize];
+		    	
 		    for(index=0; index<arrSize; index++)
 		    	arr[index] = Integer.parseInt(sc.next());
 		    right = arr.length - 1;
@@ -45,8 +48,8 @@ public class QuickSort
 	
 	int [] quickSort ( int arr[], int left, int right )
 	{
-		if( (left<0) && (right<0) )				   // used when empty array is entered
-			return arr; 
+//		if( (left<0) && (right<0) )				   // used when empty array is entered
+//			return arr; 
 		
 		int index = creatingPartition( arr, left, right ); 
 		

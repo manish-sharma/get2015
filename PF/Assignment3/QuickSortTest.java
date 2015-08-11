@@ -29,13 +29,24 @@ public class QuickSortTest
 	{
 	}
 
+//	@Test  //   ???????
+//	public void testEmptyInputArray() 
+//	{
+//		QuickSort obj = new QuickSort () ;
+//		int inputArr[] = {};
+//		int expectedArr[] = {};
+//		int left = -1, right = inputArr.length - 1;
+//		int outputArr[] = obj.quickSort (inputArr, left, right);
+//		assertArrayEquals ("true", expectedArr, outputArr);
+//	}
+	
 	@Test
 	public void testEmptyInputArray() 
 	{
 		QuickSort obj = new QuickSort () ;
 		int inputArr[] = {};
 		int expectedArr[] = {};
-		int left = -1, right = -1;
+		int left = 0, right = inputArr.length - 1;
 		int outputArr[] = obj.quickSort (inputArr, left, right);
 		assertArrayEquals ("true", expectedArr, outputArr);
 	}

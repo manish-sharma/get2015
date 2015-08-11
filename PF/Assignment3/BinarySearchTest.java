@@ -29,31 +29,44 @@ public class BinarySearchTest
 	public void tearDown() throws Exception 
 	{
 	}
+
+	@Test
+	public void testEmptyInput() 
+	{
+		BinarySearch obj = new BinarySearch () ;
+		int arr[] = {};
+		int begin = 0, end = arr.length-1, mid = (begin+end)/2;
+		int location = obj.binarySearch (arr, 88, begin, end, mid);
+		assertEquals ("Correct", -1, location);
+	}	
 	
 	@Test
 	public void testNotFound() 
 	{
-		LinearSearch obj = new LinearSearch () ;
+		BinarySearch obj = new BinarySearch () ;
 		int arr[] = {2,5,8,9,10,55,77};
-		int location = obj.linearSearch (arr, 88);
+		int begin = 0, end = arr.length-1, mid = (begin+end)/2;
+		int location = obj.binarySearch (arr, 88, begin, end, mid);
 		assertEquals ("Correct", -1, location);
 	}
 	
 	@Test
 	public void testFound()                            // positive test case
 	{
-		LinearSearch obj = new LinearSearch () ;
+		BinarySearch obj = new BinarySearch () ;
 		int arr[] = {2,5,8,9,10,55,77};
-		int location = obj.linearSearch (arr, 77);
+		int begin = 0, end = arr.length-1, mid = (begin+end)/2;
+		int location = obj.binarySearch (arr, 77, begin, end, mid);
 		assertEquals ("Correct", 7, location);
 	}
 	
 //	@Test
 //	public void testIncorrectPosition()                // negative test case
 //	{
-//		LinearSearch obj = new LinearSearch () ;
+//		BinarySearch obj = new BinarySearch () ;
 //		int arr[] = {2,5,8,9,10,55,77};
-//		int location = obj.linearSearch (arr, 77);
+//	    int begin = 0, end = arr.length-1, mid = (begin+end)/2;
+//	    int location = obj.binarySearch (arr, 88, begin, end, mid);
 //		assertEquals ("Incorrect", 6, location);
 //	}
 

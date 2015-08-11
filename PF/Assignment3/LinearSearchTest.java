@@ -30,6 +30,15 @@ public class LinearSearchTest
 	}
 
 	@Test
+	public void testEmptyInput() 
+	{
+		LinearSearch obj = new LinearSearch () ;
+		int arr[] = {};
+		int location = obj.linearSearch (arr, 88);
+		assertEquals ("Correct", -1, location);
+	}
+	
+	@Test
 	public void testNumNotFound() 
 	{
 		LinearSearch obj = new LinearSearch () ;

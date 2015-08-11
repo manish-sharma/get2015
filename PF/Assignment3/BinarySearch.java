@@ -13,6 +13,8 @@ public class BinarySearch
 		{
 			System.out.println("Enter the size of array :");
 		    arrSize = Integer.parseInt(sc.next());
+		    if(arrSize==0)
+		    	throw new ArrayIndexOutOfBoundsException();
 		    
 		    System.out.println("Enter the array :");
 		    arr = new int[arrSize];
@@ -46,6 +48,8 @@ public class BinarySearch
 
 	int binarySearch ( int arr[], int item, int begin, int end, int mid )
 	{	
+		if(arr.length=='\0')
+			throw new ArrayIndexOutOfBoundsException();
 		if( begin <= end )
 		{
 			mid = (begin+end)/2;           // set mid according to new begin or start

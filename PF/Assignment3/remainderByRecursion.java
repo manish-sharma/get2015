@@ -36,6 +36,8 @@ public class remainderByRecursion
 	
 	int rem (int num1, int num2)
 	{
+		if( num2 == 0 )
+			throw new ArithmeticException("Divide by Zero");
 		if( ( num1 >= num2 ) && ( num2 !=0 ) )
 		{
 			num1 = num1 - num2;

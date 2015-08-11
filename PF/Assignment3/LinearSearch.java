@@ -13,6 +13,8 @@ public class LinearSearch
 		{
 			System.out.println("Enter the size of array :");
 		    arrSize = Integer.parseInt(sc.next());
+		    if(arrSize==0)
+		    	throw new ArrayIndexOutOfBoundsException();
 		    
 		    System.out.println("Enter the array :");
 		    arr = new int [ arrSize ];
@@ -45,6 +47,8 @@ public class LinearSearch
 	
 	int linearSearch ( int arr[], int item )
 	{
+		if(arr.length=='\0')
+			throw new ArrayIndexOutOfBoundsException();
 		if( position == arr.length )
 			return -1 ;                // reached end of array but not found the item
 		if( item == arr[position] )    // if item found , return its position
