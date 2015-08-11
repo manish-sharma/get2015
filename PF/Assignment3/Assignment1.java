@@ -1,4 +1,4 @@
-/* this class contains three function 1.to find Remainder of two numbers
+/* this class contains three functions 1.to find Remainder of two numbers
                                       2.to find Greatest common divisor of two integer
                                       3.to find greatest digit in a given number
                                         
