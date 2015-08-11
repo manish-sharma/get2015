@@ -6,10 +6,10 @@ public class binarySearchUsingRecursion {
 		// TODO Auto-generated method stub
 
 		binarySearchUsingRecursion objectOfbiBinarySearchUsingRecursion=new binarySearchUsingRecursion();
-		int sizeOfArray;
+		int sizeOfArray,number;		
 		sizeOfArray=objectOfbiBinarySearchUsingRecursion.getsizeOfArray();
-		int inputArray[]=objectOfbiBinarySearchUsingRecursion.inputArray(sizeOfArray);
-		int number=objectOfbiBinarySearchUsingRecursion.getNumberToSearch();
+		int []inputArray=objectOfbiBinarySearchUsingRecursion.inputArray(sizeOfArray);
+		number=objectOfbiBinarySearchUsingRecursion.getNumberToSearch();
 		int position,lowerBound=0,upperBound=sizeOfArray-1;
 		position=objectOfbiBinarySearchUsingRecursion.binarySearch(inputArray,number,lowerBound,upperBound);
 		if(position>=0)
@@ -27,16 +27,19 @@ public class binarySearchUsingRecursion {
 	int getsizeOfArray()
 	{
 		//takes input size of array from console
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{
-			//if array size is not positive integer number then again takes input from console
-
 			System.out.println("Enter Size of Array :");
-			number=Integer.parseInt(sc.nextLine());
-
-		}while(number<=0);
+			number=sc.nextInt();
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		
 		return number;
 		
@@ -49,9 +52,18 @@ public class binarySearchUsingRecursion {
 		int array[]=new int[size];
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter Array Elements in sorted order : ");
-		for(int i=0;i<size;i++)
+		try
 		{
-			array[i]=Integer.parseInt(sc.next());
+			for(int i=0;i<size;i++)
+			{
+				array[i]=Integer.parseInt(sc.next());
+			}
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
 		}
 		
 		return array;
@@ -61,14 +73,20 @@ public class binarySearchUsingRecursion {
 	{
 		//takes input a number to searcch in array
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{
 			System.out.println("Enter number to be searched :");
 			number=Integer.parseInt(sc.nextLine());
 
-		}while(number<0);
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		
 		return number;
 		

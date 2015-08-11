@@ -7,10 +7,18 @@ public class remainder {
 		// TODO Auto-generated method stub
 
 		remainder remainderObject=new remainder();
-		int diviser,dividend,remainderofnumber;
+		int diviser=0,dividend=0,remainderofnumber=0;
+		try
+		{
 		dividend=remainderObject.getDividend();
 		diviser=remainderObject.getDiviser();
 		remainderofnumber=remainderObject.rem(dividend,diviser);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e+" Sorry!! invalid input");
+			System.exit(0);
+		}
 		System.out.println("When "+dividend+" divided by "+diviser+" give remainder "+remainderofnumber);
 		
 	}
@@ -19,16 +27,21 @@ public class remainder {
 	{
 		//takes number input from console
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{ 
-			//if number is less than zero repeats process
-		
+			
 			System.out.println("Enter diviser :");
 			number=Integer.parseInt(sc.nextLine());
-
-		}while(number<0);
+		
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		
 		return number;
 		
@@ -38,16 +51,23 @@ public class remainder {
 	{
 		//takes number input from console
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{ 
-			//if number is less than zero repeats process
-		
+				
 			System.out.println("Enter dividend :");
 			number=Integer.parseInt(sc.nextLine());
 
-		}while(number<0);
+		}
+		
+		catch(Exception e)
+		{
+			
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		
+		}
 		
 		return number;
 		
@@ -56,6 +76,12 @@ public class remainder {
 	int rem(int number1,int number2)
 	{
 		//find remainder when number1 is divided by number2
+		if(number2==0)
+		{
+			System.out.println("infinite case");
+			throw new ArithmeticException();
+		}
+		
 
 		if((number1>=number2)&&(number2>0))
 		{
@@ -69,8 +95,8 @@ public class remainder {
 		}
 		
 		else
-		{
-			return number1;
+		{	
+			return number1;	
 		}
 		
 	}

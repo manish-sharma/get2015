@@ -25,16 +25,23 @@ public class quickSort {
 	{
 		//takes size input from console
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{ 
-			//if size is less than zero repeats process
-		
+					
 			System.out.println("Enter size of array :");
 			number=Integer.parseInt(sc.next());
 
-		}while(number<0);
+		}
+		
+		catch(Exception e)
+		{
+			
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		
+		}
 		
 		return number;
 		
@@ -45,11 +52,27 @@ public class quickSort {
 		//takes array input from console
 		
 		int array[]=new int[size];
+		if(size==0)
+		{
+			System.out.println("Array Size can not be zero");
+			System.exit(0);
+		}
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter Array Elements  : ");
-		for(int i=0;i<size;i++)
+		try
 		{
-			array[i]=Integer.parseInt(sc.next());
+			for(int i=0;i<size;i++)
+			{
+				array[i]=Integer.parseInt(sc.next());
+			}
+		}
+		
+		catch(Exception e)
+		{
+			
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		
 		}
 		
 		return array;

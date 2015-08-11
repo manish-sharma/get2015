@@ -21,16 +21,20 @@ public class largestDigitInNumber {
 	{
 		//takes input number from console
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{
-			//if number is not positive integer repeat the process
-
 			System.out.println("Enter number :");
 			number=Integer.parseInt(sc.nextLine());
 
-		}while(number<0);
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		
 		return number;
 		

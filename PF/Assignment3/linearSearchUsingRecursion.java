@@ -11,6 +11,7 @@ public class linearSearchUsingRecursion {
 		int inputArray[]=objectOfliLinearSearchUsingRecursion.inputArray(sizeOfArray);
 		int number=objectOfliLinearSearchUsingRecursion.getNumberToSearch();
 		int position;
+		
 		position=objectOfliLinearSearchUsingRecursion.linearSearch(number,inputArray,sizeOfArray-1);
 		if(position>=0)
 		{
@@ -29,16 +30,21 @@ public class linearSearchUsingRecursion {
 	{
 		//takes input size of array from console
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{
 			//if size is not positive integer number repeat the loop
 
 			System.out.println("Enter Size of Array :");
 			number=Integer.parseInt(sc.nextLine());
-
-		}while(number<0);
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		
 		return number;
 		
@@ -49,11 +55,26 @@ public class linearSearchUsingRecursion {
 		//takes input elements of array from console
 
 		int array[]=new int[size];
+		if(size==0)
+		{
+			System.out.println("Array Size can not be zero");
+			System.exit(0);
+		}
+		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter Array Elements in sorted order : ");
-		for(int i=0;i<size;i++)
+		try
 		{
-			array[i]=Integer.parseInt(sc.next());
+			for(int i=0;i<size;i++)
+			{
+				array[i]=Integer.parseInt(sc.next());
+			}
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
 		}
 		
 		return array;
@@ -63,17 +84,21 @@ public class linearSearchUsingRecursion {
 	{
 		//takes input number to be searched 
 
-		int number;
+		int number=0;
 		Scanner sc=new Scanner(System.in);
-		do
+		try
 		{
-			//if number is not integer repeat the process again
-
+			
 			System.out.println("Enter number to be searched :");
 			number=Integer.parseInt(sc.nextLine());
 
-		}while(number<0);
+		}
 		
+		catch(Exception e)
+		{
+			System.out.println("Sorry!! invalid input");
+			System.exit(0);
+		}
 		return number;
 		
 	}

@@ -26,7 +26,7 @@ public class remainderTest {
 	}
 
 	@Test
-	public void checkRemainde1r() {
+	public void checkRemainder1() {
 		remainder remainderobj=new remainder();
 		int expectedRemainder=0;
 		int actualRemainder=remainderobj.rem(2,1);
@@ -36,7 +36,7 @@ public class remainderTest {
 	@Test
 	public void checkRemainder2() {
 		remainder remainderobj=new remainder();
-		int expectedRemainder=2;
+		int expectedRemainder=0;
 		int actualRemainder=remainderobj.rem(2,0);
 		assertEquals("Match",expectedRemainder,actualRemainder);
 	}

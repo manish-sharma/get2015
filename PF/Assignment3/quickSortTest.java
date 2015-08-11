@@ -44,7 +44,7 @@ public class quickSortTest {
 		quickSort objeQuickSort=new quickSort();
 		int expectedOutput[]={};
 		int inputArray[]={};
-		int lowerBound=-1,upperBound=-1;
+		int lowerBound=0,upperBound=inputArray.length-1;
 		int actualOutput[]=objeQuickSort.quickSortUsingRecursion(inputArray,lowerBound,upperBound);
 		assertArrayEquals("match",expectedOutput,actualOutput);
 	}
