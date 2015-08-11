@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Linear_search {
-	static int index=0;
+	 int index=0;
 	public static void  main(String args[]) {
 		
 		int no = 0,n=0;
