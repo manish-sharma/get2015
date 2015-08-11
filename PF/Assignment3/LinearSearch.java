@@ -6,7 +6,7 @@ public class LinearSearch
 	int position = 0;
 	public static void main(String[] args)
 	{
-		int arr[] = null, arrSize, index, item ;
+		int arr[] = null, arrSize, index, item, location = -2;
 		Scanner sc = new Scanner (System.in);
 		LinearSearch obj = null;
 		try
@@ -26,8 +26,17 @@ public class LinearSearch
 		    
 		    obj = new LinearSearch ();
 		    
-		    int location = obj.linearSearch (arr, item);
-		    System.out.println("The item is found at position : "+location);
+		    location = obj.linearSearch (arr, item);
+		    //System.out.println("The item is found at position : "+location);
+		    switch ( location )
+		    {
+		    	case -1 : System.out.println("The item is not found in the array.");
+		    			  break;
+		    	case -2 : System.out.println("The input array is empty.");
+  			  			  break;
+		    	default : System.out.println("The item is found at position : "+location);
+  			  			  break;
+		    }
 		}
 		catch(Exception ex)
 		{
@@ -48,7 +57,10 @@ public class LinearSearch
 	int linearSearch ( int arr[], int item )
 	{
 		if(arr.length=='\0')
-			throw new ArrayIndexOutOfBoundsException();
+		{
+			//throw new ArrayIndexOutOfBoundsException();
+			return -2;
+		}
 		if( position == arr.length )
 			return -1 ;                // reached end of array but not found the item
 		if( item == arr[position] )    // if item found , return its position

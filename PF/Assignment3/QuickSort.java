@@ -50,7 +50,8 @@ public class QuickSort
 	{
 //		if( (left<0) && (right<0) )				   // used when empty array is entered
 //			return arr; 
-		
+		if (arr.length=='\0')
+			return arr;
 		int index = creatingPartition( arr, left, right ); 
 		
 		if (left < index - 1)                      // Apply quick sort on left partition of array 

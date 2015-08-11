@@ -6,7 +6,7 @@ public class BinarySearch
 	int position = 0;
 	public static void main(String[] args)
 	{
-		int arr[]={}, arrSize, index, item ,begin = 0, end = 0, mid = (begin+end)/2; 
+		int arr[]={}, arrSize, index, location = -2, item ,begin = 0, end = 0, mid = (begin+end)/2; 
 		Scanner sc = new Scanner (System.in);
 		BinarySearch obj = null;
 		try
@@ -27,8 +27,17 @@ public class BinarySearch
 		    
 		    obj = new BinarySearch ();
 		    
-		    int location = obj.binarySearch (arr, item, begin, end, mid);
-		    System.out.println("The item is found at position : "+location);	
+		    location = obj.binarySearch (arr, item, begin, end, mid);
+		    //System.out.println("The item is found at position : "+location);
+		    switch ( location )
+		    {
+		    	case -1 : System.out.println("The item is not found in the array.");
+		    			  break;
+		    	case -2 : System.out.println("The input array is empty.");
+  			  			  break;
+		    	default : System.out.println("The item is found at position : "+location);
+  			  			  break;
+		    }	    	
 		}
 		catch(Exception ex)
 		{
@@ -49,7 +58,10 @@ public class BinarySearch
 	int binarySearch ( int arr[], int item, int begin, int end, int mid )
 	{	
 		if(arr.length=='\0')
-			throw new ArrayIndexOutOfBoundsException();
+		{
+			//throw new ArrayIndexOutOfBoundsException();
+			return -2;
+		}
 		if( begin <= end )
 		{
 			mid = (begin+end)/2;           // set mid according to new begin or start

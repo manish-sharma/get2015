@@ -31,17 +31,17 @@ public class BinarySearchTest
 	}
 
 	@Test
-	public void testEmptyInput() 
+	public void testEmptyInput()   // -2 denotes that array is empty
 	{
 		BinarySearch obj = new BinarySearch () ;
 		int arr[] = {};
 		int begin = 0, end = arr.length-1, mid = (begin+end)/2;
-		int location = obj.binarySearch (arr, 88, begin, end, mid);
-		assertEquals ("Correct", -1, location);
+		int location = obj.binarySearch (arr, 88, begin, end, mid);	
+		assertEquals ("Correct", -2, location);
 	}	
 	
 	@Test
-	public void testNotFound() 
+	public void testNotFound()    // -1 denotes that the item is not found in the array
 	{
 		BinarySearch obj = new BinarySearch () ;
 		int arr[] = {2,5,8,9,10,55,77};

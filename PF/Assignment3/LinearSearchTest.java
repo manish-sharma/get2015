@@ -30,16 +30,16 @@ public class LinearSearchTest
 	}
 
 	@Test
-	public void testEmptyInput() 
+	public void testEmptyInput() 					// -2 denotes that array is empty
 	{
 		LinearSearch obj = new LinearSearch () ;
 		int arr[] = {};
 		int location = obj.linearSearch (arr, 88);
-		assertEquals ("Correct", -1, location);
+		assertEquals ("Correct", -2, location);
 	}
 	
 	@Test
-	public void testNumNotFound() 
+	public void testNumNotFound() 					// -1 denotes that item is not found in the the array
 	{
 		LinearSearch obj = new LinearSearch () ;
 		int arr[] = {2,5,8,9,10,77,55};
