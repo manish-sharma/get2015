@@ -1,37 +1,40 @@
 package programing_fundamental;
 import java.util.*;
 
-public class assignment6 {
+public class Assignment_6 {
 	public int[] join(int a[], int asize, int b[], int bsize, int c[])
 	{
-		int i,j,l;
-		int k=0;
-		for(i=0,j=0;i<asize&&j<bsize;i++,j++)
-		{
-			if(a[i]<b[j])
-			{
-				c[k++]=a[i];j--;
-			}
-			else if(b[j]<a[i])
-			{
-				c[k++]=b[j];i--;
-			}
-			else
-			{
-				c[k++]=a[i];
-				c[k++]=b[j];
-			}
-		}
-		if(i==asize&&j!=bsize)
-		{
-			for(l=j;l<bsize;l++)
-				c[k++]=b[l];
-		}
-		else if(i!=asize&&j==bsize)
-		{
-			for(l=i;l<asize;l++)
-				c[k++]=a[l];
-		}
+		int i=0,j=0,k=0;
+		while (i < a.length && j < b.length)
+	    {
+	        if (a[i] < b[j])
+	        {
+	            c[k] = a[i];
+	            i++;
+	        }
+	        else
+	        {
+	            c[k] = b[j];
+	            j++;
+	        }
+	        k++;
+	    }
+
+	    while (i < a.length)
+	    {
+	        c[k] = a[i];
+	        i++;
+	        k++;
+	    }
+
+	    while (j < b.length)
+	    {
+	        c[k] = b[j];
+	        j++;
+	        k++;
+	    }
+	    
+		
 		return c;
 	}
 	public static void main(String args[])
@@ -52,11 +55,11 @@ public class assignment6 {
 		for(i=0;i<bsize;i++)
 			b[i]=sc.nextInt();
 		int c[]=new int[asize+bsize];
-		assignment6 a6=new assignment6();
-		c=a6.join(a, asize, b, bsize, c);
+		Assignment_6 a6=new Assignment_6();
+		int result[]=a6.join(a, asize, b, bsize, c);
 		System.out.print("\n Merge array is : ");
-		for(i=0;i<c.length;i++)
-			System.out.print(" "+c[i]);
+		for(i=0;i<result.length;i++)
+			System.out.print(" "+result[i]);
 	}
 
 }

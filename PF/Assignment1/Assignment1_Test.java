@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class assignment2test {
+public class Assignment1_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,11 +28,9 @@ public class assignment2test {
 
 	@Test
 	public void test() {
-		assignment2 test2=new assignment2();
-		int input[]=test2.removeDuplicate(new int[]{1,2,3,4,1,2,3,5,6,7,1,0,0,7,6});
-		int output[]={1,2,3,4,5,6,7,0};
-		assertArrayEquals(input,output);
-		
+		Assignment_1 a1=new Assignment_1();
+		int result=a1.convertBinaryToOctal(1101);
+		assertEquals("",15,result);
 	}
 
 }

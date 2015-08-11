@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class assignment5test {
+public class Assignment6_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,13 +28,10 @@ public class assignment5test {
 
 	@Test
 	public void test() {
-		assignment5 test5=new assignment5();
-		int input1=test5.checkArraySort(new int[]{1,2,3,4,5});
-		int input2=test5.checkArraySort(new int[]{5,4,3,2,1});
-		int input3=test5.checkArraySort(new int[]{1,9,3,7,5});
-		assertEquals("",1,input1);
-		assertEquals("",1,input1);
-		assertEquals("",1,input1);
+		Assignment_6 test6=new Assignment_6();
+		int c[]=new int[8];
+		int input1[]=test6.join(new int[]{1,3,5,7},4,new int[]{2,4,6,8},4,c);
+		assertArrayEquals("",new int[]{1,2,3,4,5,6,7,8},input1);
 	}
 
 }

@@ -2,7 +2,7 @@ package programing_fundamental;
 
 import java.util.*;
 
-public class assignment3 {
+public class Assignment_3 {
 	public int[] longestSequence(int input[])
 	{
 		int n=input.length;
@@ -49,7 +49,7 @@ public class assignment3 {
 		{
 			a[i]=sc.nextInt();
 		}
-		assignment3 a3=new assignment3();
+		Assignment_3 a3=new Assignment_3();
 		int b[]=a3.longestSequence(a);
 		int i;
 		for(i=0;i<b.length;i++)
@@ -57,4 +57,5 @@ public class assignment3 {
 	}
 
 }
+
 

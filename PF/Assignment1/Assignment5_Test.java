@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class assignment4test {
+public class Assignment5_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,12 +28,13 @@ public class assignment4test {
 
 	@Test
 	public void test() {
-		assignment4 test4=new assignment4();
-		int [][]output=test4.FCFS(new int[]{1,5,9,25}, new int[]{12,7,2,5});
-		assertArrayEquals(new int[]{1,1,0,1,12},output[0]);
-		assertArrayEquals(new int[]{2,5,8,13,19},output[1]);
-		assertArrayEquals(new int[]{3,9,11,20,21},output[2]);
-		assertArrayEquals(new int[]{4,25,0,25,29},output[3]);
+		Assignment_5 test5=new Assignment_5();
+		int input1=test5.checkArraySort(new int[]{1,2,3,4,5});
+		int input2=test5.checkArraySort(new int[]{5,4,3,2,1});
+		int input3=test5.checkArraySort(new int[]{1,9,3,7,5});
+		assertEquals("",1,input1);
+		assertEquals("",1,input1);
+		assertEquals("",1,input1);
 	}
 
 }

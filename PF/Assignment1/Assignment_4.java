@@ -2,13 +2,12 @@ package programing_fundamental;
 
 import java.util.*;
 
-public class assignment4 {
+public class Assignment_4 {
 	public int [][]FCFS( int arrival_time [], int job_size[])
 	{
-		int i,j,k;
 		int job[]={0,0,0,0,0};
 		int c[][]=new int[arrival_time.length][5];
-		for(i=0;i<arrival_time.length;i++)
+		for(int i=0;i<arrival_time.length;i++)
 		{
 			job[0]=i+1;
 			job[1]=arrival_time[i];
@@ -17,7 +16,7 @@ public class assignment4 {
 				job[2]=0;
 			job[3]=job[1]+job[2];
 			job[4]=job[3]+job_size[i]-1;
-			for(j=0;j<5;j++)
+			for(int j=0;j<5;j++)
 				c[i][j]=job[j];
 				
 			
@@ -36,7 +35,7 @@ public class assignment4 {
 		System.out.print("\n Enter job sizes : ");
 		for(i=0;i<4;i++)
 			b[i]=sc.nextInt();
-		assignment4 a4=new assignment4();
+		Assignment_4 a4=new Assignment_4();
 		int c[][]=a4.FCFS(a, b);
 		System.out.println("Job    arrived time    job wait time    job start at    job finished at");
 		for(i=0;i<4;i++)

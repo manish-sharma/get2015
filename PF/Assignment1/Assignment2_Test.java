@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class assignment3test {
+public class Assignment2_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,11 +28,11 @@ public class assignment3test {
 
 	@Test
 	public void test() {
-	assignment3 test3=new assignment3();
-	int input[]=test3.longestSequence(new int[]{1,2,3,4,5,6,7,8,9,2,3,4,5,1,2,3,7,8,9,5,4,3,8,9,1});
-	int output[]={1,2,3,4,5,6,7,8,9};
-	assertArrayEquals("",input,output);
-	
+		Assignment_2 test2=new Assignment_2();
+		int input[]=test2.removeDuplicate(new int[]{1,2,3,4,1,2,3,5,6,7,1,0,0,7,6});
+		int output[]={1,2,3,4,5,6,7,0};
+		assertArrayEquals(input,output);
+		
 	}
 
 }

@@ -2,40 +2,34 @@ package programing_fundamental;
 
 import java.util.*;
 
-public class assignment5 {
+public class Assignment_5 {
 	public int checkArraySort(int[] input)
-	{
-		int i,j,flag=0;
-		
-		if(input.length==1)
+	{	
+		    if(input.length==1)
 			return 1;
-		for(i=0;i<input.length;i++)
-		{
-			for(j=i+1;j<input.length;j++)
+			if(input[0]<input[1])
 			{
-				if(input[j]<input[i])
-					flag=1;
+				for(int i=1;i<input.length-1;)
+				{
+					if(input[i]>input[i+1])
+						return 0;
+					else
+						i++;
+				}
+				return 1;
 			}
-			if(flag==1)
-				break;
-		}
-		if(flag==0)
-			return 1;
-		flag=0;
-		for(i=0;i<input.length;i++)
-		{
-			for(j=i+1;j<input.length;j++)
-			{
-				if(input[j]>input[i])
-					flag=1;
-			}
-			if(flag==1)
-				break;
-		}
-		if(flag==0)
-			return 2;
-		else
-			return 0;
+				
+				if(input[0]>input[1])
+				{
+					for(int i=1;i<input.length-1;)
+					{
+						if(input[i]<input[i+1])
+							return 0;
+						else
+							i++;
+					}
+				}
+					return 2;
 	}
 	public static void main(String args[])
 	{
@@ -48,13 +42,13 @@ public class assignment5 {
 		System.out.println("\n Enter Elements : ");
 		for(i=0;i<size;i++)
 			a[i]=sc.nextInt();
-		assignment5 a5=new assignment5();
-		int b=a5.checkArraySort(a);
-		if(b==1)
+		Assignment_5 a5=new Assignment_5();
+		int result=a5.checkArraySort(a);
+		if(result==1)
 			System.out.print("\n Array is in ascending order..");
-		else if(b==2)
+		else if(result==2)
 			System.out.print("\n Array is in descending order..");
-		if(b==0)
+		if(result==0)
 			System.out.print("\n Array is not in any order..");
 	}
 
