@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class RemoveDuplicateTest {
+public class QuickSortTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,10 +26,10 @@ public class RemoveDuplicateTest {
 	}
 
 	@Test
-	public void test() {
-		RemoveDuplicate testObj = new RemoveDuplicate();
-		int[] a = new int[]{3,5,3,6,6,9,9,5};
-		assertArrayEquals(new int[]{3,5,6,9},testObj.removeDuplicate(a));
+	public void testQuickSort() {
+		QuickSort testObj = new QuickSort();
+		int[] array = {2, 5, 8, 9, 10, 55, 77, 11};
+		assertArrayEquals(new int[]{2, 5, 8, 9, 10, 11, 55, 77}, testObj.quickSort(array, 0, 7));
 	}
 
 }

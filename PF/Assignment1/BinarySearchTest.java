@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class DiamondTest {
+public class BinarySearchTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,22 +26,17 @@ public class DiamondTest {
 	}
 
 	@Test
-	public void testPrintDiamond() {
-		Diamond testObj1 = new Diamond();
-		String[] expected = {"  1"," 121","12321"," 121","  1"};
-		assertEquals(expected, testObj1.printDiamond(3));
+	public void test() {
+		BinarySearch testObj1 = new BinarySearch();
+		int[] array = {2, 5, 8, 9, 10, 55, 77};
+		assertEquals(-1, testObj1.binarySearch(88, array, 0, 6));
 	}
-
+	
 	@Test
-	public void testSpaces() {
-		Diamond testObj2 = new Diamond();
-		assertEquals("   ", testObj2.spaces(2, 5));
-	}
-
-	@Test
-	public void testDigits() {
-		Diamond testObj3 = new Diamond();
-		assertEquals("12321", testObj3.digits(3, 5));
+	public void test1() {
+		BinarySearch testObj2 = new BinarySearch();
+		int[] array = {2, 5, 8, 9, 10, 55, 77};
+		assertEquals(6, testObj2.binarySearch(77, array, 0, 6));
 	}
 
 }

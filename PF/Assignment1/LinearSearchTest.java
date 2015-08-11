@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class BinaryToOctalTest {
+public class LinearSearchTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,9 +26,15 @@ public class BinaryToOctalTest {
 	}
 
 	@Test
-	public void test() {
-		BinaryToOctal testObj = new BinaryToOctal();
-		assertEquals(67,testObj.convertBinaryToOctal(110111));
+	public void test1() {
+		LinearSearch testObj1 = new LinearSearch();
+		assertEquals(-1, testObj1.search(88, new int[]{2, 5, 8, 9, 10, 55, 77}, 7));
+	}
+	
+	@Test
+	public void test2() {
+		LinearSearch testObj2 = new LinearSearch();
+		assertEquals(6, testObj2.search(77, new int[]{2, 5, 8, 9, 10, 55, 77}, 7));
 	}
 
 }

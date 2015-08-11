@@ -6,9 +6,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-
-public class PyramidTest {
-
+public class RemainderTest {
+	Remainder testObj = new Remainder();
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -26,22 +25,18 @@ public class PyramidTest {
 	}
 
 	@Test
-	public void testPrintPyramid() {
-		Pyramid testObj1 = new Pyramid();
-		String[] expected = {"12345"," 1234","  123","   12","    1"};
-		assertEquals(expected, testObj1.printPyramid(5));
+	public void test1() {
+		assertEquals(1, testObj.rem(100, 3));
 	}
-
+	
 	@Test
-	public void testSpaces() {
-		Pyramid testObj2 = new Pyramid();
-		assertEquals(" ", testObj2.spaces(2, 5));
+	public void test2() {
+		assertEquals(0, testObj.rem(2, 1));
 	}
-
+	
 	@Test
-	public void testDigits() {
-		Pyramid testObj3 = new Pyramid();
-		assertEquals("1234", testObj3.digits(2, 5));
+	public void test3() {
+		assertEquals(-1, testObj.rem(2, 0));
 	}
 
 }

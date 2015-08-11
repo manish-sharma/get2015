@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class LongestIncreasingSeqTest {
+public class LargestDigitTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,10 +26,21 @@ public class LongestIncreasingSeqTest {
 	}
 
 	@Test
-	public void test() {
-		LongestIncreasingSeq testObj = new LongestIncreasingSeq();
-		int[] a = new int[]{1,2,5,6,4,2,6,4,6,2,3,5,6,7,8,9,5,4,1,6,3,4,5,6,8};
-		assertArrayEquals(new int[]{2,3,5,6,7,8,9},testObj.findSequence(a));
+	public void test1() {
+		LargestDigit testObj1 = new LargestDigit();
+		assertEquals(2, testObj1.largestDigit(2));
+	}
+	
+	@Test
+	public void test2() {
+		LargestDigit testObj2 = new LargestDigit();
+		assertEquals(9, testObj2.largestDigit(1257369));
+	}
+	
+	@Test
+	public void test3() {
+		LargestDigit testObj3 = new LargestDigit();
+		assertEquals(4, testObj3.largestDigit(444));
 	}
 
 }

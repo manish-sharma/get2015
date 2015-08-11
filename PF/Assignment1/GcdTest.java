@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -8,8 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class CheckSortedTest {
+public class GcdTest {
 
+	Gcd testObj = new Gcd();
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -27,9 +28,18 @@ public class CheckSortedTest {
 	}
 
 	@Test
-	public void test() {
-		CheckSorted testObj = new CheckSorted();
-		assertEquals(0,testObj.check(new int[]{2,5,7,10}));
+	public void test1() {
+		assertEquals(1, testObj.findGCD(100,  3));
+	}
+	
+	@Test
+	public void test2() {
+		assertEquals(6, testObj.findGCD(12, 18));
+	}
+	
+	@Test
+	public void test3() {
+		assertEquals(1, testObj.findGCD(2, 1));
 	}
 
 }
