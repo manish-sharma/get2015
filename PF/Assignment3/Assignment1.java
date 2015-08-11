@@ -12,7 +12,9 @@ public class Assignment1 {
 
 		else if(x==0)
 				return 0;
-			else
+			else if(y == 0)
+					return 0;
+			 	else
 				return rem(x-y,y);
 
 	}

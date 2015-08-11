@@ -17,7 +17,7 @@ public class JUnitTest1 {
 	public void testRemainder2() {
 		Assignment1 check= new Assignment1();
 		int valueExpected=0;
-		int valueActual=check.rem(0, 2);
+		int valueActual=check.rem(2, 0);
 		assertEquals(valueActual,valueExpected);
 	}
 	
