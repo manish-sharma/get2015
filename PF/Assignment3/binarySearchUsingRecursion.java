@@ -1,40 +1,44 @@
 import java.util.*;
-public class binarySearchUsingRecursion {
-
+/*This class perform binary search using recursive approach*
+ * @parul joshi
+ */
+public class binarySearchUsingRecursion
+{
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
-
+		/*Initialze object of class to call function of class.*/
 		binarySearchUsingRecursion objectOfbiBinarySearchUsingRecursion=new binarySearchUsingRecursion();
-		int sizeOfArray,number;		
+		int sizeOfArray,numberToSearch;		
+		/*Input array size from user.*/
 		sizeOfArray=objectOfbiBinarySearchUsingRecursion.getsizeOfArray();
+		/*Input array elements from user.*/
 		int []inputArray=objectOfbiBinarySearchUsingRecursion.inputArray(sizeOfArray);
-		number=objectOfbiBinarySearchUsingRecursion.getNumberToSearch();
+		/*Input number to be search from user.*/
+		numberToSearch=objectOfbiBinarySearchUsingRecursion.getNumberToSearch();
 		int position,lowerBound=0,upperBound=sizeOfArray-1;
-		position=objectOfbiBinarySearchUsingRecursion.binarySearch(inputArray,number,lowerBound,upperBound);
-		if(position>=0)
+		position=objectOfbiBinarySearchUsingRecursion.binarySearch(inputArray,numberToSearch,lowerBound,upperBound);
+		/*If number exist in array print its location.*/
+		if(position>0)
 		{
-			System.out.println(number+" is found at "+position);
+			System.out.println("Number"+numberToSearch+" is found at location "+position);
 		}
-		
+		/*Element does not exist in array.*/
 		else
 		{
 			System.out.println("Number does not exist in array");
-		}
-				
+		}		
 	}
 	
+	/*Function takes input size of array from console.*/
 	int getsizeOfArray()
 	{
-		//takes input size of array from console
 		int number=0;
 		Scanner sc=new Scanner(System.in);
 		try
 		{
 			System.out.println("Enter Size of Array :");
 			number=sc.nextInt();
-		}
-		
+		}	
 		catch(Exception e)
 		{
 			System.out.println("Sorry!! invalid input");
@@ -42,13 +46,12 @@ public class binarySearchUsingRecursion {
 		}
 		
 		return number;
-		
 	}
 	
+	/*Function takes input array elements from console.
+	 * It contain size as parameter*/
 	int[] inputArray(int size)
 	{
-		//takes array input from console
-
 		int array[]=new int[size];
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter Array Elements in sorted order : ");
@@ -58,8 +61,7 @@ public class binarySearchUsingRecursion {
 			{
 				array[i]=Integer.parseInt(sc.next());
 			}
-		}
-		
+		}	
 		catch(Exception e)
 		{
 			System.out.println("Sorry!! invalid input");
@@ -69,19 +71,16 @@ public class binarySearchUsingRecursion {
 		return array;
 	}
 	
+	/*Function takes a number as input to search in array from user.*/
 	int getNumberToSearch()
 	{
-		//takes input a number to searcch in array
-
 		int number=0;
 		Scanner sc=new Scanner(System.in);
 		try
 		{
 			System.out.println("Enter number to be searched :");
 			number=Integer.parseInt(sc.nextLine());
-
 		}
-		
 		catch(Exception e)
 		{
 			System.out.println("Sorry!! invalid input");
@@ -89,49 +88,40 @@ public class binarySearchUsingRecursion {
 		}
 		
 		return number;
-		
 	}
 	
-	int binarySearch(int[] array,int num,int lowerBound,int upperBound)
+	/*Function has to perform binary search using recursion.
+	 * It contains array, number,lowerBound and upperBound as
+	 * parameter.*/
+	int binarySearch(int[] array,int number,int lowerBound,int upperBound)
 	{
-		//search element in array using binary search
-
-		int mid=-1;
+		int mid=0;/*If element does not exist return location 0.*/ 
 		if(lowerBound<=upperBound)
 		{
-
-			mid=(lowerBound+upperBound)/2; // find middle index of array
-			if(num==array[mid])
+			/*Calculating middle element of array.*/
+			mid=(lowerBound+upperBound)/2; 
+			if(number==array[mid])
 			{
-				// if middle element is same as number return its location
-
+				/*If middle element is same as number return its location.*/
 				return mid+1;
 			}
-
-			if(array[mid]>num)
+			
+			if(array[mid]>number)
 			{
-				//if number is greater then middle element then lower bound is pointed next to middle index
-
-				upperBound=mid-1;
-				return binarySearch(array,num,lowerBound,upperBound);
+				/*If number is greater then middle element then lower bound is pointed next to middle index.*/				upperBound=mid-1;
+				return binarySearch(array,number,lowerBound,upperBound);
 			}
-
 			else
 			{
-				//if number is smaller then middle element then lower bound is pointed one before middle index
-
+				/*If number is smaller then middle element then lower bound is pointed one before middle index.*/
 				lowerBound=mid+1;
-				return binarySearch(array,num,lowerBound,upperBound);
+				return binarySearch(array,number,lowerBound,upperBound);
 			}
 		}
-
 		else 
 		{
-			//return location of number
-
+			/*Return location of number.*/
 			return mid;
 		}
-
 	}
-
 }
