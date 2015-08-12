@@ -29,9 +29,9 @@ public class binarySearchUsingRecursionTest {
 	public void binarySearchtestNumberExist() 
 	{
 		binarySearchUsingRecursion objectOfbiBinarySearchUsingRecursion=new binarySearchUsingRecursion();
-		int expectedlocation=-1;
-		int[] inputArray={2,5,8,9,10,77,55};
-		int numberToSearch=88;
+		int expectedlocation=7;
+		int[] inputArray={2,5,8,9,10,55,77};
+		int numberToSearch=77;
 		int lowerBound=0,upperBound=6;
 		int actuallocation=objectOfbiBinarySearchUsingRecursion.binarySearch(inputArray,numberToSearch,lowerBound,upperBound);
 		assertEquals("Match",expectedlocation,actuallocation);
@@ -41,8 +41,8 @@ public class binarySearchUsingRecursionTest {
 	public void binarySearchtestNumberNotExist() 
 	{
 		binarySearchUsingRecursion objectOfbiBinarySearchUsingRecursion=new binarySearchUsingRecursion();
-		int expectedlocation=6;
-		int[] inputArray={2,5,8,9,10,77,55};
+		int expectedlocation=7;
+		int[] inputArray={2,5,8,9,10,55,77};
 		int number=77;
 		int lowerBound=0,upperBound=6;
 		int actuallocation=objectOfbiBinarySearchUsingRecursion.binarySearch(inputArray,number,lowerBound,upperBound);

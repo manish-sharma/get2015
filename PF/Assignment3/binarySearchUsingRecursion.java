@@ -71,7 +71,7 @@ public class binarySearchUsingRecursion
 		return array;
 	}
 	
-	/*Function takes a number as input to search in array from user.*/
+	/*Function takes a number as input to search in array from user.It contain size as parameter.*/
 	int getNumberToSearch()
 	{
 		int number=0;
@@ -93,29 +93,29 @@ public class binarySearchUsingRecursion
 	/*Function has to perform binary search using recursion.
 	 * It contains array, number,lowerBound and upperBound as
 	 * parameter.*/
-	int binarySearch(int[] array,int number,int lowerBound,int upperBound)
+	int binarySearch(int[] array,int numbertosearch,int lowerBound,int upperBound)
 	{
 		int mid=0;/*If element does not exist return location 0.*/ 
 		if(lowerBound<=upperBound)
 		{
 			/*Calculating middle element of array.*/
 			mid=(lowerBound+upperBound)/2; 
-			if(number==array[mid])
+			if(numbertosearch==array[mid])
 			{
 				/*If middle element is same as number return its location.*/
 				return mid+1;
 			}
 			
-			if(array[mid]>number)
+			if(array[mid]>numbertosearch)
 			{
 				/*If number is greater then middle element then lower bound is pointed next to middle index.*/				upperBound=mid-1;
-				return binarySearch(array,number,lowerBound,upperBound);
+				return binarySearch(array,numbertosearch,lowerBound,upperBound);//Recursion.
 			}
 			else
 			{
 				/*If number is smaller then middle element then lower bound is pointed one before middle index.*/
 				lowerBound=mid+1;
-				return binarySearch(array,number,lowerBound,upperBound);
+				return binarySearch(array,numbertosearch,lowerBound,upperBound);//Recursion.
 			}
 		}
 		else 
