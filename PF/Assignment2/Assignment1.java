@@ -1,62 +1,45 @@
 package Assignments;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
+//Class for solving the problem of tower of hanoi for n number of disks. Top most disk is considered as number n and the bottom most and largest one is numbered 1.
 public class Assignment1 {
+	static List<String> Result; // Object of List String type is declared
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Assignment1 pattern=new Assignment1();
-System.out.println("Enter size of pyrimid");
-Scanner sc=new Scanner(System.in);
-int num=sc.nextInt();
-String result[]=new String[num];
-result=pattern.pyramid(num);
-for(int i=1;i<=(2*num-1);i++)
-	System.out.println(result[i-1]);
+
+		Result = new ArrayList<String>();
+		int numberOfDisk;
+		Assignment1 towerHanoi = new Assignment1();
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter Number of Disk for Tower Of Hanoi");
+		numberOfDisk = sc.nextInt();
+		if (numberOfDisk > 0) {
+			Result = towerHanoi.towerOfHanoi("A", "B", "C", numberOfDisk); // Received Result
+			Iterator<String> itr = Result.iterator(); 			// getting Iterator from arraylist to traverse elements
+			while (itr.hasNext()) { 					// hasNext() gives value true if next string is present in the list
+				System.out.println(itr.next()); // next() returns the next string in list
+			}
+		}
+
 	}
-String spaces(int row,int n)
-{
-	String space="";
-	if(row<=n)
+
+	List<String> towerOfHanoi(String source, String destination, String temp,
+			int n) // function for solving the problem of tower of hanoi for n
+					// number of disks
 	{
-		for(int i=row;i<n;i++)
-		space=space+" ";
+		if (n == 1) {
+			Result.add("Move Disk  " + n + "   " + source + "->" + destination); // moves																				// destination
+		} else {
+			towerOfHanoi(source, temp, destination, n - 1); // moves top n-1 disk from source to temporary location
+			Result.add("Move Disk  " + n + "   " + source + "->" + destination); // moves nth disk from source to destination
+			towerOfHanoi(temp, destination, source, n - 1); // moves n-1 disk from temporary to destination location
+		}
+		return Result;
+
 	}
-	else
-	{
-		for(int i=n;i<row;i++)
-		space=space+" ";
-	}
-	return space;
-}
-String numbers(int row,int n)
-{
-	String no="";
-	if(row<=n)
-	{
-		for(int i=1;i<=row;i++)
-	    no=no+i;
-		for(int i=(row-1);i>=1;i--)
-		no=no+i;
-	}
-	else
-	{
-		for(int i=1;i<=(2*n-row);i++)
-		    no=no+i;
-			for(int i=(2*n-row-1);i>=1;i--)
-			no=no+i;
-	}
-	return no;
-}
-String[] pyramid(int n)
-{
-	String fin[]=new String[2*n-1];
-	for(int i=1;i<=(2*n-1);i++)
-		fin[i-1]=spaces(i,n)+numbers(i,n);
-return fin;
-}
 }
