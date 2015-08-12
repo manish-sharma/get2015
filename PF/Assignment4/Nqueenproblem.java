@@ -51,17 +51,17 @@ class Queens
 	{
 		int numberOfQueens = position.length;
 		int array[][] = new int[numberOfQueens][numberOfQueens];
-		for (int i = 0; i < numberOfQueens; i++)
+		for (int counter1 = 0; counter1 < numberOfQueens; counter1++)
 		{
-			for (int j = 0; j < N; j++) 
+			for (int counter2 = 0; counter2 < N; counter2++) 
 			{
-				if (position[i] == j) 
+				if (position[counter1] == counter2) 
 				{
-					array[i][j] = '1';// inputing the position of queens as 1
+					array[counter1][counter2] = '1';// inputing the position of queens as 1
 				} 
 				else 
 				{
-					array[i][j] = '0';// inputs other position as 0
+					array[counter1][counter2] = '0';// inputs other position as 0
 				}
 			}
 		}
@@ -70,11 +70,11 @@ class Queens
    /*End of printQueens function*/
 	
 	/*Starting of canPlaceQueen function*/
-	public boolean canPlaceQueen(int row, int c)
+	public boolean canPlaceQueen(int row, int count)
 	{
-		for (int i = 0; i < row; i++) 
+		for (int counter = 0; counter < row; counter++) 
 		{
-			if (position[i] == c || (i - row) == (position[i] - c)|| (i - row) == (c - position[i]))//checks the position
+			if (position[counter] == count || (counter - row) == (position[counter] - count)|| (counter - row) == (count - position[counter]))//checks the position
 			{
 				return false;
 			}
@@ -86,11 +86,11 @@ class Queens
    /*Starting of placeNqueens function*/
 	public int[][] placeNqueens(int row, int numberOfQueens) 
 	{
-		for (int c = 0; c < numberOfQueens; c++) 
+		for (int counter = 0; counter < numberOfQueens; counter++) 
 		{
-			if (canPlaceQueen(row, c)) 
+			if (canPlaceQueen(row, counter)) 
 			{
-				position[row] = c;
+				position[row] = counter;
 				if (row == numberOfQueens - 1) 
 				{
 					queens = printQueens(position);
