@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Permutation {
 
-	public static List<String> permuteString(String beginningString,
+	private static List<String> permuteString(String beginningString,
 			String endingString, List<String> permutationpattern) {
 		if (endingString.length() <= 1)
 			permutationpattern.add(beginningString + endingString);
@@ -20,6 +21,17 @@ public class Permutation {
 				}
 			}
 		return permutationpattern;
+
+	}
+
+	public static List<String> permuteStrings(String beginningString,
+			String endingString) {
+		List<String> list = new ArrayList<String>();
+
+		List<String> list1 = permuteString(beginningString, endingString, list);
+
+		return list1;
+
 	}
 
 }
