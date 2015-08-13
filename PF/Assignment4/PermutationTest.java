@@ -47,18 +47,18 @@ public class PermutationTest {
 	@Test
 	public void permutationTest1() {
 
-		List<String> resultString = Permutation.permuteStrings("", "abcd");
+		List<String> resultString = Permutation.permuteStrings("abcd");
 		List<String> expectedString1 = Arrays.asList("abcd", "abdc", "acbd",
 				"acdb", "adbc", "adcb", "bacd", "badc", "bcad", "bcda", "bdac",
 				"bdca", "cabd", "cadb", "cbad", "cbda", "cdab", "cdba", "dabc",
 				"dacb", "dbac", "dbca", "dcab", "dcba");
 		assertEquals(expectedString1, resultString);
 
-		List<String> resultString1 = Permutation.permuteStrings("", "ab");
+		List<String> resultString1 = Permutation.permuteStrings("ab");
 		List<String> expectedString2 = Arrays.asList("ab", "ba");
 		assertEquals(expectedString2, resultString1);
 
-		List<String> resultString2 = Permutation.permuteStrings("", "abc");
+		List<String> resultString2 = Permutation.permuteStrings("abc");
 		List<String> expectedString3 = Arrays.asList("abc", "acb", "bac",
 				"bca", "cab", "cba");
 
