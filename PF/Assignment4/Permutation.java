@@ -24,11 +24,11 @@ public class Permutation {
 
 	}
 
-	public static List<String> permuteStrings(String beginningString,
-			String endingString) {
+	public static List<String> permuteStrings(String stringToPermute) {
 		List<String> list = new ArrayList<String>();
-
-		List<String> list1 = permuteString(beginningString, endingString, list);
+		String beginningString = "";
+		List<String> list1 = permuteString(beginningString, stringToPermute,
+				list);
 
 		return list1;
 
