@@ -6,7 +6,7 @@ public class Assignment2 {
 	
 	/**
 	 * @param number
-	 * @return factorial
+	 * @return factorial of number
 	 */
 	private int factorial(int number){
 		if(number<2)
@@ -19,11 +19,11 @@ public class Assignment2 {
 	 * @param Input String for which you wish to have combinations
 	 * @return different combinations of string
 	 */
-	public String[] generatePermutations(String Input){
-		String PrefixString="";
+	public String[] generatePermutations(String input){
+		String prefixString="";
 		count=0;
-		outputString=new String[factorial(Input.length())];
-		recusiveFunctionForPermutation(PrefixString, Input);
+		outputString=new String[factorial(input.length())];
+		recusiveFunctionForPermutation(prefixString, input);
 		return outputString;
 	}
 
@@ -31,17 +31,18 @@ public class Assignment2 {
 	 * @param PrefixString
 	 * @param input
 	 */
-	private void recusiveFunctionForPermutation(String PrefixString, String input){
+	private void recusiveFunctionForPermutation(String prefixString, String input){
 		int length=input.length();
 		if(length==0)
-			outputString[count++]=PrefixString;
+			outputString[count++]=prefixString;
 		else
 		{
 			for(int count=0;count<length;count++)
-				recusiveFunctionForPermutation(PrefixString+input.charAt(count), input.substring(0,count)+input.substring(count+1,length));  
+				recusiveFunctionForPermutation(prefixString+input.charAt(count), input.substring(0,count)+input.substring(count+1,length));  
 		}
 	}
 }
+
 
 
 
