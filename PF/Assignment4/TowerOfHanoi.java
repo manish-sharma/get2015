@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class TowerOfHanoi {
 
-	public static List<String> towerOfHanoi(String source, String destination,
+	private static List<String> towerOfHanoi(String source, String destination,
 			String temp, int noOfDisk, List<String> outputstring) {
 
 		if (noOfDisk == 1) {
@@ -22,15 +21,14 @@ public class TowerOfHanoi {
 		return outputstring;
 	}
 
-	public static void main(String a[]) {
-		List<String> list1 = new ArrayList<String>();
-		List<String> list = TowerOfHanoi.towerOfHanoi("a", "b", "c", 1, list1);
-		Iterator<String> iterator = list.iterator();
-		while (iterator.hasNext()) {
+	public static List<String> towerOfHanoi(String source, String destination,
+			String temp, int noOfDisk) {
+		List<String> list = new ArrayList<String>();
 
-			System.out.println(iterator.next());
+		List<String> list1 = towerOfHanoi(source, destination, temp, noOfDisk,
+				list);
+		return list1;
 
-		}
 	}
 
 }
