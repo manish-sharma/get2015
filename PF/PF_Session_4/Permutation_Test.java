@@ -1,5 +1,3 @@
-package programing_fundamental;
-
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -7,8 +5,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import java.util.*;
 
-public class Assignment1_Test {
+public class Permutation_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,9 +27,15 @@ public class Assignment1_Test {
 
 	@Test
 	public void test() {
-		Assignment_1 a1=new Assignment_1();
-		int result=a1.convertBinaryToOctal(1101);
-		assertEquals("",15,result);
+		List<String> expected= new ArrayList<String>();
+		expected.add("abc");
+		expected.add("acb");
+		expected.add("bac");
+		expected.add("bca");
+		expected.add("cab");
+		expected.add("cba");
+		List<String> Result=new Permutation().generatePermutations("","abc");
+		assertEquals("",expected,Result);
 	}
-
+	
 }
