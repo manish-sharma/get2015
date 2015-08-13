@@ -53,7 +53,7 @@ class Queens
 		int array[][] = new int[numberOfQueens][numberOfQueens];
 		for (int counter1 = 0; counter1 < numberOfQueens; counter1++)
 		{
-			for (int counter2 = 0; counter2 < N; counter2++) 
+			for (int counter2 = 0; counter2 < numberOfQueens; counter2++) 
 			{
 				if (position[counter1] == counter2) 
 				{
