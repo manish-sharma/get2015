@@ -13,18 +13,31 @@ public class Person {
 		this.uid = uid;
 		this.name = name;
 	}
+	/**
+	 * function to return user id
+	 */
 
 	public int getUid() {
 		return uid;
 	}
+	
+	/**
+	 * function to set user id
+	 */
 
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
+	/**
+	 * function to return name
+	 */
 
 	public String getName() {
 		return name;
 	}
+	/**
+	 * function to set name
+	 */
 
 	public void setName(String name) {
 		this.name = name;
