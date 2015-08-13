@@ -16,7 +16,8 @@ public class ShapeTest {
 		/* Main Class */
 		ShapeTest shapeTest = new ShapeTest();
 		Scanner sc = new Scanner(System.in);
-		// Shape Information
+		
+		// Shape Information of circle and square and returning area of it by different methods
 
 		System.out.println("Enter radius of Circle");
 		int shapeRadius = sc.nextInt();
@@ -50,7 +51,7 @@ public class ShapeTest {
 
 	/**
 	 * @param shape
-	 *            ->To print shape
+	 *            ->To print shape area
 	 */
 	public void printShape(Shape shape) {
 		System.out.println(shape.getArea());
@@ -70,7 +71,7 @@ class Circle implements Shape {
 
 	public void draw() {
 		System.out.println("This Is Circle");
-		// Circle drawing logic
+		// Circle drawing logic if required
 	}
 
 	public double getArea() {
@@ -93,7 +94,7 @@ class Square implements Shape {
 
 	public void draw() {
 		System.out.println("This Is Square");
-		// Square drawing logic}
+		// Square drawing logic if required
 	}
 
 	public double getArea() {
