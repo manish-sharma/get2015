@@ -29,7 +29,10 @@ public class TestPersonInheritance {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
+          /**
+	 * testing for string name,id and student id
+	 */
 	@Test
 	public void testForToString() {
 		int uid = 101;
@@ -42,6 +45,10 @@ public class TestPersonInheritance {
 		assertEquals(nameagain, std.toString());
 
 	}
+	
+	 /**
+	 *Test cases-> checking for courses
+	 */
 
 	@Test
 	public void testForToCourses() {
