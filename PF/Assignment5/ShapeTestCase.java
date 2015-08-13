@@ -57,7 +57,7 @@ public class ShapeTestCase {
 	}
 
 	private void assertArrayEquals(double d, double area) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
