@@ -56,8 +56,8 @@ class Person{
  /**  Starting Main class here*/
 public class PersonStudentByInheritance {
 
-	      public static void main(String[] arg){
-	    	  
+	      public static void main(String[] arg) throws Exception{
+	    	  try {
 	    	  Scanner sc = new Scanner(System.in);
 	    	  
 	    	  /** student1 is the object of Student class */
@@ -88,5 +88,6 @@ public class PersonStudentByInheritance {
 	    	  System.out.println("StudentID :  "+student1.getStudentId());
 	    	  System.out.println("Age of Student:  "+student1.getAge());
 	      }
+	}
 }
 /**  Ending main class*/

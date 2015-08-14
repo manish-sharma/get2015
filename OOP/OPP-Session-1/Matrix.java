@@ -47,8 +47,9 @@ public class Matrix {
     }
     
     
-    public static void main(String [] hfhd){
+    public static void main(String [] hfhd) throws Exception{
     	
+		try {
     	Scanner sc= new Scanner(System.in);
     	System.out.println("Enter the number of row and colomn of matrix"); 
     	/** for take input for number of rows and number of column */
@@ -98,7 +99,7 @@ public class Matrix {
     		System.out.println(""); 
     	}
     	
-    	
+		}	
     }
        
 

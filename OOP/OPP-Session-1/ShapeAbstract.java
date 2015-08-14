@@ -102,7 +102,9 @@ class Rectangle extends Shape {
 
 public class ShapeAbstract {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+		
+		try {
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -133,6 +135,6 @@ public class ShapeAbstract {
         System.out.println("Triangle sides lengths: " + a + ", " + b + ", " + c
                 + "\nResulting Area: " + triangle.area()
                 + "\nResulting Perimeter: " + triangle.perimeter() + "\n");
-    }
-
+      }
+	}
 }
