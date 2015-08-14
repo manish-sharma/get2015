@@ -1,15 +1,46 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Printing {
 	/*Starting of main function*/
-	public static void main(String []args){
+	public static void main(String []args)throws IOException
+	{
 		
-		Matrix mat = new Matrix(2,2);
-		mat.addElements(0, 0, 1);
-		mat.addElements(0, 1, 2);
-		mat.addElements(1, 0, 3);
-		mat.addElements(1, 1, 4);
+		int noOfRows,noOfCols,value=0;
+		Matrix mat=null;
+		BufferedReader input=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter no of Rows in Matrix\t");
+		try
+		{
+			noOfRows=Integer.parseInt(input.readLine());
+			System.out.println("Enter no of Columns in Matrix\t");
+			noOfCols=Integer.parseInt(input.readLine());
+			 mat = new Matrix(noOfRows,noOfCols);
+			try{
+				for(int row = 0 ; row < noOfRows ; row++) {
+					for(int col = 0 ; col < noOfCols ; col++) {
+						value=Integer.parseInt(input.readLine());
+						mat.addElements(row, col,value);
+						}
+					}
+				}
+			
+			catch(NumberFormatException nFormat)
+					{
+						System.out.println("Please enter element in number format");
+						System.exit(1);
+					}
+			}
+		
+		catch(Exception e)
+		{
+			System.out.println("Please enter element in number format");
+			System.exit(1);
+		}
+	
 		Matrix temp = mat.transpose();
 		temp.show();
-		
 	}
 	/*Ending of main function*/
 }
