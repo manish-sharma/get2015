@@ -1,6 +1,6 @@
 /**
  * Program to manage the services of car to the mechanics
- * there are three types of car Suv Sedan Hatchback and their rate is 500,300,100 respectively 
+ * there are three types of car Suv Sedan Hatchback and their rate is 5000,3000,1000 respectively 
  *one mechanic is specialist of one of the three cars and it can service atmost one car 
  * */
 package CarServiceAppointmentSystem;
