@@ -2,7 +2,7 @@ package assignment3;
 
 import java.util.Scanner;
 
-public class Prg1a {
+public class Remainder {
 	
 	
 	private static Scanner in;
@@ -17,7 +17,7 @@ public class Prg1a {
 	     System.out.println ("Enter divisor");        //user inputs divisor
 	     b=in.nextInt();
 	    
-	     Prg1a obj=new Prg1a();                      // object created
+	     Remainder obj=new Remainder();                      // object created
 	     int c= obj.rem(a, b);
 	     System.out.println ("Remainder is" + c);
 	    
