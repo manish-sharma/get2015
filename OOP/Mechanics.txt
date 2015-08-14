@@ -1,0 +1,8 @@
+1,Mechanic1,SUV,5000  
+2,Mechanic2,Sedan,3000
+3,Mechanic3,SUV,1000  
+4,Mechanic4,Sedan,1000
+5,Mechanic4,Sedan,1000
+6,Mechanic5,HB,1000
+
+mech.txt
