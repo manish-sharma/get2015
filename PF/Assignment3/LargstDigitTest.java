@@ -8,8 +8,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Prg1cTest {
-	Prg1c obj=new Prg1c();
+public class LargstDigitTest {
+	LargstDigit obj = new LargstDigit();
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -28,25 +29,26 @@ public class Prg1cTest {
 
 	@Test
 	public void test() {
-		 
-			assertEquals("largest digit calculated",2,obj.largestdigit(2));  // test for(2)
-			
-			
+
+		assertEquals("largest digit calculated", 2, obj.largestdigit(2)); // test
+																			// for(2)
+
 	}
+
 	@Test
 	public void test1() {
-		 
-			
-			assertEquals("largest digit calculated",9,obj.largestdigit(1257369));  // test for(1257369)
-			
-			
+
+		assertEquals("largest digit calculated", 9, obj.largestdigit(1257369)); // test
+																				// for(1257369)
+
 	}
+
 	@Test
 	public void tes2t() {
-		 
-			
-			assertEquals("largest digit calculated",4,obj.largestdigit(444));  // test for(444)
-			
+
+		assertEquals("largest digit calculated", 4, obj.largestdigit(444)); // test
+																			// for(444)
+
 	}
 
 }
