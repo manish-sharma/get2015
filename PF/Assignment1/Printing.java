@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Printing {
 	/*Starting of main function*/
-	public static void main(String []args)throws IOException
+	public static void main(String []args)
 	{
 		
 		int noOfRows,noOfCols,value=0;
@@ -31,14 +31,17 @@ public class Printing {
 						System.out.println("Please enter element in number format");
 						System.exit(1);
 					}
-			}
-		
-		catch(Exception e)
+		}
+		catch(IOException ioException)
+		{
+			System.out.println("Error in Reading");
+			System.exit(1);
+		}
+		catch(NumberFormatException e)
 		{
 			System.out.println("Please enter element in number format");
 			System.exit(1);
 		}
-	
 		Matrix temp = mat.transpose();
 		temp.show();
 	}
