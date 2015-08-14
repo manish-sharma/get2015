@@ -4,8 +4,7 @@ import java.util.*;
 /**
 * Program to solve queens problem
 * 
-* @author Arushi
-*
+* @author Sumitra
 */
 public class QueensProblem {
 
