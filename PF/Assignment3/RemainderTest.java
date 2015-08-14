@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Prg1aTest {
+public class RemainderTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,7 +28,7 @@ public class Prg1aTest {
 
 	@Test
 	public void test() {
-		 Prg1a obj=new Prg1a();
+		 Remainder obj=new Remainder();
 		assertEquals("division completed",0,obj.rem(2, 1));  // test for(2,1)
 		assertEquals("division completed",1,obj.rem(100, 3)); // test for(100,3)
 		assertEquals("cannot be divided",-1,obj.rem(2, 0)); // test for(2,0)
