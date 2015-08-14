@@ -2,7 +2,7 @@ package assignment3;
 //program to calculate  greatest common digit
 import java.util.Scanner;
 
-public class Prg1b {
+public class GreatestCommon {
 	private static Scanner in;
 	public static void main (String args[])
 	{
@@ -14,7 +14,7 @@ public class Prg1b {
 	    System.out.println ("Enter number2");        
 	    b=in.nextInt();
 	    
-	    Prg1b obj=new Prg1b();
+	    GreatestCommon obj=new GreatestCommon();
 	     
 	    c= obj.gcd (a,b);
 	    
