@@ -2,7 +2,7 @@ package assignment3;
 // program of linear array search
 import java.util.Scanner;
 
-public class Prg2a {
+public class LinearSearch {
 	private static Scanner in;
 	int c=0;
 	 public static void main(String[] args)     
@@ -19,7 +19,7 @@ public class Prg2a {
 				 
 		 System.out.println("Enter number you want to search: ");  
 		 int num=in.nextInt();  
-		 Prg2a obj =new Prg2a();
+		 LinearSearch obj =new LinearSearch();
 		 int index=obj.linear(arr, num);
 		 if(index==-1)
 		 {
