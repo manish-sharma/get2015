@@ -8,9 +8,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Prg2aTest {
-	Prg2a obj=new Prg2a();
-	int[] arr= {2,5,8,9,10, 77, 55};
+public class LinearTest {
+	LinearSearch obj = new LinearSearch();
+	int[] arr = { 2, 5, 8, 9, 10, 77, 55 };
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -29,14 +30,16 @@ public class Prg2aTest {
 
 	@Test
 	public void test() {
-		
-		assertEquals("nuber not found",-1,obj.linear(arr,88));  // test for(88)
-		
+
+		assertEquals("nuber not found", -1, obj.linear(arr, 88)); // test
+																	// for(88)
+
 	}
+
 	@Test
 	public void test1() {
-		
-		assertEquals("nuber found",6,obj.linear(arr,77));  // test for(77)
+
+		assertEquals("nuber found", 6, obj.linear(arr, 77)); // test for(77)
 	}
 
 }
