@@ -8,8 +8,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Prg3Test {
-	Prg3 obj= new Prg3();
+public class QuickTest {
+	Quick obj = new Quick();
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -27,24 +28,23 @@ public class Prg3Test {
 	}
 
 	@Test
-	public void test() {                            //test case 1
-		
-		int[] arr={2,5,8,9,10,77,55,11};
-		int[] res={2,5,8,9,10,11,55,77};
+	public void test() { // test case 1
+
+		int[] arr = { 2, 5, 8, 9, 10, 77, 55, 11 };
+		int[] res = { 2, 5, 8, 9, 10, 11, 55, 77 };
 		obj.quickSort(arr, 0, 7);
-		assertArrayEquals(res,arr);
-		
-		
+		assertArrayEquals(res, arr);
+
 	}
+
 	@Test
-	public void tes1t() {                             //test case 2	
-	
-		int[] ar1r={};
-		int[] res1={};
+	public void tes1t() { // test case 2
+
+		int[] ar1r = {};
+		int[] res1 = {};
 		obj.quickSort(ar1r, 0, 0);
-		assertArrayEquals(res1,ar1r);
-		
-		
+		assertArrayEquals(res1, ar1r);
+
 	}
 
 }
