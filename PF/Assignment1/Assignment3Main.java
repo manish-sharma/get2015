@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  */
 
 
-public class PrintingShape
+public class Assignment3Main
 {
 	
 	public static void main(String []args)
@@ -19,7 +19,7 @@ public class PrintingShape
 		{  
 			System.out.println("Enter side of square\t");
 			sideSquare=Integer.parseInt(input.readLine());
-			System.out.println("Enter side of cirle\t");
+			System.out.println("Enter radius of cirle\t");
 			sideCircle=Integer.parseInt(input.readLine());
 		}
 		catch(IOException ioException)
@@ -32,8 +32,8 @@ public class PrintingShape
 			System.out.println("Please enter no in integer format");
 			System.exit(1);
 		}
-		Square squareObj = new Square(sideSquare);
-		Circle circleObj = new Circle(sideCircle);
+		Assignment3Square squareObj = new Assignment3Square(sideSquare);
+		Assignment3Circle circleObj = new Assignment3Circle(sideCircle);
  		System.out.println("Area of Square is "+squareObj.getArea());
  		System.out.println("Area of Circle is "+circleObj.getArea());
 		
