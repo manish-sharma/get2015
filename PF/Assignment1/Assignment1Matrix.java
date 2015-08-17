@@ -3,13 +3,13 @@
 * @author Dheeraj
  * Program to implement Matrix class that contains addElement, transpose, show methods
  */
-public class Matrix {
+public class Assignment1Matrix {
 	int data[][];
 	int noRows;
 	int noCols;
 	
 	/* Start of Matrix class constructor */
-	public Matrix(int row, int col){
+	public Assignment1Matrix(int row, int col){
 		this.noRows = row;
 		this.noCols = col;
 		data = new int[row][col];
@@ -17,13 +17,18 @@ public class Matrix {
 	/* End of Matrix class constructor */
 	
 	/* Start of addElement function */
-	public void addElements(int row, int col, int val){
+	public boolean addElements(int row, int col, int val){
 		if(row>noRows||col>noCols)
 		{
-			System.out.println("Please enter valid index");
-			System.exit(1);
+			
+			return false;
+		}
+		if(row<0||col<0)
+		{
+			return false;
 		}
 		data[row][col] = val;
+		return true;
 	}
 	/* End of addElement function */
 	
@@ -35,8 +40,8 @@ public class Matrix {
 	
 
 	/* Starting of transpose function */
-	public Matrix transpose(){
-		Matrix newobj=new Matrix(noCols,noRows);
+	public Assignment1Matrix transpose(){
+		Assignment1Matrix newobj=new Assignment1Matrix(noCols,noRows);
 		for(int counterRow = 0; counterRow < noRows ; counterRow++){
 			for(int counterCol = 0; counterCol < noCols ; counterCol++){
 				
