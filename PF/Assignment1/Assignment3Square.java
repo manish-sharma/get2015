@@ -1,8 +1,8 @@
 /*Implement shape interface for find the area of square*/
-class Square implements Shape 
+class Assignment3Square implements Assignment3Shape 
 {
 	private double side;
-	public Square(int side)
+	public Assignment3Square(int side)
 	{
 		this.side = side;
 	}
