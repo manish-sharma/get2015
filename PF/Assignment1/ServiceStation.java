@@ -9,8 +9,8 @@ import java.util.List;
 
 public class ServiceStation
 {
-	private final String MECHANIC_DATA_FILE = "D:\\Mechanics.txt";
-	private final String CAR_DATA_FILE = "D:\\Cars.txt";
+	private final String MECHANIC_DATA_FILE = "/Data/Mechanics.txt";
+	private final String CAR_DATA_FILE = "/Data/Cars.txt";
 
 	private List<Mechanic> mechanicsList = new ArrayList<Mechanic>();				 		// List of Mechanics
 	private List<Car> carList = new ArrayList<Car>();				 						// List of cars
@@ -39,13 +39,15 @@ public class ServiceStation
 			}
 			catch (IOException e)
 			{
-				e.printStackTrace();
+				System.out.println("IO Error Occured");
+				System.exit(1);
 			}
 
 		}
 		catch (FileNotFoundException e1)
 		{
-			e1.printStackTrace();
+			System.out.println("File not found");
+			System.exit(1);
 		}
 
 	}
@@ -70,13 +72,15 @@ public class ServiceStation
 			}
 			catch (IOException e)
 			{
-				e.printStackTrace();
+				System.out.println("IO Error Occured");
+				System.exit(1);
 			}
 
 		}
 		catch (FileNotFoundException e1)
 		{
-			e1.printStackTrace();
+			System.out.println("File not found");
+			System.exit(1);
 		}
 
 	}
