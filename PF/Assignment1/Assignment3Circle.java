@@ -1,9 +1,9 @@
 /*Implement Shape interface for Find area of  circle*/
-class Circle implements Shape
+class Assignment3Circle implements Assignment3Shape
 {
 	private static final double PI = 3.14;
 	private double radius;
-	public Circle(double radius)
+	public Assignment3Circle(double radius)
 	{
 		this.radius = radius;
 	}
