@@ -1,16 +1,16 @@
 /**
  * Program to manage the services of car to the mechanics
- * there are three types of car Suv Sedan Hatchback and their rate is 5000,3000,1000 respectively 
+ * there are three types of car Suv Sedan Hatchback and their rate is 500,300,100 respectively 
  *one mechanic is specialist of one of the three cars and it can service atmost one car 
  * */
-package CarServiceAppointmentSystem;
+
 import java.util.HashMap;
-public class CarServiceAppointmentSystem
+public class Assignment4CarServiceAppointmentSystem
 {
 
 	public static void main(String[] args)
 	{
-		ServiceStation serviceStation = new ServiceStation();
+		Assignment4ServiceStation serviceStation = new Assignment4ServiceStation();
 		serviceStation.readMechanics();
 		serviceStation.readCars();
 		serviceStation.doAllotment();
