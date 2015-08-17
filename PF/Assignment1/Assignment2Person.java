@@ -1,8 +1,8 @@
-public class Person 
+public class Assignment2Person 
 {
 	private int uid;
 	private String name;
-	public Person(int uid, String name)
+	public Assignment2Person(int uid, String name)
 	{
 		this.uid = uid;
 		this.name = name;
