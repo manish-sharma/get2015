@@ -1,5 +1,6 @@
-package CarServiceAppointmentSystem;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,13 +8,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ServiceStation
+public class Assignment4ServiceStation
 {
-	private final String MECHANIC_DATA_FILE = "/Data/Mechanics.txt";
-	private final String CAR_DATA_FILE = "/Data/Cars.txt";
+	
+	private final String MECHANIC_DATA_FILE=new File("src/Mechanics.txt").getAbsolutePath();
+	private final String CAR_DATA_FILE =new File("src/Cars.txt").getAbsolutePath();
 
-	private List<Mechanic> mechanicsList = new ArrayList<Mechanic>();				 		// List of Mechanics
-	private List<Car> carList = new ArrayList<Car>();				 						// List of cars
+	private List<Assignment4Mechanic> mechanicsList = new ArrayList<Assignment4Mechanic>();				 		// List of Mechanics
+	private List<Assignment4Car> carList = new ArrayList<Assignment4Car>();				 						// List of cars
 	private HashMap<String, String> allotmentList = new HashMap<String, String>();		 // CarNumber,Mechanic
 	private HashMap<String, Integer> carProcessingList = new HashMap<String, Integer>(); // carTyp ,carRate
 	private int totalEarning = 0;
@@ -32,7 +34,7 @@ public class ServiceStation
 					String[] mechDetailStrings = sCurrentLine.split(",");// Reading line by line
 				
 					if (mechDetailStrings.length == 4) // if in case details are less or line is whitespace
-						mechanicsList.add(new Mechanic(mechDetailStrings[0].trim(), mechDetailStrings[1].trim(), mechDetailStrings[2].trim(),
+						mechanicsList.add(new Assignment4Mechanic(mechDetailStrings[0].trim(), mechDetailStrings[1].trim(), mechDetailStrings[2].trim(),
 								mechDetailStrings[3].trim()));
 				}
 
@@ -66,7 +68,7 @@ public class ServiceStation
 					String[] carDetailStrings = sCurrentLine.split(",");// Reading  line by line
 						//storing it in Cars list
 					if (carDetailStrings.length == 2) // if in case details are less or line is whitespace
-						carList.add(new Car(carDetailStrings[0].trim(), carDetailStrings[1].trim()));
+						carList.add(new Assignment4Car(carDetailStrings[0].trim(), carDetailStrings[1].trim()));
 				}
 
 			}
@@ -87,9 +89,9 @@ public class ServiceStation
 
 	public void doAllotment() // allotment of  cars to the mechanic
 	{
-		for (Car car : carList)
+		for (Assignment4Car car : carList)
 		{
-			for (Mechanic mech : mechanicsList)
+			for (Assignment4Mechanic mech : mechanicsList)
 			{
 				if (mech.isAvailable && mech.type.equals(car.carType))
 				{
