@@ -61,6 +61,46 @@ class Participant{
 	
 	}
 	
+	
+	
+	void reviewSurvey() {
+		Scanner sc = new Scanner(System.in);
+		try{
+                 FileReader fileReader = new FileReader("D://Questions.txt");
+		
+		         BufferedReader bufferReader = new BufferedReader(fileReader);
+		
+		        System.out.println("\n\nThanks!!!! "+participantName+" to participate in survey: \n");
+		        String question;
+		        
+		        int countQuestion=0; 
+		        while( (question=bufferReader.readLine()) != null ) {
+			
+			         System.out.println(question);
+			         
+			         /** For first two questions print and print response*/
+			         if(countQuestion<2) {
+							System.out.println(responseInt[countQuestion]);
+							countQuestion++;
+							}
+			         
+			         /** For last three questions print and print response*/
+			         else {
+			        	 System.out.println(responseString[countQuestion-2]);
+			             countQuestion++;
+			         }
+				      			
+	     	     }
+		 }
+		  catch(IOException e){
+			  
+			  e.printStackTrace(); }
+	
+	}
+	
+	
+	
+	
 };
 
 public class SurveyApplication {
@@ -84,10 +124,11 @@ public class SurveyApplication {
 			}
 			
 		
-		
-		Participant participant1= new Participant("RAJU");
+		  /** creation of first participation with his/her name as parameterized constructor call  */
+		  Participant participant1= new Participant("RAJU");
 		
 		  participant1.doSurvey();
+		  participant1.reviewSurvey();
 	}
 		
 }
