@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class TestMatrix {
+public class Assignment1TestMatrix {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
