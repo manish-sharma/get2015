@@ -2,13 +2,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Printing {
+public class Assignment1Main {
 	/*Starting of main function*/
 	public static void main(String []args)
 	{
 		
 		int noOfRows,noOfCols,value=0;
-		Matrix mat=null;
+		Assignment1Matrix mat=null;
 		BufferedReader input=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter no of Rows in Matrix\t");
 		try
@@ -16,7 +16,7 @@ public class Printing {
 			noOfRows=Integer.parseInt(input.readLine());
 			System.out.println("Enter no of Columns in Matrix\t");
 			noOfCols=Integer.parseInt(input.readLine());
-			 mat = new Matrix(noOfRows,noOfCols);
+			 mat = new Assignment1Matrix(noOfRows,noOfCols);
 			try{
 				for(int row = 0 ; row < noOfRows ; row++) {
 					for(int col = 0 ; col < noOfCols ; col++) {
@@ -42,7 +42,7 @@ public class Printing {
 			System.out.println("Please enter element in number format");
 			System.exit(1);
 		}
-		Matrix temp = mat.transpose();
+		Assignment1Matrix temp = mat.transpose();
 		temp.show();
 	}
 	/*Ending of main function*/
