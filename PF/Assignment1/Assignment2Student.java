@@ -1,9 +1,9 @@
-public class Student extends Person 
+public class Assignment2Student extends Assignment2Person 
 {
 	private int studentId;
 	private String[] courses;
 	
-	public Student(int uid, String name, int studentId)
+	public Assignment2Student(int uid, String name, int studentId)
 	{
 		super(uid,name);
 		this.studentId = studentId;
