@@ -1,10 +1,10 @@
-public class Teacher extends Person
+public class Assignment2Teacher extends Assignment2Person
 {
 	
 	int empId;
 	String []specialization;
 	
-	public Teacher(int uid, String name, int empId)
+	public Assignment2Teacher(int uid, String name, int empId)
 	{
 		super(uid , name);
 		this.empId = empId;
