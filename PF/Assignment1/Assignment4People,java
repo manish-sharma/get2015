@@ -1,5 +1,5 @@
-package CarServiceAppointmentSystem;
-public abstract class People
+
+public abstract class Assignment4People
 {
 	String mechID;
 	String name;
