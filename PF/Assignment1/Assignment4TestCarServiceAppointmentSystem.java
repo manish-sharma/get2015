@@ -1,4 +1,4 @@
-package CarServiceAppointmentSystem;
+
 import static org.junit.Assert.*;
 import java.util.HashMap;
 
@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class TestCarServiceAppointmentSystem {
+public class Assignment4TestCarServiceAppointmentSystem {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -31,7 +31,7 @@ public class TestCarServiceAppointmentSystem {
 	@Test
 	public void test()
 	{
-		ServiceStation serviceStation = new ServiceStation();
+		Assignment4ServiceStation serviceStation = new Assignment4ServiceStation();
 		serviceStation.readMechanics();
 		serviceStation.readCars();
 		serviceStation.doAllotment();
@@ -41,7 +41,23 @@ public class TestCarServiceAppointmentSystem {
 		expCarProcessingList.put("Sedan", 1);
 		expCarProcessingList.put("Hatchback", 1);
 		
-		assertEquals("Not matched", true, compareHashMap(expCarProcessingList, carProcessingList));
+		assertEquals(" matched", true, compareHashMap(expCarProcessingList, carProcessingList));
+
+	}
+	@Test
+	public void test1()
+	{
+		Assignment4ServiceStation serviceStation = new Assignment4ServiceStation();
+		serviceStation.readMechanics();
+		serviceStation.readCars();
+		serviceStation.doAllotment();
+		HashMap<String, Integer> carProcessingList = serviceStation.getCarProcessingStatus();
+		HashMap<String, Integer> expCarProcessingList = new HashMap<String, Integer>();
+		expCarProcessingList.put("SUV", 1);
+		expCarProcessingList.put("Sedan", 1);
+		expCarProcessingList.put("Hatchback", 1);
+		
+		assertEquals("Not matched matched", false, compareHashMap(expCarProcessingList, carProcessingList));
 
 	}
 
