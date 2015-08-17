@@ -1,5 +1,5 @@
 /*Interface of Shape */
-public interface Shape 
+public interface Assignment3Shape 
 {
 	void draw();
 	double getArea();
