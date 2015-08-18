@@ -1,0 +1,9 @@
+12925,Jaipur-Delhi,500,0,5
+12926,Mumbai-Delhi,700,19,12
+12927,Kolkata-Delhi,1000,12,21
+12928,Jaipur-Mysore,1400,65,25
+12929,Bangalore-Hyderabad,5400,1,12
+12930,Bhopal-Jaiselmer,5600,53,18
+12931,Pune-Ajmer,5400,5,18
+12932,Kolkata-Delhi,1000,12,21
+12933,Kolkata-Delhi,1000,12,21

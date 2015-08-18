@@ -1,0 +1,4 @@
+11230,jaipur-delhi,100,21,4
+11231,jaipur-mumbai,200,0,10
+11232,jaipur-kolkata,300,14,15
+11234,jaipur-pune,400,3,14
