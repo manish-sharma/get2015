@@ -1,0 +1,4 @@
+GT1,jaipur-delhi,100,21,4
+GT2,jaipur-mumbai,200,0,10
+GT3,jaipur-kolkata,300,14,15
+GT4,jaipur-pune,400,3,14
