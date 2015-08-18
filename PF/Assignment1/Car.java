@@ -1,28 +1,30 @@
 //class for car details like type and service rate
-public class Car {
+
+public class Cars {
+
 	String type;
 	double serviceRate;
 
-	public Car(String type, double serviceRate) { // assigns value to type and
-													// service rate
+	public Cars(String type, double serviceRate) { // Parameterized constructor
 		super();
 		this.type = type;
 		this.serviceRate = serviceRate;
 	}
 
-	public String getType() { // get car type
+	public String getType() { // Getting type of car
 		return type;
 	}
 
-	public void setType(String type) { // set car type
+	public void setType(String type) { // Setting type of car
 		this.type = type;
 	}
 
-	public double getServiceRate() { // get service rate
+	public double getServiceRate() { // getting service Rate of car
 		return serviceRate;
 	}
 
-	public void setServiceRate(double serviceRate) { // set service rate
+	public void setServiceRate(double serviceRate) { // Setting service rate of
+														// car
 		this.serviceRate = serviceRate;
 	}
 
