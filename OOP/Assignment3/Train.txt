@@ -1,0 +1,1 @@
+1,101,Jaipur,Mumbai,200,500,1,102,Jaipur,Delhi,300,400,1,103,Mumbai,Jaipur,200,500,1,104,Delhi,Jaipur,300,400,2,105,Jaipur,Mumbai,200,500,2,106,Jaipur,Delhi,300,400,2,107,Mumbai,Jaipur,200,500,2,108,Delhi,Jaipur,300,400
