@@ -1,39 +1,43 @@
 //base class to get and set user details
 
+
 public class Person {
 
-	private int uid;
-	private String name;
+	String name;
+	String carType;
+	int Flag;
 
-	public Person(int uid, String name) // constructor created to assign values
-	{
-		this.uid = uid;
+	public Person(String name, String carType, int flag) { // Constructor
+															// calling
+		super();
 		this.name = name;
+		this.carType = carType;
+		Flag = flag;
 	}
 
-	public int getUid() // function to get user id
-	{
-		return uid;
-	}
-
-	public void setUid(int uid) // function to set user id
-	{
-		this.uid = uid;
-	}
-
-	public String getName() // function to get user name
-	{
+	public String getName() { // getting name of mechanic
 		return name;
 	}
 
-	public void setName(String name) // function to set user name
-	{
+	public void setName(String name) { // setting name of mechanic
 		this.name = name;
 	}
 
-	public String toString() // function to return details
-	{
-		return "Name:" + name + ", uid:" + uid;
+	public String getCarType() { // getting car specialization of mechanic
+		return carType;
+	}
+
+	public void setCarType(String carType) { // setting car specialization of
+												// mechanic
+		this.carType = carType;
+	}
+
+	public int getFlag() { // getting flag of mechanic
+		return Flag;
+	}
+
+	public void setFlag(int flag) { // setting flag of mechanic
+		Flag = flag;
 	}
 
 }
