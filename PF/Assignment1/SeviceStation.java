@@ -26,7 +26,7 @@ public class ServiceStation {
 
 		// for Mechanic
 		File file = new File(
-				"C:/Users/Deepali/workspace/Session5/src/ServiceCarSystem/Storage.txt");
+				"../src/ServiceCarSystem/Storage.txt");
 		try {
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
@@ -52,7 +52,7 @@ public class ServiceStation {
 			int count = 0;
 
 			FileInputStream fr = new FileInputStream(
-					"C:/Users/Deepali/workspace/Session5/src/ServiceCarSystem/Storage.txt");
+					"../src/ServiceCarSystem/Storage.txt");
 
 			char c;
 			while (((InputStream) fr).available() > 0) {
@@ -95,7 +95,7 @@ public class ServiceStation {
 			name = "";
 			// for car
 			File file1 = new File(
-					"C:/Users/Deepali/workspace/Session5/src/ServiceCarSystem/Cars.txt");
+					"../src/ServiceCarSystem/Cars.txt");
 
 			// if file doesnt exists, then create it
 			if (!file1.exists()) {
@@ -117,7 +117,7 @@ public class ServiceStation {
 			bw1.close();
 
 			FileInputStream fr1 = new FileInputStream(
-					"C:/Users/Deepali/workspace/Session5/src/ServiceCarSystem/Cars.txt");
+					"../src/ServiceCarSystem/Cars.txt");
 
 			char c1;
 			while (((InputStream) fr1).available() > 0) {
