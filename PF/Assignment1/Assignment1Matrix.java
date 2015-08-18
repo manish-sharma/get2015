@@ -18,7 +18,7 @@ public class Assignment1Matrix {
 	
 	/* Start of addElement function */
 	public boolean addElements(int row, int col, int val){
-		if(row>noRows||col>noCols)
+		if(row>=noRows||col>=noCols)
 		{
 			
 			return false;
