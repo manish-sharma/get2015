@@ -33,6 +33,10 @@ public class UserInformation {
 	public int getWantedSeat() {
 		return wantedSeat;
 	}
+	public void setWantedSeat(int wantedSeat)
+	{
+		this.wantedSeat=wantedSeat;
+	}
 	
 	public String getName() {
 		return name;
