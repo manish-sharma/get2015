@@ -1,16 +1,17 @@
+
 import java.util.Scanner;
 
 /*
  * This program implement the abstract concept of shape
  */
-abstract class Shape {
-    public abstract double area();
-    public abstract double perimeter();
+ interface Shape {
+    public double area();
+    public double perimeter();
 }
 
 
 /** Rectangle class which inherits abstract class Shape */
-class Rectangle extends Shape {
+class Rectangle implements Shape {
 	/** sides of rectangle */
     private final double width, length;
     /** default constructor */
@@ -39,7 +40,7 @@ class Rectangle extends Shape {
 }
 
 /** Circle class which inherits abstract class Shape */
- class Circle extends Shape {
+ class Circle implements Shape {
     private final double radius;
     final double pi = Math.PI;
 
@@ -67,7 +68,7 @@ class Rectangle extends Shape {
 }
 
  /** Triangle class which inherits abstract class Shape */
- class Triangle extends Shape {
+ class Triangle implements Shape {
 	    private final double a, b, c; // sides
         
 	    /** default constructor */
@@ -102,9 +103,7 @@ class Rectangle extends Shape {
 
 public class ShapeAbstract {
 	
-	public static void main(String[] args) throws Exception{
-		
-		try {
+	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -135,6 +134,6 @@ public class ShapeAbstract {
         System.out.println("Triangle sides lengths: " + a + ", " + b + ", " + c
                 + "\nResulting Area: " + triangle.area()
                 + "\nResulting Perimeter: " + triangle.perimeter() + "\n");
-      }
-	}
+    }
+
 }
