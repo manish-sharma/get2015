@@ -11,8 +11,9 @@ public class Booking {
 	      * this is method for reserve train seats or weights
 	      * @param trainNumber is the number of trains in which booking have to be done
 	      * @param seatOrWeightCount is the number of seats or weights to be reserved
+	      * @param user is the User class object
 	      */
-	     void book(int trainNumber, int seatOrWeightCount)  {
+	     void book(int trainNumber, int seatOrWeightCount,User user)  {
          	try {
          	 FileReader fr = new FileReader("C://Users/Banwari/workspace/OOP-session-3/src/trainInfo.txt");
               BufferedReader br = new BufferedReader(fr);
@@ -35,6 +36,13 @@ public class Booking {
                     			 br.close();
                     			 fh.updateTrainList(trainLine,currentLine,seatOrWeightCount);                			 
                     			 System.out.println("\nYour Booking is confirmed");
+                    			 //Now you ticket is displayed
+                    			 System.out.println("\n\n\t\t TICKET");
+                    			 System.out.println("\tName: "+user.getName());
+                    			 System.out.println("\tUserID: "+user.getUserId());
+                    			 System.out.println("\tContact Number: "+user.getContactNumber());
+                    			 System.out.println("\tTrain No. :"+tokens[0]);
+                    			 System.out.println("\tNumber of Seats/Weights reserved: "+seatOrWeightCount);
                     			 System.exit(0);
                     		 }
                     	 }

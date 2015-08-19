@@ -14,13 +14,13 @@ public class ReservationSystem {
 		
 		User user = new User();
 		
-		 System.out.println("Enter the User Name: ");
+		 System.out.print("Enter the User Name: ");
 		 String name=sc.nextLine();
 		 
-		 System.out.println("Enter the UserId: ");
+		 System.out.print("Enter the UserId: ");
 		 String id=sc.nextLine();
 		 
-		 System.out.println("Enter the User Contact Number: ");
+		 System.out.print("Enter the User Contact Number: ");
 		 String contNum=sc.nextLine();
 		
 		user.userRegistration(name,id,contNum);
@@ -54,7 +54,7 @@ public class ReservationSystem {
 		//Displaying the trains 
 		trains.betweenSourceToDestinationTrains(source,destination);
 		
-		System.out.print("\n\nDo you want to book your seat/weights(Kg):\n\tPress 1 for YES\n\tPress 2 for Exit");
+		System.out.print("\n\nDo you want to book your seat/weights(Kg):\n\tPress 1 for YES\n\tPress 2 for Exit\n");
 		choice= sc.nextInt();
 		Booking booking = new Booking();
 		int trainNumber;
@@ -68,7 +68,7 @@ public class ReservationSystem {
 			trainNumber=sc.nextInt();
 			System.out.print("Enter number of seats for Passanger/weight(Kgs) for Goods: ");
 			SeatOrWeightCount = sc.nextInt();
-			booking.book(trainNumber, SeatOrWeightCount);
+			booking.book(trainNumber, SeatOrWeightCount,user);
 		}
 		
 	

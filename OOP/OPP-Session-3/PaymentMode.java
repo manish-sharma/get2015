@@ -19,7 +19,7 @@ public class PaymentMode {
 		 System.out.print("Enter the mode of payment: \n\tPress 1 for Credit Card"
 		 		                                     + "\n\tPress 2 for Wallet Payment"
 		 		                                     + "\n\tPress 3 for Net Bnaking "
-		 		                                     + "\n\tPress 4 for Exit");
+		 		                                     + "\n\tPress 4 for Exit\n");
 		 //selection of mode of payment
 		 int mode=sc.nextInt();	 
 		 if(mode==1) {

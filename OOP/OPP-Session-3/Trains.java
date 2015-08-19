@@ -8,7 +8,7 @@ public class Trains {
 	// this method display all  trains available
 	void totalTrains() {
                  System.out.println("\nList of available trains and Availability of seats:  \n");
-		         System.out.println("TrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats/Weights(Kg) \n");
+		         System.out.println("TrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats/Weights(Kg) ");
 		 
 		     try {
 			       FileReader fr = new FileReader("C://Users/Banwari/workspace/OOP-session-3/src/trainInfo.txt");
@@ -29,7 +29,7 @@ public class Trains {
 	void totalTrains(String ttype) {
                System.out.println("\nList of available "+ttype+" trains and Availability of seats:  \n");
 
-               System.out.println("TrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats \n");
+               System.out.println("TrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats");
 
                try {
     	
@@ -58,7 +58,7 @@ public class Trains {
 	
 	void betweenSourceToDestinationTrains(String source,String destination) {
 		
-		System.out.println("\nTrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats \n");
+		System.out.println("\nTrainNo., Type, Name, From, To, Dept.Time, JourneyDuration, AvailableSeats");
 
         try {
 	
