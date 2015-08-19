@@ -4,6 +4,7 @@ import java.util.Comparator;
  * @author Sumitra
  *this class is to sort the list of goods train and implements the Comparator interface
  */
+@SuppressWarnings("rawtypes")
 public class TimeComparatorForGoods implements Comparator {
 	public int compare(Object o1, Object o2) {
 		GoodsTrain p1 = (GoodsTrain) o1;
