@@ -1,18 +1,24 @@
+/*
+ * This class contains the methods for booking of seats or weights 
+ * @author Banwari
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-
 public class Booking {
-	
+	     /*
+	      * this is method for reserve train seats or weights
+	      * @param trainNumber is the number of trains in which booking have to be done
+	      * @param seatOrWeightCount is the number of seats or weights to be reserved
+	      */
 	     void book(int trainNumber, int seatOrWeightCount)  {
          	try {
-         		
-    	
-              FileReader fr = new FileReader("C://Users/Banwari/workspace/OOP-session-3/src/trainInfo.txt");
+         	 FileReader fr = new FileReader("C://Users/Banwari/workspace/OOP-session-3/src/trainInfo.txt");
               BufferedReader br = new BufferedReader(fr);
               String currentLine;
-              int trainLine=-1;
+              //trainLine contains the sequence number of train in a list
+              int trainLine=0;
               while( (currentLine=br.readLine())!=null ) {
                      trainLine++;
 	                String [] tokens = currentLine.split("\\s+");

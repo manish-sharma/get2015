@@ -1,7 +1,11 @@
+/*
+ * It is file based train reservation system
+ * User can see the available train
+ * User can book the seats  or weights for good
+ * @author Banwari
+ */
 import java.util.Scanner;
 import java.io.*;
-
-
 public class ReservationSystem {
 
 	public static void main(String [] arg) {
@@ -24,7 +28,7 @@ public class ReservationSystem {
 		Trains trains= new Trains();
 		
 		
-		/** Choice of train type */
+		// Choice of train type 
 		System.out.println("Enter the tpye of trains in which you would like to take service: "
 				                  + "\n\t 1 for All Trains"
 				                  + "\n\t 2 for Good Trains"
@@ -47,7 +51,7 @@ public class ReservationSystem {
 		System.out.print("Enter destination station Name: ");
 		String destination;
 		destination=sc.next();
-		
+		//Displaying the trains 
 		trains.betweenSourceToDestinationTrains(source,destination);
 		
 		System.out.print("\n\nDo you want to book your seat/weights(Kg):\n\tPress 1 for YES\n\tPress 2 for Exit");
@@ -55,6 +59,10 @@ public class ReservationSystem {
 		Booking booking = new Booking();
 		int trainNumber;
 		int SeatOrWeightCount;
+		/*
+		 * you have to enter the train number
+		 * And number of passenger or goods
+		 */
 		if(choice==1) {
 			System.out.print("Enter Train Number: ");
 			trainNumber=sc.nextInt();
