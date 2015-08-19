@@ -17,6 +17,7 @@ public class SurveyApplicationMain
 			int noOfQuestion=questionList.size();
 			Participant participant=null;
 			Questions question=null;
+			String str="";
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));//Reading input from keyboard
 			try
 			{
@@ -24,13 +25,18 @@ public class SurveyApplicationMain
 				while(true)
 				{
 					System.out.println("Enter your name");
-					String name=br.readLine();
-					System.out.println("Your Name is "+name+" And ID is "+id++);
-					participant=new Participant(id ,name);
+					String name=readName(br);
+				
+					System.out.println("Your Name is "+name+"  And ID is "+id);
+					participant=new Participant(id++ ,name);
 					for(int index=0;index<noOfQuestion;index++)
 					{
 						question=questionList.get(index);
-						System.out.println(question.getQuestion()+question.getQuestionType()+question.getOptions());//Display specific question
+						if(!question.getQuestionType().equalsIgnoreCase("Text")){
+							str="Enter your choice like("+question.getOptions()+")";
+						}
+						System.out.println(question.getQuestion()+"\t"+question.getQuestionType()+"  "+str);//Display specific question
+						str="";
 						String response=readResponse(br,question);//read response from keyboard
 						participant.doParticipantSurvey(response); //put the response by method doParticipantSurvey
 					}
@@ -38,9 +44,10 @@ public class SurveyApplicationMain
 					noOfUsers++;
 					int isContinue=0;
 					boolean flag=false;
+					System.out.println("Any other participant are left press 1 for continue and no for press 0");
 					do
 					{
-						System.out.println("Any other participant are left press 1 for continue and no for press 0");
+						
 						try
 						{
 							isContinue=Integer.parseInt(br.readLine());//read if further participant are continue
@@ -52,7 +59,7 @@ public class SurveyApplicationMain
 						}
 						catch(IOException io)
 						{
-							System.out.println("error occured please enter input again");
+							System.out.println("error occured please enter input again 1 OR 0");
 							continue;
 						}
 						if(isContinue==1)
@@ -119,12 +126,14 @@ public class SurveyApplicationMain
 			String questionOptions=question.getOptions();
 			if(questionType.equalsIgnoreCase("Text"))
 			{
+				if(response.length()>100)
+				{
+					System.out.println("Please enter feedback upto 100 words");
+					return false;
+				}
 				return true;
 			}
 			splitString = questionOptions.split("/");
-			int size=splitString.length;
-			splitString[0]=splitString[0].substring(1, splitString[0].length());
-			splitString[size-1]=splitString[size-1].substring(0, splitString[size-1].length());
 			if(questionType.equalsIgnoreCase("Multi Select"))
 			{
 				splitStringResponse=response.split("/");
@@ -161,13 +170,13 @@ public class SurveyApplicationMain
 			}
 			if(response==""||response==null)
 			{
-				System.out.println("Please eneter valid response1");
+				System.out.println("Please enter valid response");
 				readResponse(br, question);
 			}
 			boolean isCorrect= checkResponse(question,response);
 			if(!isCorrect)
 			{
-				System.out.println("Please enter valid response2");
+				System.out.println("Please enter valid response");
 				readResponse(br,question);
 			}
 			return response;
@@ -210,7 +219,44 @@ public class SurveyApplicationMain
 			}
 			return false;
 		}
-		
-		
+		/*read name from keyboard*/
+		public static String readName(BufferedReader br)
+		{
+			boolean flag=false;
+			String name="";
+			do{	
+				try
+				{
+					name=br.readLine();
+				}
+				catch(IOException io)
+				{
+					System.out.println("Error occured please enter again");
+					continue;
+				}
+				if(!name.isEmpty())
+					flag=isAlpha(name);
+				if(!flag)
+				{
+					System.out.println("Please enter name which contain character like A B C D");
+					continue;
+				}
+					
+			}while(!flag);
+
+			return name;
+		}
+		/*check if name contain alphabet or not*/
+		public static boolean isAlpha(String name) 
+		{
+		    char[] chars = name.toCharArray();
+
+		    for (char c : chars) {
+		        if(!Character.isLetter(c)) {
+		            return false;
+		        }
+		    }
+		    return true;
+		}	
 }
 /*Ending of survey Application class*/
