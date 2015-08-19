@@ -55,7 +55,14 @@ public class Questions
 					String[] quesDetailStrings = sCurrentLine.split(COMMA_SEPERATER);// Reading line by line
 				
 						if(quesDetailStrings.length==3)
-							questionsList.add(new Questions(++questionNo, quesDetailStrings[0].trim(), quesDetailStrings[1].trim(), quesDetailStrings[2].trim()));
+						{
+							String str= quesDetailStrings[2].trim();
+							int start=str.indexOf('(');
+							int end=str.indexOf(')');
+							String newStr=str.substring(start+1, end);				
+							
+							questionsList.add(new Questions(++questionNo, quesDetailStrings[0].trim(), quesDetailStrings[1].trim(), newStr));
+						}
 						else if(quesDetailStrings.length==2)
 						{
 							String blankString="";
