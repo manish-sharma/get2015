@@ -54,6 +54,10 @@ public class DisplayTrainTimeTable {
 
 			}
 		}
+		else
+		{
+			System.out.println("entered wrong choice");
+		}
 	}
 /**
  * 
