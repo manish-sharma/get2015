@@ -79,8 +79,8 @@ public class DisplayTrainTimeTable {
 					.iterator();
 			while (itr.hasNext()) {
 				PassengerTrain passenger = itr.next();
-				if (source.equals(passenger.getSource())
-						&& destination.equals(passenger.getDestination())) {
+				if (source.equalsIgnoreCase(passenger.getSource())
+						&& destination.equalsIgnoreCase(passenger.getDestination())) {
 					// to check whether the train is available between source and destination.
 					if (i == 0) {
 						System.out
@@ -108,8 +108,8 @@ public class DisplayTrainTimeTable {
 
 					PassengerTrain passenger = itrt.next();
 
-					if (source.equals(passenger.getSource())
-							&& destination.equals(passenger.getDestination())
+					if (source.equalsIgnoreCase(passenger.getSource())
+							&& destination.equalsIgnoreCase(passenger.getDestination())
 							&& trainNum == passenger.getTrainNumber()) {
 						//if the user has selected the train with the train number.
 						flag = 2;
@@ -182,8 +182,8 @@ public class DisplayTrainTimeTable {
 			Iterator<GoodsTrain> itr = FetchFromFile.goodsList.iterator();
 			while (itr.hasNext()) {
 				GoodsTrain goods = itr.next();
-				if (source.equals(goods.getSource())
-						&& destination.equals(goods.getDestination())) {
+				if (source.equalsIgnoreCase(goods.getSource())
+						&& destination.equalsIgnoreCase(goods.getDestination())) {
 					//if the train is available from source to destination
 					if (i == 0) {
 						System.out
@@ -209,8 +209,8 @@ public class DisplayTrainTimeTable {
 
 					GoodsTrain goods = itrt.next();
 
-					if (source.equals(goods.getSource())
-							&& destination.equals(goods.getDestination())
+					if (source.equalsIgnoreCase(goods.getSource())
+							&& destination.equalsIgnoreCase(goods.getDestination())
 							&& trainNum == goods.getTrainNumber()) {
 						//if train is available and correct train number is inserted.
 						flag = 2;
