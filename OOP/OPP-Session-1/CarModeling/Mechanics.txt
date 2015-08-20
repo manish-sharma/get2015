@@ -1,0 +1,6 @@
+Rahul,mech7,SUV 
+Raju,mech6,Sedan
+Ramesh,mech5,SUV
+Kapil,mech4,Sedan
+Suresh,mech2,Sedan
+Ram,mech1,HB
