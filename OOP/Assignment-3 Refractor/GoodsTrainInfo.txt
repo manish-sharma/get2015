@@ -1,0 +1,4 @@
+Train1,jaipur-delhi,100,21,4
+Train2,jaipur-mumbai,200,0,10
+Train3,jaipur-kolkata,300,14,15
+Train4,jaipur-pune,400,3,14
