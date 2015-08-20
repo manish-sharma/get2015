@@ -1,8 +1,0 @@
-
-public abstract class Assignment4People
-{
-	String mechID;
-	String name;
-	// OTHER COMMON DETAILS FOR PEOPLE
-}
-
