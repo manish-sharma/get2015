@@ -1,20 +1,19 @@
 /*
- * This a car class which contains car information 
- * author Banwari
+ * This class will maintain the car information
+ * @author Banwari
  */
 public class Cars {
-	String model;
 	String registrationNumber;
-	int rate;
+	String modelOfCar;
 	/*
-	 * Parameterized Constructor
-	 * @param model is car model
-	 * @param registrationNumber is the registration number of car
-	 * @param rate is the service rate of car 
+	 * Parameterized constructor
+	 * @param registrationNumber is the car registration number
+	 * @param modelOfCar is the name of car model
 	 */
-	Cars(String model,String registrationNumber,int rate) {
-		this.model=model;
-		this.registrationNumber=registrationNumber;
-		this.rate=rate;
+	Cars(String registrationNumber, String modelOfCar) {
+		this.registrationNumber = registrationNumber;
+		this.modelOfCar = modelOfCar;
+		
 	}
+
 }

@@ -23,8 +23,13 @@ public class PaymentMode {
 		 //selection of mode of payment
 		 int mode=sc.nextInt();	 
 		 if(mode==1) {
-			 System.out.println("Regret!!! Service is not Available\nTry another mode");
-			 	payment(payAmount);		 
+			 System.out.print("Enter card number: ");
+			 sc.nextLine();
+			 System.out.print("Enter CCV number: ");
+			 sc.nextLine();
+			 if(updateBankAmount(payAmount) ) {
+				 System.out.println("Thanks!!!!  Transection Sucessfully Completed");
+				 successful=true;
 		 }
 		 else if (mode==2) {
 			 if(updateBankAmount(payAmount) ) {
@@ -33,8 +38,15 @@ public class PaymentMode {
 			 }			
 		 }
 		 else if(mode==3){
-			 System.out.println("Regret!!! Service is not Available\nTry another mode");
-			 payment(payAmount);
+			 System.out.print("Enter Bank Name: ");
+			 sc.nextLine();
+			 System.out.print("Enter NetBanking User Id: ");
+			 sc.nextLine();
+			 System.out.print("Enter Password: ");
+			 sc.nextLine();
+			 if(updateBankAmount(payAmount) ) {
+				 System.out.println("Thanks!!!!  Transection Sucessfully Completed");
+				 successful=true;
 		 }
 		 else if(mode==4) {
 			 System.exit(0);
