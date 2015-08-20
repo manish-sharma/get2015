@@ -16,6 +16,11 @@ public class Questions {
 	
 	public static String line="";
 	
+	/**
+	 *SingleChoiceis a function which is used to store single choice question in string.
+	 *@return a string
+	 */
+
 	public String SingleChoice()
 	{  
 		String SingleChoice=question.get(0);
@@ -23,7 +28,11 @@ public class Questions {
 		return SingleChoice;
 		
 	}
-	
+	/**
+	 *SingleChoiceis a function which is used to store Multiple choice question in string.
+	 *@return a string
+	 */
+
 	
 	public String MultipleChoice()
 	{
@@ -32,7 +41,11 @@ public class Questions {
 		return MultipleChoice;
 		
 	}
-	
+	/**
+	 *SingleChoiceis a function which is used to store feedback question in string.
+	 * @return a string
+	 */
+
 
 	public String FeedBack()
 	{
@@ -42,8 +55,12 @@ public class Questions {
 		
 	}
 	
+	/**
+	 *readQuestions a function which is used to read the input from Qusetion.csv  file and split it.
+	 * 
+	 */
 
-	public static List<String> readQuestions()
+	public  List<String> readQuestions()
 	{
 
 		try
@@ -72,15 +89,6 @@ public class Questions {
 
 	}
 
-   public static void main(String args[])
-{
-  Questions questions=new Questions();
- 
-  System.out.print(questions.SingleChoice());
-  System.out.print(questions.MultipleChoice());
-  System.out.print(questions.FeedBack());
-  
 
-}
 
 }
