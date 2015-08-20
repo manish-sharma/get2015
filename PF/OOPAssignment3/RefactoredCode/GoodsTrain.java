@@ -4,10 +4,17 @@
  */
 public class GoodsTrain extends Train {
 
-	public GoodsTrain(int trainNumber, String source, String destination,
-			String type, int available, double price, int time) {
-		super(trainNumber, source, destination, type, available, price, time);
+	double available;
+	public GoodsTrain(int trainNumber, String source, String destination, double price, int time,double weight) {
+		super(trainNumber, source, destination, price, time);
 		// TODO Auto-generated constructor stub
+		this.available=weight;
+	}
+	public double getavailable() {
+		return available;
+	}
+	public void setavailable(double weight) {
+		this.available = weight;
 	}
 
 }
