@@ -1,0 +1,5 @@
+S.No.,TrainNo,From,TO,Avialability,Duration,Fare
+1,12345,	kota,bwm,43,	3,250
+2,13456,	Jaipur,bwm,56,	4,200
+3,13231,	kota,jaipur,70,	5,200
+4,13671,	kota,ajmer,36,	5,250
