@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+//this class is used to print chart of all the trains
 class TrainChart
 {
 	ArrayList<String> trainInfo=new ArrayList<String>();
@@ -16,12 +17,13 @@ class TrainChart
 		this.trainType=trainType;
 		this.trainInfo=trainInfo;
 	}
-	public void chart()
+	public void chart()//To show all the trains of either of goods or passangers
 	{
 		System.out.println("TrainId	From	To	S/W	Ticket	Duration");
 		for(int i=0;i<trainInfo.size();i++)
 		System.out.println(trainInfo.get(i));
 	}
+	//this method is used for show the chart of trains after booking
 	public void updatedChart(int numberOfSeats,String trainNumber) 
 	{
 		int i,j;
@@ -32,7 +34,7 @@ class TrainChart
 			StringBuffer sb=new StringBuffer();
 			this.numberOfSeats=numberOfSeats;
 			this.trainNumber=trainNumber;
-			for(i=0;i<trainInfo.size();i++)
+			for(i=0;i<trainInfo.size();i++)//Loop for subtracting the number of booked seats
 			{
 				
 				temp1=trainInfo.get(i).split(",");
@@ -115,6 +117,7 @@ class TrainChart
 		
 	}
 }
+//this class is used for checking the availability of required seats 
 class CheckAvailability
 {
 	Scanner sc;
@@ -127,7 +130,7 @@ class CheckAvailability
 		this.from=from;
 		this.to=to;
 	}
-	public void checkSeatWeight(String from,String to)
+	public void checkSeatWeight(String from,String to)//to check required trains are available or not 
 	{
 		int flag=0;
 		for(int i=0;i<trainInfo.size();i++)
@@ -145,6 +148,7 @@ class CheckAvailability
 		}	
 	}
 }
+//this class is used for ticket payment
 class Payment
 {
 	Scanner sc=new Scanner(System.in);
@@ -189,6 +193,7 @@ class Payment
 		return bookingInformation;
 	}
 }
+//this class is used to hold personal information of user 
 class PersonalInformation
 {
 	private String name;
@@ -223,6 +228,7 @@ class TrainBooking
 		this.trainType=trainType;
 		this.name=name;
 	}
+	//this method is used for printing the booking information
 	public void booking()
 	{
 		try
@@ -250,6 +256,7 @@ class TrainBooking
 		//return paymentInformation;
 	}
 }
+//main class for train reservation
 public class TrainReservation  
 {
 	public static void main(String args[])throws FileNotFoundException,NullPointerException,IOException
@@ -273,7 +280,7 @@ public class TrainReservation
 					TrainChart trainchart;
 					System.out.println("Enter Train Type Passanger/Goods");
 					trainType=sc.next();
-					if(trainType.equalsIgnoreCase("passanger"))
+					if(trainType.equalsIgnoreCase("passanger"))//to check either the train is passenger type or goods type
 					{
 						bfTrain=new BufferedReader(finPasangerTrain);
 						while((line=bfTrain.readLine())!=null)
@@ -290,7 +297,7 @@ public class TrainReservation
 						}
 					}
 					TrainChart trainChart=new TrainChart(trainType,trainInfo);
-					trainChart.chart();
+					trainChart.chart();//to call chart function of TrainChart class
 					System.out.println("Enter source station");
 					from=sc.next();
 					System.out.println("Enter destination station");
@@ -306,7 +313,7 @@ public class TrainReservation
 					PersonalInformation personalInformation=new PersonalInformation(name);
 					trainBooking.booking();
 					break;
-				case 2:System.exit(0);
+				case 2:System.exit(0);//case for exit from system
 				}
 		}
 		
