@@ -1,24 +1,23 @@
 /**
- * @author Sumitra
- *this is abstract class which is having all the entity required for the train and the required getter and setter are available.
+ *@author Sumitra
+ *this is abstract class which is having all the entity required for the Train and the required getter and setter are available.
  */
-public abstract class Train {
+public  class Train {
 	int trainNumber;
 	String source;
 	String Destination;
-	String type;
-	int available;
+	
+	
 	double price;
 	int time;
 
-	public Train(int trainNumber, String source, String destination,
-			String type, int available, double price, int time) {
-		super();
+	public Train(int trainNumber, String source, String destination,  double price, int time) {
+	
 		this.trainNumber = trainNumber;
 		this.source = source;
 		Destination = destination;
-		this.type = type;
-		this.available = available;
+	
+		
 		this.price = price;
 		this.time = time;
 	}
@@ -27,10 +26,7 @@ public abstract class Train {
 		return time;
 	}
 
-	public void setAvailable(int available)
-	{
-		this.available=available;
-	}
+	
 
 	public int getTrainNumber() {
 		return trainNumber;
@@ -48,9 +44,7 @@ public abstract class Train {
 		return Destination;
 	}
 
-	public String getType() {
-		return type;
-	}
+	
 
 	
 
@@ -58,9 +52,7 @@ public abstract class Train {
 		Destination = destination;
 	}
 
-	public int getAvailable() {
-		return available;
-	}
+	
 
 	
 
