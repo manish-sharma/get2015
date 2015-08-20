@@ -1,4 +1,0 @@
-s.no.TrainNo,From,TO,Avialability(in tons),Duration,Fare
-1,15678,	kota,bwm,43,	3,250
-2,56757,	Jaipur,bwm,55,	4,200
-3,07765,	kota,jaipur,76,	4,300
