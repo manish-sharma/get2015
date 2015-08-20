@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Sumitra
- *this is to fetch data from file using buffer reader
+ * @author Sumitra this is to fetch data from file using buffer reader
  */
 public class FetchFromFile {
 	static List<PassengerTrain> passengerList;
@@ -27,37 +26,40 @@ public class FetchFromFile {
 			String cvsSplitBy = ",";
 			String source = "";
 			String destination = "";
-			String price = "";
+			double price;
 			String availableSeat = "";
-			String trainNum = "";
-			String type = "";
-			String time = "";
+			int trainNum;
+			int type;
+			int time;
 
 			while ((line = br.readLine()) != null) {
 				String[] row = line.split(cvsSplitBy);
-				type = row[0];
-				trainNum = row[1];
+				type = Integer.parseInt(row[0]);
+				trainNum = Integer.parseInt(row[1]);
 				source = row[2];
 				destination = row[3];
-				time = row[4];
+				time = Integer.parseInt(row[4]);
 				availableSeat = row[5];
-				price = row[6];
-				int num = Integer.parseInt(type);
-				if (num == 1) {
-					// if train is of passenger type than stored in different list
+				price = Double.parseDouble(row[6]);
+
+				if (type == 1) {
+					// if train is of passenger type than stored in different
+					// list
 					PassengerTrain passenger = new PassengerTrain(
-							Integer.parseInt(trainNum), source, destination,
-							"passenger", Integer.parseInt(availableSeat),
-							Double.parseDouble(price), Integer.parseInt(time));
+							trainNum, source, destination,
+							price, time,
+							Integer.parseInt(availableSeat));
 					passengerList.add(passenger);
-				} else if (num == 2) {
-					//if train is of different type then stored in different list.
+				} else if (type == 2) {
+					// if train is of different type then stored in different
+					// list.
 					GoodsTrain goods = new GoodsTrain(
-							Integer.parseInt(trainNum), source, destination,
-							"goods", Integer.parseInt(availableSeat),
-							Double.parseDouble(price), Integer.parseInt(time));
+							trainNum, source, destination,
+							price, time,
+							Double.parseDouble(availableSeat));
+
 					goodsList.add(goods);
-				} 
+				}
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
