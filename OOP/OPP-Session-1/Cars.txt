@@ -1,6 +1,0 @@
-1,SUV
-2,SUV
-3,Sedan
-4,HB
-5,Sedan
-6,Sedan
