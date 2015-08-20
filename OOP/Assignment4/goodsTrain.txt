@@ -1,0 +1,8 @@
+45515,Alwar-Jaipur express,Alwar,Jaipur,3,65,100
+45516,Jaipur-Alwar express,Jaipur,Alwar,3,65,100
+32121,Delhi-Jaipur express,Delhi,Jaipur,5,120,100
+32122,Jaipur-Delhi express,Jaipur,Delhi,5,120,100
+10515,Alwar-Jaipur super-fast,Alwar,Jaipur,2,80,70
+10516,Jaipur-Alwar super-fast,Jaipur,Alwar,2,80,70
+11515,Jaipur-Delhi super-fast,Jaipur,Delhi,2,150,70
+11516,Delhi-Jaipur super-fast,Delhi,Jaipur,2,150,70
