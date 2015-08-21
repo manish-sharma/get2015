@@ -1,5 +1,3 @@
-package oops_assignment_3;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,14 +7,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-/**TrainInfo class is used t get the information of the passenger as well as good strain
-* Name: trainiinfo
-* @author ankur gupta
-* Since: 18 August,2015
-*  
-*/
+
+
+
 public class TrainInfo {
-	
 	static String passengerTrainFileName = "C:/Users/Ankur/Desktop/PassengerTrainInfo.txt";//static passenger train list
 	static String goodsTrainFileName = "C:/Users/Ankur/Desktop/GoodsTrainInfo.txt";//static goods train list
 	Reservation reservationObject = new Reservation();
@@ -137,9 +131,5 @@ public class TrainInfo {
 		}
 		return true;
 	}
-	
-	
+
 }
-
-
-

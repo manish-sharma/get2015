@@ -1,21 +1,13 @@
-package oops_assignment_3;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
-/**reservation class is used to make the reservation of the passenger as well as good strain
-* Name: reservation
-* @author ankur gupta
-* Since: 18 August,2015
-*  
-*/
+
+
 
 public class Reservation {
-	
-	
 	static List<String> passengerTrainInfo = new ArrayList<String>();//static passenger train list
 	static List<String> bookingChart = new ArrayList<String>();//static booking list
 
@@ -46,18 +38,23 @@ public class Reservation {
 	
 	void displayMenu() throws IOException{
 		Reservation reservationObject = new Reservation();
-		System.out.println("Press 1 for Reservation");
-		System.out.println("Press 2 for chart");
-		Scanner scan = new Scanner(System.in);
-		int userInput = scan.nextInt();//scan user input
-		switch(userInput){
-		case 1:
-			reservationObject.checkAvailability(passengerTrainInfo,goodsTrainInfo);//call checkavailability method
-			break;
-		case 2:
-			reservationObject.showChart(bookingChart);//call show chart method
-		}
+		MenuNew menuNew = new MenuNew();
 		
+	}
+	
+	void reservation()  {
+		try {
+		checkAvailability(passengerTrainInfo,goodsTrainInfo);
+		} catch(Exception e) {
+			
+		}
+	}
+	void chart()  {
+		try{
+		showChart(bookingChart);
+		} catch(Exception e) {
+			
+		}
 	}
 	
 	/**
@@ -158,7 +155,7 @@ public class Reservation {
 		else if(goodsTrainAvailable){
 			doBooking(goodsTrainInfo,trainType);
 		}
-		else if(ticketAvailable == false){
+		else if(ticketAvailable == false && (goodsTrainAvailable == true || passengerTrainAvailable == true ) ){
 			System.out.println("Ticket is not available");
 			checkAvailability(passengerTrainInfo,goodsTrainInfo);//dobooking method calling
 		}
@@ -232,4 +229,5 @@ public class Reservation {
 		
 	}
 	
+
 }
