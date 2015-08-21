@@ -1,6 +1,6 @@
 /**
  * Class to read information and make reservation and payment
- * @author Ravika
+ * @author Sanjay
 *@since 8/18/2015
  */
 

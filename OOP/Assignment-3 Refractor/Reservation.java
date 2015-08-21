@@ -1,6 +1,6 @@
 /**
  * This class is to implement the functionality of reservation of tickets
- * @author Ravika
+ * @author Sanjay
 *@since 8/18/2015
  */
 import java.io.IOException;
