@@ -1,0 +1,5 @@
+How was the session, Single Select,(1 - easy/2 - normal/3 - challenging)
+How was the pace of the session, Single Select,(1 - normal/2 - slow/3 - fast)
+Need a follow up session, Single Select,(1 - yes/2 - no)
+Area of improvement, Multiple Select,(Service Quality/Communication/Delivery Process)
+Feedback, Text,word limit 50.

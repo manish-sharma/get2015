@@ -1,0 +1,9 @@
+Train1,30,Udaipur_Jaipur,200,8,Passenger..
+Train2,20,Jaipur_Udaipur,210,7,Passenger..
+Train3,40,Jaipur_Kota,290,10,Passenger..
+Train4,50,Jaipur_Bhilwara,230,6,Passenger..
+Train5,1000,Udaipur_Jaipur,200,8,Goods..
+Train6,2000,Jaipur_Udaipur,210,7,Goods..
+Train7,3000,Jaipur_Kota,290,10,Goods..
+Train8,5000,Jaipur_Bhilwara,230,6,Goods..
+Train9,40,Udaipur_Jaipur,250,8,Passenger..
