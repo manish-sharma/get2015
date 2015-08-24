@@ -50,7 +50,7 @@ public class Processing
 			{  
 		       	String arr[] = line.split(",");
 		       	trainList.add ( new Train ( arr[0], arr[2], arr[5], arr[3], arr[1], arr[4] ) );
-		    }
+		    	}
 			in.close();
 			reader.close();
 		}
@@ -130,30 +130,6 @@ public class Processing
 			str.add (passengerObj.getPassengerName()+"\t\t"+trainObj.trainName+"\t\t"+passengerObj.getSeatsOrWeightBooked() + "\t\t\t\t" + (Integer.parseInt(trainObj.trainCost)*passengerObj.getSeatsOrWeightBooked()) ) ;
 			trainList.add(trainObj);
 			trainListFinal.remove(trainObj);
-//			String filePath = "C://javaprg/eclipse/Assignment8/src/MainClass/" ; //"C://javaprg/eclipse/Assignment7/src/"   // "C://Users/Kajal/workspace/Assignment7/src/"
-//			InputStream in = null;
-//			BufferedReader reader = null;
-//			int index = 0;
-//			
-//			// updates values file & stores them in a list = trainList
-//			try
-//			{	
-//				in = new FileInputStream( new File(filePath + "train.txt"));  
-//				reader = new BufferedReader (new InputStreamReader(in));
-//				String line;
-//				index = 0;
-//				while((line = reader.readLine())!= null)
-//				{  
-//			       	String arr[] = line.split(",");
-//			       	trainList.add ( new Train ( arr[0], arr[2], arr[5], arr[3], arr[1], arr[4] ) );
-//			    }
-//				in.close();
-//				reader.close();
-//			}
-//			catch( Exception ex )
-//			{
-//				ex.printStackTrace();
-//			}
 		}
 		trainListFinal.clear();
 		return str;
