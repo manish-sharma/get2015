@@ -11,7 +11,7 @@ public class MenuItemNew
 		actionableMenuItemObj[2] = new ActionableMenuItem("3). See updated train time table");
 		actionableMenuItemObj[3] = new ActionableMenuItem("4). Exit");
 		
-		for (int index =0; index<actionableMenuItemObj.length; index++)
+		for (int index = 0; index<actionableMenuItemObj.length; index++)
 			menuObj.addMenuItem(actionableMenuItemObj[index]);
 		
 		menuObj.display();	

@@ -10,10 +10,10 @@ import java.util.List;
 
 public class Processing
 {
-	List<String> str = new ArrayList<String>();
+	List<String> listTrain = new ArrayList<String>();
 	
 	// bubble sort for sorting train list according to duration
-	void bubbleSort ( ArrayList<Train> trainList)
+	void sortTrainListByDuration ( ArrayList<Train> trainList)
 	{
 		for ( int index = 0; index<trainList.size() ; index++)
 		{
@@ -80,7 +80,6 @@ public class Processing
 	// sorts train list according to entered train from-to station and places final selected trains in a new list & rejected trains back to previous list
 	ArrayList<Train> createNewListByFromToStation ( String fromToStation, ArrayList<Train>trainList, ArrayList<Train>trainListFinal )
 	{
-		str.clear();
 		for ( Train trainObj : new ArrayList<Train>(trainListFinal) )
 		{
 			if ( (trainObj.trainFromTo.equals(fromToStation)) == false )
@@ -97,7 +96,6 @@ public class Processing
 	ArrayList<Train> createNewListBySeatOrWeight ( String trainName, int seatOrWeight, ArrayList<Train>trainList, ArrayList<Train>trainListFinal )
 	{
 		Passenger passengerObj = new Passenger();
-		str.clear();
 		for ( Train trainObj : new ArrayList<Train>(trainListFinal) )
 		{
 			if ( trainObj.trainName.equals(trainName))
@@ -127,48 +125,24 @@ public class Processing
 	{
 		for ( Train trainObj :  new ArrayList<Train>(trainListFinal))
 		{
-			str.add (passengerObj.getPassengerName()+"\t\t"+trainObj.trainName+"\t\t"+passengerObj.getSeatsOrWeightBooked() + "\t\t\t\t" + (Integer.parseInt(trainObj.trainCost)*passengerObj.getSeatsOrWeightBooked()) ) ;
+			listTrain.add (passengerObj.getPassengerName()+"\t\t"+trainObj.trainName+"\t\t"+passengerObj.getSeatsOrWeightBooked() + "\t\t\t\t" + (Integer.parseInt(trainObj.trainCost)*passengerObj.getSeatsOrWeightBooked()) ) ;
 			trainList.add(trainObj);
 			trainListFinal.remove(trainObj);
-//			String filePath = "C://javaprg/eclipse/Assignment8/src/MainClass/" ; //"C://javaprg/eclipse/Assignment7/src/"   // "C://Users/Kajal/workspace/Assignment7/src/"
-//			InputStream in = null;
-//			BufferedReader reader = null;
-//			int index = 0;
-//			
-//			// updates values file & stores them in a list = trainList
-//			try
-//			{	
-//				in = new FileInputStream( new File(filePath + "train.txt"));  
-//				reader = new BufferedReader (new InputStreamReader(in));
-//				String line;
-//				index = 0;
-//				while((line = reader.readLine())!= null)
-//				{  
-//			       	String arr[] = line.split(",");
-//			       	trainList.add ( new Train ( arr[0], arr[2], arr[5], arr[3], arr[1], arr[4] ) );
-//			    }
-//				in.close();
-//				reader.close();
-//			}
-//			catch( Exception ex )
-//			{
-//				ex.printStackTrace();
-//			}
 		}
 		trainListFinal.clear();
-		return str;
+		return listTrain;
 	}
 	
 	
 	List<String> generateUpdatedTrainChart ( ArrayList<Train>trainList )
 	{
-		str.clear();
-		bubbleSort (trainList);
+		listTrain.clear();
+		sortTrainListByDuration (trainList);
 		for ( Train trainObj : trainList )
 		{
-			str.add ( trainObj.trainName+"\t\t"+trainObj.trainCost+"\t\t"+trainObj.trainDuration+"\t\t"+trainObj.trainSeatsOrWeight ) ;
+			listTrain.add ( trainObj.trainName+"\t\t"+trainObj.trainCost+"\t\t"+trainObj.trainDuration+"\t\t"+trainObj.trainSeatsOrWeight ) ;
 		}
-		return str;
+		return listTrain;
 	}
 	
 }

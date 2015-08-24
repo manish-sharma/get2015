@@ -13,7 +13,7 @@ public class TrainReservationRefactored
 		
 		ArrayList<Train> trainList = null;
 		ArrayList<Train> trainListFinal = null;
-		List<String> str = null;
+		List<String> listTrainTickets = null;
 		
 		Processing processingObj = null;
 		Passenger passengerObj = null;
@@ -25,7 +25,7 @@ public class TrainReservationRefactored
 			
 			trainList = new ArrayList<Train>();
 			trainListFinal = new ArrayList<Train>();
-			str = new ArrayList<String>();
+			listTrainTickets = new ArrayList<String>();
 			
 			processingObj = new Processing();
 			passengerObj = new Passenger();
@@ -34,7 +34,7 @@ public class TrainReservationRefactored
 			trainList = processingObj.loadTrainListFromFile ( trainList );
 	
     		// bubble sort for sorting train list according to duration
-    		processingObj.bubbleSort (trainList);
+    		processingObj.sortTrainListByDuration (trainList);
 			
 			while(true)
 			{	
@@ -55,16 +55,16 @@ public class TrainReservationRefactored
 				    		System.out.println("\n\nThe available trains : \nTrain Name\tTrain Fare\tTrain Duration\tTrain Seat/Weight\tTrain fron-to\tTrain Type");
 				    		
 				    		trainListFinal = processingObj.createNewListByTrainType ( trainType, trainList, trainListFinal );
-				    		for ( Train str1 : trainListFinal )
-				    			System.out.println ( str1.trainName+"\t\t"+str1.trainCost+"\t\t"+str1.trainDuration+"\t\t"+str1.trainSeatsOrWeight+"\t\t"+str1.trainFromTo+"\t\t"+str1.trainType );
+				    		for ( Train availableTrain : trainListFinal )
+				    			System.out.println ( availableTrain.trainName+"\t\t"+availableTrain.trainCost+"\t\t"+availableTrain.trainDuration+"\t\t"+availableTrain.trainSeatsOrWeight+"\t\t"+availableTrain.trainFromTo+"\t\t"+availableTrain.trainType );
 				    		
 				    		System.out.println("\n\nPlease enter from-to Station");
 				    		String fromToStation = sc.next();
 				    			
 				    		System.out.println("\n\nThe available trains : \nTrain Name\tTrain Fare\tTrain Duration\tTrain Seat/Weight");
 				    		trainListFinal = processingObj.createNewListByFromToStation ( fromToStation, trainList, trainListFinal );
-				    		for ( Train str1 : trainListFinal )
-				    			System.out.println ( str1.trainName+"\t\t"+str1.trainCost+"\t\t"+str1.trainDuration+"\t\t"+str1.trainSeatsOrWeight );
+				    		for ( Train availableTrain : trainListFinal )
+				    			System.out.println ( availableTrain.trainName+"\t\t"+availableTrain.trainCost+"\t\t"+availableTrain.trainDuration+"\t\t"+availableTrain.trainSeatsOrWeight );
 				    		
 				    		System.out.println("\n\nPlease enter Train name");
 				    		String trainName = sc.next();
@@ -74,8 +74,8 @@ public class TrainReservationRefactored
 				    		System.out.println("\n\nThe available train : \nTrain Name\tTrain Fare\tTrain Duration\tTrain Seat/Weight");
 				    		passengerObj.setSeatsOrWeightBooked(seatOrWeight);
 				    		trainListFinal = processingObj.createNewListBySeatOrWeight ( trainName, seatOrWeight, trainList, trainListFinal );
-				    		for ( Train str1 : trainListFinal )
-				    			System.out.println ( str1.trainName+"\t\t"+str1.trainCost+"\t\t"+str1.trainDuration+"\t\t"+str1.trainSeatsOrWeight );
+				    		for ( Train availableTrain : trainListFinal )
+				    			System.out.println ( availableTrain.trainName+"\t\t"+availableTrain.trainCost+"\t\t"+availableTrain.trainDuration+"\t\t"+availableTrain.trainSeatsOrWeight );
 				    	
 				    	
 				    		// does payment
@@ -112,15 +112,15 @@ public class TrainReservationRefactored
 			    			
 		    		case 2: // generates train ticket
 				    		System.out.println ("\n\nYour train ticket : \nUsername\tTrain Name\tNo. of seats/weight booked\tPaid amt");  
-				    		str = processingObj.generateTrainTicket ( trainList, trainListFinal, passengerObj );
-				    		for ( String str1 : str )
-				    			System.out.println (str1);
+				    		listTrainTickets = processingObj.generateTrainTicket ( trainList, trainListFinal, passengerObj );
+				    		for ( String ticket : listTrainTickets )
+				    			System.out.println (ticket);
 				    		
 				    		break;
 
 		    		case 3: // generates updated train chart
 		    				System.out.println ("\n\nUpdated train chart : \nTrain Name\tTrain Fare\tTrain Duration\tTrain Seat/Weight");
-		    				processingObj.bubbleSort (trainList);
+		    				processingObj.sortTrainListByDuration (trainList);
 				    		for ( Train trainObj : trainList )
 				    			System.out.println ( trainObj.trainName+"\t\t"+trainObj.trainCost+"\t\t"+trainObj.trainDuration+"\t\t"+trainObj.trainSeatsOrWeight ) ;
 		    				
@@ -143,8 +143,8 @@ public class TrainReservationRefactored
 		{
 			if ( sc != null )
 				sc = null;
-			if ( str != null )
-				str = null;
+			if ( listTrainTickets != null )
+				listTrainTickets = null;
 			if ( passengerObj!=null )
 				passengerObj = null;
 			if ( trainList != null )
