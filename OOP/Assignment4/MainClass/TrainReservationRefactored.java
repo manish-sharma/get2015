@@ -33,8 +33,8 @@ public class TrainReservationRefactored
 			// loads trainList from file		
 			trainList = processingObj.loadTrainListFromFile ( trainList );
 	
-    		// bubble sort for sorting train list according to duration
-    		processingObj.bubbleSort (trainList);
+    			// bubble sort for sorting train list according to duration
+    			processingObj.bubbleSort (trainList);
 			
 			while(true)
 			{	
@@ -43,9 +43,9 @@ public class TrainReservationRefactored
 				
 				System.out.println("\nEnter your choice : ");
 				int choice = sc.nextInt();
-		    	switch(choice)
-		    	{
-		    		case 1: //takes all details from user			    		
+		    		switch(choice)
+		    		{
+		    			case 1: //takes all details from user			    		
 				    		System.out.println("\n\nEnter your name");
 				    		passengerObj.setPassengerName(sc.next());
 				    		
@@ -110,7 +110,7 @@ public class TrainReservationRefactored
 				    		
 			    			break;
 			    			
-		    		case 2: // generates train ticket
+		    			case 2: // generates train ticket
 				    		System.out.println ("\n\nYour train ticket : \nUsername\tTrain Name\tNo. of seats/weight booked\tPaid amt");  
 				    		str = processingObj.generateTrainTicket ( trainList, trainListFinal, passengerObj );
 				    		for ( String str1 : str )
@@ -118,7 +118,7 @@ public class TrainReservationRefactored
 				    		
 				    		break;
 
-		    		case 3: // generates updated train chart
+		    			case 3: // generates updated train chart
 		    				System.out.println ("\n\nUpdated train chart : \nTrain Name\tTrain Fare\tTrain Duration\tTrain Seat/Weight");
 		    				processingObj.bubbleSort (trainList);
 				    		for ( Train trainObj : trainList )
@@ -126,13 +126,13 @@ public class TrainReservationRefactored
 		    				
 				    		break;  
 		   		   			
-		    		case 4: System.out.println("Thank you, for using our service.");
+		    			case 4: System.out.println("Thank you, for using our service.");
 		    				System.exit(0);
 		    		   		break;
 		    		   		
-		    		default : System.out.println("Please enter correct choice");
+		    			default : System.out.println("Please enter correct choice");
 		    				  break;
-		    	}
+		    		}
 			}
 		}
 		catch(Exception ex)
