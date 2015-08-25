@@ -123,10 +123,10 @@ public class MainSocialNetwork {
 				SocialNetwork.connect(entityVariable, entitySecondVariable);
 				break;
 			case 7:
-				System.out.println("enter your name: ");
+				System.out.println("enter your emailid: ");
 				Entity entityFirst = new Entity();
 				entityFirst.setEmail(sc.next());
-				System.out.println("enter friend name: ");
+				System.out.println("enter friend emailid: ");
 				Entity entitySecond = new Entity();
 				entitySecond.setEmail(sc.next());
 				SocialNetwork.disconnect(entityFirst, entitySecond);
