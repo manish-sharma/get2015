@@ -25,7 +25,7 @@ public class SocialNetwork extends Graph {
 	 * @return : return set of String containing friends
 	 */
 	public static Set<String> getFriends(Entity p) {
-		if (Processing.friendMap.containsKey(p)) {
+		if (Processing.friendMap.containsKey(p.getEmail())) {
 			return Processing.friendMap.get(p.getEmail());
 		} else {
 			Set<String> set = new HashSet<String>();
