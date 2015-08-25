@@ -1,0 +1,3 @@
+gitCollege@git.in,git college,1418956824,total-800+
+pceCollege@poornima.org,Poornima college,1418562378,total-900+
+jecrcCollege@jecrc.org,Jecrc college,1419856874,total-850+
