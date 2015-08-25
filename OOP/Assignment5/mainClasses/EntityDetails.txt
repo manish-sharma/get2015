@@ -1,0 +1,5 @@
+Kajal,kajal@gmail.com,123,CA,drawing,person
+Parul,parul@gmail.com,456,KV,sleeping,person
+Org1,org1@gmail.com,876,java,company1,org
+Org2,org2@gmail.com,899,php,company2,orgsss,sonal@,23,hj,hh,person
+
