@@ -1,0 +1,6 @@
+0,Aj,9856727862,aj@gmail.com,farzi,PingPong,music/sleeping
+0,Arushi,7415170199,arushi@gmail.com,SSPS,Jecrc,Music/Dance/ReadingBooks
+0,Deepali,8233249261,deepali@gmail.com,ABPS,GIT,Music/Dance/Games
+0,Sumitra,7548754856,sumitra@gmail.com,Farji School,PIT,Music/Dance
+0,Ani,9345627865,ani@gmail.com,st,church School,MIT,Music/Dance
+1,Jecrc,9867543210,jecrc@gmail.com,Btech,Apple/SS Sharma,TCS/Infosys/Wipro
