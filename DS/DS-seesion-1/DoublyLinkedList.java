@@ -1,246 +1,167 @@
-import java.util.Scanner;
-
-/**
- * DS Session1 Assignment
- * DoublyList.java
- * @author Banwari
- *
+/*
+ * This is a class contains all operation operate on Doubly Linked List
+ * @author Banwari Kevat
  */
-public class DoublyList {
-
-	/**
-	 * this assignment is same as previous SinglyList.java
-	 * In this only one data member prev(holds address of previous node) is extra member.
-	 * All the methods are approximately same as previous assignment methods 
+ class Node {
+	int item;
+	Node next;
+	Node previous;
+	
+	Node(){
+	   next=null;
+	   previous=null;
+	}
+	
+	Node(int item) {
+		this.item = item;
+		this.next = null;
+		this.previous=null;
+	}
+}
+ 
+ // This class contains the Linked list operation
+public class DoublyLinkedList {
+		private Node first;
+		private Node last;
+		DoublyLinkedList() {
+			this.first=null;
+			this.last=null;
+		}
+		
+	//This method create node and then return reference of that node
+	public Node createNode(int item) {
+		 Node node = new Node(item);
+		 return node;
+	}
+	/*
+	 * This method insert the node at beginning
+	 * @param item is the which will be inserted into linked list
 	 */
-	int nodeValue;
-	DoublyList prev;
-	DoublyList next;
-	static DoublyList first = null;
-	static int count = 0;
-	DoublyList()
-	{
-		nodeValue = 0;
-		prev = null;
-		next = null;
-	}
-	void addAtFirst(int item)
-	{
-		DoublyList newnode = new DoublyList();
-		newnode.nodeValue = item;
-		newnode.next = first;
-		newnode.prev = null;
-		if( first != null)
-		{
-			first.prev = newnode;
+	public void insertAtBegin( int item ) {
+		if(first==null) {
+			first = createNode(item);
+			last = first;
 		}
-		first = newnode;
-		count++;
+		else {
+			Node node = createNode(item);
+			node.next=first;
+			first.previous=node;
+			first=node;
+		}
 	}
-	void addAtLoc(int loc, int item)
-	{
-		if( loc < count )
-		{
-			DoublyList newnode = new DoublyList();
-			newnode.nodeValue = item;
-			int i;
-			DoublyList tempnode = first;
-			if( loc == 0 )
-			{
-				newnode.next = tempnode;
-				newnode.prev = null;
-				first.prev = newnode;
-				first = newnode;
-				count++;
-			}
-			else
-			{
-				for(i=0; i<(loc-1); i++)
-				{
-					tempnode = tempnode.next;
+	
+	//This method insert the node at last
+	public void insertAtLast(int item) {
+		if(first==null) {
+			first = createNode(item);
+			last = first;
+		}
+		else {
+			Node node = createNode(item);
+			last.next = node;
+			node.previous=last;
+			last=node;
+		}	      
+	}
+	
+	//This method remove the item from list 
+	public boolean removeItem( int item) {
+		if(first==null) {
+			return false;
+		}
+		else {
+			Node traverse = first;
+			while(traverse != null) {
+				if(traverse.item == item) {
+					//removed item is first then previous should be null
+					if(traverse==first) {
+						first = traverse.next;
+						first.previous=null;
+					}
+					//removed item is last then next should be null
+					else if(traverse == last) {
+						last = traverse.previous;
+						last.next=null;
+					}
+					else {
+					    traverse.previous.next=traverse.next;
+					    traverse.next.previous=traverse.previous;
+					}    
 				}
-				newnode.next = tempnode.next;
-				newnode.prev = tempnode;
-				tempnode.next.prev = newnode;
-				tempnode.next = newnode;
-				count++;
-			}
-		}
-		else
-		{
-			System.out.print("\n Location not found ");
-		}
+				traverse=traverse.next;
+			}	
+			return true;
+		}		
 	}
-	void remove(int item)
-	{
-		DoublyList previousnode = first;
-		DoublyList currnode = first;
-		while( currnode != null )
-		{
-			if( currnode.nodeValue == item )
-			{
-				break;
-			}
-			previousnode = currnode;
-			currnode = currnode.next;
+	
+	//this method will reverse the list
+	public void reverseList() {
+		Node traverse, tempnode1, tempnode2;
+		traverse= first;
+		while(traverse!= null) {
+			//interchange of previous and next references
+			tempnode1 = traverse.next;
+			tempnode2 = traverse.next;
+			traverse.next = traverse.previous;
+			traverse.previous = tempnode2;
+			traverse = tempnode1;
 		}
-		if( currnode == null )
-		{
-			System.out.print("\n Item Not Found ");
-		}
-		else
-		{
-			previousnode.next = currnode.next;
-			currnode.next.prev = previousnode;
-			currnode.next = null;
-			currnode.prev = null;
-			count --;
-		}
+		//interchange first and last
+		tempnode1 = first;
+		first = last;
+		last = tempnode1;
+		
 	}
-	void removeAtIndex(int loc)
-	{
-		if( loc < count )
-		{
-			int i;
-			DoublyList previousnode = first;
-			DoublyList currnode = first;
-			for(i=0; i<loc; i++)
-			{
-				previousnode = currnode;
-				currnode = currnode.next;
-			}
-			previousnode.next = currnode.next;
-			currnode.next.prev = previousnode;
-			currnode.next = null;
-			currnode.prev = null;
-			count --;
-		}
-		else
-		{
-			System.out.print("\n Location not found ");
-		}
-	}
-	void retrievel(int loc)
-	{
-		if( loc < count )
-		{
-			int i;
-			DoublyList currnode = first;
-			for(i=0; i<loc; i++)
-			{
-				currnode = currnode.next;
-			}
-			System.out.print("\n Item at "+loc+"th location is "+currnode.nodeValue);
-		}
-		else
-		{
-			System.out.print("\n Location not found ");
-		}
-	}
-	void reverse()
-	{
-		DoublyList tempnode1 = first, tempnode2 = null, tempnode3;
-		while( tempnode1 != null )
-		{
-			tempnode3 = tempnode2;
-			tempnode2 = tempnode1;
-			tempnode1 = tempnode1.next;
-			tempnode2.next = tempnode3;
-			tempnode2.prev = tempnode1;
-		}
-		first = tempnode2;
-	}
-	void sort()
-	{
-		DoublyList tempnode1 = first, tempnode2;
+	
+	
+	//This method sort the element of list
+	public void sortList() {
+		Node tempnode1 = first, tempnode2;
 		int temp;
-		while( tempnode1 != null )
-		{
+		 // apply simple sorting to sort the elements of Linked list
+		while( tempnode1 != null ) {
 			tempnode2 = first;
-			while( tempnode2.next != null )
-			{
-				if( tempnode2.nodeValue > tempnode2.next.nodeValue )
-				{
-					temp = tempnode2.nodeValue;
-					tempnode2.nodeValue = tempnode2.next.nodeValue;
-					tempnode2.next.nodeValue = temp;
+			while(tempnode2.next != null) {
+				if( tempnode2.item > tempnode2.next.item ){
+					temp = tempnode2.item;
+					tempnode2.item = tempnode2.next.item;
+					tempnode2.next.item = temp;
 				}
 				tempnode2 = tempnode2.next;
 			}
 			tempnode1 = tempnode1.next;
 		}
 	}
-	void display()
-	{
-		DoublyList currnode = first;
-		System.out.print("\n Linked list is : ");
-		while( currnode.next != null )
-		{
-			System.out.print(currnode.nodeValue+" ");
-			currnode = currnode.next;
-		}
-		System.out.print(currnode.nodeValue);
-		System.out.print("\n Linked list is : ");
-		while(currnode.prev != null )				// Display the elements of list from last to front using prev
-		{
-			System.out.print(currnode.nodeValue+" ");
-			currnode = currnode.prev;
-		}
-		System.out.print(currnode.nodeValue);
+	
+	
+	//This method will display the list
+	public void showList(){
+	   Node traverse = first;
+	   while(traverse!=null) {
+		   System.out.print(traverse.item+" <---> ");
+		   traverse = traverse.next;
+	   }
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int ch, loc, item;
-		Scanner sc = new Scanner(System.in);
-		DoublyList list = new DoublyList();
-		while(true)
-		{
-			System.out.print("\n 1. Add Element at First"
-							+"\n 2. Add Element at Location"
-							+"\n 3. Removal of an item based on its value "
-							+"\n 4. Removal of an item based on its index"
-							+"\n 5. Retrieval of an item of particular index"
-							+"\n 6. Reversal of linked list"
-							+"\n 7. Sorting of linked list"
-							+"\n 8. Display linked list"
-							+"\n 9. Exit");
-			System.out.print("\n Enter Your choice : ");
-			ch = sc.nextInt();
-			switch(ch)
-			{
-			case 1:
-				System.out.print("\n Enter node value : ");
-				item = sc.nextInt();
-				list.addAtFirst(item); break;
-			case 2:
-				System.out.print("\n Enter node value : ");
-				item = sc.nextInt();
-				System.out.print("\n Enter Location : ");
-				loc = sc.nextInt();
-				list.addAtLoc(loc, item); break;
-			case 3:
-				System.out.print("\n Enter node value : ");
-				item = sc.nextInt();
-				list.remove(item); break;
-			case 4:
-				System.out.print("\n Enter Location : ");
-				loc = sc.nextInt();
-				list.removeAtIndex(loc); break;
-			case 5:
-				System.out.print("\n Enter Location : ");
-				loc = sc.nextInt();
-				list.retrievel(loc); break;
-			case 6:
-				list.reverse(); break;
-			case 7:
-				list.sort(); break;
-			case 8:
-				list.display(); break;
-			case 9:
-				System.exit(0);
-			}
-		}
-
-	}
+	
+	
+public static void main(String []  arg) {
+	
+	DoublyLinkedList obj = new DoublyLinkedList();
+	obj.insertAtBegin(78);
+	obj.insertAtBegin(18);
+	obj.insertAtBegin(19);
+	obj.insertAtLast(30);
+	obj.insertAtLast(15);
+	obj.insertAtBegin(88);
+	obj.insertAtBegin(13);
+	
+	obj.showList();
+	System.out.println();
+	obj.sortList();
+    obj.showList();
+	
+}
+	
+	
 
 }
