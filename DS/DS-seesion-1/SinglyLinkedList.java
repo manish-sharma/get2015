@@ -2,20 +2,6 @@
  * This is a class contains all operation operate on Singly Linked List
  * @author Banwari Kevat
  */
- class Node {
-	int item;
-	Node next;
-	
-	Node(){
-	   next=null;	
-	}
-	
-	Node(int item) {
-		this.item = item;
-		this.next = null;
-	}
-}
- // This class contains the Linked list operation
 public class SinglyLinkedList {
 		private Node first;
 		
@@ -64,24 +50,30 @@ public class SinglyLinkedList {
 		}
 		else {
 			Node traverse = first;
-			Node temp =null;
+			Node previous = null;
 			while( traverse.next != null) {
 				if(traverse.item != item) {
-				     temp=traverse;
+					previous = traverse;
 				     traverse = traverse.next;
 				} 
 				else {
-					 temp.next=traverse.next;
-					 traverse=traverse.next;
-				}	 
-			}
-			if(traverse.next!=null){
-			    temp.next=traverse.next;
-			    return true;
+					    //remove that item
+					    if(traverse==first) {
+						   first=traverse.next;
+						    traverse=first;
+					    }
+					    else  {
+					      previous.next=traverse.next;
+					      traverse=traverse.next;
+					   }   
+					}	  
 			} 
-			else return false;
+			
+			if(traverse.item == item) {
+				previous.next=null;
+			}
+			return false;
 		}
-		
 	}
 	
 	//this method will reverse the list
@@ -124,31 +116,31 @@ public class SinglyLinkedList {
 	//This method will display the list
 	public void showList(){
 	   Node traverse = first;
-	   while(traverse!=null) {
+	   while(traverse.next!=null) {
 		   System.out.print(traverse.item+" ---> ");
 		   traverse = traverse.next;
 	   }
+	   System.out.print(traverse.item);
 	}
-	
-	
-public static void main(String []  arg) {
-	
-	SinglyLinkedList obj = new SinglyLinkedList();
-	obj.insertAtBegin(78);
-	obj.insertAtBegin(18);
-	obj.insertAtBegin(19);
-	obj.insertAtLast(30);
-	obj.insertAtLast(15);
-	obj.insertAtBegin(88);
-	obj.insertAtBegin(13);
-	
-	obj.showList();
-	System.out.println();
-	obj.sortList();
-	obj.showList();
-	
-}
-	
-	
+
+	public static void main(String [] arg) {
+		
+		SinglyLinkedList obj = new SinglyLinkedList();
+		
+		obj.insertAtBegin(78);
+		obj.insertAtBegin(18);
+		obj.insertAtBegin(19);
+		obj.insertAtLast(30);
+		obj.insertAtLast(15);
+		obj.insertAtBegin(88);
+		obj.insertAtBegin(13);
+		
+		obj.showList();
+		System.out.println();
+		obj.removeItem(15);
+	    obj.showList();
+		
+	}
+
 
 }

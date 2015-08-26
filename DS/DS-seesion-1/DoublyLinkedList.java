@@ -2,35 +2,18 @@
  * This is a class contains all operation operate on Doubly Linked List
  * @author Banwari Kevat
  */
- class Node {
-	int item;
-	Node next;
-	Node previous;
-	
-	Node(){
-	   next=null;
-	   previous=null;
-	}
-	
-	Node(int item) {
-		this.item = item;
-		this.next = null;
-		this.previous=null;
-	}
-}
- 
- // This class contains the Linked list operation
+
 public class DoublyLinkedList {
-		private Node first;
-		private Node last;
+		private DoublyNode first;
+		private DoublyNode last;
 		DoublyLinkedList() {
 			this.first=null;
 			this.last=null;
 		}
 		
 	//This method create node and then return reference of that node
-	public Node createNode(int item) {
-		 Node node = new Node(item);
+	public DoublyNode createNode(int item) {
+		DoublyNode node = new DoublyNode(item);
 		 return node;
 	}
 	/*
@@ -43,7 +26,7 @@ public class DoublyLinkedList {
 			last = first;
 		}
 		else {
-			Node node = createNode(item);
+			DoublyNode node = createNode(item);
 			node.next=first;
 			first.previous=node;
 			first=node;
@@ -57,7 +40,7 @@ public class DoublyLinkedList {
 			last = first;
 		}
 		else {
-			Node node = createNode(item);
+			DoublyNode node = createNode(item);
 			last.next = node;
 			node.previous=last;
 			last=node;
@@ -70,7 +53,7 @@ public class DoublyLinkedList {
 			return false;
 		}
 		else {
-			Node traverse = first;
+			DoublyNode traverse = first;
 			while(traverse != null) {
 				if(traverse.item == item) {
 					//removed item is first then previous should be null
@@ -96,7 +79,7 @@ public class DoublyLinkedList {
 	
 	//this method will reverse the list
 	public void reverseList() {
-		Node traverse, tempnode1, tempnode2;
+		DoublyNode traverse, tempnode1, tempnode2;
 		traverse= first;
 		while(traverse!= null) {
 			//interchange of previous and next references
@@ -116,7 +99,7 @@ public class DoublyLinkedList {
 	
 	//This method sort the element of list
 	public void sortList() {
-		Node tempnode1 = first, tempnode2;
+		DoublyNode tempnode1 = first, tempnode2;
 		int temp;
 		 // apply simple sorting to sort the elements of Linked list
 		while( tempnode1 != null ) {
@@ -136,11 +119,12 @@ public class DoublyLinkedList {
 	
 	//This method will display the list
 	public void showList(){
-	   Node traverse = first;
-	   while(traverse!=null) {
+		DoublyNode traverse = first;
+	   while(traverse.next!=null) {
 		   System.out.print(traverse.item+" <---> ");
 		   traverse = traverse.next;
 	   }
+	   System.out.print(traverse.item);
 	}
 	
 	
@@ -157,7 +141,7 @@ public static void main(String []  arg) {
 	
 	obj.showList();
 	System.out.println();
-	obj.sortList();
+	obj.removeItem(13);
     obj.showList();
 	
 }
