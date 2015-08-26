@@ -1,0 +1,4 @@
+1,Mechanic1,SUV,5000  
+2,Mechanic2,Sedan,3000
+3,Mechanic3,SUV,5000  
+4,Mechanic4,Hatchback,1000
