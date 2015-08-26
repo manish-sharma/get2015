@@ -20,17 +20,15 @@ public class LinkedListOperation {
 		do {
 			
 			System.out.print("Enter value of node");
-			data =readData(bufferedReader);
+			data = readData(bufferedReader);
 			newNode = new Node(data);
-			if(start==null)
-			{
-				start=newNode;
-				head=start;
+			if(start == null) {
+				start = newNode;
+				head = start;
 			}
-			else
-			{
+			else {
 				head.setNextNode(newNode);
-				head=head.getNextNode();
+				head = head.getNextNode();
 			}
 			// System.out.println("start data is"+start.getData());
 			System.out.print("Do you want to add more nodes:(Y/N) ");
@@ -43,7 +41,6 @@ public class LinkedListOperation {
 	
 	/*Starting of printList function*/ 
 	void printList(Node start) {			//Function will print complete Linked List 
-//		Node start = start;
 		if(start == null) {
 			System.out.println("List is Empty");
 			return;
@@ -60,7 +57,7 @@ public class LinkedListOperation {
 	/* Start of addElement function */
 	public void addElement(Node start, int element ) {
 		Node newNode = new Node(element) ;
-		Node current = new Node();
+		Node current ;
 		
 		if(start == null) {
 			start = newNode;
@@ -76,25 +73,22 @@ public class LinkedListOperation {
 	/* End of addElement function */
 	
 	/* Start of insertInBetween function */
-	public void insertInBetween(Node start, int position, int value) {
-		Node newNode = new Node();
-		Node current = new Node();
-		int count = 1;
+	public Node insertInBetween(Node start, int position, int value) {
+		Node newNode = new Node(value);
+		Node current;
+		int count = 2;
 		current = start ;
 		if( position == 1 ) {
 			newNode.setNextNode(current);
-			start = newNode ;
+			start = newNode;
 		} else {
-			count = 2;
-			while(current != null) {
-				if(count == position) {
-					newNode.setNextNode(newNode); 
-					current.setNextNode(newNode);
-				}
-				count ++;
-				current= current.getNextNode();
+			while(count++ != position) {
+				current =  current.getNextNode() ;
 			}
-		}
+				newNode.setNextNode(current.getNextNode()); 
+				current.setNextNode(newNode); 
+			}
+		return start;
 	}
 	/* End of insertInBetween function */
 	
@@ -132,6 +126,49 @@ public class LinkedListOperation {
 			
 		}
 	}
+	/* Starting of Delete Portion */
+	
+	/* Start of deleteElement function */
+	void deleteElement(Node start, int value) {
+		Node current = start;
+		while( current.getNextNode().getData() != value && current.getNextNode().getNextNode() != null ) {
+			current = current.getNextNode();
+		}
+		if(current.getNextNode().getNextNode() == null) System.out.println("Number Doesn't exist!!");
+		else if(current.getNextNode() == null)
+			current.setNextNode(null) ;
+		else
+			current.setNextNode(current.getNextNode().getNextNode());
+	}
+	/* End of deleteElement function */
+	
+	/* Start of deleteIndex function */
+	void deleteIndex(Node start, int index) {
+		Node current = start;
+		int count = 1;
+		while( ++count != index ) {
+			if(current.getNextNode() == null) {
+				System.out.println("Wrong Index");
+				break;
+			}
+			current = current.getNextNode();
+		}
+		if(current.getNextNode() == null)
+			current.setNextNode(null) ;
+		else {
+			Node nextNode = current.getNextNode().getNextNode();
+			current.setNextNode(nextNode);
+		}
+	}
+	
+	
+	/* End of deleteIndex function */
+	
+	/* End of Delete Portion */
+	
+	
+	
+	
 	/* End of reverseList function */
 	public int readData(BufferedReader br)
 	{
@@ -145,7 +182,7 @@ public class LinkedListOperation {
 			}
 			catch(NumberFormatException nf)
 			{
-				System.out.println("Please enter no like 1 2 ..");
+				System.out.println("Please enter no like 1 2 ");
 				continue;
 			}
 			catch(IOException io)
