@@ -108,24 +108,28 @@ public class ArrayList {
 	 * @param index is location after that element is searched
 	 */
 	public int indexOfElement(int element , int locationAfterSearch){
-		 for(int i = locationAfterSearch; i<=maxLength;i++) {
-			 if(element==arrayList[maxLength]) {
-				 return i;
-			 }
-	      }
-		 return -1;	 
+		if(locationAfterSearch>=0 && locationAfterSearch<=maxLength) {
+		     for(int i = locationAfterSearch; i<=maxLength;i++) {
+			     if(element==arrayList[maxLength]) {
+			    	 return i;
+			     }
+	          }
+		    
+		}
+	return -1;	     
 	}
 	
 	
 	//this method remove the item of given location from list
 	public boolean removeElementOfLocation(int location) {
-		if(location <= maxLength) {
+		if(location>=0 && location <= maxLength) {
 			for(int i=location; i<maxLength; i++)
 				arrayList[i]=arrayList[i+1];
 			maxLength--;
 			return true;
 		}
-		else return false;
+		else
+			return false;
 	}
 	
 	//this method remove the given item from list
