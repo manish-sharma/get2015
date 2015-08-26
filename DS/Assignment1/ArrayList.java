@@ -57,15 +57,15 @@ public class ArrayList {
 	/* end of reverseArray function */
 	
 	/* Start of sortArray function */
-	int []sortArray(ArrayList arrayObject) {	//returns the sorted array
-		int arraySize = arrayObject.array.length - 1;  
+	int []sortArray() {	//returns the sorted array
+		int arraySize = this.array.length - 1;  
 		int []sortedArray = array;
 		for(int loopCounter1 = 0 ; loopCounter1 < arraySize - 1 ; loopCounter1++) {
-			for( int loopCounter2 = 0 ; loopCounter2 < arraySize - loopCounter1 ; loopCounter2++) {
+			for( int loopCounter2 = 0 ; loopCounter2 < arraySize - loopCounter1 - 1; loopCounter2++) {
 				if( sortedArray[loopCounter2] > sortedArray[loopCounter2 + 1] ) {
 					int temp = sortedArray[loopCounter2] ;
-					sortedArray[loopCounter2 + 1] = sortedArray[loopCounter2];
-					sortedArray[loopCounter2] = temp;
+					sortedArray[loopCounter2] = sortedArray[loopCounter2 + 1];
+					sortedArray[loopCounter2 + 1] = temp;
 				}
 			}
 		}
@@ -85,7 +85,7 @@ public class ArrayList {
 	
 	/* Start of firstOccurence function */
 	int firstOccurence(int element) {
-		int counter;
+		int counter = -1;
 		for( counter = 0 ; counter < this.array.length -1 ; counter++) {
 			if( this.array[counter] == element) {
 				break;
@@ -120,4 +120,27 @@ public class ArrayList {
 		array[position] = element ;
 	}
 	/* End of insertAtLocation function */
+	
+	/* Start of deleteElementOnLocation function */
+	void deleteElementOnLocation(int location) {
+		int count;
+		for( count = location ; count < array.length - 1 ; count++) {
+			array[count] = array[count + 1 ] ;
+		}
+		array[ count -1 ] = 0;
+	}
+	/* End of deleteElementOnLocation function */
+
+	/* Start of deleteElement function */
+	void deleteElement(int element) {
+		int position = firstOccurence(element);
+		if( position == -1) {
+			System.out.println("Element Doesn't Exist in the array!!");
+		} else {
+			deleteElement(position);
+		}
+		
+	}
+	/* End of deleteElement function */
+	
 }
