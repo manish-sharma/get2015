@@ -2,11 +2,9 @@
  * Adds the menu
  * @author Banwari 
  */
-public class MenuNew
-{
+public class MenuNew{
 	//adds the menu
-	MenuNew() 
-	{
+	MenuNew() {
 		Menu menu = new Menu();
 		ActionableMenuItem item1 = new ActionableMenuItem("\nPress 1 for All Trains");
 		ActionableMenuItem item2 = new ActionableMenuItem("Press 2 for Goods Trains");
