@@ -1,4 +1,0 @@
-101,1,Jaipur,Delhi,120,5,200
-102,1,Jaipur,Ajmer,120,4,400
-103,2,Ajmer,Gurgaon,212,8,800
-104,1,Jaipur,Delhi,120,3,200
