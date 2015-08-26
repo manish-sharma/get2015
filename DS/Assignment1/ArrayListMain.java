@@ -11,7 +11,7 @@ public class ArrayListMain {
 		arrayListObject.insertItem(14, 4);
 		arrayListObject.insertItem(15, 5);
 		arrayListObject.insertItem(16, 6);
-		arrayListObject.insertItem(17, 7);
+		arrayListObject.insertItem(170, 7);
 		arrayListObject.insertItem(18, 8);
 		arrayListObject.insertItem(19, 9);
 		arrayListObject.insertItem(20, 10);
@@ -24,7 +24,7 @@ public class ArrayListMain {
 		}
 		System.out.println();
 		System.out.println("Sorted Array: ");
-		array = arrayListObject.sortArray(arrayListObject);
+		array = arrayListObject.sortArray();
 		sizeOfArray = array.length;
 		
 		for( int counter = 0 ; counter < sizeOfArray ; counter++) {  //to print reversed array
