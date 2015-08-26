@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.Scanner;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -7,7 +9,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class Assignment1Test {
+public class Test_Class_N_Queens_Problem {
+	N_Queens_Problem obj;
+
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -19,7 +23,7 @@ public class Assignment1Test {
 
 	@Before
 	public void setUp() throws Exception {
-		 String num ;
+		obj=new N_Queens_Problem();
 	}
 
 	@After
@@ -28,8 +32,15 @@ public class Assignment1Test {
 
 	@Test
 	public void test() {
-		Assignment1 tester=new Assignment1();
-		 assertEquals("not match", 65, tester.BinaryToOctal("110101"));
-	}
+		//boolean expected;
+		Scanner scan;
+		scan=new Scanner(System.in);
+		//expected=Boolean.valueOf(scan.nextLine());
+		 System.out.println("Enter Total no. of Queens");
+		   int n=Integer.parseInt(scan.nextLine());
+			boolean actual=obj.solveNQ(n);//call solveNQ() fn
+			
+			assertEquals(true, actual);
+	}   
 
 }

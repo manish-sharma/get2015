@@ -7,7 +7,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class Assignment2Test {
+public class Test_Class_Binary_to_Octal {
+	Binary_to_Octal obj;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -19,6 +20,7 @@ public class Assignment2Test {
 
 	@Before
 	public void setUp() throws Exception {
+		obj=new Binary_to_Octal();
 	}
 
 	@After
@@ -27,11 +29,8 @@ public class Assignment2Test {
 
 	@Test
 	public void test() {
-			
-			Assignment2 assignment2=new Assignment2();
-			int input[]={1,2,3,8,9,3,5,1,0};
-			int expected[]={1,2,3,8,9,5,0};
-			assertArrayEquals(expected,assignment2.removeDuplicates(input));
-		}
+		assertEquals(65, obj.convert(110101));
+		
+	}
 
 }
