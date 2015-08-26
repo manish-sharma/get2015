@@ -1,3 +1,0 @@
-Person,Riddhi,8561830094,ridz1094@gmail.com,Dancing,0
-Person,Rajat,9166343252,rajat280992@gmail.com,Playing Cricket,1
-Organization,GIT,01412572370,git@gmail.com,Academics,2
