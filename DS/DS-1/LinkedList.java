@@ -1,4 +1,7 @@
-
+/**
+ * Class to implement the functionality of Linked List
+ * @author Sanjay
+ */
 import java.util.Scanner;
 
 
@@ -8,8 +11,8 @@ public class LinkedList {
 	private static Scanner sc;
 
 	/**
-	 * @param item
-	 *            value to be inserted in node
+	 * Method to create the link list
+	 * @param item = add item to link list
 	 */
 	void createLinkedList(int item) {
 		Node newNode = new Node(item, null);
@@ -26,18 +29,18 @@ public class LinkedList {
 		size = +1;
 	}
 
+	
 	/**
-	 * @param item
-	 *            value to be inserted
-	 * @param index
-	 *            of the node where you want to insert
+	 * Method to insert node at particular location
+	 * @param item = element to be inserted
+	 * @param index = location at which to be inserted
 	 */
 	public void insertAtParticularPosition(int item, int index) {
 		Node newNode = new Node(item, null);
 		Node temp = start;
 		int count;
 		if (size < index) {
-			System.out.println("Enter valid index position ");
+			System.out.println("Enter valid position ");
 			return;
 		}
 		if (index == 0) {
@@ -45,23 +48,23 @@ public class LinkedList {
 			start = newNode;
 		}
 		else{
-			
-		
-		for (count = 0; count < index - 1; count++) {
-			temp = temp.getNext();
-			if (temp == null) {
-				System.out.println("Node in the list is at less than one");
-				return;
+
+
+			for (count = 0; count < index - 1; count++) {
+				temp = temp.getNext();
+				if (temp == null) {
+					System.out.println("Node in the list is at less than one");
+					return;
+				}
 			}
-		}
-		newNode.setNext(temp.getNext());
-		temp.setNext(newNode);
+			newNode.setNext(temp.getNext());
+			temp.setNext(newNode);
 		}
 		size = +1;
 	}
 
 	/**
-	 * method to print list
+	 * Method to print the linked list
 	 */
 	void traversalLinkedList() {
 		Node temp = start;
@@ -73,8 +76,8 @@ public class LinkedList {
 	}
 
 	/**
-	 * @param index
-	 *            of the node whom value you wish to print
+	 * Method to get element at particular index
+	 * @param index = element's location
 	 */
 	void retrievalAtIndex(int index) {
 		Node temp = start;
@@ -92,12 +95,12 @@ public class LinkedList {
 			}
 			System.out.println("The value at index is " + temp.getValue());
 		}
-		
+
 	}
 
 	/**
-	 * @param index
-	 *            of the node whom you want o delete
+	 * Method to delete element from a particular location
+	 * @param index = element's location
 	 */
 	public void deleteItemOnIndex(int index) {
 		Node temp = null, current = start;
@@ -124,8 +127,8 @@ public class LinkedList {
 	}
 
 	/**
-	 * @param item
-	 *            value that you want to delete
+	 * Method to delete element based on the value
+	 * @param value = element to be deleted
 	 */
 	public void deleteItemOnValue(int value) {
 		Node temp = start;
@@ -148,7 +151,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * reverse the linked list
+	 * Method to reverse the linked list
 	 */
 	void reverse() {
 		Node prevNode = null;
@@ -168,13 +171,13 @@ public class LinkedList {
 	}
 
 	/**
-	 * sort linked list
+	 * Method to sort the linked list
 	 */
 	void sortLinkedList() {
 		Node temp, current = start;
 		int check;
 		while (current != null) // apply simple sorting to sort the elements of
-								// Linked list
+			// Linked list
 		{
 			temp = start;
 			while (temp.getNext() != null) {
@@ -206,7 +209,7 @@ public class LinkedList {
 			System.out.print("\n Enter Your choice : ");
 			ch = sc.nextInt();
 			switch (ch) // Apply switch case and call corresponding method
-						// according to the user's choice
+			// according to the user's choice
 			{
 			case 1:
 				System.out.print("\n Enter node value : ");

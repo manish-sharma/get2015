@@ -1,4 +1,8 @@
-
+/**
+ * Class to implement the functionality of a node
+ * @author Sanjay
+ *
+ */
 
 public class Node {
 	private int value;
@@ -10,6 +14,7 @@ public class Node {
 	}
 
 	/**
+	 * Method to create the constructor
 	 * @param value
 	 * @param next
 	 */
@@ -19,6 +24,7 @@ public class Node {
 	}
 
 	/**
+	 * method to get the value
 	 * @return value
 	 */
 	public int getValue() {
@@ -26,6 +32,7 @@ public class Node {
 	}
 
 	/**
+	 * method to set the value
 	 * @param value
 	 */
 	public void setValue(int value) {
@@ -33,6 +40,7 @@ public class Node {
 	}
 
 	/**
+	 * method to get the next node
 	 * @return next
 	 */
 	public Node getNext() {
@@ -40,6 +48,7 @@ public class Node {
 	}
 
 	/**
+	 * Method to set the next node
 	 * @param next
 	 */
 	public void setNext(Node next) {

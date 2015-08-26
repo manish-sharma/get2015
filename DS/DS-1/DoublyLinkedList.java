@@ -1,3 +1,6 @@
+/**
+ * class to implement the functionality of doubly linked list
+ */
 import java.util.Scanner;
 
 
@@ -7,8 +10,8 @@ public class DoublyLinkedList {
 	private static Scanner sc;
 
 	/**
-	 * @param item
-	 *            value to be added to the doublylinked list
+	 * Method to create the linked list and add the item to it
+	 * @param item = item to be added
 	 */
 	void createDoublyLinkedList(int item) {
 		DoublyNode newNode = new DoublyNode(item, null, null);
@@ -26,10 +29,9 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * @param item
-	 *            value to be inserted
-	 * @param index
-	 *            position for insertion of e=item
+	 * Method to insert element at particular location
+	 * @param item = value of the node
+	 * @param index = location to insert
 	 */
 	public void insertAtParticularPosition(int item, int index) {
 		DoublyNode newNode = new DoublyNode(item, null, null);
@@ -55,7 +57,7 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * method to print doubly linked list
+	 * Method to print the linked list
 	 */
 	void traversalDoublyLinkedList() {
 		DoublyNode temp = start;
@@ -67,8 +69,8 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * @param index
-	 *            position for print the value
+	 * Method to print the element at particular location
+	 * @param index = location of element
 	 */
 	void retrievalAtIndex(int index) {
 		DoublyNode temp = start;
@@ -80,8 +82,8 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * @param index
-	 *            position for deletion
+	 * Method to delete element at a particular location
+	 * @param index = location of element
 	 */
 	public void deleteItemOnIndex(int index) {
 		DoublyNode temp = null, current = start;
@@ -100,8 +102,8 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * @param item
-	 *            value that to be deleted
+	 * Method to delete item based on its value
+	 * @param item = element to be deleted
 	 */
 	public void deleteItemOnValue(int item) {
 		DoublyNode current = start;
@@ -128,7 +130,7 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * method for reversing the doubly linked list
+	 * Method to reverse the linked list
 	 */
 	void reverse() {
 		DoublyNode tempnode1=null,tempnode2;
@@ -145,7 +147,7 @@ public class DoublyLinkedList {
 	}
 
 	/**
-	 * sort the doubly linked list
+	 * Method to sort the linked list
 	 */
 	void sortLinkedList() {
 		DoublyNode temp, current = start;

@@ -1,4 +1,8 @@
-
+/**
+ * Class for creating nodes for doubly linked list
+ * @author Sanjay
+ *
+ */
 public class DoublyNode {
 	private int value;
 	private DoublyNode next;
@@ -13,7 +17,7 @@ public class DoublyNode {
 	/**
 	 * @param value
 	 * @param next
-	 * @param prev
+	 * @param previous
 	 */
 	public DoublyNode(int value, DoublyNode next, DoublyNode prev) {
 		this.value = value;
@@ -50,14 +54,14 @@ public class DoublyNode {
 	}
 
 	/**
-	 * @return prev node
+	 * @return previous node
 	 */
 	public DoublyNode getPrev() {
 		return prev;
 	}
 
 	/**
-	 * @param prev
+	 * @param previous
 	 */
 	public void setPrev(DoublyNode prev) {
 		this.prev = prev;
