@@ -6,37 +6,41 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class LinkedListOperation {
-	private Node start ;
-	Node createList() throws IOException {
-		BufferedReader bufferedReaderObject = new BufferedReader(new InputStreamReader(System.in));
-		Scanner scannerObject = new Scanner(System.in);
-		Node newNode = new Node();
-		Node current = new Node();
-		Node start = null;
+	
+	/*Start of createList function */
+	public Node createList() throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(
+				new InputStreamReader(System.in));
 		int data;
 		String choice = null;
-		
+		Node head = null;
+		Node start = null;
+		Node newNode = null;
+
 		do {
-			current = start;
-			System.out.print("Enter value of node");
-			data = scannerObject.nextInt();
-			newNode = new Node(data);
-			current= newNode;
-			newNode.setNextNode(null);
-			System.out.print("Do you want to add more nodes:(Y/N) ");
-			choice = bufferedReaderObject.readLine();
 			
-		}while(choice.equalsIgnoreCase("y"));
+			System.out.print("Enter value of node");
+			data =readData(bufferedReader);
+			newNode = new Node(data);
+			if(start==null)
+			{
+				start=newNode;
+				head=start;
+			}
+			else
+			{
+				head.setNextNode(newNode);
+				head=head.getNextNode();
+			}
+			// System.out.println("start data is"+start.getData());
+			System.out.print("Do you want to add more nodes:(Y/N) ");
+			choice = bufferedReader.readLine();
+
+		} while (choice.equalsIgnoreCase("y"));
 		return start;
 	}
 	/*end of Create list function */
 	
-	/*start of isEmpty function */
-	 public boolean isEmpty() {		//function will check if list is empty
-	        return start == null;
-	 }
-	 /*End of isEmpty function*/
-	 
 	/*Starting of printList function*/ 
 	void printList(Node start) {			//Function will print complete Linked List 
 //		Node start = start;
@@ -45,7 +49,7 @@ public class LinkedListOperation {
 			return;
 		}
 		System.out.println("List is :");
-		while(start.getNextNode() != null) {
+		while(start!= null) {
 			System.out.println(start.getData());
 			start = start.getNextNode();
 		}
@@ -54,7 +58,7 @@ public class LinkedListOperation {
 	/* End of printList function */
 	
 	/* Start of addElement function */
-	public void addElement(int element ) {
+	public void addElement(Node start, int element ) {
 		Node newNode = new Node(element) ;
 		Node current = new Node();
 		
@@ -72,7 +76,7 @@ public class LinkedListOperation {
 	/* End of addElement function */
 	
 	/* Start of insertInBetween function */
-	public void insertInBetween(int position, int value) {
+	public void insertInBetween(Node start, int position, int value) {
 		Node newNode = new Node();
 		Node current = new Node();
 		int count = 1;
@@ -95,8 +99,8 @@ public class LinkedListOperation {
 	/* End of insertInBetween function */
 	
 	/* Starting of insertAtEnd function */
-	void insertAtEnd(int value) {
-		Node current = new Node();
+	void insertAtEnd(Node start, int value) {
+		Node current = start;
 		Node newNode = new Node(value);
 		while(current.getNextNode() != null) {
 			current = current.getNextNode() ;
@@ -106,30 +110,8 @@ public class LinkedListOperation {
 	}
 	/* End of insertAtEnd function */
 	
-//	/* Start of deleteByValue function */
-//	void deleteByValue(int element) {
-//		Node current = start;
-//		boolean flag = false;
-//		if(current == null) {
-//			System.out.println("List is empty");
-//		}
-//		
-//		while(current.nextAddress.data != element) {
-////			if(current.data == element) {
-////				start = current.nextAddress;
-////			}
-////			else if( current.nextAddress != null) {
-////				
-////			}
-////			flag = true ;
-////			break;
-//			current = current.nextAddress ;
-//		}
-//		current.nextAddress = current.nextAddress.nextAddress;
-//	}
-	
 	/* Start of getElement function */
-	int getElement(int index) {		//function will return value on particular index
+	int getElement(Node start, int index) {		//function will return value on particular index
 		int count = 0;
 		Node current = start ;
 		while( count != index) {
@@ -141,7 +123,7 @@ public class LinkedListOperation {
 	/* End of getElement function */
 	
 	/* Starting of reverseLlist function */
-	void reverseList() {
+	void reverseList(Node start) {
 		Node current = start ;
 		if(start == null)
 			System.out.println("Empty List");
@@ -151,4 +133,29 @@ public class LinkedListOperation {
 		}
 	}
 	/* End of reverseList function */
+	public int readData(BufferedReader br)
+	{
+		int data=0;
+		boolean isCorrect=false;
+		do
+		{
+			try 
+			{
+				data =Integer.parseInt(br.readLine());
+			}
+			catch(NumberFormatException nf)
+			{
+				System.out.println("Please enter no like 1 2 ..");
+				continue;
+			}
+			catch(IOException io)
+			{
+				System.out.println("Error Occured please enter again");
+				continue;
+			}
+			isCorrect=true;
+			
+		}while(!isCorrect);
+		return data;
+	}
 }
