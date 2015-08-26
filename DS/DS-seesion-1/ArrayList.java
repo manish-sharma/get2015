@@ -63,11 +63,23 @@ public class ArrayList {
 	 * @param element is item which will be insert to the last of list
 	 * @param index is the index at which item will be inserted
 	 */
-	public boolean addElement(int element, int index) {
-		 if( index < arrayList.length ) {
-			 arrayList[index]=element;	
-			 maxLength++;
+	public boolean addElement(int item, int index) {
+		 if( index>=0 && index <= maxLength ) {
+			 if( index == maxLength ) {
+				 addElement(item);
+				 arrayList[index]=item;
+				 return true;
+			 }
+			 else {
+				 
+				 for(int i=maxLength;i>=index;i--) { 
+					 arrayList[i+1]=arrayList[i];					 
+				 }
+				 arrayList[index] = item;	
+			      maxLength++;
 			 return true;
+			 }
+			 
 		 }	 
 		 else return false;		 
 	}
