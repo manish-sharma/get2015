@@ -1,9 +1,0 @@
-PT1,Jaipur-Delhi,500,0,5
-PT2,Mumbai-Delhi,700,19,12
-PT3,Kolkata-Delhi,1000,12,21
-PT4,Jaipur-Mysore,1400,65,25
-PT5,Bangalore-Hyderabad,5400,1,12
-PT6,Bhopal-Jaiselmer,5600,53,18
-PT7,Pune-Ajmer,5400,5,18
-PT8,Kolkata-Delhi,1000,12,21
-PT9,Kolkata-Delhi,1000,12,21

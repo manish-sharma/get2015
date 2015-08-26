@@ -1,9 +1,0 @@
-Train1,Jaipur-Delhi,500,0,5
-Train2,Mumbai-Delhi,700,19,12
-Train3,Kolkata-Delhi,1000,12,21
-Train4,Jaipur-Mysore,1400,65,25
-Train5,Bangalore-Hyderabad,5400,1,12
-Train6,Bhopal-Jaiselmer,5600,53,18
-Train7,Pune-Ajmer,5400,5,18
-Train8,Kolkata-Delhi,1000,12,21
-Train9,Kolkata-Delhi,1000,12,21
