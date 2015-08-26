@@ -35,19 +35,19 @@ public class LinkedList {
 			case 3:
 				System.out.print("\nEnter a number to insert: ");
 				int element = scannerObject.nextInt();
-				listOperationObject.addElement(element);
+				listOperationObject.addElement(start, element);
 				break;
 			case 4:
 				System.out.print("Enter number : ");
 				value = scannerObject.nextInt();
 				System.out.print("Enter Position : ");
 				int position = scannerObject.nextInt();
-				listOperationObject.insertInBetween(position, value);
+				listOperationObject.insertInBetween(start, position, value);
 				break;
 			case 5:
 				System.out.print("Enter number");
 				value = scannerObject.nextInt();
-				listOperationObject.insertAtEnd(value);
+				listOperationObject.insertAtEnd(start , value);
 				break;
 			
 			default:
