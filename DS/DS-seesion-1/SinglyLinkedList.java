@@ -2,6 +2,20 @@
  * This is a class contains all operation operate on Singly Linked List
  * @author Banwari Kevat
  */
+ class Node {
+	int item;
+	Node next;
+	
+	Node(){
+	   next=null;	
+	}
+	
+	Node(int item) {
+		this.item = item;
+		this.next = null;
+	}
+}
+ // This class contains the Linked list operation
 public class SinglyLinkedList {
 		private Node first;
 		
