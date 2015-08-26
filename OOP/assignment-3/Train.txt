@@ -1,0 +1,5 @@
+
+Rajdhani ,Delhi ,Mumbai ,1 ,1000 ,10 ,P
+Duronto ,Kolkata ,Delhi ,10 ,2000 ,20 ,P
+Rajdhani1 ,Delhi ,patna ,1 ,1500 ,12 ,P
+xyz ,Delhi ,Mumbai ,2000 ,1000 ,10 ,G
