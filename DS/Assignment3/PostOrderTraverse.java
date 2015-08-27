@@ -3,7 +3,7 @@
  * This class will perform Post Order Traversal on a tree
  */
 
-package preordertraversal;
+package traversal;
 
 /* Start of PostOrderTraverse class*/
 public class PostOrderTraverse {
