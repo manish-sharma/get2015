@@ -1,4 +1,3 @@
-package SocialNetwork;
 
 import java.util.List;
 
@@ -12,8 +11,6 @@ public class Edge {
 		
 	}
 	
-	
-
 	public Node getAdjacentNode() {
 		return adjacentNode;
 	}
@@ -26,16 +23,20 @@ public class Edge {
 
 	public boolean addEdge(Graph graph , Node sourceNode ,Node destinationNode)
 	{
+			if(sourceNode==null||destinationNode==null)
+				return false;
 			int isAvailable1=searchNode(graph, sourceNode);
-			int isAvailable2=searchNode(graph, sourceNode);
+			int isAvailable2=searchNode(graph, destinationNode);
 			if(isAvailable1==-1||isAvailable2==-1)
 				return false;
 			
 			Edge edge1 = new Edge();
 			edge1.adjacentNode=destinationNode;
+			edge1.adjacentNode.setData(destinationNode.getData());
 			sourceNode.getEdgeList().add(edge1);
 			Edge edge2 = new Edge();
 			edge2.adjacentNode=sourceNode;
+			edge2.adjacentNode.setData(sourceNode.getData());
 			destinationNode.getEdgeList().add(edge2);
 			return true;
 	}
@@ -43,10 +44,9 @@ public class Edge {
 	public boolean deleteEdge(Graph graph, Node sourceNode,Node destinationNode)
 	{
 		int index;
-		int isAvailable1=searchNode(graph, sourceNode);
-		int isAvailable2=searchNode(graph, sourceNode);
-		if(isAvailable1==-1||isAvailable2==-1)
+		if(sourceNode==null)
 			return false;
+		
 		
 	
 		index=searchAdjacentNode(sourceNode.getEdgeList(), destinationNode);
@@ -62,6 +62,7 @@ public class Edge {
 			int index=-1;
 			for(int vertex=0;vertex<graph.getAdajenceyList().size();vertex++)
 			{
+				
 				if(nodeToSearch.equals(graph.getAdajenceyList().get(vertex)))
 				{
 					index=vertex;
@@ -75,7 +76,7 @@ public class Edge {
 		int index=-1;
 		for(int adjacent=0;adjacent<edgeList.size();adjacent++)
 		{
-			if(noToSearch.equals(edgeList.get(adjacent)))
+			if(noToSearch.getData()==edgeList.get(adjacent).getAdjacentNode().getData())
 			{
 				index=adjacent;
 				break;
@@ -83,8 +84,6 @@ public class Edge {
 		}
 		return index;
 	}
-		
-			
-
+	
 }
 
