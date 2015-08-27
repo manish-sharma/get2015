@@ -1,5 +1,0 @@
-gaurav,8233249261,gaurav.saini@gmail.com,ABPS,GIT
-sanjay,7548754856,sanjay.nainani@gmail.com,G School,PIT
-ankur,7415170199,ankur.gupta@gmail.com,School no. 1,PCE
-anurag,9876598765,anurag.anand@gmail.com,ABC School,GIT
-amit,4564564560,amit.natani@gmail.com,JVM,IIT
