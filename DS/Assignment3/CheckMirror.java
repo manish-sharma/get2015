@@ -3,7 +3,7 @@
  * Class will handle mirror checking of tree
  */
 
-package preordertraversal;
+package traversal;
 
 /* Start of CheckMirror Class */
 public class CheckMirror {
