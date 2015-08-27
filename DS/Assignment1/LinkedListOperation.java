@@ -116,16 +116,6 @@ public class LinkedListOperation {
 	}
 	/* End of getElement function */
 	
-	/* Starting of reverseLlist function */
-	void reverseList(Node start) {
-		Node current = start ;
-		if(start == null)
-			System.out.println("Empty List");
-		while(current.getNextNode() != null) {
-			
-			
-		}
-	}
 	/* Starting of Delete Portion */
 	
 	/* Start of deleteElement function */
@@ -166,10 +156,27 @@ public class LinkedListOperation {
 	
 	/* End of Delete Portion */
 	
-	
-	
+	/* Starting of reverseLlist function */
+	public Node reverseList(Node start) {
+		if(start == null) {
+			System.out.println("Empty List");
+			return null;
+		}
+		Node previousNode = null, nextNode = null;
+		Node head = start;
+		while(head != null) {
+			nextNode = head.getNextNode();
+			head.setNextNode(previousNode);
+			previousNode = head;
+			head = nextNode;
+		}
+		System.out.println("List is Reversed");
+		return previousNode;
+		
+	}
 	
 	/* End of reverseList function */
+	/* Starting of readData function */
 	public int readData(BufferedReader br)
 	{
 		int data=0;
@@ -195,4 +202,5 @@ public class LinkedListOperation {
 		}while(!isCorrect);
 		return data;
 	}
+	/* End of readData function */
 }
