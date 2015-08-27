@@ -1,8 +1,14 @@
-package preordertraversal;
+/**
+ * @author Girdhari
+ * This is main class of assignment 3
+ */
+package traversal;
 
 import java.util.Scanner;
 
+/* Start of MainClass */
 public class MainClass {
+	/* End of main function */
 	public static void main(String []args) {
 		BinarySearchTree bstObject = new BinarySearchTree();
 		Scanner scannerObject = new Scanner(System.in);
@@ -32,6 +38,8 @@ public class MainClass {
 			System.exit(0);
 		}
 	}
+	/* End of main function */
+	
 	/* Starting of checkMirror function*/ 
 	public static void checkMirror() {
 		Scanner scannerObject = new Scanner(System.in);
@@ -64,3 +72,4 @@ public class MainClass {
 	}
 	 /* End of checkMirror function*/ 
 }
+/* End of MainClass */
