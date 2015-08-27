@@ -1,3 +1,11 @@
+/****************************************************************************************
+Name            : StackUsingLinkList
+Revision Log    : 2015-08-27: Babalu patidar : created.
+                : 
+                : 
+Use             : This class is used to perform all opertion of stack
+                :
+****************************************************************************************/
 import java.util.Scanner;
 
 
