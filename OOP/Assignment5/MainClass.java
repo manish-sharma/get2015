@@ -1,8 +1,9 @@
-package SocialNetwork;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class MainClass {
@@ -10,12 +11,13 @@ public class MainClass {
 		{
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 			boolean result;
+			Scanner scanner=new Scanner(System.in);
 			int input; 
+			String name="";
 			
 				
 				SocialNetwork socialNetwork = new SocialNetwork();
 				socialNetwork.readPersonInformation();
-				//socialNetwork.readOrganisationInformation();
 				Connection con=null;
 				SocialNetworkMenu socialNetworkMenu = new SocialNetworkMenu();
 				Person person = null;
@@ -23,88 +25,151 @@ public class MainClass {
 				do
 				{
 					socialNetworkMenu.showMenu();
-					try {
-					
-					input = Integer.parseInt(br.readLine());
+					try
+					{
+						input = Integer.parseInt(br.readLine());
 					switch(input)
 					{
 						/* Displaying social network */
-						case 1:	List<Node> nodelist=socialNetwork.getAdajenceyList();
-						for(int index=0;index<nodelist.size();index++)
-						{
-							nodelist.get(index).display();
-							Node node=nodelist.get(index);
-							System.out.println("No of Friends are "+node.getEdgeList().size());
-							System.out.println();
-						}
-							
-							break;
+						case 1:	
+								List<Node> nodelist=socialNetwork.getAdajenceyList();
+								for(int index=0;index<nodelist.size();index++)
+								{
+									nodelist.get(index).display();
+									Node node=nodelist.get(index);
+									System.out.println("No of Friends are "+node.getEdgeList().size());
+									for(int friendno=0;friendno<node.getEdgeList().size();friendno++)
+									{
+										int friendId=node.getEdgeList().get(friendno).getAdjacentNode().getData();
+										name=getFriendById(socialNetwork,friendId);
+										System.out.println((friendno+1)+ "Friend is)"+name);
+									}
+									System.out.println();
+								}
+								break;
+					
 						
-						/* Displaying records */
-						case 2:
-							
-							break;
-						
-						/* Adding a node */
-						case 3:		person1 = new Person(5, "dheeraj1993@gmail.com","dheeraj kumar", "8559818925","JVM","SBTC");
+								/* Adding a person in social network */
+						case 2:		
+								person=readFromConsole(br);
+								result = socialNetwork.addEntitySocialNetwork(person);
+								displayMessage(result);
+								break;
 									
-									result = socialNetwork.addEntitySocialNetwork(person1);
-									displayMessage(result);
-									break;
-						
-						/* adding an edge */
-						case 4: person=readFromConsole(br);
+								/* adding a friend in social network */
+						case 3: 
+								System.out.println("Are you a new user for(Press 1)or existing user for(Press 2)");
+								do
+								{	
+									int check=scanner.nextInt();
+									if(check==1)
+									{
+										person=readFromConsole(br);
+										break;
+									}
+									else if(check==2)
+									{
+										System.out.println("Enter your name");
+										name=br.readLine();
+										person=getPersonDetails(socialNetwork,name);
+										if(person==null)
+										{
+											System.out.println("Name does not exist");
+											continue;
+										}
+										break;
+									}
+									else
+										System.out.println("Please enter correct choice");
+								}while(true);
+								Person friend=selectChoice(socialNetwork,name,br);
 								if(person!=null)
 								{
 									
-									result =socialNetwork.addNode(person);
 									con=new Connection();
-									result=con.addFriend(socialNetwork, person1, person);
+									result=con.addFriend(socialNetwork, person,friend);
 									displayMessage(result);
 								}
-							break;
+								break;
 							
-						/* removing a node */
-						case 5:
+								/* removing a node */
+						case 4:	
+								System.out.println("Enter your name");
+								name=br.readLine();
+								person1=getPersonDetails(socialNetwork, name);
+								if(person1==null)
+								{
+									System.out.println("user does not exist");
+									break;
+								}
 								result=socialNetwork.deleteNode(person1);
 								displayMessage(result);
 								break;
 							
-						/* displaying based on search */
+								/* displaying based on search */
+						case 5:
+								System.out.println("Enter your name");
+								name=br.readLine();
+								person1=getPersonDetails(socialNetwork, name);
+								if(person1==null)
+								{
+									System.out.println("user does not exist");
+									break;
+								}
+								else
+									person.display();
+								break;
+							
+								/* removing an  friend  */
 						case 6:
+								System.out.println("Enter your name");
+								name=br.readLine().trim();
+								person=getPersonDetails(socialNetwork,name);
+								if(person==null)
+								{
+									System.out.println("Name does not exist");
+									break;
+								}
+								else
+								{
+									System.out.println("Enter your friend name ");
+									String friedName=br.readLine().trim();
+									person1=getPersonDetails(socialNetwork, friedName);
+									if(person1==null)
+									{
+										System.out.println("Name does not exist");
+										break;
+									}
+									else
+									{
+										con=new Connection();
+										result=con.removeFriend(socialNetwork, person, person1);
+										displayMessage(result);
+										break;
+									}
+								}
 							
-							break;
 							
-						/* removing an edge between two nodes */
+								/* Exit */
 						case 7:
-							result=con.removeFriend(socialNetwork, person1, person);
-							displayMessage(result);
-							break;
-							
-						/* Exit */
-						case 8:
-							System.exit(0);
+								scanner.close();
+								System.exit(0);
 							
 						default:
 							System.out.println("Enter Right choice");
 							input = Integer.parseInt(br.readLine());
 					}
-					}
-					catch(NumberFormatException nf)
-					{
-						System.out.println("please enter correct number");
-						continue;
-					}
-					
-					catch(IOException io)
-					{
+				}
+				catch(NumberFormatException nf)
+				{
+					System.out.println("please enter correct number");
+					continue;
+				}
+				catch(IOException io)
+				{
 						System.out.println("Error occured please enter input again");
-					}
-					
-				
-				}while(true);
-			
-			
+				}
+			}while(true);
 		}
 		public static void displayMessage(boolean result)
 		{
@@ -117,7 +182,9 @@ public class MainClass {
 				System.out.println("Operation failed");
 			}
 		}
-		public static Person readFromConsole(BufferedReader br) {
+		
+		public static Person readFromConsole(BufferedReader br)
+		{
 			int id=6;
 			Person person=null;
 			try{
@@ -139,9 +206,46 @@ public class MainClass {
 				System.out.println("Error please try again");
 				return null;
 			}
-			
 			return person;
-			
 		}
-	}
+		
+		public static Person selectChoice(SocialNetwork socialNetwork,String name,BufferedReader br) throws IOException
+		{
+			System.out.println("Available friend are");
+			for(int index=0;index<socialNetwork.getAdajenceyList().size();index++)
+			{
+				Person person=socialNetwork.getNode(index);
+					if(person.getName().equalsIgnoreCase(name))
+						continue;
+					System.out.println(person.getName());
+				
+			}
+			System.out.println("Enter your friend name who know you");
+			String friedName=br.readLine().trim();
+			return getPersonDetails(socialNetwork, friedName);
+		}
+		
+		public static Person getPersonDetails(SocialNetwork socialNetwork,String name)
+		{
+			for(int index=0;index<socialNetwork.getAdajenceyList().size();index++)
+			{
+				Person person=socialNetwork.getNode(index);
+				if(person.getName().equalsIgnoreCase(name))
+					return person;
+				
+			}
+			return null;
+		}
+		
+		public static String  getFriendById(SocialNetwork socialNetwork,int friendId)
+		{
+			for(int index=0;index<socialNetwork.getAdajenceyList().size();index++)
+			{
+				Person person=socialNetwork.getNode(index);
+				if(person.getData()==friendId)
+					return person.getName();
+			}
+			return null;
+		}
 
+}
