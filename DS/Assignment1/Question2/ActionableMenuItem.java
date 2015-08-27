@@ -33,24 +33,24 @@ public class ActionableMenuItem implements MenuItem
 		switch (choice)
 		{
 			case 1 : System.out.println("\nEnter item to add in list 1 : ");
-					 item = sc.nextInt();
-					 objMergeArrayList1.addValueInList(item);
-					 break;
+				 item = sc.nextInt();
+				 objMergeArrayList1.addValueInList(item);
+				 break;
 		
 			case 2 : System.out.println("\nEnter item to add in list 2 : ");
-					 item = sc.nextInt();
-					 objMergeArrayList2.addValueInList(item);
-					 break;
+				 item = sc.nextInt();
+				 objMergeArrayList2.addValueInList(item);
+				 break;
 					 
 			case 3 : System.out.println("List 1 after merging list 2 to it : ");
-					 objMergeArrayList1.mergeArrayLists(objMergeArrayList2);
-					 break;
+				 objMergeArrayList1.mergeArrayLists(objMergeArrayList2);
+				 break;
 					 
 			case 4 : System.exit(0);
-					 break;
+				 break;
 			
 			default : System.out.println("Please enter correct choice");
-			 		  break;
+			 	  break;
 
 		}
 	}
