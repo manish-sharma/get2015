@@ -31,16 +31,16 @@ public class CollegeCounselling {
 			while((line=br.readLine())!=null)
 			{
 				String [] token=line.split(",");
-				if(token.length>0)//to check if some value is read or not from file
-				{
+				if(token.length<2)//to check if some value is read or not from file
+				continue;
 				Student student=new Student();
 				student.setName(token[0]);
 				student.setRank(Integer.parseInt(token[1]));
 				//student.setCollegeName(token[2]);
 				studentList.add(student);//inserting object into list
-				}
-				br.close();//closing file
-			} 
+			}
+			br.close();//closing file
+			
 		}
 		catch (FileNotFoundException e) {
 				System.out.println(e);
@@ -62,13 +62,15 @@ public class CollegeCounselling {
 			while((line=br.readLine())!=null)
 			{
 				String [] token=line.split(",");
-				if(token.length>0)//condition to check if some data is read or not 
-				{
+				if(token.length<2)//condition to check if some data is read or not 
+				continue;
 					College colleges=new College();
 					colleges.setCollegeName(token[0]);
 					colleges.setSeatsAvilabel(Integer.parseInt(token[1]));
 					collegeQueue.enqueue(colleges);//inserting into queue of type college object
-				}
+				         collegeList.add(colleges);
+					
+			}
 				br.close();//closing the file 
 			} 
 		}
