@@ -1,0 +1,6 @@
+Mechanic1 , SUV , 5000
+Mechanic2 , Sedan , 3000
+Mechanic3 , SUV , 5000
+Mechanic4 , Sedan , 3000
+Mechanic5 , Hatchback , 2000
+Mechanic6 , Sedan , 3000
