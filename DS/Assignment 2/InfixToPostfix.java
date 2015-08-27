@@ -1,3 +1,11 @@
+/****************************************************************************************
+Name            : InfixToPostfix
+Revision Log    : 2015-08-27: Babalu patidar : created.
+                : 
+                : 
+Use             : This class is used to perform infix to postfix.
+                :
+****************************************************************************************/
 import java.util.Scanner;
 
 public class InfixToPostfix extends StackUsingLinkList {
