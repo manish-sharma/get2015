@@ -190,5 +190,24 @@ public class DoublyLinkedList
 		return null;
 	}
 	
+	public DoublyNode reverseList(DoublyNode start) {
+		if(start == null) {
+			System.out.println("Empty List");
+			return null;
+		}
+		DoublyNode current=start;
+		DoublyNode temp=null;
+		while (current!=null)
+		{
+		     temp=current.getPreviousNode();
+		     current.setPreviousNode(current.getNextNode());
+		      current.setNextNode(temp);
+		      current=current.getPreviousNode();
+		 }      
+		 System.out.println("List is Reversed");
+		return temp.getPreviousNode();
+		
+	}
+	
 
 }
