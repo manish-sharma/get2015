@@ -1,3 +1,12 @@
+/****************************************************************************************
+Name            : Queue
+Revision Log    : 2015-08-27: Babalu patidar : created.
+                : 
+                : 
+Use             : This class is used to perform queue operation.
+                :
+****************************************************************************************/
+
 import java.util.Scanner;
 
 
