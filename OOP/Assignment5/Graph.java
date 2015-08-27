@@ -1,11 +1,11 @@
-package SocialNetwork;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Graph {
 	private  int  noOfVertices;
-	private  List<Node> AdjacencyList;
+	private static  List<Node> AdjacencyList;
 	
 	public  int getNoOfVertices() {
 		return noOfVertices;
@@ -26,15 +26,20 @@ public class Graph {
 	public boolean addNode(Node nodeToAdd){
 		
 	
-		
+		Entity entity = (Entity)nodeToAdd;
 		for(int index=0;index<AdjacencyList.size();index++)
 		{
 			if(AdjacencyList.get(index).equals(nodeToAdd))
 				return false;
 		}
-		AdjacencyList.add(nodeToAdd);
+		AdjacencyList.add(entity);
 		noOfVertices=AdjacencyList.size();
 		return true;
+	}
+	public Entity getNode(int index)
+	{
+		Node node=AdjacencyList.get(index);
+		return (Entity)node;
 	}
 	public boolean deleteNode(Node nodeToRemove)
 	{
