@@ -1,5 +1,11 @@
+/**
+ * @author Girdhari
+ * This class will create Node
+ */
+
 package preordertraversal;
 
+/* Start of Node class */
 public class Node {
 
 	private Node leftNode;
@@ -35,3 +41,4 @@ public class Node {
 	}
 	
 }
+/* End of Node class */
