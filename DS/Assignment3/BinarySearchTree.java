@@ -3,7 +3,7 @@
  * This class will handle various operation on Binary Search
  */
 
-package preordertraversal;
+package traversal;
 
 /* Start of BinarySearchTree class */
 public class BinarySearchTree {
