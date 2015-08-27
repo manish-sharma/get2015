@@ -133,7 +133,7 @@ public class DoublyLinkedList
 		while(head!=null&&head.getData()!=data)
 		{
 			head=head.getNextNode();
-			System.out.println("IN while");
+		
 		}
 		if(DoublyLinkedList.isEmpty(head))
 		{
