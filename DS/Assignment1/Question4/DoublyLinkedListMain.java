@@ -30,46 +30,46 @@ public class DoublyLinkedListMain
 			switch (choice)
 			{
 				case 1 : System.out.println("\nEnter item to add in list : ");
-						 item = sc.nextInt();
-						 objDoublyLinkedList.addValueInList(item);
-						 break;
+					 item = sc.nextInt();
+					 objDoublyLinkedList.addValueInList(item);
+					 break;
 						
 				case 2 : System.out.println("\nEnter item to add in list : ");
-						 item = sc.nextInt();
-						 System.out.println("\nEnter location of item to be inserted in list : ");
-						 location = sc.nextInt();
-						 objDoublyLinkedList.addValueAtGivenLocation(item,location-1);
-						 break;
+					 item = sc.nextInt();
+					 System.out.println("\nEnter location of item to be inserted in list : ");
+					 location = sc.nextInt();
+					 objDoublyLinkedList.addValueAtGivenLocation(item,location-1);
+					 break;
 						 
 				case 3 : System.out.println("\nEnter the item to remove : ");
-						 item = sc.nextInt();
-						 objDoublyLinkedList.removeItemBasedOnvalue(item);
-						 break;
+					 item = sc.nextInt();
+					 objDoublyLinkedList.removeItemBasedOnvalue(item);
+					 break;
 						 
 				case 4 : System.out.println("\nEnter location of item to be deleted : ");
-						 location = sc.nextInt();
-						 objDoublyLinkedList.removeItemBasedOnLocation( location-1 );
-						 break;
+					 location = sc.nextInt();
+					 objDoublyLinkedList.removeItemBasedOnLocation( location-1 );
+					 break;
 						 
 				case 5 : System.out.println("\nEnter location of item to be found : ");
-						 location = sc.nextInt();
-						 objDoublyLinkedList.retrieveItemAtGivenLocation(location-1);
-						 break;
-						 
+					 location = sc.nextInt();
+					 objDoublyLinkedList.retrieveItemAtGivenLocation(location-1);
+					 break;
+					 
 				case 6 : objDoublyLinkedList.reverseDoublyLinkedList();
-						 break;
+					 break;
 						 
 				case 7 : objDoublyLinkedList.sortDoublyLinkedList();
-						 break;
+					 break;
 						 
 				case 8 : objDoublyLinkedList.traverseList();
-						 break;
+					 break;
 						 
 				case 9 : System.exit(0);
-				 		  break;
+				 	 break;
 				
 				default : System.out.println("Please enter correct choice");
-				  		  break;
+				  	  break;
 			}
 		}
 	}
