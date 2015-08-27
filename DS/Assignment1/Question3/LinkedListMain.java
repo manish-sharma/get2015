@@ -33,46 +33,46 @@ public class LinkedListMain
 			switch (choice)
 			{
 				case 1 : System.out.println("\nEnter item to add in list : ");
-						 item = sc.nextInt();
-						 objLinkedList.addValueInList(item);
-						 break;
+					 item = sc.nextInt();
+					 objLinkedList.addValueInList(item);
+					 break;
 						
 				case 2 : System.out.println("\nEnter item to add in list : ");
-						 item = sc.nextInt();
-						 System.out.println("\nEnter location of item to be inserted in list : ");
-						 location = sc.nextInt();
-						 objLinkedList.addValueAtGivenLocation(item,location-1);
-						 break;
+					 item = sc.nextInt();
+					 System.out.println("\nEnter location of item to be inserted in list : ");
+					 location = sc.nextInt();
+					 objLinkedList.addValueAtGivenLocation(item,location-1);
+					 break;
 						 
 				case 3 : System.out.println("\nEnter the item to remove : ");
-						 item = sc.nextInt();
-						 objLinkedList.removeItemBasedOnvalue(item);
-						 break;
+					 item = sc.nextInt();
+					 objLinkedList.removeItemBasedOnvalue(item);
+					 break;
 						 
 				case 4 : System.out.println("\nEnter location of item to be deleted : ");
-						 location = sc.nextInt();
-						 objLinkedList.removeItemBasedOnLocation( location-1 );
-						 break;
+					 location = sc.nextInt();
+					 objLinkedList.removeItemBasedOnLocation( location-1 );
+					 break;
 						 
 				case 5 : System.out.println("\nEnter location of item to be found : ");
-						 location = sc.nextInt();
-						 objLinkedList.retrieveItemAtGivenLocation(location-1);
-						 break;
+					 location = sc.nextInt();
+					 objLinkedList.retrieveItemAtGivenLocation(location-1);
+					 break;
 						 
 				case 6 : objLinkedList.reverseLinkedList();
-						 break;
+					 break;
 						 
 				case 7 : objLinkedList.sortLinkedList();
-						 break;
+					 break;
 						 
 				case 8 : objLinkedList.traverseList();
-						 break;
+					 break;
 						 
 				case 9 : System.exit(0);
-				 		  break;
+				 	 break;
 				
 				default : System.out.println("Please enter correct choice");
-				  		  break;
+				  	  break;
 			}
 		}
 	}
