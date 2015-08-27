@@ -1,3 +1,12 @@
+/****************************************************************************************
+Name            : CounselingOfCollege
+Revision Log    : 2015-08-27: Babalu patidar : created.
+                : 
+                : 
+Use             : This class is used to implement college counceling.
+                :
+****************************************************************************************/
+
 import java.util.*;
 
 public class CounselingOfCollege extends Queue {
