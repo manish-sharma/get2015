@@ -1,4 +1,4 @@
-package SocialNetwork;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -80,5 +80,10 @@ public class SocialNetwork extends Graph {
 	public void printGraph()
 	{
 		super.printGraph();
+	}
+	public Person getNode(int index)
+	{
+		Entity entity=super.getNode(index);
+		return (Person)entity;
 	}
 }
