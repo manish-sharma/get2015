@@ -3,7 +3,7 @@
  * This class will create Node
  */
 
-package preordertraversal;
+package traversal;
 
 /* Start of Node class */
 public class Node {
