@@ -62,6 +62,7 @@ public class MainClassSinglyLinkedList
 				break;
 			case 8: 
 				start=singlyLinkedList.reverseList(start);
+				break;
 			default:
 				System.out.println("Wrong Choice!");
 			}
