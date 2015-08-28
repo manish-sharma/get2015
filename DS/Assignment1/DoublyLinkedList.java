@@ -209,5 +209,29 @@ public class DoublyLinkedList
 		
 	}
 	
+	public void sortList(DoublyNode start)
+	{
+		DoublyNode outer,inner,temp;
+		outer=start;
+		inner=null;
+		temp=start;
+		while(outer.getNextNode()!=null)
+		{
+			temp=start;
+			while(temp.getNextNode()!=inner)
+			{
+				if(temp.getData()>temp.getNextNode().getData())
+				{
+					temp.setData(temp.getData()+temp.getNextNode().getData());
+					temp.getNextNode().setData(temp.getData()-temp.getNextNode().getData());
+					temp.setData(temp.getData()-temp.getNextNode().getData());
+				}
+				temp=temp.getNextNode();
+			}
+			inner=temp;
+			outer=outer.getNextNode();
+		}
+	}
+	
 
 }
