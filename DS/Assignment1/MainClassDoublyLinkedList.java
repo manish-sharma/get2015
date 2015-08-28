@@ -18,7 +18,8 @@ public class MainClassDoublyLinkedList {
 					+ "3. Insert Node at Postion\n"
 					+ "4. Delete Node \n"
 					+ "5. Delete Node by Position\n" 
-					+ "6. Reverse of List\n");
+					+ "6. Reverse of List\n"
+					+  "7.Sorting of List\n");
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 			int choice = DoublyLinkedList.readData();
 			DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
@@ -50,7 +51,9 @@ public class MainClassDoublyLinkedList {
 				case 6 : 
 					startNode=doublyLinkedList.reverseList(startNode);
 					break;
-			
+				case 7:
+					doublyLinkedList.sortList(startNode);
+					break;
 				default:
 					System.out.println("Please enter corrrect choice");
 			}
