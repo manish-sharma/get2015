@@ -23,7 +23,8 @@ public class MainClassSinglyLinkedList
 								+ "5. Insert At the End\n"
 								+ "6. Delete Node \n"
 								+ "7. Delete By Index\n"
-								+ "8. Reverse List\n");
+								+ "8. Reverse List\n"
+								+ "9. Sorting of List\n");
 			int choice = scanner.nextInt();
 			SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
 			switch(choice) {
@@ -62,6 +63,9 @@ public class MainClassSinglyLinkedList
 				break;
 			case 8: 
 				start=singlyLinkedList.reverseList(start);
+				break;
+			case 9:
+				singlyLinkedList.sortList(start);
 				break;
 			default:
 				System.out.println("Wrong Choice!");
