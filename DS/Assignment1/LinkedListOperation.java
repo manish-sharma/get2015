@@ -30,7 +30,6 @@ public class LinkedListOperation {
 				current.setNextNode(newNode);
 				current = current.getNextNode();
 			}
-			// System.out.println("start data is"+start.getData());
 			System.out.print("Do you want to add more nodes:(Y/N) ");
 			choice = bufferedReader.readLine();
 
