@@ -69,11 +69,33 @@ public class DoublyLinkedListOperation {
 	}
 	/* End of readData function */
 
-	/* Start of displayList function */
 	public static boolean isEmpty(DoublyNode node) {
 		return node == null;
 	}
-
+	
+	/* Start of sortList function */
+	public void sortList(DoublyNode start) {
+			DoublyNode previous, current, temp;
+			previous = start;
+			current = null;
+			temp = start;
+			while( previous.getNextNode() != null) {
+				temp = start;
+				while( temp.getNextNode() != previous) {
+					if(temp.getData() > temp.getNextNode().getData()) {
+						temp.setData(temp.getData() + temp.getNextNode().getData());
+						temp.getNextNode().setData(temp.getData() - temp.getNextNode().getData());
+						temp.setData(temp.getData() - temp.getNextNode().getData());
+					}
+					temp = temp.getNextNode();
+				}
+				current = temp;
+				previous = previous.getNextNode();
+			}
+		}
+	/* End of sortList function */
+		
+	/* Start of displayList function */
 	void displayList(DoublyNode start) {
 		if (isEmpty(start)) {
 			System.out.println("List is empty");
