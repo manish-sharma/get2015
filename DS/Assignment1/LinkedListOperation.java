@@ -13,7 +13,7 @@ public class LinkedListOperation {
 				new InputStreamReader(System.in));
 		int data;
 		String choice = null;
-		Node head = null;
+		Node current = null;
 		Node start = null;
 		Node newNode = null;
 
@@ -24,11 +24,11 @@ public class LinkedListOperation {
 			newNode = new Node(data);
 			if(start == null) {
 				start = newNode;
-				head = start;
+				current = start;
 			}
 			else {
-				head.setNextNode(newNode);
-				head = head.getNextNode();
+				current.setNextNode(newNode);
+				current = current.getNextNode();
 			}
 			// System.out.println("start data is"+start.getData());
 			System.out.print("Do you want to add more nodes:(Y/N) ");
@@ -203,4 +203,30 @@ public class LinkedListOperation {
 		return data;
 	}
 	/* End of readData function */
+	
+	/* Start of sortList function */
+	public void sortList(Node start)
+	{
+		Node previous, current, temp;
+		previous = start;
+		current = null;
+		temp = start;
+		while(previous.getNextNode() != null)
+		{
+			temp = start;
+			while( temp.getNextNode() != current)
+			{
+				if(temp.getData() > temp.getNextNode().getData())
+				{
+					temp.setData(temp.getData() + temp.getNextNode().getData());
+					temp.getNextNode().setData(temp.getData() - temp.getNextNode().getData());
+					temp.setData(temp.getData() - temp.getNextNode().getData());
+				}
+				temp = temp.getNextNode();
+			}
+			current = temp;
+			previous = previus.getNextNode();
+		}
+	}
+	/* End of sortList function */
 }
