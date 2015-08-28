@@ -137,7 +137,7 @@ public class ArrayList {
 		if( position == -1) {
 			System.out.println("Element Doesn't Exist in the array!!");
 		} else {
-			deleteElement(position);
+			deleteElementOnLocation(position);
 		}
 		
 	}
