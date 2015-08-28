@@ -90,8 +90,8 @@ public class BinarySearchTree<T>
 	//if postorder of tree 1 and preorder of tree 2 is equal then they are mirror of each other
 	public  boolean isMirror(Node<T> root1 ,Node<T> root2) 
 	{
-		postOrderTraversal(root1);
-		preOrderTraversal(root2);
+		preOrderTraversal(root1);
+		mirrorTraversal(root2);
 		return mirrorString.equalsIgnoreCase(preOrderString);
 	}
 
