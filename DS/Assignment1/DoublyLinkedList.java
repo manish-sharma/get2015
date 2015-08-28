@@ -9,7 +9,7 @@ package question4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/* Start of DoublyLinkedList class */
 public class DoublyLinkedList {
 	public static void main(String args[]) {
 
@@ -17,9 +17,14 @@ public class DoublyLinkedList {
 		String choiceContinue = "";
 		do {
 
-			System.out.print("Menu:\n" + "1. Create List\n" + "2. Print List\n"
-					+ "3. Insert Node at Postion\n" + "4. Delete Node \n"
-					+ "5. Delete Node by Position\n" + "6. Reverse of List\n");
+			System.out.print("Menu:\n"
+					+ "1. Create List\n"
+					+ "2. Print List\n"
+					+ "3. Insert Node at Postion\n"
+					+ "4. Delete Node \n"
+					+ "5. Delete Node by Position\n"
+					+ "6. Reverse of List\n"
+					+ "7. Sort List");
 			BufferedReader bufferedReader = new BufferedReader(
 					new InputStreamReader(System.in));
 			int choice = DoublyLinkedListOperation.readData();
@@ -58,7 +63,11 @@ public class DoublyLinkedList {
 			case 6:
 				startNode = doublyLinkedList.reverseList(startNode);
 				break;
-
+				
+			case 7:
+				doublyLinkedList.sortList(startNode);
+				break;
+				
 			default:
 				System.out.println("Please enter corrrect choice");
 			}
@@ -85,3 +94,4 @@ public class DoublyLinkedList {
 	}
 
 }
+/* End of DoublyLinkedList */
