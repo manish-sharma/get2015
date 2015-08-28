@@ -47,13 +47,15 @@ public static void  main(String []args) {
 		
 		if(result){
 			System.out.println("Both trees are mirror similar");
+			System.out.println("**Exit**");
 		}
-		else
+		else{
 			System.out.println("Both trees are not mirror similar");
-	
+	     	System.out.println("**Exit**");
+		}
 	  }catch(Exception e){
 		System.out.println("Enter valid values");
-		
+		System.out.println("**Exit**");
 	}
 	
 	}
@@ -63,7 +65,8 @@ public static void  main(String []args) {
  */
 	
 	public boolean  mirrorSimilar(Node<Integer> root1, Node<Integer> root2) {
-		                  boolean status=false;
+		                 
+		     boolean status=false;
 		  
 		     if(root1 ==null && root2 == null){
 		               	status = true;
@@ -71,8 +74,8 @@ public static void  main(String []args) {
 		
 		else	{
 			
-			if(root1 == null) return false;
-			if(root2 == null) return false;
+			if(root1 == null && root2 != null) return false;
+			if(root2 == null && root1 != null) return false;
 		
 	   else if(root1.nodeValue == root2.nodeValue){
 			status = (mirrorSimilar(root1.left, root2.right) && mirrorSimilar(root1.right, root2.left));
