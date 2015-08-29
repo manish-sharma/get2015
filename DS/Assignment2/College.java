@@ -3,7 +3,7 @@ public class College {
 	
 	private String collegeName;
 	private int collegeRank;
-	private int capacityOfStudent;
+	private int capacityOfStudent=10;
 	private static int noOfColleges;
 	
 	public String getCollegeName() {
@@ -34,6 +34,6 @@ public class College {
 	public College(String collegeName ,int collegeRank) {
 		this.collegeName=collegeName;
 		this.collegeRank=collegeRank;
-		
+		noOfColleges++;
 	}
 }
