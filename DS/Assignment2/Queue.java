@@ -6,7 +6,7 @@ public class Queue<T> {
 	private T queue[];
 	private int front;
 	private int rear;
-	private final int SIZE=20;
+	private int size;
 	
 	public T[] getQueue() {
 		return queue;
@@ -27,12 +27,12 @@ public class Queue<T> {
 		this.rear = rear;
 	}
 	public int getSIZE() {
-		return SIZE;
+		return size;
 	}
 	
-	public Queue(Class<T[]> classObj) {
-		
-		queue= (T[]) classObj.cast(Array.newInstance(classObj.getComponentType(), SIZE));
+	public Queue(Class<T[]> classObj , int size) {
+		this.size=size;
+		queue= (T[]) classObj.cast(Array.newInstance(classObj.getComponentType(), size));
 		front=-1;
 		rear=-1;
 	}
@@ -41,7 +41,7 @@ public class Queue<T> {
 	{
 		if(front==-1&&rear==-1)
 			front=0;
-		if(front==SIZE-1)
+		if(rear>=size)
 		{
 			System.out.println("Overflow occured queue is full");
 			return false;
@@ -59,12 +59,11 @@ public class Queue<T> {
 			System.out.println("Under Flow occured queue is empty");
 			return null;
 		}
-		if(front==SIZE-1)
-		{
-			front=rear=-1;
-		}
 		T data=queue[front];
-		front++;
+		if(front==rear)
+			front=rear=-1;
+		else
+			front++;
 		return data;
 	}
 	
@@ -86,5 +85,12 @@ public class Queue<T> {
 	{
 		front=rear=-1;
 		System.out.println("Queue is cleared");
+	}
+	public boolean isEmpty()
+	{
+		if(front==-1&&rear==-1)
+			return true;
+		
+		return false;
 	}
 }
