@@ -1,14 +1,20 @@
 import java.util.Comparator;
 
-
 public class Student {
 	
 	private String studentName;
 	private boolean isCollegeAlloted;
 	private int studentRank;
 	private static int noOfStudent;
+	private int selectOption[];
 	
 	
+	public int[] getSelectOption() {
+		return selectOption;
+	}
+	public void setSelectOption(int[] selectOption) {
+		this.selectOption = selectOption;
+	}
 	public int getStudentRank() {
 		return studentRank;
 	}
@@ -34,10 +40,11 @@ public class Student {
 		this.isCollegeAlloted = isCollegeAlloted;
 	}
 	
-	public Student(String studentName,int studentRank) {
+	public Student(String studentName,int studentRank ,int selectOption[]) {
 		this.studentName=studentName;
 		isCollegeAlloted=false;
 		this.studentRank=studentRank;
+		this.selectOption=selectOption;
 		noOfStudent++;
 	}
 	
