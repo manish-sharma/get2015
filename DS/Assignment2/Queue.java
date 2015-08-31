@@ -6,14 +6,14 @@
 package queue;
 
 import java.lang.reflect.Array;
-
+/* Start of Queue class */
 public class Queue<T> {
 
 	private T queue[];
 	private int end;
 	private int start;
 	private int size;
-
+	/* Start of getters and setters */
 	public T[] getQueue() {
 		return queue;
 	}
@@ -41,7 +41,8 @@ public class Queue<T> {
 	public int getSize() {
 		return size;
 	}
-
+	/* End of getters and setters */
+	/* Start of class Constructor */
 	public Queue(Class<T[]> classObject, int size) {
 		this.size = size;
 		queue = (T[]) classObject.cast(Array.newInstance(
@@ -49,7 +50,8 @@ public class Queue<T> {
 		end = -1;
 		start = -1;
 	}
-
+	/* End of class Constructor */
+	/* Start of insertElement function */
 	public boolean insertElement(T data) {
 		if (end + start < 0)
 			end = 0;
@@ -61,7 +63,8 @@ public class Queue<T> {
 		queue[ start ] = data;
 		return true;
 	}
-
+	/* End of insertElement function */
+	/* Start of deleteElement function */
 	public T deleteElement() {
 		if (end == start && end == -1) {
 			System.out.println("Under Flow occured queue is empty");
@@ -74,9 +77,10 @@ public class Queue<T> {
 			end++;
 		return data;
 	}
-
+	/* End of deleteElement function */
+	/* Start of displayQueue function */
 	public void displayQueue() {
-		if (end == -1 && start == -1) {
+		if (end + start < 0) {
 			System.out.println("Queue is empty");
 			return;
 		}
@@ -86,17 +90,21 @@ public class Queue<T> {
 		}
 		System.out.println();
 	}
-
+	/* End of displayQueue function */
+	/* Start of clearAll function */
 	public void clearAll() // clear all the data in queue array
 	{
 		end = start = -1;
 		System.out.println("Queue is cleared");
 	}
-
+	/* End of clearAll function */
+	/* Start of isEmpty function */
 	public boolean isEmpty() {
 		if (end == -1 && start == -1)
 			return true;
 
 		return false;
 	}
+	/* End of isEmpty function */
 }
+/* End of Queue class */
