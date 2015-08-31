@@ -2,7 +2,7 @@ package queue;
 
 /**
  @author Girdhari
- * counseling class doing counseling of each student according to its choice and rank   
+ * Counseling class doing Counseling of each student according to its choice and rank   
  */
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/* Starting of counseling class */
-public class counseling {
+/* Starting of Counseling class */
+public class Counseling {
 
 	private int collegeSize;
 	private int studentSize;
@@ -21,7 +21,7 @@ public class counseling {
 	private Queue<Student> studentList;
 	private List<College> listOfCollege;
 	private List<Student> listOfStudent;
-	private Map<String, String> counselingResult;
+	private Map<String, String> CounselingResult;
 
 	/* Starting of getters and setters */
 	public int getCollegeSize() {
@@ -56,12 +56,12 @@ public class counseling {
 		this.listOfStudent = listOfStudent;
 	}
 
-	public Map<String, String> getcounselingResult() {
-		return counselingResult;
+	public Map<String, String> getCounselingResult() {
+		return CounselingResult;
 	}
 
-	public void setcounselingResult(HashMap<String, String> counselingResult) {
-		this.counselingResult = counselingResult;
+	public void setCounselingResult(HashMap<String, String> CounselingResult) {
+		this.CounselingResult = CounselingResult;
 	}
 
 	public Queue<Student> getStudentList() {
@@ -82,18 +82,18 @@ public class counseling {
 	}
 	/* End of getters and setters */
 	/* Start of class constructor */
-	public counseling(int collegeSize, int studentSize) {
+	public Counseling(int collegeSize, int studentSize) {
 		this.collegeSize = collegeSize;
 		this.studentSize = studentSize;
 		listOfCollege = new ArrayList<College>();
 		listOfStudent = new ArrayList<Student>();
 
 		this.studentList = new Queue<Student>(Student[].class, this.studentSize);
-		counselingResult = new HashMap<String, String>();
+		CounselingResult = new HashMap<String, String>();
 	}
 	/* End of class constructor */
-	/* Start of docounseling function */
-	public void docounseling() {
+	/* Start of doCounseling function */
+	public void doCounseling() {
 		Collections.sort(listOfStudent, Student.comapareRank);
 		for (int studentNo = 0; studentNo < listOfStudent.size(); studentNo++) {
 			studentList.insertElement(listOfStudent.get(studentNo));
@@ -107,21 +107,21 @@ public class counseling {
 				if (college.getCapacityOfStudent() > 0) {
 					student.setCollegeAlloted(true);
 					college.setCapacityOfStudent(college.getCapacityOfStudent() - 1);
-					counselingResult.put(student.getStudentName(),
+					CounselingResult.put(student.getStudentName(),
 							college.getCollegeName());
 					break;
 				}
 			}
 		}
 	}
-	/* End of docounseling function */
+	/* End of doCounseling function */
 	/* Start of displayResult function */
 	public void displayResult() {
-		Set<String> keySet = counselingResult.keySet();
+		Set<String> keySet = CounselingResult.keySet();
 		Iterator<String> iterator = keySet.iterator();
 		while (iterator.hasNext()) {
 			String studentName = (String) iterator.next();
-			String collegeName = (String) counselingResult.get(studentName);
+			String collegeName = (String) CounselingResult.get(studentName);
 			System.out.println("Name: " + studentName + " College: "
 					+ collegeName);
 		}
@@ -129,4 +129,4 @@ public class counseling {
 	}
 	/* End of displayResult function */
 }
-/* End of counseling class */
+/* End of Counseling class */
