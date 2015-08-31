@@ -1,16 +1,16 @@
 /**
  * @author Girdhari 
- * This class contains main method for counselling
+ * This class contains main method for Counseling
  */
 package queue;
-/* Startomg of CounsellingMain class */
-public class CounsellingMain {
+/* Starting of CounselingMain class */
+public class CounselingMain {
 	/* Starting of main function */
 	public static void main(String args[]) {
 		int collegeSize = 5;
 		int studentSize = 25;
 		int option[] = { 1, 2, 3, 4, 5 };
-		Counselling counseling = new Counselling(collegeSize, studentSize);
+		Counseling counseling = new Counseling(collegeSize, studentSize);
 		counseling.addCollege("college1", 1);
 		counseling.addCollege("college2", 2);
 		counseling.addCollege("college3", 3);
@@ -46,4 +46,4 @@ public class CounsellingMain {
 	}
 	/* End of main function */
 }
-/* End of CounsellingMain class */
+/* End of CounselingMain class */
