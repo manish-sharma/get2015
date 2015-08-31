@@ -3,9 +3,9 @@
  * This class contains main method for counselling
  */
 package queue;
-
+/* Startomg of CounsellingMain class */
 public class CounsellingMain {
-
+	/* Starting of main function */
 	public static void main(String args[]) {
 		int collegeSize = 5;
 		int studentSize = 25;
@@ -44,5 +44,6 @@ public class CounsellingMain {
 		counseling.doCounseling();
 		counseling.displayResult();
 	}
-
+	/* End of main function */
 }
+/* End of CounsellingMain class */
