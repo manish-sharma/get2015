@@ -1,0 +1,9 @@
+1,101,jaipur,delhi,5,300,120.0
+1,102,jaipur,bhopal,7,200,300.0
+2,103,jaipur,mumbai,9,100,200.0
+1,104,jaipur,ajmer,2,100,100.0
+1,105,jaipur,delhi,4,100,200.0
+2,106,ajmer,jaipur,2,100,100.0
+2,107,ajmer,jaipur,3,200,120.0
+2,108,jaipur,chennai,30,200,400.0
+1,109,jaipur,delhi,4,100,220.0
