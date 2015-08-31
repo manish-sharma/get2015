@@ -7,7 +7,8 @@ public class MainClassQueue {
 	public static void main(String args[])
 	{
 		char continueChoice=0;
-		Queue<Integer> queueOperation= new Queue<Integer>(Integer[].class);
+		int size=20;
+		Queue<Integer> queueOperation= new Queue<Integer>(Integer[].class , size);
 	
 		boolean isCorrect=false;
 		Scanner scanner =  new Scanner(System.in);
