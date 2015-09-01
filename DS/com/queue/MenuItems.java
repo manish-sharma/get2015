@@ -1,15 +1,13 @@
 /**
  * @author: Pooja Khandelwal
- * created date:31/08/2015
- * Name: MenuItems class
- * Description: this class implements MenuItemInterface and display the menu Items one by one 
- *
+ * @created date:01/09/2015
+ * @Name: MenuItems class
+ * @Description: this class implements MenuItemInterface and display the menu Items one by one 
  */
-
-package com.menu.admin.printer;
+package com.queue;
 
 public class MenuItems implements MenuItemInterface {
-	String displayText;
+	private String displayText;
 
 	public MenuItems() {
 	}

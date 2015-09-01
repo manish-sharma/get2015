@@ -1,14 +1,15 @@
-/**
- * @author Pooja Khandelwal
- * @created date:31/08/2015
+/**  
+ * @author: Pooja Khandelwal
+* @created date:01/09/2015
  * @Name: Menu Class
- *@Description: it will set the all menu items contens and then display them by further calling the displayMenu() function of MenuItems class
+ * @Description: it will set the all menu items contens and then display 
+ * then by further calling the displayMenu() function of MenuItems class
  *
  */
-package com.menu.admin.printer;
+package com.sortedLinkList;
 
 public class Menu {
-	String[] menuContent;
+	private String[] menuContent;
 
 	/*
 	 * @Name: Menu Class Constructor
@@ -17,10 +18,9 @@ public class Menu {
 	 */
 	public Menu() {
 		menuContent = new String[] {
-				"\npress 1 to send documents to print",
-				"press 2 to print the documents",
-				"press 3 to show all documents priority which are still assigned to printer",
-				"press 4 to exit" };
+				"\nPress 1 to add element into list",
+				  "press 2 to print elements of list",
+				  "press 0 to exit" };
 	}
 
 	/*
