@@ -1,8 +1,14 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 
 public class GuestHouse {
 	
 	private Room roomArray[];
 	private int noOfRooms;
+	private Map<Integer,String> allotList=new HashMap<Integer,String>();
 	
 	public Room[] getRoomArray() {
 		return roomArray;
@@ -29,27 +35,26 @@ public class GuestHouse {
 		
 	}
 	
-	public boolean allotRoom(int ageOfPerson)
+	public int allotRoom(String name,int ageOfPerson)
 	{
-		boolean isAlloted=false;
 		if(ageOfPerson<18&&ageOfPerson>120)
 		{
 			System.out.println("please enter valid age");
-			return isAlloted;
+			return -1;
 		}
 		int roomIndex = ageOfPerson % noOfRooms;
 		int newRoomIndex;
 		if(Room.getNoOfRoomsAlloted()==noOfRooms)
 		{
 			System.out.println("All rooms are alloted");
-			return isAlloted;
+			return -1;
 		}
 		do
 		{
 			if(!roomArray[roomIndex].isAlloted())
 			{
 				roomArray[roomIndex].alloteRoom(roomIndex);
-				isAlloted=true;
+				allotList.put(roomIndex+1, name);
 				break;
 			}
 			else
@@ -61,14 +66,17 @@ public class GuestHouse {
 			
 		}while(true);
 			
-		return isAlloted;
+		return roomIndex+1;
 	}
 	public void display()
 	{
-		for(int index=0;index<noOfRooms;index++)
+		Set<Integer> keySet = allotList.keySet();
+		Iterator<Integer> iterator = keySet.iterator();
+		while (iterator.hasNext()) 
 		{
-			if(roomArray[index].isAlloted())
-			System.out.println("room no is"+roomArray[index].getRoomId());
+			Integer roomNo = (Integer) iterator.next();
+			String name = (String)allotList.get(roomNo);
+			System.out.println("Room No:"+roomNo+"\tName :"+name);
 		}
 	}
 	
