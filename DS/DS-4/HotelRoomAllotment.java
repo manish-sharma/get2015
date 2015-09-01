@@ -38,7 +38,7 @@ public class HotelRoomAllotment {
 				room = room + 1;
 			}
 			else{
-				room = 1;
+				room = 0;
 			}
 		}
 		
@@ -49,7 +49,7 @@ public class HotelRoomAllotment {
 	 * Method to view the allotment list
 	 */
 	private void viewList(){
-		for(int i = 0;i<numberOfRooms;i++){
+		for(int i = 0;i<=numberOfRooms;i++){
 			System.out.println("Room Number " + i + " " +hotelRooms.get(i));
 		}
 	}
