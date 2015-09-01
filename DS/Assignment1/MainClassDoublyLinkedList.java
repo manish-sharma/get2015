@@ -9,6 +9,7 @@ public class MainClassDoublyLinkedList {
 	
 		DoublyNode startNode=null;
 		String choiceContinue="";
+		DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
 		do 
 		{
 			
@@ -22,7 +23,7 @@ public class MainClassDoublyLinkedList {
 					+  "7.Sorting of List\n");
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 			int choice = DoublyLinkedList.readData();
-			DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+		
 			switch(choice) 
 			{
 				case 1:
