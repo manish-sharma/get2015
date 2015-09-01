@@ -16,9 +16,8 @@ public class MainQueue {
 			do {
 				System.out.println("1. Add element");
 				System.out.println("2. Remove Element");
-				System.out.println("3. Top element");
-				System.out.println("4. Display");
-				System.out.println("5. Exit");
+				System.out.println("3. Display");
+				System.out.println("4. Exit");
 				int choice = sc.nextInt();
 				switch (choice) {
 				case 1:
@@ -32,12 +31,12 @@ public class MainQueue {
 							+ object.dequeue());
 					break;
 
-				case 4:
+				case 3:
 					System.out.println("Queue Contains");
 					System.out.println(object.toString());
 					break;
 
-				case 5:
+				case 4:
 					System.exit(0);
 					break;
 
