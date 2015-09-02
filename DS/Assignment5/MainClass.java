@@ -8,9 +8,9 @@ import java.util.Scanner;
 /* Starting of main class */
 public class MainClass {
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
 		System.out.print("Enter a String: ");
-		String inputString = scannerObject.nextLine();
+		System.out.println(args[0]);
+		String inputString = args[0];
 		FindOccurrence findOccurrenceObject = new FindOccurrence();
 		findOccurrenceObject.findOccurrence(inputString);
 		findOccurrenceObject.printOccurence();
