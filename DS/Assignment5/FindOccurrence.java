@@ -12,11 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/* Starting of FindOccurrence class */
 public class FindOccurrence {
 	HashMap<Character, String> hashMapObject = new HashMap<Character, String>(); 
-
-	/* Starting of findOccurrence function */
 	public void findOccurrence(String inputString) {
 		int counter;
 		int stringLength = inputString.length();
@@ -42,14 +39,11 @@ public class FindOccurrence {
 		}
 		
 	}
-	/* Ending of findOccurrence function */
 	
-	/* Starting of printOccurence function */
 	public void printOccurence() {
 		for(Map.Entry mapping:hashMapObject.entrySet()){  
-			   System.out.println(mapping.getKey()+" "+mapping.getValue());  
-		}  
+			   System.out.println(mapping.getKey()+" = "+mapping.getValue());  
+			  }  
 	}
-	/* Ending of printOccurence function */
+
 }
-/* Ending of FindOccurrence function */
