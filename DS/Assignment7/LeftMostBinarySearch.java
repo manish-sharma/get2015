@@ -4,7 +4,12 @@ public class LeftMostBinarySearch {
 	public int leftMostBinarySearch(int inputArray[] , int searchNumber , int startIndex , int endIndex)
 	{
 			
-			int middleIndex = ( startIndex + endIndex ) / 2;//Find the index of  middle element
+			if(inputArray==null||inputArray.length==0) // if array is empty or null
+			{
+				System.out.println("Array is empty or null");
+				return -1;
+			}
+			int middleIndex = ( startIndex + endIndex ) / 2 ; //Find the index of  middle element
 			int tempIndex = middleIndex;
 			
 			if( startIndex >=endIndex )//if number is not found in an array
