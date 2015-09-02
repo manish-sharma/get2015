@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class QueueImplementation 
+public class MainClassQueueImplementation 
 {
 
 	public static void main(String args[])
