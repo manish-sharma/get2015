@@ -15,7 +15,8 @@ public class ConcordanceOfCharacter {
 		Scanner scanner = new Scanner(System.in);
 		String name;
 		System.out.println("enter the string");
-		name = scanner.next();
+		name = scanner.nextLine();
+		name = name.replaceAll("\\s", "");
 		Set<Character> result = new HashSet<Character>();
 
 		for (int i = 0; i < name.length(); i++) {
