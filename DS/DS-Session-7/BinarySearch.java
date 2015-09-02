@@ -6,27 +6,43 @@ import java.util.Scanner;
  * @author Banwari Kevat
  */
 public class BinarySearch {
-	
-	public int binarySearch(int[] inputArr, int key) {
+	/*
+	 *This method for binary search in sorted arraylist
+	 *@param inputArr is the list in which search will be performed
+	 *@param key is the item which will be searched
+	 *return index of leftmost key if not found then return -1
+	 */
+	public int binarySearch(int[] inputArr, int key)
+	{
+        //indexFound for storing the index of key
         int indexFound = -1;
+        //starting index
         int start = 0;
+        //lst index of current list
         int end = inputArr.length - 1;
-        while (start <= end) {
+        
+        while (start <= end) 
+        {
             int mid = (start + end) / 2;
-            
-            if (key == inputArr[mid]) {
+            // element found 
+            if (key == inputArr[mid]) 
+            {
                 indexFound = mid;
             }
-           
-            if (key < inputArr[mid]) {
+            //element resides in left side of middle element
+            if (key < inputArr[mid])
+            {
                 end = mid - 1;
-            } else {
+            }
+            //element resides in right side of middle element
+            else
+            {
                 start = mid + 1;
             }
         }
-        
+        //now perform linear search for leftmost index
         while( indexFound > 0 && inputArr[indexFound-1] == key  )
-        {
+        {     
         	indexFound--;
         }
         return indexFound;
