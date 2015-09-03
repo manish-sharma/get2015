@@ -1,0 +1,65 @@
+package secondprogram;
+
+import java.util.Scanner;
+
+public class MainClass {
+	public static void main(String args[]) {
+		Scanner sc;
+		try {
+			sc = new Scanner(System.in);
+			RoomAllottement object = new RoomAllottement();
+			Guest objectOfGuest;
+			object.room = RoomDetails.readInfo();
+			// menu to display
+			int choice;
+			do {
+				System.out.println("1. Room Booking");
+				System.out.println("2. Already Allotted Rooms");
+				System.out.println("3. CheckOut");
+				System.out.println("4. Exit");
+				choice = sc.nextInt();
+				switch (choice) {
+
+				case 1:
+					objectOfGuest = new Guest();
+					System.out.println("Enter name");
+					String name = sc.next();
+					objectOfGuest.setName(name);
+					System.out.println("Enter the age of guests");
+					objectOfGuest.setAge(sc.nextInt());
+					int index = GenerateKey.hashFunction(
+							objectOfGuest.getAge());
+					if (object.allotingRooms(index, objectOfGuest))
+						System.out.println("Welcome :" + name);
+					break;
+
+				case 2:// function to print all rooms alloted
+					object.print();
+					break;
+
+				case 3:
+					System.out.println("Enter the number of room");
+					int roomNumber = sc.nextInt();
+					name = object.checkOut(roomNumber);
+					if (name != null)
+						System.out.println("Thank you for visiting " + name);
+					else
+						System.out.println("Enter a valid room number");
+					break;
+
+				case 4:
+					System.exit(0);
+
+				default:
+					System.out.println("Enter a valid input");
+
+				}
+
+			} while (true);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}
