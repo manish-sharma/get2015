@@ -1,10 +1,8 @@
-
 public class Employee implements Comparable<Employee>{
 	
 	private Integer id;
 	private String name;
 	private String address;
-	
 	
 	public Integer getId() {
 		return id;
@@ -39,7 +37,7 @@ public class Employee implements Comparable<Employee>{
 	}
 	
 	@Override
-	public int compareTo(Employee employee1) {
-		return this.getId().compareTo(employee1.getId());
+	public int compareTo(Employee employee) {
+		return this.getId().compareTo(employee.getId());
 	}
 }
