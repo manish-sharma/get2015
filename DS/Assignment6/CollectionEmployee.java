@@ -25,6 +25,7 @@ public class CollectionEmployee  {
 			return true;
 		return false;
 	}
+	
 	public void displayEmployeeCollection()
 	{
 		if(employeeSet.size()==0)
@@ -41,11 +42,11 @@ public class CollectionEmployee  {
 	public static class NameComparator implements Comparator<Object>
 	{	
 		
-		public int compare(Object o1, Object o2)
+		public int compare(Object object1, Object object2)
 		{
-			Employee e1 = (Employee)o1;
-			Employee e2 = (Employee)o2;
-			return e1.getName().compareTo(e2.getName());
+			Employee employee1 = (Employee)object1;
+			Employee employee2 = (Employee)object2;
+			return employee1.getName().compareTo(employee2.getName());
 		}
 	}
 
