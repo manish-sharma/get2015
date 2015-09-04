@@ -1,8 +1,9 @@
+package secondprogram;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * 
+ * class is used to check the validity of a integer
  * @author Riddhi
  *
  */
