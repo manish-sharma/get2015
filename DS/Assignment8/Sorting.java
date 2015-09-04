@@ -29,7 +29,7 @@ public class Sorting {
 				if(array.length <= 10) {
 					array = comparisonSortObject.bubbleSort(array);
 				} else {
-					array = comparisonSortObject.quickSort(array);
+					comparisonSortObject.quickSort(array);
 				}
 				break;
 			case 2:
