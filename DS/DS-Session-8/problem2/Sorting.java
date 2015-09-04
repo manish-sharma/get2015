@@ -1,9 +1,12 @@
-
+/*
+ * DS-Seeion-8 Assignment
+ * @authhor Banwari kevat
+ */
 public class Sorting {
 
 	//This method take parameter list of integer array and return sorted integer array
 	public int[] bubbleSort( int[] list )
-	{      //current size record last index of unsorted  list
+	{      //current size contains last index of unsorted  list
 		   int currentSize = list.length;
 		   while(currentSize > 1)
 		   {   
@@ -16,7 +19,7 @@ public class Sorting {
 			          list[i]=list[i]-list[i+1];
 			     }  
 		   }
-		   // reduce  list size	   
+		   // reduce  list size by one because last element is reach at actual position	   
 		   currentSize--;
 		   }
 		   return list;
@@ -50,6 +53,7 @@ public class Sorting {
 	                	
 	             }
 	             //swap pivot element to middle position where list is divided into two half
+	             //one half is less than pivot and another half is greater than pivot
 	             int temp = list[pivot];
 	             list[pivot] = list[stored-1];
 	             list[stored-1] = temp;
@@ -65,7 +69,7 @@ public class Sorting {
      * Method for quick sort 
      * @param list is the list which will be sorted
      */
-    public int [] quickSort(int [] list) 
+    public int[] quickSort(int [] list) 
     {   System.out.println("q");
     	return quickSort( list , 0 , list.length-1);	
     }
@@ -108,26 +112,35 @@ public class Sorting {
     /*
      * Method for Radix sort
      * @param list is which will be sorted
+     * @param max is the maximum element in the list 
      * @return sorted list
      */
       public int [] radixSort( int[] list, int max)
        {    
     	  
-            int i, exponential = 1, size = list.length;
-            int[] b = new int[10];
-          
-            while (max / exponential > 0)
+            int exponential = 1;
+            int[] tempBucket = new int[10];
+            //repeat this loop number of digit present in max 
+            while (max /exponential > 0)
             {
                 int[] bucket = new int[10];
-     
-                for (i = 0; i < size; i++)
+                
+                for (int i = 0; i < list.length; i++)
+                {	//storing frequency of digit
                     bucket[(list[i] / exponential) % 10]++;
-                for (i = 1; i < 10; i++)
-                    bucket[i] += bucket[i - 1];
-                for (i = size - 1; i >= 0; i--)
-                    b[--bucket[(list[i] / exponential) % 10]] = list[i];
-                for (i = 0; i < size; i++)
-                	list[i] = b[i];
+                }    
+                for (int i = 1; i<10; i++)
+                { 	
+                    bucket[i] += bucket[i-1];
+                }   
+                for (int i = list.length - 1; i >= 0; i--)
+                { 	
+                	tempBucket[--bucket[( list[i] / exponential ) % 10]] = list[i];
+                }	
+                for (int i = 0; i < list.length; i++)
+                {	
+                	list[i] = tempBucket[i];
+                }	
                 exponential *= 10;        
             }
             return list;
