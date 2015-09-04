@@ -26,23 +26,15 @@ public class BinarySearchTest {
 	}
 
 	@Test
-	public void testLeftMostOccurrence() {
-		int arr[]={1,2,2,3,4,5,6,6,6,6,6,6,6,6,6,6,7,7,7};
-		int value=7;
-		BinarySearch object=new BinarySearch();
-		int actualOutput=object.leftMostOccurrence(arr, 0, arr.length, value);
-		int expectedOutput=16;
-		assertEquals(expectedOutput,actualOutput);
-	}
-	
-	@Test
-	public void testRightMostOccurrence() {
-		int arr[]={1,2,2,2,3,3,3,3,3,4,4,4,4};
-		int value=3;
-		BinarySearch object=new BinarySearch();
-		int actualOutput=object.rightMostOccurrence(arr, 0, arr.length, value);
-		int expectedOutput=8;
-		assertEquals(expectedOutput,actualOutput);
-	}
+	public void binarysearchTest() {
+
+		int arr[] = {1,1,1,2,3};
+		int index = object.binarySearch(arr, 0, 4, 1);
+		int left = object.getLeftMostOccurence(arr,0,index,1);
+		int right = object.getRightMostOccurence(arr,index,5,1);
+		assertEquals(2,index);
+		assertEquals(left, 0);
+		assertEquals(right, 2);
+		}
 
 }
