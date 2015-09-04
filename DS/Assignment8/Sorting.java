@@ -27,9 +27,9 @@ public class Sorting {
 			case 1:
 				array = classObject.takeInput();
 				if(array.length <= 10) {
-					comparisonSortObject.bubbleSort(array);
+					array = comparisonSortObject.bubbleSort(array);
 				} else {
-					//					comparisonSortObject.quickSort(array);
+					array = comparisonSortObject.quickSort(array);
 				}
 				break;
 			case 2:
@@ -40,7 +40,7 @@ public class Sorting {
 						largest = value;
 					}
 				}
-				if(largest > 50 ) {
+				if(largest > 99 ) {
 					array = linearSortObject.radixSort(array);
 				}
 				else {
