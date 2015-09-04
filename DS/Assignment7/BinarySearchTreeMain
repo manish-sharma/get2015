@@ -1,0 +1,58 @@
+public class BinarySearchTreeMain {
+	// main function
+	public static void main(String[] args) {
+		// utility class contains function which checks the input string entered
+		System.out.println("Enter the size of array");
+		int size = Utility.checkInteger();
+		System.out.println("Enter the values in array");
+		int arr[] = new int[size];
+		for (int i = 0; i < size; i++) {
+
+			arr[i] = Utility.checkInteger();
+		}
+		System.out.println("Enter the value to be searched");
+		int value = Utility.checkInteger();
+		int pos;
+		BinarySearch object = new BinarySearch();
+		do {
+			System.out
+					.println("Press\n1. For Left Most Occurence Of Character");
+			System.out.println("2. For Right Most Occurence Of Character");
+			System.out.println("3. Exit");
+			int choice = Utility.checkInteger();
+			switch (choice) {
+			case 1:
+				pos = object.binarySearch(arr, 0, size - 1, value);
+				if (pos == -1) {
+					System.out.println("Not found the item");
+					break;
+				}
+				// to check leftmost occurrence
+				pos = object.getLeftMostOccurence(arr, 0, pos, value);
+
+				System.out.println("Position is" + pos);
+
+				break;
+			case 2:
+				// first searching element in array
+				pos = object.binarySearch(arr, 0, size - 1, value);
+				if (pos == -1) {
+					System.out.println("Not found");
+					break;
+				}
+				// to check rightmost occurrence
+				pos = object.getRightMostOccurence(arr, pos, size, value);
+
+				System.out.println("Position is" + pos);
+
+				break;
+			case 3:
+				System.exit(0);
+
+			default:
+				System.out.println("Enter a valid value");
+			}
+
+		} while (true);
+	}
+}
