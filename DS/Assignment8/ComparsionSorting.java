@@ -26,6 +26,10 @@ public class ComparsionSorting {
 	}
 	/* Ending of bubbleSort function */
 	private int[] array;
+	
+	public int[] getArray() {
+		return array;
+	}
 	private int length;
 	
 	 public void quickSort(int[] inputArr) {
