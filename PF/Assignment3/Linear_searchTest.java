@@ -41,4 +41,12 @@ public class Linear_searchTest {
 		int output=L.linear_search(arr1, 77);
 		assertEquals(6, output);
 	}
+	//negative test case;
+	@Test
+	public void test2() {
+		Linear_search L=new Linear_search();
+		int[] arr1= {2,5,8,9,10,77,55,11};
+		int output=L.linear_search(arr1, 77);
+		assertEquals(5, output);
+	}
 }

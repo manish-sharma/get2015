@@ -27,26 +27,26 @@ public class Quick_Sort1Test {
 	// positive case as per given in assignment;
 	@Test
 	public void test() {
-		int[] input={2,5,8,9,10,11,55,77};
+		int[] expected={2,5,8,9,10,11,55,77};
 		int[] arr1 = {2,5,8,9,10,77,55,11};
 		new QuickSort().quickSort(arr1,0,7);
-		assertArrayEquals(input, arr1);
+		assertArrayEquals(expected, arr1);
 		}
 	// positive case as per given in assignment;
 	@Test
 	public void test1() {
-		int[] input={};
+		int[] expected={};
 		int[] arr1 = {};
 		new QuickSort().quickSort(arr1,0,0);
-		assertArrayEquals(input, arr1);
+		assertArrayEquals(expected, arr1);
 		}
 	// negative case as per given in assignment;
 	@Test
 	public void test2() {
-		int[] input={2,5,8,9,10,11,55,77};
+		int[] expected={2,5,8,9,10,55,77,11};
 		int[] arr = {2,5,8,9,10,55,77,11};
 		new Quick_Sort1().quickSort(arr,0,7);
-		assertArrayEquals(input, arr);
+		assertArrayEquals(expected, arr);
 		}
 	
 }
