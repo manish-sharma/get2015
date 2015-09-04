@@ -53,7 +53,8 @@ public class SortingTest {
 				if(array.length <= 10) {
 				sortedArray	= comparisonSortObject.bubbleSort(array);
 				} else {
-					sortedArray = comparisonSortObject.quickSort(array);
+					comparisonSortObject.quickSort(array);
+					sortedArray = comparisonSortObject.getArray();
 				}
 				break;
 			case 2:
@@ -79,7 +80,7 @@ public class SortingTest {
 		} catch (IOException exception) {
 			System.out.println("Some Input / Output related error occured!!");
 		}
-		int expected[] = {2, 33, 231, 3432, 42313};
+		int expected[] = {1,2,3,4,5,6,7,8,9,10,11};
 		
 		assertArrayEquals(expected, sortedArray);
 	}
