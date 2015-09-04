@@ -6,21 +6,21 @@ public class Sorting {
 
 	//This method take parameter list of integer array and return sorted integer array
 	public int[] bubbleSort( int[] list )
-	{      //current size contains last index of unsorted  list
+	{          //current size contains last index of unsorted  list
 		   int currentSize = list.length;
 		   while(currentSize > 1)
 		   {   
 			   for(int i = 0 ; i < currentSize-1 ; i++)
-		       {  //if next element is greater than current element than swap
-		     	  if(list[i] > list[i+1])
-		    	  {	  //swapping without using third variable
-		     		  list[i]=list[i]+list[i+1];
-			          list[i+1]=list[i]-list[i+1];
-			          list[i]=list[i]-list[i+1];
-			     }  
-		   }
-		   // reduce  list size by one because last element is reach at actual position	   
-		   currentSize--;
+		              {  //if next element is greater than current element than swap
+		          	  if(list[i] > list[i+1])
+		         	  {	  //swapping without using third variable
+		     		        list[i]=list[i]+list[i+1];
+			                list[i+1]=list[i]-list[i+1];
+			               list[i]=list[i]-list[i+1];
+			          }  
+		              }
+		       // reduce  list size by one because last element is reach at actual position	   
+		      currentSize--;
 		   }
 		   return list;
 	}
@@ -144,7 +144,7 @@ public class Sorting {
                 exponential *= 10;        
             }
             return list;
-      }    
+       }    
  
       /*
        * This method for decision of sorting
