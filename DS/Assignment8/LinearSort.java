@@ -1,4 +1,5 @@
 /**
+ * @author Girdhari
  * Class to implement logics of linear Sorting algorithms like counting sort, radix sort etc.
  */
 package question2;
@@ -33,11 +34,9 @@ public class LinearSort {
 					counter++;
 				}
 			}
-
 		}
 		return array;
 	}
-
 	/* End of countingSort function */
 
 	/* Starting of radixSort function */
