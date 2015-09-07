@@ -8,13 +8,12 @@ public class SortingMainClass {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		Sorting sorting = new Sorting();
+		Display display = new Display();
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
 		while (true) {
 			// try {
-			// Performing binary tree operation
-
+			
 			System.out.println("\n***Menu***\n1. Insert Elements"
 					+ "\n2. comparison sorting" + "\n3. linear sorting"
 					+ "\n4. Display" + "\n5. Exit ");
@@ -40,12 +39,12 @@ public class SortingMainClass {
 				// sorting By Linear
 				System.out.println("Sorted By Linear sorting");
 				LinearSorting linearSorting = new LinearSorting();
-				arrayList=linearSorting.sort(arrayList);
+				arrayList = linearSorting.sort(arrayList);
 				break;
 
 			case "4":
 				// Display
-				sorting.display(arrayList);
+				display.display(arrayList);
 				break;
 
 			case "5":
