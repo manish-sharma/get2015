@@ -1,0 +1,5 @@
+1,pce@ggmail.com, PCE College, 9143243243,15,190
+2,sbtc@gmail.com, SBTC College, 8945784556, 15,50
+3,pit@gmail.com, PIT College, 8695452568, 12,60
+4,jecrc@gmail.com, JECRC College, 8956457856, 16, 40
+5,piet@gmail.com, PIEt College, 8978455623, 13, 50
