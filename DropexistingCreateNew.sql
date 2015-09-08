@@ -1,0 +1,13 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE MEMBER;
+
+SET FOREIGN_KEY_CHECKS=1;
+
+CREATE TABLE MEMBER(
+member_id INT NOT NULL,
+member_name VARCHAR(50),
+address_line1 VARCHAR(50),
+address_line2 VARCHAR(50),
+category VARCHAR(50),
+PRIMARY KEY(member_id));
