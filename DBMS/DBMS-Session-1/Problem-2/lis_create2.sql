@@ -1,7 +1,9 @@
+--create dtabase
 CREATE DATABASE lib_info_sys;
+--select database
 USE lib_info_sys;
 
-
+-- members table
 CREATE TABLE members
 (
 member_id int NOT NULL AUTO_INCREMENT,
@@ -12,6 +14,8 @@ category varchar(100),
 PRIMARY KEY (member_id)
 );
 
+
+--books table
 CREATE TABLE books
 (
   accession_no varchar(20),
@@ -23,6 +27,8 @@ CREATE TABLE books
   FOREIGN KEY fk_titles(title_id) REFERENCES titles(title_id) ON DELETE CASCADE  ON UPDATE CASCADE
 );
 
+
+--book_issue table
 CREATE TABLE book_issue
 (
   issue_dt DATE,
@@ -34,6 +40,8 @@ CREATE TABLE book_issue
   FOREIGN KEY fk_members(member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE  
 );
 
+
+--subjects table
 CREATE TABLE subjects 
 (
   subject_id int,
@@ -41,6 +49,8 @@ CREATE TABLE subjects
   PRIMARY KEY (subject_id)
 );
 
+
+--publishers table
 CREATE TABLE publishers 
 (
   publisher_id int,
@@ -48,6 +58,8 @@ CREATE TABLE publishers
   PRIMARY KEY (publisher_id)
 );
 
+
+--authors table
 CREATE TABLE authors 
 (
   author_id int,
@@ -55,6 +67,8 @@ CREATE TABLE authors
   PRIMARY KEY (author_id)
 );
 
+
+--book_return table
 CREATE TABLE book_return 
 (
   return_dt DATE,
@@ -66,6 +80,8 @@ CREATE TABLE book_return
   FOREIGN KEY fk_members (member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE
 );
 
+
+--titles table
 CREATE TABLE titles
 (
   title_id int,
@@ -77,6 +93,8 @@ CREATE TABLE titles
   FOREIGN KEY fk_subjects (subject_id) REFERENCES subjects(subject_id) ON DELETE CASCADE  ON UPDATE CASCADE
 );
 
+
+--title_author table
 CREATE TABLE title_author
 (
   title_id int,
@@ -86,25 +104,33 @@ CREATE TABLE title_author
   FOREIGN KEY fk_authors (author_id) REFERENCES authors(author_id) ON DELETE CASCADE  ON UPDATE CASCADE
 );
 
+
+--display all tables names
 show tables;
 
 
-DESCRIBE book_issue;
-
+-- set default issue date as current date
 ALTER TABLE book_issue MODIFY issue_dt TIMESTAMP DEFAULT NOW();
 
+
+--set default due date as next 15 days to currenr issue date
 DELIMITER ;;
 CREATE TRIGGER book_due_dt AFTER INSERT ON book_issue FOR EACH ROW
 BEGIN
 UPDATE book_issue SET issue_dt = DATE_ADD(CURDATE(),INTERVAL 15 DAY) WHERE issue_dt = NOW();
 END;;
 
+--Removing of member table
+
+--remove trigger then then remove all child table those referencing parents members table
+--then remove members
 DROP TRIGGER book_due_dt;
 DROP TABLE book_issue;
 DROP TABLE book_return;
 DROP TABLE members;
 
 
+--Now create members table than child tables 
 CREATE TABLE members
 (
 member_id int NOT NULL AUTO_INCREMENT,
@@ -115,7 +141,7 @@ category varchar(100),
 PRIMARY KEY (member_id)
 );
 
-
+--create child table book_issue
 CREATE TABLE book_issue
 (
   issue_dt DATE,
@@ -127,7 +153,7 @@ CREATE TABLE book_issue
   FOREIGN KEY fk_members(member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE  
 );
 
-
+--create child table book_return
 CREATE TABLE book_return 
 (
   return_dt DATE,
