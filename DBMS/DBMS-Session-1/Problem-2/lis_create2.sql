@@ -1,0 +1,142 @@
+CREATE DATABASE lib_info_sys;
+USE lib_info_sys;
+
+
+CREATE TABLE members
+(
+member_id int NOT NULL AUTO_INCREMENT,
+member_nm varchar( 30) NOT NULL,
+addressline1 varchar(100),
+addressline2 varchar(100),
+category varchar(100),
+PRIMARY KEY (member_id)
+);
+
+CREATE TABLE books
+(
+  accession_no varchar(20),
+  title_id int,
+  purchase_dt DATE,
+  price int,
+  status ENUM ('Y','N'),
+  PRIMARY KEY (accession_no),
+  FOREIGN KEY fk_titles(title_id) REFERENCES titles(title_id) ON DELETE CASCADE  ON UPDATE CASCADE
+);
+
+CREATE TABLE book_issue
+(
+  issue_dt DATE,
+  accession_no varchar(20),
+  member_id int,
+  due_dt DATE,
+  PRIMARY KEY (issue_dt,accession_no,member_id),
+  FOREIGN KEY fk_books(accession_no) REFERENCES books(accession_no) ON DELETE CASCADE  ON UPDATE CASCADE,
+  FOREIGN KEY fk_members(member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE  
+);
+
+CREATE TABLE subjects 
+(
+  subject_id int,
+  subject_nm varchar(20),
+  PRIMARY KEY (subject_id)
+);
+
+CREATE TABLE publishers 
+(
+  publisher_id int,
+  publisher_nm varchar(20),
+  PRIMARY KEY (publisher_id)
+);
+
+CREATE TABLE authors 
+(
+  author_id int,
+  author_nm varchar(20),
+  PRIMARY KEY (author_id)
+);
+
+CREATE TABLE book_return 
+(
+  return_dt DATE,
+  accession_no varchar(20),
+  member_id int,
+  issue_dt DATE,
+  PRIMARY KEY (return_dt,accession_no,member_id),
+  FOREIGN KEY fk_books (accession_no) REFERENCES books(accession_no) ON DELETE CASCADE  ON UPDATE CASCADE ,
+  FOREIGN KEY fk_members (member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE
+);
+
+CREATE TABLE titles
+(
+  title_id int,
+  title_nm varchar(20),
+  subject_id int,
+  publisher_id int,
+  PRIMARY KEY (title_id),
+  FOREIGN KEY fk_publishers (publisher_id) REFERENCES publishers(publisher_id) ON DELETE CASCADE  ON UPDATE CASCADE ,
+  FOREIGN KEY fk_subjects (subject_id) REFERENCES subjects(subject_id) ON DELETE CASCADE  ON UPDATE CASCADE
+);
+
+CREATE TABLE title_author
+(
+  title_id int,
+  author_id int,
+  PRIMARY KEY (title_id,author_id),
+  FOREIGN KEY fk_titles (title_id) REFERENCES titles(title_id) ON DELETE CASCADE  ON UPDATE CASCADE ,
+  FOREIGN KEY fk_authors (author_id) REFERENCES authors(author_id) ON DELETE CASCADE  ON UPDATE CASCADE
+);
+
+show tables;
+
+
+DESCRIBE book_issue;
+
+ALTER TABLE book_issue MODIFY issue_dt TIMESTAMP DEFAULT NOW();
+
+DELIMITER ;;
+CREATE TRIGGER book_due_dt AFTER INSERT ON book_issue FOR EACH ROW
+BEGIN
+UPDATE book_issue SET issue_dt = DATE_ADD(CURDATE(),INTERVAL 15 DAY) WHERE issue_dt = NOW();
+END;;
+
+DROP TRIGGER book_due_dt;
+DROP TABLE book_issue;
+DROP TABLE book_return;
+DROP TABLE members;
+
+
+CREATE TABLE members
+(
+member_id int NOT NULL AUTO_INCREMENT,
+member_nm varchar( 30) NOT NULL,
+addressline1 varchar(100),
+addressline2 varchar(100),
+category varchar(100),
+PRIMARY KEY (member_id)
+);
+
+
+CREATE TABLE book_issue
+(
+  issue_dt DATE,
+  accession_no varchar(20),
+  member_id int,
+  due_dt DATE,
+  PRIMARY KEY (issue_dt,accession_no,member_id),
+  FOREIGN KEY fk_books(accession_no) REFERENCES books(accession_no) ON DELETE CASCADE  ON UPDATE CASCADE,
+  FOREIGN KEY fk_members(member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE  
+);
+
+
+CREATE TABLE book_return 
+(
+  return_dt DATE,
+  accession_no varchar(20),
+  member_id int,
+  issue_dt DATE,
+  PRIMARY KEY (return_dt,accession_no,member_id),
+  FOREIGN KEY fk_books (accession_no) REFERENCES books(accession_no) ON DELETE CASCADE  ON UPDATE CASCADE ,
+  FOREIGN KEY fk_members (member_id) REFERENCES members(member_id) ON DELETE CASCADE  ON UPDATE CASCADE
+);
+
+SHOW tables;
