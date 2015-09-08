@@ -1,0 +1,10 @@
+USE Library;
+DROP TABLE Title_Author;
+DROP TABLE Authors;
+DROP TABLE Books_Return;
+DROP TABLE Books_Issue;
+DROP TABLE Books;
+DROP TABLE Title;
+DROP TABLE Subjects;
+DROP TABLE Publishers;
+DROP TABLE Users;
