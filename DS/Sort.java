@@ -6,7 +6,7 @@
 public class Sort {
 	/**
 	 * method to sort the user array by bubble sort algorithm
-	 * @param array... user array
+	 * @param Integer array... user array
 	 * @return..sorted array
 	 */
 	public int[] bubbleSort(int[] array){

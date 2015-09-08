@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * student class to add roll number with their name in the tree
  * insertion in binary search tree
@@ -11,6 +14,7 @@ public class Student extends TreeSort {
 	 * creation of student list
 	 * @return.. tree 
 	 */
+	 Map<Integer, String> mapToDisplay = new HashMap<Integer, String>();
 	public Node<Integer> createStudentList(){
 		int noOfStudents=0;
 		int[] studentRollno = null;
@@ -94,14 +98,21 @@ public class Student extends TreeSort {
 	 * method to display the student tree
 	 * @param newNode
 	 */
-	public void showStudentList(Node<Integer> newNode){
-		if(root == null)
-			System.out.println("Empty");
-
+	public Map<Integer, String> showStudentList(Node<Integer> newNode){
+		
+		 if(root == null)
+			  System.out.println("Empty");
+		
 		if(newNode != null){
-			showStudentList(newNode.left);
-			System.out.println(newNode.nodeValue1 + " \t  ,\t"+newNode.nodeValue2);
-			showStudentList(newNode.right);
+		mapToDisplay=showStudentList(newNode.left);
+			
+			mapToDisplay.put(newNode.nodeValue1, newNode.nodeValue2);
+			mapToDisplay= showStudentList(newNode.right);
 		}
+		
+		 
+		return mapToDisplay;
+		
+		
 	}
 }

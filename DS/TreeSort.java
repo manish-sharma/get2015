@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 /**
  * main class for tree sort
@@ -7,6 +9,7 @@ import java.util.Scanner;
 public class TreeSort {
 
 	static Node<Integer> root = new Node<Integer>();
+	static Map<Integer, String> display = new HashMap<Integer, String>();
 	static Scanner scan = new Scanner(System.in);
 	/**
 	 * main method
@@ -25,7 +28,8 @@ public class TreeSort {
 				break;
 			case 2://to print list by tree sort algorithm
 				System.out.println("Roll Number,   Name");
-				student.showStudentList(root);
+				display = student.showStudentList(root);
+				System.out.println(display);
 				break;
 
 			case 0://to exit from console

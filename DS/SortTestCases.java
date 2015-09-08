@@ -25,7 +25,7 @@ public class SortTestCases {
 	@Test
 	public void quickSortTest(){
 		int[] expected ={1,2,3,4,5,6,7,8,9,10,11};
-		int[] actual = sort.bubbleSort(new int[]{2,3,1,4,9,10,11,8,5,7,6});
+		int[] actual = sort.quickSort((new int[]{2,3,1,4,9,10,11,8,5,7,6}),0,10);
 		assertArrayEquals(expected, actual);
 	}
 	/**
