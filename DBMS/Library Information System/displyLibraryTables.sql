@@ -1,2 +1,0 @@
-USE Library;
-SHOW Tables;
