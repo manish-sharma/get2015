@@ -8,4 +8,4 @@ left outer join categories as parent2 on parent2.id = parent1.parentid
 left outer join categories as parent3 on parent3.id = parent2.parentid;
     
 -- To select categories if it is top category
-SELECT name FROM categories where parentId is null ;
+select id,name,ifnull(parentId, 'top category') from categories;
