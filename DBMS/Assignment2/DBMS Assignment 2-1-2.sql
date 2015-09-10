@@ -26,9 +26,10 @@ SELECT Category, COUNT(Category) from Members group by Category;
 SELECT m.Member_name FROM Members m INNER JOIN Members m1 ON m.Category=m1.Category AND m1.Member_name="Riddhi" AND m.Member_name!=m1.Member_name;
 
 -- query to display information of all books issued
-SELECT Accession_no AS Acc_no ,Member_id AS Mem_id,Issue_date AS Iss_d,Return_date AS Ret_d FROM Book_return;
+SELECT bi.Accession_no AS Acc_no ,bi.Member_id AS Mem_id,bi.Issue_date AS Iss_d,IFNULL(br.Return_date," ") AS Ret_d FROM Book_return br RIGHT OUTER JOIN Book_issue bi ON bi.Accession_no=br.Accession_no;
 
 -- query to display information of all books issued in ascending order of issue date and within isssue date members name
-SELECT b.Accession_no AS Acc_no ,b.Member_id AS Mem_id, b.Issue_date AS Iss_d,b.Return_date AS Ret_d FROM Book_return b INNER JOIN Members m  ON m.Member_id = b.Member_id ORDER BY Issue_date , m.Member_name;
-
+SELECT bi.Accession_no AS Acc_no ,bi.Member_id AS Mem_id, bi.Issue_date AS Iss_d,IFNULL(br.Return_date," ") AS Ret_d FROM Book_return br 
+RIGHT OUTER JOIN Book_issue bi ON bi.Accession_no=br.Accession_no AND bi.Member_id=br.Member_id 
+INNER JOIN Members m  ON m.Member_id = bi.Member_id ORDER BY bi.Issue_date, m.Member_name;
 
