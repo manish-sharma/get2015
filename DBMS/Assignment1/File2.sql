@@ -62,10 +62,9 @@ UPDATE Members SET AddressLine1="EPIP,Sitapura" WHERE Category='F';
  
  
  
-ALTER TABLE Titles
-DROP FOREIGN KEY Publisher_id_second;
+ SET SQL_SAFE_UPDATES = 0;
  
-TRUNCATE TABLE Publishers;
+DELETE FROM Publishers;
  
  
  
