@@ -4,6 +4,39 @@ CREATE DATABASE library_information_system;
 
 USE library_information_system;
 
+CREATE TABLE Publishers(
+Publisher_id INT PRIMARY KEY AUTO_INCREMENT,
+Publisher_name VARCHAR(50)
+);
+
+CREATE TABLE Subjects(
+Subject_id INT PRIMARY KEY,
+Subject_name VARCHAR(50)
+);
+
+CREATE TABLE Titles(
+Subject_id INT,
+Title_id INT,
+Title_name VARCHAR(50),
+Publisher_id INT,
+PRIMARY KEY(Title_id),
+CONSTRAINT Subject_id_second FOREIGN KEY(Subject_id) REFERENCES Subjects(Subject_id) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT Publisher_id_second FOREIGN KEY(Publisher_id) REFERENCES Publishers(Publisher_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Authors(
+Author_id Int PRIMARY KEY,
+Author_name VARCHAR(50)
+);
+
+CREATE TABLE Title_Author(
+Title_id Int,
+Author_id INT,
+CONSTRAINT Title_is_second FOREIGN KEY(Title_id) REFERENCES Titles(Title_id) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT Author_id_second FOREIGN KEY(Author_id) REFERENCES Authors(Author_id) ON DELETE CASCADE ON UPDATE CASCADE,
+PRIMARY KEY(Title_id,Author_id)
+);
+
 CREATE TABLE Members(
 Member_id INT PRIMARY KEY AUTO_INCREMENT,
 Member_name VARCHAR(15),
@@ -38,39 +71,6 @@ Return_date DATE,
 PRIMARY KEY(Accession_no,Return_date,Member_id),
 CONSTRAINT Accession_id_third FOREIGN KEY(Accession_no) REFERENCES Books(Accession_no) ON DELETE CASCADE ON UPDATE CASCADE,
 CONSTRAINT Member_id_third FOREIGN KEY(Member_id) REFERENCES Members(Member_id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Publishers(
-Publisher_id INT PRIMARY KEY AUTO_INCREMENT,
-Publisher_name VARCHAR(50)
-);
-
-CREATE TABLE Subjects(
-Subject_id INT PRIMARY KEY,
-Subject_name VARCHAR(50)
-);
-
-CREATE TABLE Titles(
-Subject_id INT,
-Title_id INT,
-Title_name VARCHAR(50),
-Publisher_id INT,
-PRIMARY KEY(Title_id),
-CONSTRAINT Subject_id_second FOREIGN KEY(Subject_id) REFERENCES Subjects(Subject_id) ON DELETE CASCADE ON UPDATE CASCADE,
-CONSTRAINT Publisher_id_second FOREIGN KEY(Publisher_id) REFERENCES Publishers(Publisher_id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Authors(
-Author_id Int PRIMARY KEY,
-Author_name VARCHAR(50)
-);
-
-CREATE TABLE Title_Author(
-Title_id Int,
-Author_id INT,
-CONSTRAINT Title_is_second FOREIGN KEY(Title_id) REFERENCES Titles(Title_id) ON DELETE CASCADE ON UPDATE CASCADE,
-CONSTRAINT Author_id_second FOREIGN KEY(Author_id) REFERENCES Authors(Author_id) ON DELETE CASCADE ON UPDATE CASCADE,
-PRIMARY KEY(Title_id,Author_id)
 );
 
 SHOW TABLES;
@@ -110,7 +110,6 @@ AddressLine1 VARCHAR(50),
 AddressLine2 VARCHAR(50),
 Category VARCHAR(5)
 );
-
 
 ALTER TABLE Book_issue
 ADD CONSTRAINT Member_id_second FOREIGN KEY(Member_id) REFERENCES Members(Member_id);
