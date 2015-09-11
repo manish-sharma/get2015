@@ -30,6 +30,6 @@ SELECT bi.Accession_no AS Acc_no ,bi.Member_id AS Mem_id,bi.Issue_date AS Iss_d,
 
 -- query to display information of all books issued in ascending order of issue date and within isssue date members name
 SELECT bi.Accession_no AS Acc_no ,bi.Member_id AS Mem_id, bi.Issue_date AS Iss_d,IFNULL(br.Return_date," ") AS Ret_d FROM Book_return br 
-RIGHT OUTER JOIN Book_issue bi ON bi.Accession_no=br.Accession_no AND bi.Member_id=br.Member_id 
+RIGHT OUTER JOIN Book_issue bi ON bi.Accession_no=br.Accession_no 
 INNER JOIN Members m  ON m.Member_id = bi.Member_id ORDER BY bi.Issue_date, m.Member_name;
 
