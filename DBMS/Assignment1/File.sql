@@ -70,7 +70,8 @@ Issue_date DATE,
 Return_date DATE,
 PRIMARY KEY(Accession_no,Return_date,Member_id),
 CONSTRAINT Accession_id_third FOREIGN KEY(Accession_no) REFERENCES Books(Accession_no) ON DELETE CASCADE ON UPDATE CASCADE,
-CONSTRAINT Member_id_third FOREIGN KEY(Member_id) REFERENCES Members(Member_id) ON DELETE CASCADE ON UPDATE CASCADE
+CONSTRAINT Member_id_third FOREIGN KEY(Member_id) REFERENCES Members(Member_id) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT Issue_date_second FOREIGN KEY(Issue_date) REFERENCES Book_issue(Issue_date) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 SHOW TABLES;
