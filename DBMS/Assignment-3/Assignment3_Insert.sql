@@ -1,4 +1,4 @@
-CREATE
+-- Inserting values into various tables -- 
 INSERT INTO members VALUES("1","Shishir Pareek","Civil Lines","Delhi","F");
 INSERT INTO members VALUES("2","Shreerath Nair","200 ft bypass","Kerela","S");
 INSERT INTO members VALUES("3","Sumit Chaudhary","Khatipura","Banglore","S");
@@ -31,7 +31,7 @@ INSERT INTO subjects(subject_id,subject_nm) VALUES
 ("1","JAVA"),
 ("2","C Programming"),
 ("3","Networking"),
-("4","Database"),
+("4","Database");
 
 
 INSERT INTO authors(author_id,author_nm) VALUES 
@@ -47,10 +47,6 @@ INSERT INTO book_issue(accession_no,member_id) VALUES
 ("3","3"),
 ("4","4"),
 ("5","5");
-
-SELECT * from book_issue;
-
-SELECT * from title_author;
 
 INSERT INTO title_author(title_id,author_id) VALUES ("10","1");
 INSERT INTO title_author(title_id,author_id) VALUES ("20","2");
