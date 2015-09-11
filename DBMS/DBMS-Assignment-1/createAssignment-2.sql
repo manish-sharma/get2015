@@ -29,10 +29,10 @@ CREATE TABLE book_issue(
    issue_date DATE,
    accession_no INT ,
    member_id VARCHAR(100),
-   due_date DATE NOT NULL,
+   due_date DATE,
    PRIMARY KEY(issue_date,accession_no,member_id), 
    FOREIGN KEY(accession_no) REFERENCES books(accession_no) ON DELETE CASCADE ON UPDATE CASCADE,
-   FOREIGN KEY(member_id) REFERENCES member(member_id) ON DELETE CASCADE ON UPDATE CASCADE
+   CONSTRAINT foregin_key1 FOREIGN KEY(member_id) REFERENCES member(member_id) ON DELETE CASCADE ON UPDATE CASCADE
    );
 
 /*Creating subjects table */
@@ -57,7 +57,7 @@ CREATE TABLE book_return(
    issue_date DATE NOT NULL,
    PRIMARY KEY(return_date,accession_no,member_id), 
    FOREIGN KEY(accession_no) REFERENCES books(accession_no) ON DELETE CASCADE ON UPDATE CASCADE,
-   FOREIGN KEY(member_id) REFERENCES member(member_id) ON DELETE CASCADE ON UPDATE CASCADE
+   CONSTRAINT foregin_key2  FOREIGN KEY(member_id) REFERENCES member(member_id) ON DELETE CASCADE ON UPDATE CASCADE
    );
    
 /*Creating author table */   
@@ -93,12 +93,6 @@ SHOW tables;
 /*Alter issue_date field by default value current date */
 ALTER TABLE book_issue MODIFY COLUMN issue_date TIMESTAMP not NULL DEFAULT NOW();
 
-/*Alter due_date field by default value (current date+15) */
-
-/*Alter issue_date field by default value (current date+15) using Adddate function*/
-/*ALTER TABLE book_issue MODIFY COLUMN due_date TIMESTAMP not NULL DEFAULT Adddate('2015-09-23', interval 15 day);*/
-
-
 /*Alter issue_date field by default value (current date+15) by using trigger*/
 DELIMITER //
 
@@ -106,10 +100,18 @@ CREATE TRIGGER book
 BEFORE INSERT ON book_issue
 FOR EACH ROW 
 BEGIN
-SET NEW.due_date = now() + INTERVAL 15 day;
+SET NEW.due_date = IFNULL(NEW.due_date, now() + INTERVAL 15 day);
 END; //
 
 DELIMITER ;
+
+/*Drop foreign key mmber id of book_issue*/
+ALTER TABLE book_issue
+DROP FOREIGN KEY foregin_key1;
+
+/*Drop foreign key mmber id of book_return*/
+ALTER TABLE book_return
+DROP FOREIGN KEY foregin_key2;
 
 /*Deleting table member */
 DROP TABLE member;
