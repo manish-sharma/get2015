@@ -8,18 +8,10 @@ TRUNCATE book_issue;
 
 TRUNCATE book_return;
 
-TRUNCATE members;
-
-select * from members;
 UPDATE members SET category="O" WHERE member_name="Dheeraj";
-
-
-INSERT INTO members(member_name,addressline1,addressline2,category) VALUES
-("Dheeraj","Kishangarh","Ajmer","O"),
-("Babalu","Jalabarh","Jalabarh","O"),
-("Anurag Anand","Chai Ki Mandi","Patna","S"),
-("Sumitra","Madhav Nagar","Chittorgarh","F"),
-("Girdhari","HOli Gate","Mathura","F");
+UPDATE members SET category="O" WHERE member_name="Babalu";
+UPDATE members SET category="S" WHERE member_name="Anurag Anand";
+UPDATE members SET category="F" WHERE member_name="Girdhari";
 
 INSERT INTO book_issue(issue_Date, accession_No, member_Id, due_Date) VALUES
 ('2015-09-23', 1, 5, '2015-10-08'),
