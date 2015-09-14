@@ -11,4 +11,5 @@ BEGIN
   END IF;
 END;;
 DELIMITER ;
+-- Query to display data of Books_Issue Table
 select* from Books_Issue;

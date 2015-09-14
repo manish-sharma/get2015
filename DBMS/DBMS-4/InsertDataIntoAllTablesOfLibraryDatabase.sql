@@ -2,11 +2,11 @@
 USE Library;
 -- Query to insert data into Members table
 INSERT INTO Members VALUES ( 1001, 'raju','sector-8','sector-10','m','Faculty'),
-                        ( 1002, 'rani','malviyanager','sitapura','f','Student'),
+                        ( 1002, 'rani','malviyanager','sitapura','f','Other'),
                        ( 1003, 'ram','jagatpura','mansroavar','m','Student'),
                         ( 1004, 'rajshree','india gate','goner','f','Faculty'),
                         ( 1005, 'rajshree','india gate','goner','f','Student'),
-                        ( 1006, 'rajshree','india gate','goner','f','Other');
+                        ( 1006, 'rajshree','india gate','goner','f','Student');
  -- Query to display data of Members table                      
 select* from Members;                     
 -- Query to insert data into Publishers table                    
@@ -35,18 +35,10 @@ INSERT INTO Books VALUES (101,201, '2013-01-01',500,'available'),
                             (104,204, '2015-01-01',700,'available');	
 -- Query to display data of Books table       
 select* from Books;
--- Query to insert data into Books_Issue table
-INSERT INTO Books_Issue (accessionNo,memberId) VALUES (101,1001),
-                                                    ( 102,1001),
-							                                      ( 101,1003);
--- Query to insert data into Books_Issue table
-INSERT INTO Books_Issue VALUES ('2013-01-01',101,1001,'2013-11-16'),('2013-01-02',102,1001,'2013-09-16');
+
 -- Query to display data of Books_Issue table       
 select* from Books_Issue;
--- Query to insert data into Books_Return table
-INSERT INTO Books_Return VALUES (curdate(),101,1001,DATE_SUB(curdate(),INTERVAL 15 day)),
-                                  (curdate(),102,1001,DATE_SUB(curdate(),INTERVAL 15 day)),
-								  (curdate(),101,1003,DATE_SUB(curdate(),INTERVAL 15 day));
+
 -- Query to display data of Books_Return table       
 select* from Books_Return;
 -- Query to insert data into Authors table
