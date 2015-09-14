@@ -13,7 +13,7 @@ UPDATE  book_issue SET issue_date="2015-09-24" WHERE member_id=5 AND accession_n
 
 /*2. Show issue date, title, member name and due date who are not return books till .*/
 
-SELECT bi.member_id ,m.member_name ,t.title_name ,b.title_id,bi.issue_date,bi.due_date 
+SELECT bi.member_id AS "Member Id",m.member_name AS "Member Name",t.title_name AS "Title Name",b.title_id AS "Title Id",DATE(bi.issue_date) AS "Issue Date",bi.due_date AS "Due Date" 
     FROM  book_issue bi , members m ,books b ,titles t 
         WHERE NOT EXISTS ( SELECT  bi.accession_no FROM  book_return br WHERE br.accession_no = bi.accession_no) 
     AND bi.member_id=m.member_id AND bi.accession_no= b.accession_no AND b.title_id= t.title_id;
@@ -23,10 +23,11 @@ SELECT bi.member_id ,m.member_name ,t.title_name ,b.title_id,bi.issue_date,bi.du
 
 /*3.Corelated query list of all member who are return books after due date*/
 
-SELECT bi.member_id ,m.member_name ,t.title_name ,b.title_id,bi.issue_date,bi.due_date 
+SELECT bi.member_id AS "Member Id",m.member_name AS "Member Name",t.title_name AS "Title Name",b.title_id AS "Title Id",DATE(bi.issue_date) AS "Issue Date",bi.due_date AS "Due Date" 
     FROM  book_issue bi , members m ,books b ,titles t 
         WHERE EXISTS ( SELECT  bi.accession_no FROM  book_return br WHERE br.accession_no = bi.accession_no AND DATEDIFF(br.return_date, bi.due_date) > 0)
     AND bi.member_id=m.member_id AND bi.accession_no= b.accession_no AND b.title_id= t.title_id;
+    
     
 
 /*4.list of all  equal most expensive books */
