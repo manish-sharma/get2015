@@ -51,29 +51,29 @@ VALUES
 ("904", "Biography");
 
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("401", "2-States", "1001");
+("401", "2-States", "1001", "902");
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("402", "Shiva", "1001");
+("402", "Shiva", "1001", "901");
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("403", "Database", "1003");
+("403", "Database", "1003", "903");
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("404", "Operating System", "1002");
+("404", "Operating System", "1002", "903");
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("405", "India A Growing Economy", "1001");
+("405", "India A Growing Economy", "1001", "904");
 INSERT INTO titles
-(title_id, title_name, publisher_id)
+(title_id, title_name, publisher_id, subject_id)
 VALUES
-("406", "Colombus", "1002");
+("406", "Colombus", "1002", "904");
 
 INSERT INTO title_author
 (author_id, title_id)
@@ -103,7 +103,7 @@ VALUES
 INSERT INTO books
 (accession_no, title_id, purchase_date, price, status)
 VALUES
-("1001", "401", "2015/08/02", "499", "available");
+("1001", "401", "2015/08/02", "499", "un-available");
 INSERT INTO books
 (accession_no, title_id, purchase_date, price, status)
 VALUES
@@ -119,11 +119,11 @@ VALUES
 INSERT INTO books
 (accession_no, title_id, purchase_date, price, status)
 VALUES
-("1005", "405", "1964/08/02", "499", "available");
+("1005", "405", "1998/08/02", "499", "un-available");
 INSERT INTO books
 (accession_no, title_id, purchase_date, price, status)
 VALUES
-("1006", "406", "1857/08/02", "499", "available");
+("1006", "406", "2000/08/02", "499", "available");
 
 INSERT INTO members
 (member_id, member_name, address_line1, address_line2, category)
@@ -137,6 +137,30 @@ INSERT INTO members
 (member_id, member_name, address_line1, address_line2, category)
 VALUES
 ("503", "Khemanshu Rao", "6/210, malviya nagar, ", "jaipur, rajasthan", "m");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("504", "Ankit", "5/101, malviya nagar, ", "jaipur, rajasthan", "f");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("505", "Amit", "6/501, malviya nagar, ", "jaipur, rajasthan", "f");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("506", "Manish", "6/401, malviya nagar, ", "jaipur, rajasthan", "f");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("507", "Sanjay", "58/210, malviya nagar, ", "jaipur, rajasthan", "m");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("508", "Sumit Bumb", "48/210, malviya nagar, ", "jaipur, rajasthan", "f");
+INSERT INTO members
+(member_id, member_name, address_line1, address_line2, category)
+VALUES
+("509", "Keshav Sharma", "54/210, malviya nagar, ", "jaipur, rajasthan", "f");
 
 INSERT INTO book_issue
 (accession_no, member_id)
@@ -153,7 +177,31 @@ VALUES
 INSERT INTO book_issue
 (accession_no, member_id)
 VALUES
-("1004", "503");
+("1004", "504");
+INSERT INTO book_issue
+(accession_no, member_id)
+VALUES
+("1005", "505");
+INSERT INTO book_issue
+(accession_no, member_id)
+VALUES
+("1006", "509");
+
+
+desc book_return;
+INSERT INTO book_return
+(return_date, accession_no, member_id, issue_date)
+VALUES
+(NOW(), 1002, 502, (SELECT issue_Date FROM book_issue WHERE accession_no = "1002" AND member_id = "502"));
+INSERT INTO book_return
+(return_date, accession_no, member_id, issue_date)
+VALUES
+(NOW(), 1004, 504, (SELECT issue_Date FROM book_issue WHERE accession_no = "1004" AND member_id = "504"));
+INSERT INTO book_return
+(return_date, accession_no, member_id, issue_date)
+VALUES
+(NOW(), 1006, 509, (SELECT issue_Date FROM book_issue WHERE accession_no = "1006" AND member_id = "509"));
+
 SELECT * FROM book_issue;
 UPDATE  members SET address_line2 = "Jaipur";
 Update  members set address_line1 = "EPIP, Sitapura"

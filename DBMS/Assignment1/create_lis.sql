@@ -17,6 +17,8 @@ subject_name VARCHAR(30));
 CREATE TABLE titles (title_id INTEGER PRIMARY KEY AUTO_INCREMENT,
 title_name VARCHAR(30),
 publisher_id INTEGER ,
+subject_id INTEGER,
+FOREIGN KEY (subject_id) REFERENCES subjects (subject_id) ON DELETE CASCADE ON UPDATE CASCADE,
 FOREIGN KEY (publisher_id) REFERENCES publishers (publisher_id) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE title_author(author_id INTEGER,
@@ -56,3 +58,13 @@ issue_date DATE NOT NULL,
 PRIMARY KEY(return_date,accession_no,member_id));
 
 SHOW TABLES;
+
+SELECT * FROM authors;
+SELECT * FROM book_issue;
+SELECT * FROM book_return;
+SELECT * FROM books;
+SELECT * FROM members;
+SELECT * FROM publishers;
+SELECT * FROM subjects;
+SELECT * FROM title_author;
+SELECT * FROM titles;
