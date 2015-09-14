@@ -1,3 +1,8 @@
+DROP DATABASE LIS;
+
+CREATE DATABASE LIS;
+USE LIS;
+
 CREATE TABLE AUTHOR(
 au_id INT NOT NULL,
 au_lname VARCHAR(50),
@@ -30,8 +35,10 @@ title_id INT NOT NULL,
 title VARCHAR(50),
 title_type VARCHAR(50),
 price INT ,
+sub_id INT NOT NULL,
 pub_id INT NOT NULL,
 FOREIGN KEY(pub_id) REFERENCES PUBLISHER(pub_id),
+FOREIGN KEY(sub_id) REFERENCES SUBJECTS(sub_id),
 PRIMARY KEY(title_id)
 );
 
@@ -70,9 +77,11 @@ CREATE TABLE BOOK_RETURN(
 accession_no INT NOT NULL,
 member_Id INT NOT NULL , 
 issue_date DATE NOT NULL,
-due_date DATE NOT NULL,
+return_date DATE NOT NULL,
 FOREIGN KEY (member_Id) REFERENCES MEMBER(member_Id),
 FOREIGN KEY (accession_no) REFERENCES BOOKS(accession_no),
-PRIMARY KEY (accession_no,due_date,member_Id));
+PRIMARY KEY (accession_no,return_date,member_Id));
 
 
+
+SHOW tables;

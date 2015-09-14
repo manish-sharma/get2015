@@ -1,13 +1,87 @@
-/*Insert query is used to insert the data in the table*/
-INSERT INTO AUTHOR VALUES(1,"gupta","ankur","123","jaipur"),(2,"gupta","ankur","123","jaipur"),(3,"sharma","vaibhav","b24","jaipur"),(4,"nainani","sanjay","rajapark","jaipur");
-INSERT INTO PUBLISHER VALUES(1,"willy_publication","jaipur"),(2,"nk","jaipur"),(3,"cbc","kota");
-INSERT INTO MEMBER VALUES(01,"ankur","71","shastrinagar","s"),(02,"sanju","b56","shastrinagar","f"),(03,"priyagupta","35","chotichaupar","o"),(04,"amit","s46","shastrinagar","s");
-INSERT INTO SUBJECTS VALUES(1,"science"),(2,"maths"),(3,"physics"),(4,"maths");
-INSERT INTO TITLE VALUES(15,"Run","story",125,2),(16,"harry porter","story",300,1);
-INSERT INTO AUTHOR_TITLE VALUES(15,1),(16,3);
-INSERT INTO BOOKS VALUES(34,15,'2001-11-02',200,"Available"),(35,16,'2010-12-23',625,"Available"),(36,16,'2010-09-23',625,"Available"),(37,16,'2010-01-23',925,"Available");
+DROP DATABASE LIS;
+
+CREATE DATABASE LIS;
+USE LIS;
+
+CREATE TABLE AUTHOR(
+au_id INT NOT NULL,
+au_lname VARCHAR(50),
+au_fname VARCHAR(50),
+address VARCHAR(50),
+city VARCHAR(30),
+PRIMARY KEY(au_id));
+
+CREATE TABLE PUBLISHER(
+pub_id INT NOT NULL,
+pub_name VARCHAR(50),
+city VARCHAR(30),
+PRIMARY KEY(pub_id));
+
+CREATE TABLE MEMBER(
+member_id INT NOT NULL,
+member_name VARCHAR(50),
+address_line1 VARCHAR(50),
+address_line2 VARCHAR(50),
+category VARCHAR(50),
+PRIMARY KEY(member_id));
+
+CREATE TABLE SUBJECTS(
+sub_id INT NOT NULL,
+ sub_name VARCHAR(10),
+ PRIMARY KEY(sub_id));
+
+CREATE TABLE TITLE(
+title_id INT NOT NULL,
+title VARCHAR(50),
+title_type VARCHAR(50),
+price INT ,
+sub_id INT NOT NULL,
+pub_id INT NOT NULL,
+FOREIGN KEY(pub_id) REFERENCES PUBLISHER(pub_id),
+FOREIGN KEY(sub_id) REFERENCES SUBJECTS(sub_id),
+PRIMARY KEY(title_id)
+);
 
 
-INSERT INTO BOOK_ISSUE VALUES(34,01,curdate(),Date_ADD(curdate(),interval 15 DAY)),(35,02,curdate(),Date_ADD(curdate(),interval 15 DAY));
-INSERT INTO BOOK_RETURN VALUES(34,01,DATE_SUB(curdate(),INTERVAL 15 DAY ),curdate()),(35,02,DATE_SUB(curdate(),INTERVAL 15 DAY ),curdate());
-INSERT INTO BOOK_ISSUE VALUES(36,03,curdate(),Date_ADD(curdate(),interval 70 DAY)),(37,02,curdate(),Date_ADD(curdate(),interval 15 DAY));
+CREATE TABLE AUTHOR_TITLE(
+title_id INT NOT NULL,
+au_id INT NOT NULL ,
+FOREIGN KEY (title_id) REFERENCES TITLE(title_id),
+FOREIGN KEY(au_id) REFERENCES AUTHOR(au_id),
+PRIMARY KEY(title_id,au_id));
+
+
+ 
+CREATE TABLE BOOKS(
+accession_no INT NOT NULL,
+title_Id INT NOT NULL ,
+purchase_id INT ,
+price INT ,
+status VARCHAR(50) ,
+FOREIGN KEY (title_id) REFERENCES TITLE(title_id),
+PRIMARY KEY (accession_no));
+
+
+CREATE TABLE BOOK_ISSUE(
+accession_no INT NOT NULL,
+member_Id INT NOT NULL , 
+issue_date DATE NOT NULL,
+due_date DATE NOT NULL,
+FOREIGN KEY (member_Id) REFERENCES MEMBER(member_Id),
+FOREIGN KEY (accession_no) REFERENCES BOOKS(accession_no),
+PRIMARY KEY (accession_no,issue_date,member_Id));
+
+
+
+CREATE TABLE BOOK_RETURN(
+accession_no INT NOT NULL,
+member_Id INT NOT NULL , 
+issue_date DATE NOT NULL,
+return_date DATE NOT NULL,
+FOREIGN KEY (member_Id) REFERENCES MEMBER(member_Id),
+FOREIGN KEY (accession_no) REFERENCES BOOKS(accession_no),
+PRIMARY KEY (accession_no,return_date,member_Id));
+
+
+
+SHOW tables;
