@@ -8,6 +8,7 @@ SELECT * FROM members WHERE category = ( SELECT category FROM members WHERE memb
 DELETE FROM book_return WHERE member_id=1;
 DELETE FROM book_issue WHERE member_id=4 AND due_date='2015-11-30';
 DELETE FROM book_issue WHERE member_id=5 AND issue_date='2015-09-24';
+UPDATE  book_issue SET issue_date="2015-09-24" WHERE member_id=5 AND accession_no=6;
 
 
 /*2. Show issue date, title, member name and due date who are not return books till .*/
