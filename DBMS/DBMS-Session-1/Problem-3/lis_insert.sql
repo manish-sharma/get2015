@@ -92,4 +92,36 @@ USE lib_info_sys;
 
  --update addressline2
  UPDATE members SET addressline2 = 'Jaipur' where member_id = 2;
+ 
+ --update addressline2
+ UPDATE members SET addressline1 = 'EPIP, Sitapura' where category = 'F';
+ 
+ 
+ 
+ -- delete all the rows from publisher table
+ DELETE FROM publishers;
+ 
+ 
+ 
+ -- Insert into publishers using substitution variables
+ 
+ SET @publisher_id = 1;
+ SET @publisher_nm = 'Jai prakashan';
+ INSERT INTO publishers values ( @publisher_id, @publisher_nm );
+ 
+ SET @publisher_id = 2;
+ SET @publisher_nm = 'Shivani prakshan';
+ INSERT INTO publishers values ( @publisher_id, @publisher_nm );
+ 
+ SET @publisher_id = 3;
+ SET @publisher_nm = 'Soni Prakashan';
+ INSERT INTO publishers values ( @publisher_id, @publisher_nm );
+ 
+ SET @publisher_id = 4;
+ SET @publisher_nm = 'Keshav publikeshion';
+ INSERT INTO publishers values ( @publisher_id, @publisher_nm );
+ 
+ 
+ -- Delete from titles which have publisher_id = 1
+ DELETE FROM titles where publisher_id = 1;
 
