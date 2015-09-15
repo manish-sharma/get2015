@@ -1,0 +1,3 @@
+iitb@iit.com,IITB,1198467583,23,500
+mitsgwal@gwl.com,MITS,5556789765,12,900
+sgits@sgs.com,SGSITS,7543786543,34,800
