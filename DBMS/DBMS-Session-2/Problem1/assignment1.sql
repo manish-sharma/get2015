@@ -8,7 +8,7 @@ SELECT member_nm "NAME" ,member_id "ID" , category "CATEGORY" from members;
 
 -- Display Member name , id  whose category should be professor
 SELECT member_nm "NAME" ,member_id "ID", category "CATEGORY" from members
-WHERE category = 'professor' ; 
+WHERE category = 'F' ; 
 
 -- Display all categoris name
 SELECT DISTINCT category from members;
@@ -26,14 +26,13 @@ WHERE tt.subject_id = sb.subject_id AND tt.publisher_id = pb.publisher_id;
 -- Display number of members present in particular Category
 SELECT category ", count(*) "total_type" FROM members
 GROUP BY category;
+
+
 -- Diplay Members name whose category same to Keshav Sharma
-SELECT member_nm from members
-where category IN 
-                  (
-                    SELECT category from members
-                    WHERE member_nm = 'Keshav Sharma'
-                  );
-                  
+SELECT m1.member_nm
+FROM members m1 JOIN members m2 ON m1.category = m2.category
+WHERE m2.member_nm = 'Keshav Sharma';
+                   
  
  -- Display  the information of all issued book
  SELECT bi.issue_dt , bi.accession_no , bi.member_id , br.return_dt 
