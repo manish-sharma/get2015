@@ -29,27 +29,27 @@ public class JDBCQuery {
 	private static void fetchBooks(String name) {
 		ArrayList<Title> listOfTitles = new ArrayList<Title>();
 		System.out.println("\nFetching data using PreparedStatement ....");
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		ConnectionUtil conUtil = new ConnectionUtil();
-		con = conUtil.getConnection();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		ConnectionUtil connectionUtil = new ConnectionUtil();
+		connection = connectionUtil.getConnection();
 		String query = "select title.title_id,title_name,subject_id,publisher_id from author,title_author,title where author_name = ? and"
 				+" author.author_id = title_author.author_id and title.title_id = title_author.title_id";
 	
 		try {
-			ps = con.prepareStatement(query);
+			preparedStatement = connection.prepareStatement(query);
 			/* set variable in prepared statement */
 			
-			 ps.setString(1,name);
-			rs = ps.executeQuery();
+			preparedStatement.setString(1,name);
+			resultSet = preparedStatement.executeQuery();
 			Title newTitle = null;
-			while (rs.next()) {
+			while (resultSet.next()) {
 				newTitle = new Title();
-				newTitle.setId(rs.getInt(1));
-				newTitle.setName(rs.getString(2));
-				newTitle.setSubjectId(rs.getInt(3));
-				newTitle.setPublisherId(rs.getInt(4));
+				newTitle.setId(resultSet.getInt(1));
+				newTitle.setName(resultSet.getString(2));
+				newTitle.setSubjectId(resultSet.getInt(3));
+				newTitle.setPublisherId(resultSet.getInt(4));
 				listOfTitles.add(newTitle);
 			}
 
@@ -59,11 +59,11 @@ public class JDBCQuery {
 		} finally {
 			/* close connection */
 			try {
-				if (con != null) {
-					con.close();
+				if (connection != null) {
+					connection.close();
 				}
-				if (ps != null) {
-					ps.close();
+				if (preparedStatement != null) {
+					preparedStatement.close();
 				}
 
 			} catch (SQLException e) {
@@ -84,23 +84,23 @@ public class JDBCQuery {
 	private static boolean isBookIssued(String book_name,int memberId) {
 	
 		System.out.println("\nFetching data using PreparedStatement2 ....");
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		ConnectionUtil conUtil = new ConnectionUtil();
-		con = conUtil.getConnection();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		ConnectionUtil connectionUtil = new ConnectionUtil();
+		connection = connectionUtil.getConnection();
 		//to check member is present or not
 		String query = "select member_id from members where member_id =?";
 
 		try {
-			ps = con.prepareStatement(query);
+			preparedStatement = con.prepareStatement(query);
 		
-			ps.setInt(1,memberId);
+			preparedStatement.setInt(1,memberId);
 			
-			rs = ps.executeQuery();
+			resultSet = preparedStatement.executeQuery();
 		
 			
-			if(!rs.next()) {
+			if(!resultSet.next()) {
 				System.out.println("member not exist ");
 				return false;
 			} 
@@ -113,20 +113,20 @@ public class JDBCQuery {
 				+ "where title_id_of_given_book_name.title_id = books.title_id and status = 0;";
 
 		try {
-			ps = con.prepareStatement(query);
+			preparedStatement = connection.prepareStatement(query);
 			/* set variable in prepared statement */
 			
-			ps.setString(1,book_name);
+			preparedStatement.setString(1,book_name);
 			
-			rs = ps.executeQuery();
-			if(rs.next()) {
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
 				query = "INSERT INTO Book_Issue(issue_date,accession_No, member_id,due_date) VALUES(now(), " 
-			+ rs.getInt(1) + "," + memberId + "," +"DATE_ADD(NOW(), INTERVAL 15 DAY))";
-				ps = con.prepareStatement(query);
-				ps.executeUpdate(query);
-				query = "update books set status= 1 where  accession_no ="+rs.getInt(1);
-				ps = con.prepareStatement(query);
-				ps.executeUpdate(query);
+			+ resultSet.getInt(1) + "," + memberId + "," +"DATE_ADD(NOW(), INTERVAL 15 DAY))";
+				preparedStatement = con.prepareStatement(query);
+				preparedStatement.executeUpdate(query);
+				query = "update books set status= 1 where  accession_no ="+resultSet.getInt(1);
+				preparedStatement = con.prepareStatement(query);
+				preparedStatement.executeUpdate(query);
 				return true;
 			} else {
 				return false;
@@ -137,11 +137,11 @@ public class JDBCQuery {
 		} finally {
 			/* close connection */
 			try {
-				if (con != null) {
-					con.close();
+				if (connection != null) {
+					connection.close();
 				}
-				if (ps != null) {
-					ps.close();
+				if (preparedStatement != null) {
+					preparedStatement.close();
 				}
 
 			} catch (SQLException e) {
@@ -161,35 +161,35 @@ public class JDBCQuery {
 	private static int deleteBooks() {
 		
 		System.out.println("\nFetching data using PreparedStatement ....");
-		Connection con = null;
-		ResultSet rs = null;
-		Statement stmt = null;
-		ConnectionUtil conUtil = new ConnectionUtil();
+		Connection connection = null;
+		ResultSet resultSet = null;
+		Statement statement = null;
+		ConnectionUtil connectionUtil = new ConnectionUtil();
 		int numberOfRows = 0 ;
-		con = conUtil.getConnection();
+		connection = connectionUtil.getConnection();
 		String query= "SET FOREIGN_KEY_CHECKS=0";
 	
 		try {
-			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);		
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery(query);		
 			query = "delete  from books where accession_no in"
 					+ " (select accession_no "
 					+ "from (select accession_no,max(issue_date) as max_issue_date "
 					+ "from book_issue group by accession_no) as issued_books "
 					+ "where dateDiff(now(), max_issue_date) > 365) or accession_no not in (select accession_no from book_issue)";
-			numberOfRows = stmt.executeUpdate(query);
+			numberOfRows = statement.executeUpdate(query);
 			query = "SET FOREIGN_KEY_CHECKS=1;";
-			rs = stmt.executeQuery(query);		
+			resultSet = statement.executeQuery(query);		
 			} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			/* close connection */
 			try {
-				if (con != null) {
-					con.close();
+				if (connection != null) {
+					connection.close();
 				}
-				if (stmt != null) {
-					stmt.close();
+				if (statement != null) {
+					statement.close();
 				}
 
 			} catch (SQLException e) {
