@@ -14,9 +14,9 @@ public class Assignment2 {
    	 String book = sc.next(); 
    	 System.out.print("Enter the name of member: ");
   	 String member = sc.next(); 
-   	 Helper helper = new Helper();
-   	 //Message for 
-   	 String flag = helper.issueBookToMember(book, member);
+  	 BusinessLogic businessLogic = new BusinessLogic();
+   	 //Message for book issue
+   	 String flag = businessLogic.issueBookToMember(book, member);
    	 
    	 System.out.println(flag);
    	 	  

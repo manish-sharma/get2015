@@ -10,9 +10,9 @@ public class Assignment1 {
     	 Scanner sc = new Scanner(System.in);
     	 System.out.print("Enter the name of author: ");
     	 String author = sc.next(); 
-    	 Helper helper = new Helper();
+    	 BusinessLogic businessLogic = new BusinessLogic();
     	 
-    	 List<String> titleList = helper.authorToTitles(author);
+    	 List<String> titleList = businessLogic.getTitlesByAuthor(author);
     	 
     	 System.out.println("All titles of this author: ");
     	 for(String i: titleList)
