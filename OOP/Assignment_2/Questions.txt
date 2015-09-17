@@ -1,0 +1,8 @@
+1,You are  1)Student 2)Working Professional  3)House Wife   4)Other,Single Select
+2,Your Age group  1) Up to 18  2) Between 18 to 30  3) Between 18 to 30  4) Over 50,Single Select
+3,Please Mention the income group you belong to (Student mention their Pocket money)  1) Below Rs.5000  2) Rs.5000 to 10000  3) Rs.10000 to 25000  4) Above Rs.250000,Single Select
+4,How much you spend on daily fast food?  1) Rs.10-15  2) Rs.26-50  3) Rs.51-75  4) More than Rs.75,Single Select
+5,I spend Most of above Quoted Money for(You can select Multiple Answer)   Breakfast/ Afternoon Snacks and coffe/ Lunch/ Other,Multiple Select
+6,I usully prefer(You can select Multiple Answer)  Pizza / Burger/ French fries/ Other,Multiple Select
+7,What’s your favourite food?,Text
+8,which type of food You like?,Text
