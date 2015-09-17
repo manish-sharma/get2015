@@ -19,6 +19,7 @@ public class Helper {
 		Helper helper = new Helper();
 		helper.getListOfTitles();
         helper.addNewMemberInBookIssue(getAccessionNo(), 1);
+        
 	}
 
 	/*
@@ -156,4 +157,14 @@ helper.closeConnection();
 		helper.closeConnection();
 	}
 
+	private void deleteBooks()
+	{
+		Helper helper = new Helper();
+		String query ="delete FROM books WHERE DATEDIFF(NOW(),purchase_date) > "
+				+ "365 AND accession_no NOT IN (SELECT DISTINCT(accession_no) "
+				+ "FROM book_issue WHERE DATEDIFF( NOW(),issue_date) <= 365) ;";
+	int noOFRowDeleted =helper.executeUpdateQueryUsingStatement(query);
+		System.out.println("No of row Deleted is "+noOFRowDeleted);
+		
+	}
 }
