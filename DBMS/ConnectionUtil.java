@@ -15,7 +15,7 @@ public class ConnectionUtil {
 	private static final String USER = "root";
 	private static final String PASSWORD = "mysql";
 			
-	private Connection con = null;
+	private Connection connection = null;
 	
 	public Connection getConnection() {
 		
@@ -29,12 +29,12 @@ public class ConnectionUtil {
 		
 		/* open connection */
 		try {
-			con = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+			connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 		}
-		return con;
+		return connection;
 	}
 	
 }
