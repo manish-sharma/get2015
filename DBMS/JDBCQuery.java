@@ -15,7 +15,7 @@ public class JDBCQuery {
 
 	//main function
 	public static void main(String[] args) {
-		fetchBooks( "amit");
+		fetchBooks( "Ankit");
 		System.out.println(isBookIssued("C++ Complete Reference",1));
 		System.out.println(deleteBooks());
 		System.out.println("\nExiting . . .");
