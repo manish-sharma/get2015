@@ -11,16 +11,16 @@ public class BookIssue {
 		return memberId;
 	}
 
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
+	public void setMemberId(Members m) {
+		this.memberId = m.getMemberId();
 	}
 
 	public int getAccessionNumber() {
 		return accessionNumber;
 	}
 
-	public void setAccessionNumber(int accessionNumber) {
-		this.accessionNumber = accessionNumber;
+	public void setAccessionNumber(Book b) {
+		this.accessionNumber = b.getAccessionNumber();
 	}
 
 	public Date getIssueDate() {
@@ -38,5 +38,4 @@ public class BookIssue {
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
-
 }
