@@ -1,9 +1,6 @@
 package com.vehiclemanagement.model;
 
-/**
- * @author Akshat
- *
- */
+
 public class Vehicle {
 	private String make;
 	private String model;

@@ -1,9 +1,6 @@
 package com.vehiclemanagement.model;
 
-/**
- * @author Akshat
- *
- */
+
 public class Bike extends Vehicle{
 	private boolean selfStart;
 	private int helmetPrice;

@@ -4,10 +4,7 @@ import com.vehiclemanagement.model.Bike;
 import com.vehiclemanagement.model.Car;
 import com.vehiclemanagement.model.Vehicle;
 
-/**
- * @author Akshat
- *
- */
+
 public class VehicleHelper {
 	private String vehicleType;
 

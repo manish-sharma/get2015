@@ -1,9 +1,6 @@
 package com.vehiclemanagement.model;
 
-/**
- * @author Akshat
- *
- */
+
 public class Car extends Vehicle{
 	private boolean AC;
 	private boolean powerStearing;

@@ -1,10 +1,7 @@
 package com.vehiclemanagement.helper;
 import com.vehiclemanagement.model.Vehicle;
 
-/**
- * @author Akshat
- *
- */
+
 public class VehicleDetailPrinter {
 	/**
 	 * @param vehicle
