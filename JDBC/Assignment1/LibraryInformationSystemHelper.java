@@ -189,6 +189,9 @@ public class LibraryInformationSystemHelper {
 		con = conUtil.getConnection();
 		ResultSet rs = null;
 		int count = 0;
+		int index = 1;
+		List<Integer> listOfBooks = new ArrayList<Integer>();
+		StringBuilder builder = new StringBuilder();
 		// query to select accession number of those books which are not used
 		// recently
 		String query = "select distinct b.accession_no from book_issue bi right join books b on b.accession_no=bi.accession_no "
@@ -197,21 +200,32 @@ public class LibraryInformationSystemHelper {
 				+ "Where((DATEDIFF( NOW(), bi.Issue_date)>=365) and "
 				+ "DATEDIFF( NOW(), b.purchase_date)>=365 or bi.issue_date is null)";
 
-		// query to delete books returned by the select query
-		String query1 = "delete From books where accession_no=?";
-		try {
+				try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			while (rs.next()) {
 				// prepared statement used to pass parameters
-				ps = (PreparedStatement) con.prepareStatement(query1);
-				/* set variable in prepared statement */
-				// ps.setInt(1,index);
-				ps.setInt(1, rs.getInt(1));
-				ps.executeUpdate();
-				// count the number of delete operations performed
-				count++;
+				listOfBooks.add(rs.getInt(1));
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		for (int i = 0; i < listOfBooks.size(); i++) {
+			builder.append("?,");
+		}
+		// query to delete books returned by the select query
+		String query1 = "delete From books where accession_no in ("
+				+ builder.deleteCharAt(builder.length() - 1).toString() + ")";
+		try {
+			ps = (PreparedStatement) con.prepareStatement(query1);
+			/* set variable in prepared statement */
+			// ps.setInt(1,index);
+			for (Integer i : listOfBooks) {
+				ps.setInt(index++, i);
+			}
+			count = ps.executeUpdate();
+			// count the number of delete operations performed
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
