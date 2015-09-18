@@ -23,6 +23,8 @@ public class LibraryInformationSystemHelper {
 		List<Title> titleList = new ArrayList<Title>();
 		// title class object
 		Title t = null;
+		Subject s=null;
+		Publisher p=null;
 		// connection object
 		Connection con = null;
 		// resultSet object
@@ -31,7 +33,8 @@ public class LibraryInformationSystemHelper {
 		Statement stmt = null;
 		// connectionUtil class object
 		ConnectionUtil conUtil = new ConnectionUtil();
-		// connection util class get connection method to return object of connection
+		// connection util class get connection method to return object of
+		// connection
 		con = conUtil.getConnection();
 
 		/*
@@ -52,10 +55,14 @@ public class LibraryInformationSystemHelper {
 				// iterates over all rows return by query
 				while (rs.next()) {
 					t = new Title();
-					t.setSubjectId(rs.getInt(1));
+					s=new Subject();
+					p=new Publisher();
+					s.setSubjectId(rs.getInt(1));
+					t.setSubjectId(s);
 					t.setTitleId(rs.getInt(2));
 					t.setTitleName(rs.getString(3));
-					t.setPublisherId(rs.getInt(4));
+					p.setPublisherId(rs.getInt(4));
+					t.setPublisherId(p);
 					titleList.add(t);
 				}
 			}
@@ -192,6 +199,7 @@ public class LibraryInformationSystemHelper {
 		int index = 1;
 		List<Integer> listOfBooks = new ArrayList<Integer>();
 		StringBuilder builder = new StringBuilder();
+
 		// query to select accession number of those books which are not used
 		// recently
 		String query = "select distinct b.accession_no from book_issue bi right join books b on b.accession_no=bi.accession_no "
@@ -199,8 +207,7 @@ public class LibraryInformationSystemHelper {
 				+ " where bi1.accession_no=bi.accession_no group by (bi1.accession_no))"
 				+ "Where((DATEDIFF( NOW(), bi.Issue_date)>=365) and "
 				+ "DATEDIFF( NOW(), b.purchase_date)>=365 or bi.issue_date is null)";
-
-				try {
+		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			while (rs.next()) {
@@ -231,14 +238,13 @@ public class LibraryInformationSystemHelper {
 		} finally {
 			/* close connection */
 			try {
-				if (con != null) {
-					con.close();
-				}
+				if (stmt != null)
+					stmt.close();
 				if (ps != null) {
 					ps.close();
-
-					if (stmt != null)
-						stmt.close();
+					if (con != null) {
+						con.close();
+					}
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
