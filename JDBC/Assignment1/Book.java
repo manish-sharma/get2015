@@ -6,7 +6,6 @@ public class Book {
 	private double price;
 	private String status;
 	private Date purchaseDate;
-	Title t=new Title();
 
 	public int getAccessionNumber() {
 		return accessionNumber;
