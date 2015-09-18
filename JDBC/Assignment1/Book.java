@@ -19,8 +19,8 @@ public class Book {
 		return titleId;
 	}
 
-	public void setTitleId(int titleId) {
-		this.titleId = titleId;
+	public void setTitleId(Title t) {
+		this.titleId=t.getTitleId();
 	}
 
 	public double getPrice() {
@@ -46,5 +46,6 @@ public class Book {
 	public void setPurchaseDate(Date date) {
 		this.purchaseDate = date;
 	}
-
 }
+
+
