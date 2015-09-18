@@ -16,16 +16,16 @@ public class Title {
 		return subjectId;
 	}
 
-	public void setSubjectId(int subjectId) {
-		this.subjectId = subjectId;
+	public void setSubjectId(Subject s) {
+		this.subjectId = s.getSubjectId();
 	}
 
 	public int getPublisherId() {
 		return publisherId;
 	}
 
-	public void setPublisherId(int publisherId) {
-		this.publisherId = publisherId;
+	public void setPublisherId(Publisher p) {
+		this.publisherId = p.getPublisherId();
 	}
 
 	public String getTitleName() {

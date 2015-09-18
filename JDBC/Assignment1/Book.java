@@ -6,6 +6,7 @@ public class Book {
 	private double price;
 	private String status;
 	private Date purchaseDate;
+	Title t=new Title();
 
 	public int getAccessionNumber() {
 		return accessionNumber;
@@ -19,8 +20,8 @@ public class Book {
 		return titleId;
 	}
 
-	public void setTitleId(int titleId) {
-		this.titleId = titleId;
+	public void setTitleId(Title t) {
+		this.titleId=t.getTitleId();
 	}
 
 	public double getPrice() {
@@ -48,3 +49,5 @@ public class Book {
 	}
 
 }
+
+

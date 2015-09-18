@@ -11,24 +11,24 @@ public class BookReturn {
 		return memberId;
 	}
 
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
+	public void setMemberId(Members m) {
+		this.memberId = m.getMemberId();
 	}
 
 	public int getAccessionNumber() {
 		return accessionNumber;
 	}
 
-	public void setAccessionNumber(int accessionNumber) {
-		this.accessionNumber = accessionNumber;
+	public void setAccessionNumber(Book b) {
+		this.accessionNumber = b.getAccessionNumber();
 	}
 
 	public Date getIssueDate() {
 		return issueDate;
 	}
 
-	public void setIssueDate(Date issueDate) {
-		this.issueDate = issueDate;
+	public void setIssueDate(BookIssue bi) {
+		this.issueDate = bi.getIssueDate();
 	}
 
 	public Date getReturnDate() {
