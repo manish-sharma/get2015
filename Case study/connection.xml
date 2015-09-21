@@ -1,0 +1,8 @@
+<?xml version="1.0"?><connection><jdbc>
+
+	<url>jdbc:mysql://localhost:3306/Vehicle</url>
+	<driver>com.mysql.jdbc.Driver</driver>
+	<username>root</username>
+	<password>mysql</password>
+</jdbc>
+</connection>

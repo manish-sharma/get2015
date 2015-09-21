@@ -1,0 +1,52 @@
+<?xml version="1.0"?><vehicle>
+<Car>
+	<make>Ford</make>
+	<createDTime>2015-09-21 10:23:39.693</createDTime>
+	<model>EcoSport</model>
+	<engineInCC>2000</engineInCC>
+	<fuelCapacity>50</fuelCapacity>
+	<milage>22</milage>
+	<price>850009</price>
+	<roadTax>40049</roadTax>
+	<AC>true</AC>
+	<powerSteering>true</powerSteering>
+	<accessoryKit>Radio , Cd Player</accessoryKit>
+</Car>
+<Bike>
+	<make>Royal Enfield</make>
+	<createDTime>2015-09-21 10:23:39.693</createDTime>
+	<model>Bullet 300</model>
+	<engineInCC>350</engineInCC>
+	<fuelCapacity>15</fuelCapacity>
+	<milage>30</milage>
+	<price>120009</price>
+	<roadTax>150049</roadTax>
+	<selfStart>true</selfStart>
+	<helmetPrice>1500</helmetPrice>
+</Bike>
+<Car>
+	<make>Ford1</make>
+	<createDTime>2015-09-21 10:23:39.693</createDTime>
+	<model>EcoSport1</model>
+	<engineInCC>20001</engineInCC>
+	<fuelCapacity>501</fuelCapacity>
+	<milage>221</milage>
+	<price>8500091</price>
+	<roadTax>400491</roadTax>
+	<AC>false</AC>
+	<powerSteering>false</powerSteering>
+	<accessoryKit>Radio , Cd Player1</accessoryKit>
+</Car>
+<Bike>
+	<make>Royal Enfield1</make>
+	<createDTime>2015-09-21 10:23:39.693</createDTime>
+	<model>Bullet 3001</model>
+	<engineInCC>3501</engineInCC>
+	<fuelCapacity>151</fuelCapacity>
+	<milage>301</milage>
+	<price>1200091</price>
+	<roadTax>1500491</roadTax>
+	<selfStart>false</selfStart>
+	<helmetPrice>15001</helmetPrice>
+</Bike>
+</vehicle>
