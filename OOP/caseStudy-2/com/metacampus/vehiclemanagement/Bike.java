@@ -5,7 +5,15 @@ public class Bike extends Vehicle {
 	private boolean selfStart;
 
 	private int helmetPrice;
-
+	
+	public Bike()
+	{
+		super();
+	}
+	
+	public Bike(String make,String model){
+		super(make,model);
+	}
 	public boolean isSelfStart() {
 		return selfStart;
 	}
@@ -22,9 +30,16 @@ public class Bike extends Vehicle {
 		this.helmetPrice = helmetPrice;
 	}
 	//function calculates on road price of an bike and returns it.
-	public double calculateOnRoadPrice(double price, double roadTax) {
-		return (roadTax + price);
+	public double calculateOnRoadPrice() {
+		return super.calculateOnRoadPrice()+100;
 
+	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString()+ "Bike [selfStart=" + selfStart + ", helmetPrice=" + helmetPrice
+				+ "]";
 	}
 
 }

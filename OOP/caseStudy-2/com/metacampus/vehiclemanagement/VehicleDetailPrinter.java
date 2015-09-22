@@ -9,7 +9,7 @@ public class VehicleDetailPrinter {
 			}else
 			{
 				Bike bike = (Bike) vehicle;
-				return bike.getMake().toString() + bike.getModel().toString();
+				return bike.getMake() + bike.getModel();
 			}		
 	}
 
