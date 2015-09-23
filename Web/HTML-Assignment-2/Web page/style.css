@@ -1,0 +1,158 @@
+body{
+	width:95%;
+	background-color:Gray;
+}
+#back{
+	margin:17px;
+	height:700px;
+	width:1550px;
+	background-color:white;
+	border-radius: 20px;
+	position:absolute;
+}
+.header{
+	float:top;
+	background-color:LightBlue;
+	height:80px;
+	width:100%;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	position:absolute;
+}
+
+.header center h2{
+	margin-top:5px;
+}
+.header center h4{
+	margin-top:0px;
+}
+
+.nav{
+	margin-top:80px;
+	height:30px;
+	width:100%;
+	background-color:LightSteelBlue ;
+	position:absolute;	
+}
+.nav ul {
+      margin-top:5px;
+      list-style:none;
+	  
+}
+.nav ul li {
+
+	display:inline;
+	border:2px solid LightSlateGray ;
+	background-color:LightSlateGray ;
+	border-radius:4px;
+	margin:0 20px;
+}
+.nav ul li a {
+	hover:blue;
+	color:black;
+	text-decoration:none;
+}
+
+.nav ul li a:hover { 
+    color:WhiteSmoke ;
+}
+#container
+{
+	width: auto;
+   position: relative;
+}
+.center{
+	margin-left:425px;
+	margin-top:120px;
+	margin-right:425px;
+	width:700px;
+	height:500px;
+	background-color:white;
+	position: absolute;
+}
+
+.center h3{
+	text-align:center;
+}
+
+
+.left{
+	margin-left:10px;
+	margin-top:120px;
+	margin-right:1140px;
+	border-radius:20px;
+	width:400px;
+	height:500px;
+	background-color:#BDBCBA;
+	position: absolute;
+	
+}
+.left h3{
+	text-align:center;
+}
+
+.left ul {
+	margin-left:20px;
+	color:black;
+}
+.left ul li {
+	color:black;
+	padding:5px;	
+}
+
+.left ul li a{
+	color:black;
+	text-decoration:none;
+}
+
+
+.right{
+	margin-left:1140px;
+	margin-right:10px;
+	margin-top:120px;
+    border-radius:20px;
+	width:400px;
+	height:500px;
+	background-color:#BDBCBA;
+	position: absolute;
+}
+
+.right h3 {
+	text-align:center;
+}
+.top{
+	padding-top:20px;
+	padding-left:20px;
+	color:black;
+}
+
+.image{
+	float:left;
+	padding-right:30px;
+}
+
+.detail{
+	padding-left:20px;
+	margin-right:10px;
+}
+
+.clearBoth {
+clear: both;
+}
+
+.footer{
+	position:absolute;
+	top:620px;
+	background-color:lightgray;
+	height:90px;
+	width:100%;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	float:left;
+}
+
+.footer p{
+	text-align:center;
+	
+	
+}
