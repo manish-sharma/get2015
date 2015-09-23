@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<vehicle name="Car">
+		<createdby>Banwari</createdby>
+		<enginecc>500</enginecc>
+		<fuelcapacity>50</fuelcapacity>
+		<make>Hyundai</make>
+		<milage>17</milage>
+		<model>i10</model>
+		<price>800000.0</price>
+		<roadtax>1000</roadtax>
+		<ac>YES</ac>
+		<accessorykit>YES</accessorykit>
+		<powersteering>YES</powersteering>
+	</vehicle>
+	<vehicle name="Bike">
+		<createdby>Banwari</createdby>
+		<enginecc>500</enginecc>
+		<fuelcapacity>50</fuelcapacity>
+		<make>TVS</make>
+		<milage>17</milage>
+		<model>apache</model>
+		<price>80000.0</price>
+		<roadtax>10000</roadtax>
+		<helmetprice>1000</helmetprice>
+		<selfstart>YES</selfstart>
+	</vehicle>
+</config>
