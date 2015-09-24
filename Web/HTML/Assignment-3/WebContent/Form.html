@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Html 5</title>
+<link href="Custom2.css" rel="stylesheet" />
+</head>
+<body>
+	<form>
+		<div class="form">
+			<div class="form_heading">My Form</div>
+			<table cellspacing="10">
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="name" required="required"></td>
+				</tr>
+
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><input type="email" name="email" required="required"></td>
+				</tr>
+
+
+				<tr>
+					<td>Date Of Birth</td>
+					<td>:</td>
+					<td><input type="date" name="dob" required="required"></td>
+				</tr>
+
+				<tr>
+					<td>Marks Scored</td>
+					<td>:</td>
+					<td><input type="range" name="marks" min="0" max="100"
+						value="30" step="10"></td>
+				</tr>
+
+				<tr>
+					<td>Set Grade</td>
+					<td>:</td>
+					<td><input type="text" name="dob" list="grade"> <datalist
+							id="grade">
+							<option value="A+">
+							<option value="A">
+							<option value="B+">
+							<option value="B">
+							<option value="C">
+							<option value="D">
+						</datalist></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="submit" value="Submit"
+						class="btn"></td>
+				</tr>
+
+			</table>
+
+		</div>
+	</form>
+</body>
+</html>
