@@ -1,0 +1,82 @@
+body{
+	background-color:rgba(228, 236, 233, 1);
+}
+
+
+header {
+	text-align:center;
+	font-family:"Cosmic Sans";
+	font-size:20px;
+	background-color:rgba(3, 3, 3, 0.67);
+	height:15%;
+	color:rgba(207, 189, 189, 1);
+}
+h1{
+	margin-bottom:-1%;
+}
+nav{
+	background-color:rgba(3, 3, 3, 0.67);
+	text-align:center;
+}
+
+ul {
+      margin:0px;
+      list-style:none;
+}
+
+li {
+	display:inline;
+	border:0px solid #f00;
+	padding:50px;
+	font-size:20px;
+}
+
+nav ul li a {
+	text-align:center;
+	color:darkblue;
+	text-decoration:none;
+}
+
+nav ul li a:hover {
+	color:black;
+	text-decoration:underline;
+	border:1px solid grey;
+	background-color:grey;
+}
+
+
+section {
+    height: 700px;
+    width: 75%;
+    float: left;
+    background-color: rgba(228, 236, 233, 1);
+	padding-left:30px;
+	text-align:center;
+}
+
+article{
+	font-color:red;
+}
+h3{
+	width:100%;
+}
+
+aside {
+	border:1px dashed lightblue;
+	 border-radius: 25px;
+	margin-top:10px;
+	position:relative; 
+	padding-left:20px;
+	width:20%;
+	float:right;
+	height:600px;
+	background-color:rgba(3, 3, 3, 0.67);
+}
+
+footer{
+	margin-top:700px;
+	height:11%;
+	text-align:center;
+	background-color:#B0C4DE;
+}
+
