@@ -1,0 +1,62 @@
+.divison{
+background-color: #FFFFF;
+    width: 1100px;
+    padding: 10px;
+    border-top-width: 30PX ;
+	border-right-width: 10px;
+    border-left-width: 10px;
+	border-bottom-width:10px;
+	border-style :solid ;
+	border-color:#D8D8D8 ;
+    margin: 25px;
+	height: 800px;
+}
+
+.wrapper{
+	
+    width: 275px;
+    padding: 10px;
+    border: 2PX  solid white ;
+	height: 175px;
+	float:left;
+}
+.header{
+	background-color: #F0FFFF;
+    width: 1050px;
+    padding: 15px;
+    border: 1px solid #99CCFF ;
+    margin: 1px 15px 10px 10px;
+	height: 30px;
+}
+.leftNav {
+	background-color:black;
+	width:300px;
+	height:200px;
+	border: 3px solid #D8D8D8;
+	float:left;
+	
+	
+	
+}
+.leftNav img{
+	width :273px;
+	height:175px;
+	margin:0.2px;
+	float:left;
+}
+.table{
+	font-size:18px;
+	color:black;
+	
+}
+
+.rightNav{
+	background-color:#FFFFF;
+	width:500px;
+	height:700px;
+	margin:30px;
+	font-size:6;
+	float:left;
+	
+
+}
