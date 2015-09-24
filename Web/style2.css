@@ -122,7 +122,7 @@ background-repeat : no-repeat;
 	padding :5px;
 	
  }
- .menuItem3 {
+ #menuItem3 {
 	 list-style :none;
 	 width:81%;
 	 margin-left :5px;
@@ -131,6 +131,9 @@ background-repeat : no-repeat;
 	text-align:left;
 	padding :5px;
 	
+ }
+ #menuItem3 :HOVER  {
+	 color:black;
  }
  
  #center {
