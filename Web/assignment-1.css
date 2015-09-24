@@ -1,0 +1,41 @@
+#divison{
+background-color: #FFFFF;
+     width: 1000px;
+     padding: 15px;
+     border: 15px solid lightGray ;
+     margin: 25px;
+	 height: 500px;
+	 
+}
+
+#header{
+	 background-color: #CCFFFF;
+     width: 900px;
+     padding: 15px;
+     border: 3px solid lightgray ;
+     margin: 25px;
+	 text-align:center;
+}
+#leftNav {
+	 background-color:black;
+	 width:266px;
+	 height:200px;
+	 border: 5px solid #CCFFFF;
+	 float:left;
+}
+
+#leftNav img{
+	max-height : 100%;
+	max-width: 100%;
+}
+
+#right-nav{
+	background-color:white;
+	width:600px;
+	height:370px0px;
+	 border: 5px solid white;
+	float:left;	
+}
+ #table{
+	 font-size:15px;	 
+ }
