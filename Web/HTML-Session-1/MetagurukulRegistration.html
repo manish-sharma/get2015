@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Metagurukul Account Registration Form</title>
+ </head>
+ <body>
+
+<form>
+     <table>
+       <tr>
+	      <td colspan=2><b>Metagurukul Account Registration</b><hr></td>
+       </tr>
+       <tr>
+		 <td align="right">Name:</td>
+		  <td ><input type="text" placeholder="firstName" name="first name"><input name="lastName" type="text" placeholder="Last Name"></td>
+	    </tr>
+        <tr>
+		   <td align="right">Gender:</td>
+		    <td ><select name="gender">
+			 <option>- Select One -</option>
+			<option value="male"> Male </option>
+			<option value="female">Female </option>
+			</select></td>
+	     </tr>
+	    <tr>
+		  <td align="right">BirthDay:</td>
+		  <td ><select>
+			<option>- Select Month -</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			</select>
+			<input type="text" placeholder="Day" style="width:10%">
+			<input type="text" placeholder="Year"  style="width:15%">
+		  </td>
+	   </tr>
+	   <tr>
+		 <td align="right">Country:</td>
+		 <td ><select name="country">
+			<option value="India" >India</option>
+			<option value="usa">Usa</option>
+			</select>
+			</td>
+	    </tr>
+
+        <tr>
+	           <td colspan=2><br><b>Select an ID and password</b><hr></td>
+        </tr>		
+
+	      <tr>
+		     <td align="right">Metagurukul ID:</td>
+		      <td ><input type="text">@<select name="metaID">	
+			<option>metagurukul.com</option> 
+			<option value="gmail.com">gmail.com</option> 
+			<option value="yahoo.com">yahoo.com</option>
+			<button type="button">Check</button>
+		     </td>
+	       </tr>
+	     <tr>
+		   <td style="text-align:right">Password:</td>
+		   <td><input type="password" name="password"> &nbsp <font size="1">Password Strength</font><label></td>
+	      </tr>
+
+	  <tr>
+		<td style="text-align:right">Conform Password:</td>
+		<td><input type="password" name="conformPassword"> </td>
+	  </tr>
+
+  
+      <tr>
+	     <td colspan=2><br><b>In case you forget your ID or password</b><hr></td>
+       </tr>
+				
+	   <tr>
+		   <td align="right">Alternate Email(optional)</td>
+		  <td ><input type="email" name="alterEmail"></td>
+	    </tr>
+
+	    <tr>
+		   <td align="right">Select Question 1</td>
+		   <td ><select style="width:50%" name="questionOne">
+			<option>- Select One -</option>
+			<option value="">What is your nick name ?</option>
+			<option value="">What is your birthplace ?</option>
+			</select></td>
+	      </tr>
+	
+	      <tr>
+		    <td style="text-align:right">Your Answer</td>
+		    <td><input type="text" style="width:49%" name="answerTwo"> </td>
+	      </tr>
+	
+        <tr>
+		  <td align="right">Select Question 2</td>
+		  <td><select style="width:50%" name="questionTwo">
+			<option>- Select One -</option>
+			<option value="">What is your fav Color?</option>
+			<option value="">What is your fav Dish?</option>
+		 </select></td>
+	</tr>
+	
+	<tr>
+		<td style="text-align:right">Your Answer</td>
+		<td><input type="text" style="width:49%" name="answerTwo"></td>
+	</tr>
+    <tr>
+	  <td colspan=2><hr></td>
+     </tr>
+     <tr>
+	    <td></td>
+	    <td><br>
+		<input type="submit" value="Create My Account" style="width:150px;height:30px;font-weight:bold"></td>
+       </tr>
+		
+     </table>
+    </form>
+  </body>
+</html>
