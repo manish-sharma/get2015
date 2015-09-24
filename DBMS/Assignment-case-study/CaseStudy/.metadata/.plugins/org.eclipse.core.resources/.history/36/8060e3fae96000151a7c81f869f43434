@@ -1,0 +1,5 @@
+package com.metacampus.vehiclemanagement.model;
+
+public class Car {
+
+}

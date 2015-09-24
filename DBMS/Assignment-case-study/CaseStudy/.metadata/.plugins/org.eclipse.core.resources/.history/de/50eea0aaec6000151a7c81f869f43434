@@ -1,0 +1,81 @@
+package com.metacampus.vehiclemanagement.helper;
+
+import com.metacampus.vehiclemanagement.model.Bike;
+import com.metacampus.vehiclemanagement.model.Car;
+import com.metacampus.vehiclemanagement.model.Vehicle;
+import com.metacampus.vehiclemanagement.model.VehicleType;
+
+public class VehicleHelper {
+
+	/** create the bike with given argument
+	 * @param make company of bike
+	 * @param model
+	 * @param engineInCC
+	 * @param fuelCapacity
+	 * @param milage
+	 * @param price
+	 * @param roadTax
+	 * @param selfStart
+	 * @param helmetPrice
+	 * @return
+	 */
+	public static Bike createBike(Vehicle vehicle, boolean selfStart, float helmetPrice) {
+		Bike bike = (Bike)vehicle;
+		bike.setSelfStart(selfStart);
+		bike.setHelmetPrice(helmetPrice); 
+		return bike;
+	}
+	
+	/** creating the car with given specification
+	 * @param make company of car
+	 * @param model
+	 * @param engineInCC
+	 * @param fuelCapacity
+	 * @param milage
+	 * @param price
+	 * @param roadTax
+	 * @param AC
+	 * @param powerSteering
+	 * @param accessoryKit
+	 * @return
+	 */
+	public static Car createCar(Vehicle vehicle, boolean AC, boolean powerSteering, boolean accessoryKit) {
+		Car car = (Car)vehicle;
+		car.setAC(AC);
+		car.setPowerSteering(powerSteering);;
+		car.setAccessoryKit(accessoryKit);
+		
+		return car;
+	}
+	
+	public static Vehicle createVehicle(VehicleType vehicleType, String make, String model, String engineInCC, int fuelCapacity, 
+			String milage, float price, float roadTax) {
+		Vehicle vehicle = null;
+		if(vehicleType.equals(vehicleType.CAR)) {
+			vehicle = new Car();
+			vehicle.setMake(make);
+			vehicle.setModel(model);
+			vehicle.setEngineInCC(engineInCC);
+			vehicle.setFuelCapacity(fuelCapacity);
+			vehicle.setMilage(milage);
+			vehicle.setPrice(price);
+			vehicle.setRoadTax(roadTax);
+		}
+		else if(vehicleType.equals(vehicleType.BIKE)) {
+			vehicle = new Bike();
+			vehicle.setMake(make);
+			vehicle.setModel(model);
+			vehicle.setEngineInCC(engineInCC);
+			vehicle.setFuelCapacity(fuelCapacity);
+			vehicle.setMilage(milage);
+			vehicle.setPrice(price);
+			vehicle.setRoadTax(roadTax);
+		}
+		else {
+			System.out.println("Object type is un defined");
+		}
+		
+		return vehicle;
+	}
+	
+}

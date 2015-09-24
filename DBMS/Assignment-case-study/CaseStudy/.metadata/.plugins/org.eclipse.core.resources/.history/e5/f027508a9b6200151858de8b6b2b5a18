@@ -1,0 +1,96 @@
+package com.metacampus.vehiclemanagement.xml;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import javax.xml.stream.XMLEventReader;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.StartElement;
+import javax.xml.stream.events.XMLEvent;
+
+public class ReadConnectionXml {
+
+
+	String connection = "connection";
+	String url = "url";
+	String driver = "driver";
+	String username = "username";
+	String password = "password";
+
+	public ConnectionItems readConfig(String configFile) {
+
+		ConnectionItems connectionItem = null;
+		try {
+			/* Creating a new XML Factory */
+			XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+
+			/* Strring up a new eventReader */
+			InputStream in = new FileInputStream(configFile);
+			XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
+			connectionItem = null;
+
+			/*Reading the XML Document */
+			while (eventReader.hasNext()) {
+				XMLEvent event = eventReader.nextEvent();
+
+				if (event.isStartElement()) {
+					StartElement startElement = event.asStartElement();
+					/* If we have an item element, we create a new item */
+					if (startElement.getName().getLocalPart() == (connection)) {
+						connectionItem= new ConnectionItems();
+					}
+
+					/* Reading URL */
+					if (event.isStartElement()) {
+						if (event.asStartElement().getName().getLocalPart()
+								.equals(url)) {
+							event = eventReader.nextEvent();
+							connectionItem.setUrl(event.asCharacters().getData());
+							continue;
+						}
+					}
+
+					/* Reading Driver */
+					if (event.isStartElement()) {
+						if (event.asStartElement().getName().getLocalPart()
+								.equals(driver)) {
+							event = eventReader.nextEvent();
+							connectionItem.setDriver(event.asCharacters().getData());
+							continue;
+						}
+					}
+
+					/* Reading User Name*/
+					if (event.asStartElement().getName().getLocalPart()
+							.equals(username)) {
+						event = eventReader.nextEvent();
+						connectionItem.setUsername(event.asCharacters().getData());
+						continue;
+					}
+
+					/* Reading Password */
+					if (event.asStartElement().getName().getLocalPart()
+							.equals(password)) {
+						event = eventReader.nextEvent();
+						connectionItem.setPassword(event.asCharacters().getData());
+						continue;
+					}
+				}
+				/* If we reach the end of an item element, we add it to the list */
+				if (event.isEndElement()) {
+					event.asEndElement();
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (XMLStreamException e) {
+			System.out.println(e.getMessage());
+		}
+		return connectionItem;
+	}
+} 
+
+

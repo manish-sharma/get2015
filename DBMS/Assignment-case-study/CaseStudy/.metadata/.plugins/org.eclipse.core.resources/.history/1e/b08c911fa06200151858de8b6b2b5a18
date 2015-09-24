@@ -1,0 +1,14 @@
+import com.metacampus.vehiclemanagement.xml.ReadConnectionXml;
+
+
+public class Main {
+	
+	public static void main(String args[]) {
+		ReadConnectionXml read = new ReadConnectionXml();
+	    read.readConfig("connection.xml");
+	    ReadConnectionXml read = new ReadConnectionXml();
+	    read.readConfig("connection.xml");
+	    
+	}
+
+}
