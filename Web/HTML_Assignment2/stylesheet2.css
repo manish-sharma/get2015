@@ -1,0 +1,33 @@
+header{
+	text-align:center;
+}
+section{
+	float: left;
+}
+fieldset{
+	-moz-border-radius:10px;  
+	border-radius: 10px;  
+	-webkit-border-radius: 10px;
+	padding : 20px;
+	width : 20%;
+	margin-left : 38%;
+	background-color : #E1EEEE;
+}
+span{
+	float:left;
+}
+.form_name{
+	float: left;
+    width: 50%;
+}
+.form_name > span{
+	width: 100%;
+	float: left;
+	margin: 5px;
+}
+.form_input{
+	width: 100%;
+	float: left;
+	margin: 5px;
+	
+}
