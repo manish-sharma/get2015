@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="form.css">
+ </head>
+<body>
+  <center>
+  <div id= "wrapper">
+    <div id="header">
+      <h1 style="display:inline;color:white">MY FORM</h1>
+    </div>
+    <form>
+      <table>
+        <tr>
+          <td style="padding-left:10px">Full Name: </td>
+          <td><input type="text" name="name" placeholder="Enter full Name" required></td>
+        </tr>
+        
+        <tr>
+          <td style="padding-left:10px">Email Address: </td>
+          <td><input type="email" nmae="mailid" placeholder="enter email address" required></td>
+        </tr>
+        
+        <tr>
+          <td style="padding-left:10px">Date of Birth: </td>
+          <td><input type="date" name="dob" required></td>
+        </tr>
+        <tr>
+          <td style="padding-left:10px">Height (100-200cm) </td>
+          <td><input type="range" min="100" max="200" name="height"></td>
+        </tr>
+        
+        <tr>
+          <td style="padding-left:10px">Area of Interest: </td>
+          <td>
+            
+            <input list="interest" name="interest">
+            <datalist id="interest">
+              <option value="Developmet">
+              <option value="Testing">
+              <option value="Managemens">
+              <option value="Politics">
+              <option value="Sports">
+             </datalist>            
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" align="center"><input type="submit" name="Submit"></td>
+        </tr>
+        
+      </table>  
+    </form>
+    
+    
+     <div id="footer">
+     <font color="#ffffff"> C© Copyright 2015 Banwari kevat</font>  
+    </div>
+  
+  </div>
+  </center> 
+
+</body>
+
+</html>

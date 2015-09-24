@@ -1,0 +1,36 @@
+#wrapper 
+{
+	width:700px;
+	background-color:#D8F6F4;
+	border-style:solid;
+	
+}
+
+#header
+{
+    width:700px;
+	height:80px;
+    background-color:#284FAB;
+}
+#footer
+{
+    width:700px;
+	height:40px;
+    background-color:#284FAB;
+}
+
+table
+{ 
+  margin:100px;
+  width:100%;
+}
+
+tr
+{
+  height:40px;
+}
+
+body 
+{
+	background-color:#C7D8D7;
+}
