@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-procurement System</title>
+    <link href="CssOFExample.css" rel="stylesheet" />
+</head>
+<body>
+    <header align="center" >
+        <h2>E-Procurement System</h2>
+    </header>
+	<nav align="center">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Contect Us</a></li>
+</ul>
+</nav>  
+<article>
+        <h1>What is E-procurement System</h1>
+        <p>
+          <h4>  Welcome to eProcurement System </h4>
+</p>
+<p>The eProcurement System of India enables the Tenderers to download the Tender Schedule free of cost and then submit the bids online through this portal
+        </p>
+    </article>
+    <aside>
+        <figure>
+            <img src="C:/Users/Sumitra/Desktop/html2/logo_eprocurement.gif" id="img">
+            <figcaption>E-Procurement Indian Goverment</figcaption>
+        </figure>
+        <p>
+            This website as a connection link to reduce the communication time to the minimum for better coordination among Suppliers/ Contractors, Clients and EIL.This  Portal provides online facility to the Suppliers& Contractors, Clients and EIL users to  view & download  all the Press & Limited Tenders / Enquiries, due for submission of bids.  We welcome your * feedback / suggestions for improving this website  as we want to continue to streamline the website based on your feedback.
+        </p>
+    </aside>
+    <section>
+        <h1>Procurement Services</h1>
+        <p>
+	EIL offers end-to-end supply chain management Services for various clients globally. The services include contracts and purchase, inspection, expediting, transportation as well as supplier/contractor enlistment. We have vast expertise in global procurement through excellent manpower, procedures, rules and policies ably supported by an extensive data base with vast information on global suppliers and contractors from all over world.<br />
+	<br />
+	Public Procurement has three vital components, i.e., transparency, equity and fairness.&nbsp; Public Procurement of EIL is intended to procure works, material and services of the specified quality within the specified time at the most competitive price in a fair, just and transparent manner. All enquires for procurement of goods, Services and Works, POs/ Contracts and nomination cases awarded are hosted on Central Public Procurement Portal (<a href="http:////eprocure.gov.in/cppp/" target="_blank">CPPP</a>) and EIL website (&quot;<a href="http://tenders.eil.co.in/newtenders/" target="_blank">Tenders</a>&quot;).<br />
+	<br />
+	We adopt latest IT tools/technologies for enhancing the efficiency, effectiveness and transparency of its procurement processes. Over the years, all procurement functions have been IT enabled- from the receipt of an indent up to Inspection, Dispatch and transportation of the equipment. In addition, we have an integrated in-house ERP and EDMS application linking all procurement functions across various geographical locations.<br />
+	<br />
+	EIL has already implemented E-procurement and reverse auction to enhance transparency with cost reduction. E-Tendering was successfully conducted for Rs. 983.28 Cr. throughout various projects of OBE/KSTK, POA besides in house jobs and reverse auction value of Rs. 310.07 Cr was conducted. reverse auction besides bringing transparency resulted in huge cost reduction to project cost. For Example reverse auction for design, construction and laying of interceptor sewers along najafgarh, supplementary and shahdara drains for Delhi Jal Board, for a price of Rs 1963.42 crore resulted in a saving of 28% i.e. Rs. 763.68 crore.<br />
+	<br />
+	We also provide specialized inspection and expediting services through its nine regional procurement Offices (RPOs) spread all over India and three overseas inspection offices located at London, Milan and Shanghai. Our inspection services aim at ensuring timely supply of material and equipment of the specified quality and meeting specification requirements for various projects of our clients.<br />
+	<br />
+
+        </p>
+    </section>
+    <footer>
+        
+        
+    </footer>
+</body>
+</html>
