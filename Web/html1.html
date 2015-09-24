@@ -1,0 +1,202 @@
+<html>
+	<head>
+		<title>Job Profile Creation</title>
+	</head>
+
+	<body>
+		<form>
+			<table>
+				<h4><b>Create Your Account</b></h4>
+				<tr>
+					<td align="right"><font color = "red">*</font>Email ID </td>
+					<td><input required type = "text" size = "20"></td>
+					<tr><td></td><td><sub>Enter your Email Address</sub></td></tr>
+				</tr>
+				<tr>
+					<td align="right"><font color = "red">*</font>Password </td>
+					<td><input type = "password" size = "20"></td>
+				</tr>
+				<tr>
+					<td align="right"><font color = "red">*</font>Confirm Password </td>
+					<td><input type = "password" size = "20"></td>
+				</tr>
+			</table>
+
+			<hr>
+
+			<table>
+				<h4><b>Contact Details</b> <font size = "2">  where recruiters will contact you for jobs </font></h4>
+				<tr>
+					<td align="right" >Your Name </td>
+					<td ><input type = "text" style = "width:100%" ></td>
+				</tr>
+				<tr>
+					<td align="right"><font color = "red">*</font>Current Location </td>
+					<td width = auto><select name = "Location" style = "width:100%">
+						<option>none</option>
+						<option>Jaipur</option>
+						<option>New Delhi</option>
+						<option>Mumbai</option>
+						</select>
+					</td>
+					<td>
+						<input type = "checkbox"/>Not From India
+					</td>
+				</tr>
+				<tr>
+					<td align="right" ><font color = "red">*</font>Mobile </td>
+					<td><input type = "text" pattern = "[0-9]" style = "width:100%"></td>
+					<tr><td></td><td><sub>If you dont have a Mob. No. Enter <a href="#" target="_blank">Landline No.</a></sub></td></tr>
+				</tr>
+			</table>
+
+			<hr>
+
+			<table>
+				<h4><b>Current Professional Details</b></h4>
+				<tr>
+					<td align="right" ><font color = "red">*</font>Total Experience </td>
+					<td><select required name = "Years" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						</select> Years
+						<select name = "Months" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						</select> Months
+					</td>
+				</tr>
+				<tr>
+					<td align="right" ><font color = "red">*</font>Current Industry </td>
+					<td ><select name = "Industry" style = "width:100%">
+						<option>none</option>
+						<option>Software</option>
+						<option>Electricity</option>
+						<option>Mechanical</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><font color = "red">*</font>Functional Area </td>
+					<td ><select name = "FunctionalArea" style = "width:100%">
+						<option>none</option>
+						<option>Development</option>
+						<option>Testing</option>
+						<option>Maintenance</option>
+						</select>
+						<br>
+						<a href="#" target="_blank"><font size = "2">What is my Functional area and industry</font></a>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" ><font color = "red">*</font>Key Skills </td>
+					<td><textarea rows = "3" cols = "50"></textarea></td>
+				</tr>
+				<tr>
+					<td align="right"><font color = "red">*</font>Resume headline </td>
+					<td><textarea rows = "1" cols = "50" placeholder="Describe your professional area in one line"></textarea></td>
+					<tr><td></td><td><sub>Max 250 characters</sub></td></tr>
+				</tr>
+			</table>
+			</hr>
+			
+			<hr>
+			<table>
+			<tr>
+				<h4><b>Education Detailsils</b> <font size = "2">  Please list your area of study </font></h4>
+			</tr>
+			<tr>
+				<td align="right" ><font color = "red" >*</font>Basic Graduation</td>
+				<td ><select name = "Basic Graduation" style = "width:300%">
+					<option>Select</option>
+					<option>B.Tech</option>
+					<option>B.E.</option>
+					<option>B.Sc</option>
+					<option>BBA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Post Graduation</td>
+				<td ><select name = "Post Graduation" style = "width:300%">
+					<option>Select</option>
+					<option>M.Tech</option>
+					<option>M.Sc</option>
+					<option>MA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" >Post Graduation</td>
+				<td ><select name = "Doctrate/Phd" style = "width:300%">
+					<option>Select</option>
+					<option>M.Tech</option>
+					<option>M.Sc</option>
+					<option>MA</option>
+					</select>
+				</td>
+			</tr>
+			</table>
+			
+			<hr>
+			<table>
+			<tr >
+				<h4><b>Upload Resume</b> <font size = "2">  Please upload a detailed resume </font></h4>
+			</tr>
+			<tr>
+				<td align="right"> Attach Resume </td>
+				<td><input type="file" name="file"> </td>
+			</tr>
+			</table>
+			</hr>
+			
+			<hr>
+			<table>
+			<tr >
+				<h4><b>Mailer and Privacy Settings</b> <font size = "2">  </font></h4>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="jobAlertCheck"> Job Alerts</td>
+				<td><input type="checkbox" name="importantNotificationCheck"> Important Notifications</td>
+
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="jobAlertCheck"> Naukri Fastforward E-Mails</td>
+				<td><input type="checkbox" name="importantNotificationCheck">  Communication from client (Voice / Calls / SMS)</td>
+
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="jobAlertCheck"> Naukri FastForward Calls/SMS</td>
+				<td><input type="checkbox" name="importantNotificationCheck"> Other promotions</td>
+
+			</tr>
+			</table>
+			
+			
+			<hr>
+			<table>
+			<tr>
+				<td><hr></td>
+			</tr>
+			<tr>
+				<td ><input type="checkbox" name="accept">I have read & understood, and agree to the <a href="#">Terms and Conditions</a> governing the use</td>
+			</tr>
+			<tr>
+				<td  align="center"><input type="submit" value="Create My Account"></td>
+			</tr>
+			</table>
+			
+			
+			
+		</form>
+
+	</body>
+</html>
