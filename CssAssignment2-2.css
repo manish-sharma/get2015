@@ -1,0 +1,298 @@
+body {
+width : 100%;
+height : 100%;
+background-image : url('C:/Users/sumitra/Desktop/images.jpg');
+background-size:100% 100%;
+background-repeat : no-repeat;
+
+}
+ 
+ #wrapper {
+    margin:0 auto;
+	width:850px;
+	height:800px;
+	background:white;
+	border: 30px solid #FFCC99;
+	}
+	
+	#header{
+	 background:#D4C1A9;;
+	 margin-top:0px;
+	 margin-left:0px;
+	 margin-right:0px;
+	 padding:15px;
+	 height:80px;
+     text-align:center;
+	 }
+	 
+	 #siteTitle{
+	  font-size:24px;
+      font-weight:bold;
+	 }
+	 
+	 #siteSlogan{
+	  font-size:12px;
+      font-weight:normal;
+      
+	 }
+	 
+	 #nav {
+	background:#9BB2B8;
+	padding:3px;
+	text-align:left;
+}
+
+#nav ul {
+      margin:0px;
+      list-style:none;
+}
+
+#nav ul li {
+	
+	display:inline;
+	border:0px solid red;
+	margin:0 10px;
+}
+
+#nav ul li a {
+	color:white;
+	text-decoration:none;
+}
+
+#nav ul li a:HOVER {
+	color:#FFF;
+	border: 1px solid black;
+	background:#6699FF;
+	
+}
+
+ #container {
+	    background:white;
+	    margin:0%;
+	    width: 80%;
+	    }
+ 
+ #leftContainer{
+  float: left;
+  background: white;
+  width: 220px;
+  height: 450px;
+ }
+
+ #firstLeftNavOuterContainer{
+    margin:0px;
+    padding:0px;
+     background:#F0FFFF;
+     height: 30%;
+     width: 100%;
+     border:  1px solid gray; 
+ }
+ 
+ #verticalMenu{
+ text-align:center;
+  margin-top:3px;
+  margin-left:3px;
+  margin-right:3px;
+ height: 25px;
+ background: #D8D8D8;
+ padding:2px;
+ font-size:18px;
+  font-weight:bold;
+ border:  1px solid gray ;
+ }
+
+#firstLeftNavInnerContainer{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	padding:2px;
+	text-align:center;
+	position:absolute;
+	float:inherit;
+}
+
+#firstLeftNavInnerContainer ul{
+	text-align:center;
+	 margin:0px;
+      list-style:none;
+}
+
+#firstLeftNavInnerContainer ul li {
+    text-align:center;
+	border:0px solid red;
+	margin:0 10px;
+}
+
+#firstLeftNavInnerContainer ul li a {
+	text-align:center;
+	taxt-size:10px;
+	color:black;
+	text-decoration:none;
+}
+
+#firstLeftNavInnerContainer ul li a:HOVER {
+	color:black;
+	
+	background:#D9B9B9;
+	
+}
+
+#secondLeftNavOuterContainer{
+	margin-top:4px;
+    background: #F0FFFF;
+    height: 60%;
+    width: 100%;
+    border:  2px solid gray; 
+}
+
+#newBlock{
+text-align:center;
+  margin-top:3px;
+  margin-left:3px;
+  margin-right:3px;
+ height: 25px;
+ background: inactiveborder;
+ background-color:#D8D8D8;
+ padding:2px;
+ font-size:18px;
+  font-weight:bold;
+ border:  0px solid #99CCFF ;
+}
+
+#newBlockContent{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	padding:0px;
+	border:  1px solid #99CCFF ;
+	
+}
+
+#rightContainer{
+	background:white;
+	margin-left:2%;
+	width: 40%;
+	height: 70%;
+	float: left;
+	border: 0px solid black;
+}
+
+#rightNewPage{
+ text-align:left;
+  margin-top:3px;
+  margin-left:2px;
+  margin-right:2px;
+ height: 24px;
+ width:350 px;
+ background:white;
+ padding:2px;
+ font-size:24px;
+  font-weight:bold;
+ 
+}
+
+#rightNewPageStart{
+ text-align:left;
+  margin-top:0px;
+  margin-left:2px;
+  margin-right:2px;
+ height: 15px;
+ width:100%;
+ background:white;
+ padding:2px;
+ font-size:15px;
+  font-weight:normal;
+}
+#rightImageContainer{
+	
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	 height:40%;
+	width:100%;
+	float:left;
+	
+ }
+   
+ #htmlImage2{
+     
+	    width:100%;
+	     height:95%;
+	    }
+	   
+	 #rightcontentContainer{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	padding:2px;
+	text-align:left;
+	float:left;
+
+	
+	width: 350px;
+	 } 
+	
+#rightmostContainer{
+	background:white;
+	margin-left:25px;
+	width:220px;
+	height: 550px;
+	
+	float: left;
+	border: 1px solid black;
+}
+
+.Head
+{
+ text-align:center;
+  margin-top:1px;
+  margin-left:3px;
+  margin-bottom:0px;
+  margin-right:3px;
+ height: 24px;
+ background:#D5D5D6;
+ padding:2px;
+ font-size:18px;
+  font-weight:bold;
+ border:  1px solid gray ;	
+}
+
+
+.rightMostInnerContainers{
+	
+	  float: left;
+  background: #F0FFFF;
+  width: 90%;
+  height: 30%;
+border: 3px solid #E0D8D8;
+border-radius:6px;
+margin-top:2%;
+	
+	
+}
+#link{
+	font-size:15px;
+     margin-top:2%;
+     margin-left:3px;
+	 margin-bottom:1%;
+}
+#link :HOVER{
+	color:black;
+}
+#footer{
+	margin-top:0;
+	width:100%;
+	height: 12%;
+	text-align : center;
+	 padding-top : 2%;
+	  background:#DCDCDC;
+	border: 1px solid gray;
+	border-radius:6px;
+	
+	float: left;
+}
+  
