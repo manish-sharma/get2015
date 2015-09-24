@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link href="CssOFRegistrationForm.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header align="center" >
+        <h2>Registration Form</h2>
+    </header>
+	<div id="container">
+	
+		<h4>Register YourSelf:</h4>
+			<form>
+				<label id ="label">First Name:
+				</label>
+				<input type="text" name="firstname" placeholder="First Name" id="textBox" required><br>
+	
+				<label id ="label"> Last Name:</label>
+				<input type="text" name="lastname" placeholder="Last Name" id="textBox" required><br>
+	           <label id ="label">Email ID:</label>
+	           <input type="email" id="email" name="email" placeholder="e.g. name@example.com" title="Please enter a valid email" required />
+				
+		<label id ="label">Password:</label>
+    <input type="password" name="pwd" placeholder="Password"  id="textBox" required><br>
+	 
+              <label id="label">Birthday:</label>
+
+              <input  id="textBox" type="date" placeholder="Date of birth" required><br>
+				
+				<p>
+				<label id="label">Gender:</label>
+     <select class="select-style gender" name="gender" required>
+            <option value="select">i am..</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="others">Other</option>
+            </select><br><br>
+ </p>
+            <p class="contact"><label id="label">Mobile phone</label>
+            <input id="textBox" name="phone" placeholder="phone number" required="" type="text" maxlength="10"> <br></p>
+	
+			Range Slider:<input id="skill" type ="range" value="30" />
+           <p> <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!" type="submit">   </p>
+   </form>
+</div>
+</html>
