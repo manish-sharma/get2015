@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<link href="HTML-2-2-CSS.css" rel="stylesheet" />
+		<title>Insert title here</title>
+	</head>
+	
+	<body>
+		<div id="container">
+		<header>
+			<h1>Information</h1>
+		</header>
+		<form>
+			<section>
+				<label>Enter Name:</label>
+				<input type="text" name =UserName required pattern="[A-Z|a-z]+"  placeholder="Enter your name">
+				<br>
+				<br>
+				<Label>Enter Email</Label>
+				<input type="email" name="email" required="required" placeholder="Enter your email"  >
+				<br>
+				<br>
+				<Label>Enter Date</Label>
+				<input type="date" name="date" required="required" placeholder="Enter the date">
+				<br>
+				<br>
+				<label>Enter College</label>
+				<input list="colleges" name="college" placeholder="Enter the college" required="required">
+				<datalist id="colleges">
+					<option value="Git">
+					<option value="Poornima">
+					<option value="Skit">
+					<option value="Jecerc">
+					<option value="Arya">
+				</datalist>
+				<br>
+				<br>
+				<input type="range" name= "range" >
+				<br>
+				<br>
+				<input type="submit" value="Create My Account" style=" align:centre" >
+			</section>
+		</form>
+		<footer>
+			<hr/>
+			Copyright (C) 2015. All rights reserved.
+		</footer>
+		</div>
+	</body>
+</html>
