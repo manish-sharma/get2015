@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {width: 350px;height: 70px;padding: 10px;border: 1px solid #aaaaaa;background-color: gray;}
+#div2 {width: 200px;height: 50px;width:100px;padding: 10px;border: 1px solid #aaaaaa;background-color: gray;}
+#container {margin-left:100px;margin-top:100px;width: 500px;height: 300px;background-color: blue;};
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<div id="container">
+<p>Drag the sample div:</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div id="div2" draggable="true" ondragstart="drag(event)" width="200" height="40">
+<p>Sample</p>
+</div>
+</div>
+</body>
+</html>
