@@ -1,0 +1,22 @@
+
+<html>
+	<head>
+		<title>Canavs</title>
+		<link href="canvas.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+
+	<canvas id="myCanvas"  >
+	Your browser does not support the canvas element.
+	</canvas>
+
+	<script>
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "red";
+	ctx.fillRect(25,12.5,200,75);
+	</script>
+	
+	</body>
+</html>
