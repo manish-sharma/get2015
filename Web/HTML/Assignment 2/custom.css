@@ -1,0 +1,32 @@
+body {
+	background-image: url("the-batman.jpg");
+
+	
+}
+
+.header {
+	border: 1px solid black;
+	height:50px;
+	background-color: #008B8B;
+	border-radius:5px;
+}
+
+.header h2 {
+	padding:auto;
+	margin:10px ;
+	color: #191970;
+}
+
+.leftContainer{
+	 width:400px;
+	 float:left;
+	 margin:20px;
+}
+
+.rightContainer{
+	width:40%;
+	position:absolute;
+	left:20px;
+	top: 20px;
+	margin-left:250px;
+}

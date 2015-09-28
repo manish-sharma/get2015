@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bike>
+  <row type="bike">
+   <vehicle>3</vehicle>
+   <make>Honda</make>
+   <model>Y2K</model>
+   <engineInCC>2000</engineInCC>
+   <fuelCapacity>100</fuelCapacity>
+   <mileage>3</mileage>
+   <price>15000000</price>
+   <roadTax>50000</roadTax>
+   <selfStart>true</selfStart>
+   <helmetPrice>3000</helmetPrice>
+ </row>
+ 
+  <row type="bike">
+  <vehicleId>3</vehicleId> 
+  <make>Royal Enfield</make> 
+  <model>Bullet 300</model> 
+  <engineInCC>300</engineInCC> 
+  <fuelCapacity>12</fuelCapacity> 
+  <mileage>33</mileage> 
+  <price>100000</price> 
+  <roadTax>9000</roadTax> 
+  <selfStart>true</selfStart> 
+  <helmetPrice>1000</helmetPrice> 
+  </row>
+ </bike>
