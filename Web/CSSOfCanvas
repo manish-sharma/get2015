@@ -1,0 +1,7 @@
+
+
+#Mycanvas{
+	width:10%;
+	height:5%;
+	border:10px solid black;
+}
