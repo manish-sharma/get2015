@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body style="text-align: center;">
+	<!-- paragraph where output will be displayed -->
+	<p id="findLocation">click on button to get user location</p>
+	<!-- button to get user location -->
+	<button onclick="getLocation()">getLocation</button>
+</body>
+<!-- script is used -->
+<script>
+<!--get paragraph element by id where output will be displayed-->
+var x=document.getElementById("findLocation");
+
+<!-- getLocation() function,which find the user's loaction-->
+function getLocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition);
+	}
+	else{
+		x.innerHTML="Geolocation is not supported by this browser.";
+	}
+}
+
+<!--showPosition() function, which display the user's location-->
+function showPosition(position){
+	x.innerHTML="Latitude:"+position.coords.latitude+"<br>Longitude:"+position.coords.longitude;
+}
+</script>
+</html>
