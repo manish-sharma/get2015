@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML SESSION3 ASSIGNMENT</title>
+		<style>
+			#div1 {width:220px;height:300px;padding:10px;border:1px solid #aaaaaa;Float: left;}
+			section {border-bottom: 1px solid #e7d9f3; float: left; width:100%; margin:20px 0; }
+			header {float:left;}
+			#wrapper {border: 3px solid #cdebff; float: left; width: 60%;}
+			.container {margin-left: 23%; width: 100%;}
+		</style>
+	</head>
+	<body>
+		<div class = "container">
+			<div id = "wrapper">
+				<section>
+					<header>Assignment 1</header>
+					<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+				</section>
+				<section>
+					<header>Assignment 2</header>
+
+					<button onclick="getLocation()">get location</button>
+
+					<p id="demo"></p>
+				</section>
+				<section>
+					<header>Assignment 3</header>
+					<p>Drag below image into the rectangle:</p>
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">BOX 1</div>
+					<img id="drag1" style = "float:left;" src="https://www.ucl.ac.uk/news/news-articles/1213/muscle-fibres-heart.jpg" draggable="true" ondragstart="drag(event)" width="230px" height="300px">
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">BOX 2</div>
+
+				</section>
+			</div>
+		</div>
+		<script>
+		/** ------------------Assignment 1 script ----------------*/
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0,0,150,75);
+		/** ------------------Assignment 1 script end----------------*/
+		/** ------------------Assignment 2 script ----------------*/
+			var x = document.getElementById("demo");
+
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else { 
+					x.innerHTML = "Geolocation is not supported by this browser.";
+				}
+			}
+
+			function showPosition(position) {
+				x.innerHTML = "Latitude: " + position.coords.latitude + 
+				"<br>Longitude: " + position.coords.longitude;	
+			}
+		/** ------------------Assignment 2 script end----------------*/
+		/** ------------------Assignment 3 script ----------------*/
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				ev.target.appendChild(document.getElementById(data));
+				document.getElementById("drag1").style.width = "100%";
+				document.getElementById("drag1").style.height = "95%";
+			}
+		/** ------------------Assignment 3 script end----------------*/
+		</script>
+	</body>
+</html>
