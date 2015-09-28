@@ -1,0 +1,31 @@
+body {
+    background:#FFFFFF;
+	border:20px solid #C3E4ED;
+	margin:50px auto;
+	width :700px;
+	height : 600px;
+	text-indent
+}
+
+ #header {
+	margin : 20px;
+	border:1px solid #C3E4ED;
+    background:#F0FFFF;
+	width : 620px;
+    height:60px;
+    text-align:left;
+    padding-top:40px;
+	padding-left:40px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+#leftNav {
+	margin : 20px;
+	width:304px;
+	float:left;
+}
+#rightNav {
+	margin : 20px;
+	float:left;
+}
