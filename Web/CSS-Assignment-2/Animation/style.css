@@ -1,0 +1,26 @@
+div{
+margin-top:200px;
+margin-left:0px;
+width:200px;
+height:200px;
+background-color: green;
+border:2px solid blue;
+border-radius:70px;
+animation-name:example;
+animation-iteration-count:3;
+animation-duration:10s;
+
+}
+
+header{
+	text-align:center;
+}
+
+@keyframes example {
+	0% {transform:rotate(40deg);margin-left:0%;background-color:DimGray ;}
+	25% {transform:rotate(80deg);margin-left:40%;background-color:HotPink  ;}
+	50% {transform:rotate(135deg);margin-left:60%;background-color:LightSteelBlue ;}
+	75% {transform:rotate(180deg);margin-left:80%;background-color:Lavender;}
+	100%{transform:rotate(270deg);margin-left:100%;background-color:LightGray ;}
+}
+
