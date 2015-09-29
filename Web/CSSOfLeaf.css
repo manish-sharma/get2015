@@ -1,0 +1,54 @@
+body{
+	width:100%;
+	height:100%;
+	background-image:url(C:/Users/Sumitra/Desktop/CSS2/image1.jpg),url(C:/Users/Sumitra/Desktop/CSS2/images.jpg);
+	background-position: left top , right top ;
+    background-repeat: no-repeat,repeat;
+	background-size:150px,cover;
+	padding:20px;
+}
+
+#left-top-leaf{
+	width:18%;
+	height:25%;
+	background: -webkit-linear-gradient(150deg, white ,rgba(247, 139, 5, 0.92));
+	border-radius:0 120px 0 120px;
+	-webkit-border-radius:0 120px 0 120px;
+	 padding: 20px; 
+	position:absolute;
+	top:80px;
+	left:30%;
+}
+#left-bottom-leaf{
+	width:18%;
+	height:25%;
+	background: -webkit-linear-gradient(200deg, white ,rgba(70, 70, 251, 0.94));
+	border-radius:120px 0 120px 0;
+	-webkit-border-radius: 120px 0 120px 0;
+	 padding: 20px; 
+	position:absolute;
+	top:350px;
+	left:30%;
+}
+#right-top-leaf{
+	width:18%;
+	height:25%;
+	background: -webkit-linear-gradient(80deg, white ,rgba(65, 245, 16, 0.86));
+	border-radius: 120px 0 120px 0;
+	-webkit-border-radius:  120px 0 120px 0;
+	 padding: 20px; 
+	position:absolute;
+	top:80px;
+	left:52%;
+}
+#right-bottom-leaf{
+	width:18%;
+	height:25%;
+	background: -webkit-linear-gradient(300deg, white ,rgb(223, 228, 56));
+	border-radius: 0 120px 0 120px;
+	-webkit-border-radius:  0 120px 0 120px;
+	 padding: 20px; 
+	position:absolute;
+	top:350px;
+	left:52%;
+}
