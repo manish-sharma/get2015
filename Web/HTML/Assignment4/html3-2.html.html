@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>Canvas</TITLE>
+		<link rel="stylesheet" href="Assignment1style.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<p>Click the button to get your Location Coordinates.</p>
+			<button onclick="getLocation()">Try It</button>
+			<p id="Location"></p>
+			<script>
+				var x = document.getElementById("Location");
+				function getLocation() {
+					if (navigator.geolocation) {
+						navigator.geolocation.getCurrentPosition(showPosition);
+					} else { 
+						x.innerHTML = "Geolocation is not supported by this browser.";
+					}
+				}
+				function showPosition(position) {
+					x.innerHTML = "Latitude: " + position.coords.latitude + 
+					"<br>Longitude: " + position.coords.longitude;	
+				}
+			</script>
+		
+	</BODY>
+</HTML>
