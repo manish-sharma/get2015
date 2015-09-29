@@ -7,7 +7,7 @@
 
 <body>
 <form>
-    <table>
+    <table >
         <h1>Metagurukul Account Registration:</h1>
         <tr>
             <td colspan="2">
@@ -15,14 +15,14 @@
             </td>
         </tr>
         <tr>
-            <td>Name:</td>
+            <td style= "text-align:right">Name :</td>
             <td>
                 <input required type="text" placeholder="First Name" name="firstName" style="width:48%;">
                 <input required type="text" placeholder="Last Name" style="width:49%;" name="lastName">
             </td>
         </tr>
         <tr>
-            <td>Gender:</td>
+            <td style= "text-align:right">Gender :</td>
             <td>
                 <select name="Gender" style="width:100%;">
                     <option>- Select One -</option>
@@ -33,7 +33,7 @@
             </td>
         </tr>
         <tr>
-            <td>Birthday:</td>
+            <td style= "text-align:right">Birthday :</td>
             <td>
                 <select name="Month">
                     <option>- Select Month -</option>
@@ -43,7 +43,7 @@
             </td>
         </tr>
         <tr>
-            <td>Country:</td>
+            <td style= "text-align:right">Country :</td>
             <td>
                 <select name="Country" style="width:100%;">
                     <option value="IND">India</option>
@@ -51,7 +51,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2"><b>Select an ID and Password</b> 
+            <td colspan="2"><br><br><b>Select an ID and Password</b> 
             </td>
         </tr>
         <tr>
@@ -60,29 +60,30 @@
             </td>
         </tr>
         <tr>
-            <td>Metagurukul ID:</td>
+            <td style= "text-align:right">Metagurukul ID :</td>
             <td>
                 <input required type="text" name="username">@
                 <select>
                     <option>metagurukul.com</option>
                 </select>
-                <input type="button" value="check" name="checkValidity">
+             </td>   <td>
+				<input type="button" value="check" name="checkValidity">
             </td>
         </tr>
         <tr>
-            <td>Password :</td>
+            <td style= "text-align:right">Password :</td>
+            <td>
+                <input required type="password" name="password">Password Strength|_||_|
+            </td>
+        </tr>
+        <tr>
+            <td style= "text-align:right">Re-Type Password :</td>
             <td>
                 <input required type="password" name="password">
             </td>
         </tr>
         <tr>
-            <td>Re-Type Password :</td>
-            <td>
-                <input required type="password" name="password">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2"><b>In case you forget your ID or password</b> 
+            <td colspan="2"><br><br><b>In case you forget your ID or password</b> 
             </td>
         </tr>
         <tr>
@@ -91,13 +92,13 @@
             </td>
         </tr>
         <tr>
-            <td>Alternate Email (Optional):</td>
+            <td style= "text-align:right">Alternate Email (Optional) :</td>
             <td>
                 <input type="email" name="alternateEmail" style="width:100%;">
             </td>
         </tr>
         <tr>
-            <td>Secret Question 1 :</td>
+            <td style= "text-align:right">Secret Question 1 :</td>
             <td>
                 <select name="secretQuestion1" style="width:100%;">
                     <option>- Select One -</option>
@@ -105,13 +106,13 @@
             </td>
         </tr>
         <tr>
-            <td>Your Answer:</td>
+            <td style= "text-align:right">Your Answer :</td>
             <td>
                 <input required type="text" name="secretAnswer1" style="width:100%;">
             </td>
         </tr>
         <tr>
-            <td>Secret Question 2 :</td>
+            <td style= "text-align:right">Secret Question 2 :</td>
             <td>
                 <select name="secretQuestion2" style="width:100%;">
                     <option>- Select One -</option>
@@ -119,7 +120,7 @@
             </td>
         </tr>
         <tr>
-            <td>Your Answer:</td>
+            <td style= "text-align:right">Your Answer :</td>
             <td>
                 <input required type="text" name="secretAnswer2" style="width:100%;">
             </td>
