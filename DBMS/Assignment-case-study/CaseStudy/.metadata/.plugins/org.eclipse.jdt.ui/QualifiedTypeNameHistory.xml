@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.helper.VehicleHelper"/>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.model.VehicleType"/>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.printer.VehicleDetailPrinter"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLInputFactory"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLEventReader"/>
+<fullyQualifiedTypeName name="javax.xml.stream.events.XMLEvent"/>
+<fullyQualifiedTypeName name="javax.xml.stream.events.StartElement"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLStreamException"/>
+<fullyQualifiedTypeName name="javax.xml.stream.events.EndElement"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.model.Vehicle"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsInstanceOf"/>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.model.Car"/>
+<fullyQualifiedTypeName name="com.metacampus.vehiclemanagement.model.Bike"/>
+</qualifiedTypeNameHistroy>

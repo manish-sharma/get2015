@@ -1,0 +1,35 @@
+import java.util.Iterator;
+import java.util.List;
+
+import com.metacampus.vehiclemanagement.helper.VehicleJDBCHelper;
+import com.metacampus.vehiclemanagement.model.Vehicle;
+import com.metacampus.vehiclemanagement.xml.ReadConnectionXml;
+import com.metacampus.vehiclemanagement.xml.StaXParser;
+import com.metacampus.vehiclemanagement.xml.WriteConnectionXML;
+
+
+public class Main {
+	
+	public static void main(String args[]) {
+		try
+		{
+			WriteConnectionXML connectionFile = new WriteConnectionXML();
+		    connectionFile.setFile("Connection.xml");
+		    connectionFile.saveConfig();
+			ReadConnectionXml read = new ReadConnectionXml();
+		    read.readConfig("connection.xml");
+		    StaXParser readVehicleData = new StaXParser();
+		    List<Vehicle> vehicleList = readVehicleData.readConfig("C:/Users/Khemanshu/CaseStudy/VehicleManagement/VehicleData.xml");
+		    Iterator<Vehicle> vehicleIterator = vehicleList.iterator();
+		    while(vehicleIterator.hasNext()) {
+		    	System.out.println()"Hello");
+		    	Vehicle obj = vehicleIterator.next();
+		    	VehicleJDBCHelper.insert(obj);
+		    }
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+}
