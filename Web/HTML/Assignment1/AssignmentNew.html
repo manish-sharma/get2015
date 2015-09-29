@@ -1,156 +1,328 @@
 
-<!DOCTYPE html>
 <html>
-
-<head>
-    <title>Insert title here</title>
-</head>
-
-	<body>
-	<form>
-		<table cellspacing=5>
-			<h2>Create your account:</h2>
+	<head>
+		<title>
+			JobProfile
+		</title>
+	</head>
+	<body style="font-family:verdana">
+		<b>
+			Create your account
+		</b>
+		<br/>
+		<br/>
+		<Table>
 			<tr>
-				<td align="right">*E-Mail:</td>
-				<td><input required type= "text" size ="20" maxlength="10"></td>
-			</tr>
-			<tr>
-				<td align="right">*Password: </td>
-				<td><input required type="password" size="20" maxlength="10"></td>
-			</tr>
-			<tr>
-				<td align="right">*Confirm Password: </td>
-				<td><input required type="password" size="20" maxlength="10"></td>
-			</tr>
-		</table>
-		<hr>
-		<table cellspacing=5>
-				<h2>Contact Details:<font size="2">This is where recruiters and employers will contact you for jobs.</font></h2>
-			<tr>
-				<td align="right">Your Name:</td>
-				<td><input type= "text" size ="20" maxlength="10"></td>
-			</tr>
-			<tr>
-				<td align="right">*Current Location: </td>
+				<td style= "text-align:right" >
+					<font color="red">*Email ID:</font>					
+				</td> 
 				<td>
-					<Select name="Select">
-						<option>Jaipur</option><option>Ajmer</option><option>Delhi</option>
-					</select>
-					<input type="checkbox" name="Location" value="none"/>Not from India<br/>
+					<font color="red"><input type = "text" style = "width : 200px"/></font>
 				</td>
 			</tr>
 			<tr>
-				<td align="right">*Mobile Number: </td>
-				<td><input required type="Numeric" size="20" maxlength="10"></td>
-			</tr>
-		</table>
-		<h6>If you do not have a mobile, enter <font color='blue'><u>Landline no.</u></font></h6>
-		<hr>
-		<table cellspacing=5>
-			<h2>Current Professional Details</h2>
-			<tr>
-				<td align="right">Total Experience:</td>
-				<td><Select required name="Year">
-						<option>Select</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-					</select>Year	
-					<Select name="Month">
-						<option>1</option><option>2</option><option>3</option>
-					</select>Month
+				<td>				
 				</td>
-			</tr>
-			<tr>
-				<td align="right">*Current Industry: </td>
 				<td>
-					<Select required name="Select">
-						<option>IT Industry</option><option>Manufacturing Indusrty</option>
+					<font color = "gray">Enter your email address.</font>
+					<br>
+					<font color = "red">Please specify your emailid.</font>				
+				</td>
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Password:
+				</td> 
+				<td>
+					<input type = "password" style = "width : 200px"/>
+				<td>
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Confirm Password:
+				</td>
+				<td> 
+					<input type = "password" style = "width : 200px"/>
+				</td>
+			</tr>
+		</Table>
+		<br/>
+		<br/>
+		<hr/>
+		<br/>
+		<b>
+			Contact details
+		</b>
+		This is where recruitersand employee will contact you for job.
+		<br/>
+		<br/>
+		<Table>
+			<tr>
+				<td style= "text-align:right" >
+					Your Name:
+				</td>
+				<td>
+					<input type = "text" style = "width : 200px"/>
+				</td>
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Current Location:
+				</td>
+				<td> 
+					<Select> 
+					<option>Select</option> 
+					<option>Jaipur</option> 
+					<option>Delhi</option> 
+					<option>Ajmer</option> </Select>
+					<input type ="checkbox"/>
+					not from india
+				</td>	
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Mobile Number:
+				</td>
+				<td>
+					<input type = "text" style = "width : 200pX"/>
+				</td>
+			<tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					If you do not have Mobile enter 
+					<a href = "#">
+						LandlineNo.
+					</a>
+				</td>
+			</tr>
+		</Table>
+		<br/>
+		<br/>
+		<hr/>
+		<br/>
+		<b>
+			Current Professional Details
+		</b>
+		<br/>
+		<br/>
+		<Table>
+			<tr>
+				<td style= "text-align:right;vertical-align:top" >
+					<font color="red">*	Total Experience</font>
+				 
+				</td>
+				<td>
+					<Select>
+					<option>Select</option>
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					</Select>
+					Years
+					<Select>
+					<option>Select</option>
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					</Select>
+					Months
+					<br/>
+					<font color="red">Please select your basic graduation.</font>
+				</td>
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Current Industry
+				</td>
+				<td>
+					<Select style = "width : 500px">
+					<option>Select</option>
+					<option>IT</option>
+					<option>Marketing</option>
+					</Select>
+				</td>
+			</tr>
+			<tr>
+				<td style= "text-align:right" >
+					<font color="red">*</font>
+					Functional Area 
+				</td>	
+				<td>
+					<Select style = "width : 500PX"/>
+					<option>Select</option>
+					<option>Software designing</option>
+					<option>testing</option>
+					</Select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<a href = "#">
+						What is my Functional Area and Industry?
+					</a>
+				</td>
+			</tr>	
+			<tr>
+				<td style= "text-align:right;vertical-align:top" >
+					<font color="red">*</font>
+					Key Skill
+				</td>
+				<td>
+					<textarea rows="4" cols="70" placeholder="Please enter your areas of expertise/specialization"></textarea>
+				</td>
+			</tr>
+			<tr >
+				<td valign="top" >
+					<font color="red">*</font>
+					Resource Headline
+				</td>
+				<td>
+					<textarea rows="1" cols="70" placeholder="Describe your professional background in one line"></textarea>
+					<br>
+					<font color = "gray" style = "float:right">Max 250 Characters.</font>	
+				</td>
+			</tr>
+		</Table>
+		<br/>
+		<br/>
+		<hr/>
+		<br/>
+		<b>
+			Education Details
+		</b>
+		Please list your area of study
+		<br/>
+		<br/>
+		<Table>
+			<tr>
+				<td style= "text-align:right;vertical-align:top" >
+					<font color="red">*BasicGraduation:</font>	
+					
+				</td>
+				<td>
+					<Select style = "width : 300px">
+					<option>Select</option>
+					<option>B.tech</option>
+					<option>BCA</option>
 					</select>
+					<br/>
+					<font color="red">Please select your basic graduation.</font>	
 				</td>
 			</tr>
 			<tr>
-				<td align="right">*Functional Area: </td>
-				<td> <Select name="Select">
-						<option>Development</option><option>Database</option>
-					</select>
+				<td style= "text-align:right" >
+					Post Graduation:
+				</td>
+				<td>
+					<Select style = "width : 300px">
+					<option>Select</option>
+					<option>M.Tech</option>
+					<option>MCA</option>
+					</Select>
 				</td>
 			</tr>
 			<tr>
-			<td></td>
-			<td><a href="#">What is my functional Area and Industry?</td>
+				<td style= "text-align:right" >	
+					Doctorate/PhD: 
+				</td>	
+				<td>
+					<Select style = "width : 300PX"/>
+					<option>Select</option>
+					<option></option>
+					</Select>
+				</td>
 			</tr>
-			
+		</Table>
+		<br/>
+		<br/>
+		<hr/>
+		<br/>
+		<b>
+				Upload Resume
+		</b>
+		Please upload a detailed resume.
+		<br/>
+		<br/>
+		<Table>
 			<tr>
-				<td align="right">Key Skills: </td>
-				<td><textarea row="4" column="30" placeholder="Please enter your areas of expertise"></textarea>
+				<td style= "text-align:right" >
+					Attach Resume:
+				</td>
+				<td>
+					<div style="height: 30px;overflow-y:scroll ">
+					<input type ="file"/>
+					<br>
+					<font color = "gray">Supported Format: doc,docx,rtf.Max file size : 200kb</font>
+					</div>		
+				</td>
+			</tr>
+		</Table>
+		<br/>
+		<br/>
+		<hr/>
+		<br/>
+		<b>
+				Mailer and Privacy Settings
+		</b>
+		<br/>
+		<br/>
+		<Table>
+			<tr>
+				<td>
+					<input type ="checkbox"/>
+					Job alert
+				</td>
+				<td>
+					<input type ="checkbox" checked/>
+					Important Notification
 				</td>
 			</tr>
 			<tr>
-				<td align="right">Resume Headline:</td>
-				<td><input type= "text" size ="50" maxlength="50" placeholder="Describe your professional background in one line"</td>
-			</tr>
-		</table>
-		
-		<hr>
-		<table cellspacing=5>
-			<h2>Education Details:</h2>
-			<tr>
-				<td align="right">Basic/Graduation</td>
-				<td><Select name="Select">
-						<option>B.Tech</option><option>B.Sc</option><option>B.Arch</option>
-					</select>
+				<td>
+					<input type ="checkbox"/>
+					Naukri Fast Forward E-mails
+					<img src ="download.jpg" width = "15px">
+				</td>
+				<td>
+					<input type ="checkbox" checked/>
+					Communication from clients(Voice/Calls/SMS)
+					<img src ="download.jpg" width = "15px">
 				</td>
 			</tr>
 			<tr>
-				<td align="right">Post Graduation</td>
-				<td><Select name="Select">
-						<option>M.Tech</option><option>M.Sc</option><option>M.A</option>
-					</select>
+				<td>
+					<input type ="checkbox"/>
+					Naukri fastforward Calls/SMS
+					<img src ="download.jpg" width = "15px">
+				</td>
+				<td>
+					<input type ="checkbox" checked/>
+					Other Professional/Special Offers
 				</td>
 			</tr>
-			<tr>
-				<td align="right">Doctorate/Phd</td>
-				<td><Select name="Select">
-						<option>Computers</option><option>Mathematics</option>
-					</select>
-				</td>
-			</tr>
-		</table>
-		<hr>
-		<table>
-			<h2>Upload Resume</h2>
-			<tr>
-				<td align="right">Attach Resume</td>
-				<td><input type="file" name="file"></td
-			</tr>
-			<tr>
-			<td></td>
-			<td>
-				Supported Formats: docx,doc,rtf.
-				Max file size=100kb
-				</td>
-			</tr>
-		</table>
-		<hr>
-		<table>
-			<h2>Mailer and Privacy Setting</h2>
-			<tr>
-				<td><input type="checkbox" name="Setting" value="1"/>Job Alerts<br/></td>
-				<td><input type="checkbox" name="Setting" value="2"/>Important Notification<br/></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="Setting" value="3"/>Naukari FastForward E-Mail<br/></td>
-				<td><input type="checkbox" name="Setting" value="4"/>Communication from Clients<br/></td>
-			</tr>
-			<tr>			
-				<td><input type="checkbox" name="Setting" value="5"/>Naukari FastForward Call/SMS<br/></td>
-				<td><input type="checkbox" name="Setting" value="6"/>Other Promotions/Special Offer<br/></td>
-			</tr>
-		</table>
-		<hr>
-		<input required type="checkbox" name="Check" value="True"/>I have read and understand and agree to the Terms And Conditions governing issue.<br/>
-		<align='Center'><input type="submit" value="Create My Account"></align>
-		</form>
+		</Table>
+		<br/>
+		<br/>
+		<input type ="checkbox" checked/>I have read and understood and agree to the 
+			<a href = "#">
+						Terms and Conditions
+			</a>
+		governing the use.
+		<br/>
+		<br/>
+		<input type ="Submit" value = "Create my Account" style = "margin-left : 200px ; width : 150pX; height : 30px; font-weight : bold;font-size : 15px"/>
 	</body>
 </html>
