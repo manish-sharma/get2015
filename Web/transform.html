@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Transforms </title>
+		<style> 
+			div {
+				width : 200px;
+				height : 200px;
+				border : 2px solid black;
+				background-color: red;
+				text-align : center;
+				font-size : 23px;
+				margin : 6%;
+				padding : 3%;
+				float : left;
+			}
+			
+			.scale:HOVER {
+				 -webkit-transform: scale(1.5,1.5);
+				 -moz-transform: scale(1.5,1.5);
+				 transform: scale(1.5,1.5);
+			}
+			.rotate:HOVER {
+				 -webkit-transform: rotate(20deg);
+				 -moz-transform: rotate(20deg);
+				 transform: rotate(20deg);
+			}
+			.skew:HOVER {
+				 -webkit-transform: skew(20deg,20deg);
+				 -moz-transform: skew(20deg,20deg);
+				 transform: skew(20deg,20deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "scale" > <b> keep mouse for scaling </b></div>
+		<div class = "rotate" > <b> keep mouse for rotation </b></div>
+		<div class = "skew" > <b> keep mouse for skewing </b></div>
+	</body>
+</html>
