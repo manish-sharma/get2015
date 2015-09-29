@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Animation </title>
+		<style>
+			.back {
+				width : 650px;
+				height : 600px;
+				border : 2px solid black;
+				background-color: green;
+				margin-left : 50px;
+				-webkit-animation-name: bodyColor; 
+				-webkit-animation-duration: 4s;
+				-webkit-animation-iteration-count: 3; 
+				animation-name: bodyColor;
+				animation-duration: 4s;
+				animation-iteration-count: 3;
+				-moz-animation-name: bodyColor;
+				-moz-animation-duration: 4s;
+				-moz-animation-iteration-count: 3;
+			}
+			div {
+				width: 100px;
+				height: 100px;
+				border : 2px solid black;
+				background-color: red;
+				position: relative;
+				-webkit-animation-name: example; 
+				-webkit-animation-duration: 4s;
+				-webkit-animation-iteration-count: 3; 
+				animation-name: example;
+				animation-duration: 4s;
+				animation-iteration-count: 3;
+				-moz-animation-name: example;
+				-moz-animation-duration: 4s;
+				-moz-animation-iteration-count: 3;
+			}
+			@keyframes example {
+				0%   {background-color: red; left : 0%; top : 43%;}
+				25%  {background-color: yellow; left : 43%; top : 0%;}
+				50%  {background-color: blue; left : 83%; top : 43%;}
+				75%  {background-color: green; left : 43%; top : 83%;}
+				100% {background-color: red; left : 0%; top : 43%;}
+			}
+			@keyframes bodyColor {
+				0%   {background-color: yellow; }
+				25%  {background-color: blue; }
+				50%  {background-color: green; }
+				75%  {background-color: red; }
+				100% {background-color: yellow; }
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class = "back">
+			<div ></div>
+		</div>
+		
+	</body>
+</html>
