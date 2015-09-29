@@ -1,0 +1,136 @@
+body{
+min-height:40%;
+min-width:40%;
+}
+
+.main {
+	text-align:center;
+	font-family:"Cosmic Sans";
+	font-size:100%;
+	background-color:#483D8B;
+	height:10%;
+	color:white;
+	padding:1%;
+}
+
+.main h1{
+	margin-bottom:-1%;
+}
+
+.nav{
+	height:5%;
+	background-color:#778899;
+}
+
+.nav ul {
+	padding:0.5%;
+      margin:0px;
+      list-style:none;
+}
+
+.nav ul li {
+	display:inline;
+	border:0px solid #f00;
+	margin:1%;
+}
+
+.nav ul li a {
+	align:center;
+	color:darkblue;
+	text-decoration:none;
+}
+
+.nav ul li a:hover {
+	color:black;
+	text-decoration:underline;
+	border:1px solid grey;
+	background-color:grey;
+}
+
+.wrapper{
+	height:80%;
+	background-color:#DCDCDC;
+}
+
+.left{
+	width:20%;
+	float:left;
+}
+.leftinner,.leftinner2{
+	margin:2%;
+	width:100%;
+	border:2px solid #7B68EE;
+	float:left;
+}
+
+.leftinner h2,.leftinner2 h3,.center h3{
+	margin-top:-0.4%;
+	background-color:#B0C4DE;
+	text-align:center;
+}
+
+.leftinner ul {
+      margin:0px;
+      list-style:none;
+      width:60%;
+}
+
+.leftinner ul li {
+	text-decoration:none;
+	text-align:center;	
+}
+
+.leftinner ul li a {
+	color:blue;
+	text-decoration:none;
+	
+}
+
+.leftinner ul li a:hover {
+	text-decoration:underline;
+	text-align:center;
+	background-color:#B0C4DE;
+}
+
+.leftinner2 p,.center p{
+	text-align:center-left;
+}
+
+
+.center{
+	position:relative;
+	left:3%; 
+	width:52%;
+	float:left;
+	height:70%
+}
+
+.center h3{
+	width:100%;
+}
+
+.right {
+	position:relative;
+	margin-left:1%; 
+	width:20%;
+	float:right;
+}
+
+.right h3{
+	margin-top:-0.3%;
+	background-color:#B0C4DE;
+}
+
+.rightinner1,.rightinner2,.rightinner3{
+
+	margin-top:3%;
+	width:100%;
+	border:2px solid #7B68EE;
+	float:right;
+}
+
+.footer{
+	height:11%;
+	text-align:center;
+	background-color:#B0C4DE;
+}

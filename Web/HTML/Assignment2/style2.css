@@ -1,0 +1,48 @@
+.main {
+	margin:10 10 0 10;
+	font-size:20px;
+	background-color:#00BFFF;
+	height:15%;
+	padding:10 0 10 20;
+}
+
+.main h1{
+	text-align:left;
+	color:white;
+	font-family:"Cosmic Sans";
+}
+
+.wrapper{
+	margin:0 10 0 10;
+	background-color:#FAF0E6;
+	height:100%;
+}
+
+.left{
+	margin:23px;
+	width:30%;
+	float:left;
+}
+
+.left img{
+	border:10px double #778899;
+}
+
+.right{
+	left:50px;
+	position:relative;
+	width:60%;
+	float:left;
+}
+
+.right span{
+	padding:20 0 20 0;
+	font-size:20px;
+	font-weight:bold;
+	font-style:italic;
+	color:#00BFFF;
+}
+
+.right table{
+	padding:20 20 20 20;
+}
