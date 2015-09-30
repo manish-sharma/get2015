@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" href="style.css" />
+<title>form</title>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Registration Form</h1>
+		</header>
+
+		<form>
+			<section>
+
+
+				<table>
+					<tr class="spaceUnder">
+						<td class="text">Your Name :</td>
+						<td><input type="text" name="text" pattern="[a-z/A-Z]+"
+							required class="inputbox" placeholder="Enter your name" /></td>
+
+					</tr>
+
+					<tr class="spaceUnder">
+						<td class="text">Email :</td>
+						<td><input type="email" name="email" required
+							class="inputbox" placeholder="Enter email" /></td>
+
+					</tr>
+
+					<tr class="spaceUnder">
+						<td class="text">Date Of Birth :</td>
+						<td><input type="date" name="dob" required size="100"
+							width="100%" class="inputbox" placeholder="Choose date of birth" />
+						</td>
+
+					</tr>
+					<tr class="spaceUnder">
+						<td class="text">Range Yourself in Programming :</td>
+						<td><input type="range" min="0" max="100" value="0" step="5"
+							class="inputbox" required placeholder="range yourself" /></td>
+					</tr>
+					<tr class="spaceUnder">
+						<td class="text">Your Country :</td>
+						<td><input type="text" list="countries" class="inputbox"
+							required placeholder="Select your country" /> <datalist
+								id="countries">
+								<option value="Afghanistan">
+								<option value="Australiya">
+								<option value="United Kingdom">
+								<option value="United States">
+								<option value="India">
+								<option value="Vatican City">
+								<option value="Pakistan">
+								<option value="Bangladesh">
+								<option value="Japan">
+							</datalist></td>
+					</tr>
+
+
+				</table>
+
+			</section>
+			<button type="submit" class="button">Submit</button>
+
+		</form>
+
+
+	</div>
+
+</body>
+</html>

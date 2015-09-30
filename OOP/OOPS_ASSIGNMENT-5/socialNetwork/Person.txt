@@ -1,0 +1,5 @@
+suman@gmail.com,Suman Sharma,9782640000,Sketching
+manish@gmail.com,Manish Sharma,000000000,Hockey
+chetna@gmail.com,Chetna Sharma,1111111111,wathing Tv
+richa@gmail.com,Richa Mittal,2473279857,Painting
+nidhi@gmail.com,Nidhi Sharma,4563778265,wathing Tv
