@@ -1,0 +1,29 @@
+@CHARSET "ISO-8859-1";
+header{
+	height:100px;
+	background-color:skyblue;
+	text-align:center;
+	padding-top:20px;
+}
+#wrapper{
+	width:1500px;
+	height:700px;
+	background-image:url(White-Flowers.jpg),url(2211e1050522f23d_9475-w233-h233-b1-p10--modern-wallpaper.jpg);
+	background-position:right bottom,top left;
+	background-repeat:no-repeat,repeat;
+	padding:15px;
+	
+}
+#leaf{
+	width:200px;
+	height:200px;
+	background:pink;
+	border-style:solid;
+	border-width:4px 30px 4px 30px;
+	border-color: blue blue red red;
+	border-radius: 0 125px 0 125px;
+	
+	
+	
+}
+
