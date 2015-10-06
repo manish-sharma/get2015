@@ -1,0 +1,48 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	padding-left: 100px;
+	background-color: #dff2df;
+}
+
+#normal {
+	height: 100px;
+	width: 200px;
+	border: 2px solid;
+}
+
+#translate {
+	height: 100px;
+	width: 200px;
+	border: 2px solid;
+	-ms-transform: translate(150px, 0px);
+	-webkit-transform: translate(150px, 0px);
+	transform: translate(150px, 0px);
+}
+
+#rotate {
+	height: 100px;
+	width: 200px;
+	border: 2px solid;
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+
+#scale {
+	height: 100px;
+	width: 200px;
+	border: 2px solid;
+	-ms-transform: scale(2, 0.5);
+	-webkit-transform: scale(2, 0.5);
+	transform: scale(2, 0.5);
+}
+
+#skew {
+	height: 100px;
+	width: 200px;
+	border: 2px solid;
+	-ms-transform: skewX(20deg);
+	-webkit-transform: skewX(20deg);
+	transform: skewX(20deg);
+}

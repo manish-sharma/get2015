@@ -1,0 +1,14 @@
+#leaf {
+	width:200px;
+	height:120px;
+	background-color:#20F29E;
+	border-width:2px 30px 2px 30px;
+	border-style:solid;
+	border-color:#656CCE #656CCE #FF4B4B #FF4B4B;
+	border-radius:0 120px 0 120px;
+	-webkit-border-radius:0 120px 0 120px;
+}
+
+body {
+	background:url("../images/bg2.png") right bottom no-repeat, url("../images/bg1.jpg");
+}
