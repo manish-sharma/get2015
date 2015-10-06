@@ -33,6 +33,7 @@ public class List {
 		} else {
 			System.out.println("Input is not valid ");
 		}
+		traverse();
 	}
 	
 	/**
