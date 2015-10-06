@@ -1,7 +1,14 @@
+#table1 
+{
+    margin:5px;	
+}
+#image {
+	width:200px;
+	height:200px;
+}
 #header {
     background-color:black;
     color:white;
-    text-align:center;
     padding:5px;
 }
 #nav {
@@ -16,6 +23,11 @@
     float:left;
     padding:10px;
 	margin-bottom:90px;
+}
+
+ td.std {
+	
+	padding-left:20px;
 }
   
  #wrapper {

@@ -2,12 +2,10 @@
 
 #wrapper {
 	border:solid;
-	width : 95%;
-	height : 700px;
+	width : 1200px;
 	background : white;
 	margin: 0 auto;
-	margin-top : 30px;
-	height : 1100px;
+	margin-top : 10px;
 }
 
 #header{
@@ -20,47 +18,38 @@
 #navigation {
 	background-color : lightgrey;
 	padding:1px;
-	text-align:left;
+	
 }
-
 #navigation ul {
-	list-style-type : none;
-	padding-left: 5px;
+   list-style-type:none;
+   padding-left: 5px;
 }
-
 #navigation ul li{
 	display : inline;
-	border:0px solid #f00;
 	margin : 0, 10px;
-	padding-right : 10px;
+	padding-left : 10px;
 }
 
-#navigation ul li a {
-	text-decoration : none;
-	color : black;
-}
-
-#navigation ul li a:hover {
-	color: black;
-	text-decoration : underline;
-}
-
-#navigation .active a{
-    background-color :  #AED1ED;
-	border : 1px solid black;
+#navigation a:hover {
+	background-color:#3C88C9;
+	color:black;
+	border:2px solid;
 }
 
 #container {
 	background:white;
-	height:800px;
-	margin : 10px;
+	width:95%;
+	margin : 8px;
 }
 
+#leftcontainer {
+	width:30%;	
+	float:left;
+}
 #leftnavigation{
 	height : 100px;
 	background-color : #EDE6E6;
 	width:300px;
-	float:left;
 	margin-left: 10px;
 	border-radius : 5px;
 }
@@ -91,7 +80,6 @@
 	text-decoration : underline;
 	color :blue;
 }
-
 #leftnavigation ul li.verticalmenuhead {
 	width : 280px;
 	padding-top :5px;
@@ -105,92 +93,87 @@
 	
 }
 
-#leftnavigation ul li a:active {
-	width : 280px;
-	background-color : #89C8DC;
-}
-
-#middlecontent {
-	position : relative;
-	margin-left: 26%;
-	width : 50%;
-	background-color : white;
-	height : 800px;
-}
-p {
-	text-align:justify;
-}
-
-#search {
-	margin-right : 40px;
-	float : right;
-	margin-top : -54%;
-	background-color : lightgrey;
-	width : 250px;
-	height : 80px;
-	border-radius : 10px;
-}
- 
- #searchheading {
-	 width : 250px;
-	 background-color : grey;
-	 border-radius : 5px;
- }
- 
 #leftblock {
-	position : relative;
-	margin-left : -300px;
-	margin-top : 120px;
-	float : left;
+	margin-top : 10px;
+	margin-left : 10px;
 	width : 300px;
 	background-color : lightgrey;
-	border-radius : 5px;
+	border-radius : 5px;	
 }
+
+#leftblock p,h4 {
+	padding-left: 25px;
+}
+
  #newblockhead {
 	 width : 300px;
 	 background-color : grey;
 	 border-radius : 5px;
+	 padding-left:25px;
  }
  #leftblock.newblockhead {
 	background-color : lightgrey;
 	padding-top :5px;
-	padding-left : 20px;
+	padding-left :25px;
 	font-weight:bold;
 	text-align:left;
 	height:25px;
 	border-top-left-radius : 5px;
 	border-top-right-radius : 5px;
  }
+
+#middlecontent {
+	width : 40%;
+	background-color : white;
+	float:left;
+	text-align:justify;
+}
+
+
+#rightcontainer {
+	width:30%;
+   float:right;	
+}
+
+#search {
+	background-color : lightgrey;
+	width :100%;
+	height : 80px;
+	border-radius : 10px;
+	margin-left:20px;
+}
  
- #categories {
-	margin-right: 40px;
-	float: right;
-	margin-top: -45%;
-	background-color: #D3D3D3;
-	width: 250px;
-	height: 177px;
-	border-radius: 10px;
- }
- 
- #categoryheading {
-	 width : 250px;	
+ #searchheading {
+	
 	 background-color : grey;
 	 border-radius : 5px;
  }
  
+ #categories {
+	width :100%;
+	margin-top:10px;
+   margin-left:20px;	
+	background-color: #D3D3D3;
+	border-radius: 10px;
+ }
+ 
+ .categoryheading {
+	 background-color : grey;
+	 border-radius : 5px;
+	 width:2
+ }
  
  #archives {
 	border-radius: 10px;
-	margin-right: 40px;
-	float: right;
-	margin-top: -28%;
+	margin-top:10px;
+	margin-left:20px;
 	background-color: #D3D3D3;
-	width: 250px;
+	width:100%;
 	height: 127px;
  }
  
  #archiveheading {
-	 width : 250px;
+	 width : 100%;
 	 background-color : grey;
 	 border-radius : 5px;
  }
@@ -198,9 +181,9 @@ p {
  #footer {
 	 background-color :#92AC64;
 	 width : 100%;
-	 height: 120px;
+	 height: 80px;
 	 text-align:center;
-	 
+	 padding-top : 30px;
  }
  
  #footer ul {
@@ -220,3 +203,4 @@ p {
 	text-decoration : none;
 }
 #footer p {text-align:center;}
+ 
