@@ -1,4 +1,8 @@
-
+/**
+ * to make list Node
+ * @uothor Ravika Jain
+ * @since 10/5/2015
+ * */
 public class ListNode {
 	int flag;
 	Object data;
