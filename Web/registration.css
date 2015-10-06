@@ -1,0 +1,23 @@
+
+.container {
+	margin-left:35%;
+	width: 500px;
+	background-color: #c0c0c0;	
+}
+.header {
+	background-color:#a69e46;
+	width: 500px;
+	height: 60px;
+	text-align: center;
+	font-size: 45px;
+	font-weight: bold;
+	font-style: italic;
+}
+.content {
+	width: 430px;
+	height: 500px;
+	background-color:lightblue;
+	padding-left: 14%;
+	font-size: large;
+	font-weight: bold;
+}
