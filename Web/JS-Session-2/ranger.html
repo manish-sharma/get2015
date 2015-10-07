@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="ranger.css">
+  <script src="ranger.js"></script>
+ </head>
+<body>
+    <div class="wrapper">
+	  <table id="inputtable" cellspacing="20">
+	      <tr>
+		    <td>NAME</th>
+		    <td>MIN</th>
+		    <td>MAX</th>
+		  </tr>
+		  <tr>
+		     <td class="tdip"><input id="inputtableTd21" class="ip" type="text"></td>
+		     <td class="tdip"><input  id="inputtableTd22" class="ip" type="number" min="0" max="10"></td>
+		     <td class="tdip" ><input id="inputtableTd23" class="ip" type="number" min="0" max="10"></td>
+		  </tr>
+		  <tr>
+		     <td class="tdip" ><input id="inputtableTd31" class="ip" type="text"></td>
+		     <td class="tdip" ><input id="inputtableTd32" class="ip" type="number" min="0" max="10"></td>
+		     <td class="tdip" ><input id="inputtableTd33" class="ip" type="number" min="0" max="10"></td>
+		  </tr>
+		  <tr>
+		     <td class="tdip" ><input id="inputtableTd41" class="ip" type="text"></td>
+		     <td class="tdip" ><input id="inputtableTd42" class="ip" type="number" min="0" max="10"></td>
+		     <td class="tdip" ><input id="inputtableTd43" class="ip" type="number" min="0" max="10"></td>
+		  </tr>
+		  <tr>
+		     <td class="tdip" ><input id="inputtableTd51" class="ip" type="text"></td>
+		     <td class="tdip" ><input id="inputtableTd52" class="ip" type="number" min="0" max="10"></td>
+		     <td class="tdip" ><input id="inputtableTd53" class="ip" type="number" min="0" max="10"></td>
+		  </tr>
+		  <tr>
+		     <td class="tdip" ><input id="inputtableTd61" class="ip" type="text"></td>
+		     <td class="tdip" ><input id="inputtableTd62" class="ip" type="number" min="0" max="10"></td>
+		     <td class="tdip" ><input id="inputtableTd63" class="ip" type="number" min="0" max="10"></td>
+		  </tr>
+		   
+		   </table>
+		   
+		    <button id="button" type="button" onclick="fillcolor()">OK</button>
+		 </div>
+	
+	 <div class="wrapper">
+	      <table id="outputtable">
+		     <tr>
+			    <td class ="opnametd" id="outputtableTd11"></td>
+				<td class="opcolortd" id="outputtableTd12"></td>
+				<td class="opcolortd" id="outputtableTd13"></td>
+				<td class="opcolortd" id="outputtableTd14"></td>
+				<td class="opcolortd" id="outputtableTd15"></td>
+				<td class="opcolortd" id="outputtableTd16"></td>
+				<td class="opcolortd" id="outputtableTd17"></td>
+				<td class="opcolortd" id="outputtableTd18"></td>
+				<td class="opcolortd" id="outputtableTd19"></td>
+				<td class="opcolortd" id="outputtableTd110"></td>
+				<td class="opcolortd" id="outputtableTd111"></td>
+				<td class="opcolortd" id="outputtableTd112"></td>
+			 </tr>
+			 <tr>
+			    <td class ="opnametd" id="outputtableTd21"></td>
+				<td class="opcolortd" id="outputtableTd22"></td>
+				<td class="opcolortd" id="outputtableTd23"></td>
+				<td class="opcolortd" id="outputtableTd24"></td>
+				<td class="opcolortd" id="outputtableTd25"></td>
+				<td class="opcolortd" id="outputtableTd26"></td>
+				<td class="opcolortd" id="outputtableTd27"></td>
+				<td class="opcolortd" id="outputtableTd28"></td>
+				<td class="opcolortd" id="outputtableTd29"></td>
+				<td class="opcolortd" id="outputtableTd210"></td>
+				<td class="opcolortd" id="outputtableTd211"></td>
+				<td class="opcolortd" id="outputtableTd212"></td>
+			 </tr>
+			 <tr>
+			    <td class ="opnametd" id="outputtableTd31"></td>
+				<td class="opcolortd" id="outputtableTd32"></td>
+				<td class="opcolortd" id="outputtableTd33"></td>
+				<td class="opcolortd" id="outputtableTd34"></td>
+				<td class="opcolortd" id="outputtableTd35"></td>
+				<td class="opcolortd" id="outputtableTd36"></td>
+				<td class="opcolortd" id="outputtableTd37"></td>
+				<td class="opcolortd" id="outputtableTd38"></td>
+				<td class="opcolortd" id="outputtableTd39"></td>
+				<td class="opcolortd" id="outputtableTd310"></td>
+				<td class="opcolortd" id="outputtableTd311"></td>
+				<td class="opcolortd" id="outputtableTd312"></td>
+			 </tr>
+			 <tr>
+			    <td class ="opnametd" id="outputtableTd41"></td>
+				<td class="opcolortd" id="outputtableTd42"></td>
+				<td class="opcolortd" id="outputtableTd43"></td>
+				<td class="opcolortd" id="outputtableTd44"></td>
+				<td class="opcolortd" id="outputtableTd45"></td>
+				<td class="opcolortd" id="outputtableTd46"></td>
+				<td class="opcolortd" id="outputtableTd47"></td>
+				<td class="opcolortd" id="outputtableTd48"></td>
+				<td class="opcolortd" id="outputtableTd49"></td>
+				<td class="opcolortd" id="outputtableTd410"></td>
+				<td class="opcolortd" id="outputtableTd411"></td>
+				<td class="opcolortd" id="outputtableTd412"><t/d>
+			 </tr>
+			 <tr>
+			    <td class ="opnametd" id="outputtableTd51"></td>
+				<td class="opcolortd" id="outputtableTd52"></td>
+				<td class="opcolortd" id="outputtableTd53"></td>
+				<td class="opcolortd" id="outputtableTd54"></td>
+				<td class="opcolortd" id="outputtableTd55"></td>
+				<td class="opcolortd" id="outputtableTd56"></td>
+				<td class="opcolortd" id="outputtableTd57"></td>
+				<td class="opcolortd" id="outputtableTd58"></td>
+				<td class="opcolortd" id="outputtableTd59"></td>
+				<td class="opcolortd" id="outputtableTd510"></td>
+				<td class="opcolortd" id="outputtableTd511"></td>
+				<td class="opcolortd" id="outputtableTd512"></td>
+			 </tr>
+		  </table>
+    </div>
+</body>
+
+</html>
