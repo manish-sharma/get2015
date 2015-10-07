@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>form using js</title>
+		<link rel="stylesheet" href="CSS/style.css">
+		<script type="text/javascript" src="JS/validation.js">validation()</script>
+	</head>
+<body>
+	
+	<form name="registration">
+		<h2>REGISTRATION FORM</h2>
+				
+		<table>
+			<tr>
+				<td><label >First Name :</label></td>
+				<td><input id ="fname" type="text" placeholder="first name"></td>
+			</tr> 
+				
+			<tr>
+				<td><label >Last Name :</label></td>
+				<td><input id ="lname" type="text" placeholder="last name"></td>
+			</tr>
+				
+			<tr>
+				<td><label>Password :</label></td>
+				<td><input id="pwd" type="password" placeholder="password"></td>
+			</tr>
+				
+			<tr>
+				<td><label>Confirm Password :</label></td>
+				<td><input id="cpwd" type="password" placeholder="confirm password"></td>
+			</tr>
+				
+			<tr>
+				<td><label>Age :</label></td>
+				<td><input type="number" max="100" min="1" step=".1"></td>
+			</tr>
+				
+			<tr>
+				<td><label>State :</label></td>
+				<td><select id="state" onChange="filter()">
+				<option selected="selected" disabled="disabled">Select-state</option>
+				<option value = "rajasthan">Rajasthan</option>
+				<option value = "mp">MP</option>
+				<option value = "up">UP</option>
+				<option value = "mahrashtra">Maharastra</option>
+				</select></td>
+			</tr>
+				
+			<tr>
+				<td><label>City :</label></td>
+				<td><select id="city" >
+				<option selected="selected" disabled="disabled">Select-city</option>
+				</select></td>
+				<td><p id = "test"></p></td>
+			<tr>
+				
+			<tr>
+				<td><label>Address :</label></td>
+				<td><textarea></textarea>></td>
+			</tr>
+				
+			<tr>
+				<td><input id="check" name="check" type="checkbox" onClick="disable()" ></td>
+				<td>I accept terms and conditions</td>
+			</tr>
+				
+			<tr>
+				<td></td>
+				<td><button id="button" name="create" disabled="disabled" onclick="validation()">Create</button></td>
+			</tr>
+		</table>				
+	</form>
+
+</body>
+</html>
+
