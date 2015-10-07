@@ -1,0 +1,52 @@
+
+.wrapper {
+	 margin:0 auto;
+	width:100%;
+	background:#00FFE2;
+   text-align:center;
+ } 
+ .top {
+	 margin:0 auto;
+	width:100%;
+	padding-top:10px;
+	background:#00FFE2;
+   text-align:center;
+ } 
+#table
+{ width: 25%;
+   padding-top:10px;
+   margin:0 auto;
+   text-align:center;
+	
+}
+.name
+{
+	border-right:2px solid;
+}
+/*#tables
+{ border:2px solid gray;
+	
+}*/
+#graph
+{  width:50%;
+    margin:0 auto;
+	text-align:center;
+
+	table-collapse:collapse;}
+.createGraph
+{    margin-top:10px;
+	color: #00B1E6;
+	 text-decoration: none;
+	-webkit-border-radius: 10px;
+	 cursor: pointer;
+    font-size:13px;
+}
+  .registration {
+    background:#AED1ED;
+    height:60px;
+	color:#F0F0F0;
+    text-align:center;
+    padding-top:40px;
+    font-size:24px;
+    font-weight:bold;
+}
