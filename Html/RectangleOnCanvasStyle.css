@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+/* set attributes of body*/
+body {
+	background: white;
+}
+
+/*set attributes of wrapper div*/
+#Wrapper {
+	margin: 5% auto;
+	width: 40%;
+	height: 500px;
+	text-align: center;
+}
+
+/*set attributes of canvas*/
+.MyCanvas {
+	margin: 28% auto;
+	width: 70%;
+	height: 40%;
+	border: 1px solid black;
+}

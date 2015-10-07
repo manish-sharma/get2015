@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+/*set attributes of body*/
+body{
+	text-align:center;
+}
+/*set attributes of div and apply animations on this div*/
+.div {
+	margin: 0 auto;
+	width: 3%;
+	border: 1px solid black;
+	margin-top: 50px;
+	padding: 5%;
+	background-color: red;
+	position: relative;
+	-webkit-animation-name: divAnimation; /* Chrome, Safari, Opera */
+	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+	animation-iteration-count: 3;
+	animation-name: divAnimation;
+	animation-duration: 4s;
+}
+
+/*Standard syntax :div animations(color and position change)*/
+@keyframes divAnimation {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+}

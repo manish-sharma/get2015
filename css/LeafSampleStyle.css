@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+/*Set attributes of body in html document*/
+body {
+	text-align: center;
+}
+
+/*set attributes of wrapper div,set multiple background in this div*/
+#wrapper {
+	margin: 0 auto;
+	width: 50%;
+	height: 500px;
+	border: 1px solid black;
+	background-image: url(download7.jpg), url(download7.jpg),
+		url(download7.jpg), url(download7.jpg), url(download5.jpg);
+	background-position: left top, right bottom, left bottom, right top,
+		left top;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+	background-size: 150px, 150px, 130px, 130px;
+	text-align: center;
+}
+
+/*set attributes of div which is used to create leaf*/
+#div {
+	margin: 0 auto;
+	padding: 15%;
+	background: green;
+	width: 17%;
+	height: 50px;
+	border: 1px solid black;
+	margin-top: 100px;
+	border-radius: 100% 0% 100% 0%;
+}

@@ -1,0 +1,15 @@
+Train-251
+Jaipur To Mumbai
+Weight-50Kg
+Cost-20
+Duration-7hrs
+Train-211
+Sirohi To Kota
+Weight-30Kg
+Cost-70
+Duration-9hrs
+Train-411
+Jaipur To Mumbai
+Weight-30Kg
+Cost-60
+Duration-10hrs

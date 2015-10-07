@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+/*set attributes of body*/
+body {
+	text-align: center;
+}
+
+/*set attributes of original div*/
+.div {
+	width: 3%;
+	border: 1px solid black;
+	float: left;
+	margin: 6%;
+	padding: 5%;
+}
+
+/*rotate original div*/
+.divRotate {
+	/* Rotate div */
+	-ms-transform: rotate(10deg); /* IE 9 */
+	-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+	transform: rotate(10deg);
+}
+
+/*scale original div*/
+.divScale {
+	/* Rotate div */
+	-ms-transform: scale(2, 2); /* IE 9 */
+	-webkit-transform: scale(2, 2); /* Chrome, Safari, Opera */
+	transform: scale(2, 2);
+}
+
+/*skew original div*/
+.divSkew {
+	/* Rotate div */
+	-ms-transform: skewY(20deg); /* IE 9 */
+	-webkit-transform: skewY(20deg); /* Chrome, Safari, Opera */
+	transform: skewY(20deg);
+}

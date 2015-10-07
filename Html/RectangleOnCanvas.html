@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!-- link of RectangleOnCanvasStyle.css file -->
+<link rel="stylesheet" href="RectangleOnCanvasStyle.css" type="text/css">
+</head>
+<body>
+	<div id="Wrapper">
+		<!-- creating canvas object -->
+		<canvas id="myCanvas" class="MyCanvas">
+</canvas>
+	</div>
+</body>
+<!-- Script are used -->
+<script>
+<!-- getting canvas object -->
+var c=document.getElementById("myCanvas");
+<!-- getting HTML5 context object to draw on canvas -->
+var ctx=c.getContext("2d");
+<!-- fill red color into rectangle -->
+ctx.fillStyle = "red";
+<!-- fill the rectangle with defined arguments -->
+ctx.fillRect(75,35, 150,75);
+<!--filling black color in rectangle border-->
+ctx.strokeStyle = "#black";
+<!--border width-->
+ctx.lineWidth   = 1;
+<!--creating rectangle border-->
+ctx.strokeRect(75,35, 150,75);
+</script>
+</html>
+

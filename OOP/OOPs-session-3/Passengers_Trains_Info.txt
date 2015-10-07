@@ -1,0 +1,15 @@
+Train-340
+Jaipur To Kolkata
+SeatsAvailable-140
+Cost-120
+Duration-6hrs
+Train-221
+Sirohi To Jaipur
+SeatsAvailable-30
+Cost-200
+Duration-8hrs
+Train-411
+Jaipur To MountAbu
+SeatsAvailable-120
+Cost-160
+Duration-10hrs
