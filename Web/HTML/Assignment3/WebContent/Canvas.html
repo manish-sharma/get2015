@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Canvas Demo</title>
+</head>
+<body>
+	<canvas id="rectangle" width="300" height="225"
+		style="border: 1px solid #000000;"></canvas>
+	<script>
+		var c = document.getElementById("rectangle");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(0, 0, 300, 225);
+	</script>
+</body>
+</html>
