@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+.color {
+	background-color: red;
+	width: 40px;
+	height: 20px;
+}
+.notColor {
+	width: 40px;
+	height: 20px;
+}
+table {
+	border: 0px solid black;
+	border-collapse:collapse; 
+	margin-top: 20px; 
+}
+tr{
+	
+	border: 2px solid black;
+}
+.tableContainer {
+	margin-left: 300px;
+}
