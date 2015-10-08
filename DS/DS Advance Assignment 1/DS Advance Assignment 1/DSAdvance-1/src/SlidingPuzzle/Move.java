@@ -3,7 +3,8 @@ package SlidingPuzzle;
  * the puzzle board. Each method is static, and it has a
  * private constructor to prevent instantiation of the class.
  *
- */
+ *
+/
 public class Move {
 	private Move() {
 	}
