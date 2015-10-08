@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>change page</title>
+		<link rel="stylesheet" href="CSS/style.css">
+		<script type="text/javascript" src="JS/script.js"></script>
+	</head>
+	<body>
+		<div>
+			<form name="range">
+				<table id="table1">
+					<tr>
+						<td>NAME</td>
+						<td>MIN VALUE</td>
+						<td>MAX VALUE</td>
+					</tr>
+					<tr>
+						<td><input id="name1" type="name"></td>
+						<td><input id="min1" type="number" min="0" max="10"></td>
+						<td><input id="max1" type="number" min="0" max="10"></td>
+					</tr>	
+					<tr>
+						<td><input id="name2" type="name"></td>
+						<td><input id="min2" type="number" min="0" max="10"></td>
+						<td><input id="max2" type="number" min="0" max="10"></td>
+					</tr>	
+					<!--<tr>
+						<td><input id="name3" type="name"></td>
+						<td><input id="min3" type="number" min="0" max="10"></td>
+						<td><input id="max3" type="number" min="0" max="10"></td>
+					</tr>	
+					<tr>
+						<td><input id="name4" type="name"></td>
+						<td><input id="min4" type="number" min="0" max="10"></td>
+						<td><input id="max4" type="number" min="0" max="10"></td>
+					</tr>	
+					<tr>
+						<td><input id="name5" type="name"></td>
+						<td><input id="min5" type="number" min="0" max="10"></td>
+						<td><input id="max5" type="number" min="0" max="10"></td>
+					</tr>-->
+					
+				</table>
+				<!--<input id="button1" name="submit" type="submit" style="width :80px;"  value="OK" onclick="rangeGraph()">-->
+				<button id="button1" style="width :80px;" type="button" onclick="rangeGraph()">OK</button>
+				<button id="button2" type="button" onclick="createRow()">CREATE ROW</button>
+			</form>
+			
+			<table id="newtable" cellspacing="0">	
+			</table> 
