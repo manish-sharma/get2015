@@ -78,7 +78,7 @@
 						row.cells[col].style.borderRight="1px solid black";
 						row.cells[col].style.borderTop="1px solid black";
 				}
-				else if (col >= min1 && col <= max1){
+				else if ((col > min1 && col < max1)||col == min1 || col == max1){
 					var column2 = row.insertCell(col);
 					
 						row.cells[col].bgColor="red";
