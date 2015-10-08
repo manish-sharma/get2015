@@ -8,7 +8,6 @@
 	var column1 = row.insertCell(0);
 	var column2 = row.insertCell(1);
 	var column3 = row.insertCell(2);
-	
 	column1.innerHTML = "<input type = \"text\" name = \"name\" id = \""+ len +"0\">";
 	column2.innerHTML = "<input type = \"number\" name = \"min\" id = \""+ len +"1\" >";
 	column3.innerHTML = "<input type = \"number\" name = \"max\" id = \""+ len +"2\">";
@@ -55,7 +54,7 @@
 		var graph = document.getElementById("graph");
 		graph.innerHTML = "";
 		
-		graph.style.visibility = "visible";
+		
 		
 		var len = table.rows.length;
 	for(var key =1;key<len;key++){
@@ -77,24 +76,29 @@
 						row.cells[col].style.width="100px";
 						row.cells[col].style.borderRight="1px solid black";
 						row.cells[col].style.borderTop="1px solid black";
+						
+
 				}
 				else if ((col > min1 && col < max1)||col == min1 || col == max1){
 					var column2 = row.insertCell(col);
-					
 						row.cells[col].bgColor="red";
-						row.cells[col].style.width=""+wid+"px";
+						row.cells[col].style.width="100px";
 						row.cells[col].style.borderTop="1px solid black";
-					
+						
+						
 				}
-				else if(col > max1){
+				 
+				 else{
 					var column3 = row.insertCell(col);
 					row.cells[col].style.width="100px";
 					row.cells[col].style.borderTop="1px solid black";
 				}
 			
 			}
+			graph.style.visibility = "visible";
 	}
 			
 
 	
 	}
+	
