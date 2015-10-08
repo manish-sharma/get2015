@@ -1,0 +1,15 @@
+#table{
+	border:4px solid black;
+	margin:auto;
+	
+}
+#table td{
+
+margin:4px;
+}
+.graph{
+	border:2px solid black;
+	margin:70%;
+	height:90%;
+}
+
