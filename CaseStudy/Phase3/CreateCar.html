@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CarStyle.css" type="text/css">
+<title>Create Car</title>
+</head>
+<body>		
+	<form action="action_page.php" method="get">
+		<div id="wrapper">
+		<div id="header">
+			Car Dekho
+		</div>
+
+		<div id="header1">
+			<ul>
+				<li><a href="HomePage.html">Back To Home Page</a></li>
+			</ul>
+		</div>
+		<section>
+			<label class="left">ID: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">Make: </label>
+				<input class="input" type="text" required="required">  
+			<br> 
+			<br>
+			<label class="left">Model: </label>
+				<input class="input" type="text" required="required">  
+			<br> 
+			<br>
+			<label class="left">EngineInCC: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">Fuel Capacity: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">Mileage: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">Price: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">Road Tax: </label>
+				<input class="input" type="number" required="required">  
+			<br> 
+			<br>
+			<label class="left">AC: </label>
+				<input class="input" type="radio" name="AC" value="True" checked><label class="radio">Available</label>
+				<br>
+  				<input class="input" type="radio" name="AC" value="False"><label class="radio">Not Available</label>
+			<br> 
+			<br>
+			<label class="left">Power Steering: </label>
+				<input class="input" type="radio" name="Power Steering" value="True" checked><label class="radio">Available</label>
+				<br>
+  				<input class="input" type="radio" name="Power Steering" value="False"><label class="radio">Not Available</label>
+			<br> 
+			<br>
+			<label class="left">Accessory Kit: </label>
+				<input class="input" type="text" required="required">  
+			<br> 
+			<br>
+			<label class="left">Created By: </label>
+				<input class="input" type="text" required="required">  
+			<br> 
+			<br>
+			<label class="left">Created Time: </label>
+				<input class="input" id="startdate" name="startdate" min="2014-01-01" max="2016-01-01" type="date"> 
+			<br> 
+			<br>
+				<button autofocus class="mid" type="button" style="width: 247px; height: 28px">Create Car</button>
+		</section>
+		<div id="footer">
+			<p>Posted by: Hege Refsnes</p>
+			<p>
+				Contact information: <a href="mailto:Someone@CarDekho.com">
+					Someone@CarDekho.com</a>.
+			</p>
+		</div>
+		</div>
+	</form>
+</body>
+</html>

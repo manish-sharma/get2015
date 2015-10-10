@@ -1,0 +1,166 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background: #e9e8d1;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 1100px;
+	height: 800px;
+	background: #AED1ED;
+	border: thin solid black;
+}
+
+#header {
+	background: #AED1ED;
+	height: 100px;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: oblique;
+	border: thin solid black;
+}
+
+#header1 {
+	background: #c0bcb1;
+	padding: 3px;
+	text-align: left;
+	border: thin solid black;
+}
+
+#header1 ul {
+	margin: 0px;
+	list-style: none;
+}
+
+#header1 ul li {
+	display: inline;
+	border: 0px solid #f00;
+	margin: 0 10px;
+}
+
+#header1 ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#header1 ul li a:hover {
+	background-color: #7ba0df;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#mid {
+	background: #AED1ED;
+	height: 500px;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: oblique;
+	border: thin solid black;
+}
+
+#nav1 {
+	background: #c0bcb1;
+	padding: 3px;
+	text-align: left;
+	border: thin solid black;
+	width: 200px;
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+#nav1 ul {
+	margin: 0px;
+	list-style: none;
+}
+
+#nav1 ul li {
+	display: inline;
+	border: 0px solid #f00;
+	margin: 0 10px;
+}
+
+#nav1 ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#nav1 ul li a:hover {
+	background-color: #7ba0df;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#nav2 {
+	background: #c0bcb1;
+	padding: 3px;
+	text-align: left;
+	border: thin solid black;
+	width: 200px;
+	margin-left: 80px;
+	margin-top: 40px;
+}
+
+#nav2 ul {
+	margin: 0px;
+	list-style: none;
+}
+
+#nav2 ul li {
+	display: inline;
+	border: 0px solid #f00;
+	margin: 0 10px;
+}
+
+#nav2 ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#nav2 ul li a:hover {
+	background-color: #7ba0df;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#image {
+	width: 750px;
+	height: 250px;
+	margin-top: 0px;
+	position: relative;
+	float: right;
+}
+
+#footer {
+	clear: both;
+	background: #c0bcb1;
+	height: 160px;
+	top: 650px;
+	width: 1100px;
+	position: absolute;
+	border: thin solid black;
+}
+
+#footer p {
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+}
+
+table {
+	width: 35%;
+	height: 15%;
+	margin-top: 10%;
+	margin-left: 35%;
+	border: 1px solid black;
+	padding-left: 20px;
+	padding-top: 40px;
+}
+
+td {
+	padding: 20px;
+}
