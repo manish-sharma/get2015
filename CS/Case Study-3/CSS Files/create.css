@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+body {
+	width: 100%;
+}
+header {
+	width:40%;
+	margin-left:25%;
+	background-color: blue;
+	text-align: center;
+	font-size: 40px;
+	font-style: italic;
+}
+.tableContainer {
+	border:1px solid black;
+	width: 40%;
+	background-color: #c0c0c0;
+	margin-left: 25%;
+}
+table,tr,td{
+	border: 1px solid black;
+}
+table {
+	width: 100%;
+}
+td {
+	height:30px;
+	text-align: center;
+}
