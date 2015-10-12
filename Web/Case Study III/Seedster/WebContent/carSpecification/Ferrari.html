@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="ferrari.css">
+</head>
+<body>
+<header class="head">
+		<img id="logo"
+			src="C:\Users\.hp\workspace\Seedster\WebContent\Homepage\image\logo.jpg" />
+		<h1 id="websitename">Speedster</h1>
+		<div id="container">
+			<input id="toggle" type="checkbox"> <label id="menu_button"
+				for="toggle">=</label>
+			<div class="slide-menu">
+				<nav class="menu">
+					<li><a href="HomePage.html">Home</a></li>
+					<li><a href="../Login Page/login.html">Login</a></li>
+					<li><a href="../SignUp/SignUp.html">Sign Up</a></li>
+					<li><a href="../SearchPage/Searchpage.html">Search</a></li>
+					<li><a href="../add_car/Addcar.html">Add Car</a></li>
+					<li><a href="#">About US</a></li>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="availabel_car">
+	 <h2>458 Italia Specification</h2>
+	 
+				<form name="createCarForm"  action="#">
+ 	
+					<label class="left">Make*</label> 
+					<input class="input" type="text" value="Ferrari" pattern="[a-zA-Z ]+" name="make" disabled="disabled"><br><br><br> 
+			
+					<label class="left">Model*</label> 
+					<input class="input" type="text" name="model" value="458 Italia" pattern="[a-zA-Z1-9 ]+" disabled="disabled"><br><br><br>
+		
+			 		<label class="left">EngineInCC*</label> 
+			 		<input class="input" type="number" name="engineInCc" value="3500" min="500" max="4000" disabled="disabled"><br><br> <br>
+			 
+			 		<label class="left">FuelCapacity*</label>
+			  		<input class="input" type="number" name="fuelCapacity" value="150" min="25" max="200" disabled="disabled"><br><br><br>
+			 
+			 		<label class="left">Mileage*</label>
+			 		<input class="input" type="number" name="mileage" value="5" min="1" max="100" disabled="disabled"><br><br><br>
+			 
+			 
+			 		<label class="left">Ex-Showroom Price*</label>
+			 		<input class="input" type="number"  name="exShowroomPrice" value="48000000" min="100000" max="100000000" disabled="disabled"><br><br><br>
+			
+			 		<label class="left">roadTax*</label> 
+			 		<input class="input" type="number" name="roadTax" value="1000000" min="2000" max="1000000" disabled="disabled"><br><br><br>
+			
+			 		<label class="left">onRoadPrice*</label> 
+			 		<input class="input" type="number" name="onRoadPrice" value="49000000" min="102000" max="101000000" disabled="disabled"><br><br><br>
+			 
+			  		<input class="submit" type="submit" name="submit" value="Back" onclick="goBack()" >
+				</form>
+		</div>
+	
+</body>
+</html>
