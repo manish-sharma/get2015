@@ -1,0 +1,54 @@
+Body {
+    background:#F0F0F0;
+}
+
+#wrapper {
+	 margin:0 auto;
+	width:50%;
+	background:#FFF;
+
+ } 
+ .registration {
+    background:#AED1ED;
+    height:60px;
+	color:#F0F0F0;
+    text-align:center;
+    padding-top:40px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+
+input:focus, select:focus{
+    background-color: #efffe0;
+}
+ Legend
+{
+    color: #abda0f;
+    padding:2px;
+    margin-left: 14px;
+    font-weight:bold;
+    font-size: 20px;
+    font-weight:100;
+}
+#button
+{    
+     color: #00B1E6;
+	 text-decoration: none;
+	-webkit-border-radius: 5px;
+	 cursor: pointer;
+    font-size:18px;
+  	margin-left:43%;
+}
+span
+{
+	color: red;
+	font-size:14px;
+	
+}
+
+
+
+
+
+
