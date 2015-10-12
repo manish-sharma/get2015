@@ -1,0 +1,44 @@
+#name
+{
+	border-right: 10px solid black;
+	
+}
+tr
+{
+	border-bottom:2px solid black;
+	
+}
+#wrapper {
+	width:50%;
+	margin:0 auto;
+ } 
+ #table{
+	 float: none;
+	 margin: 0 auto;
+	 width: fit-content;
+	 width: -moz-fit-content;
+	 width: -webkit-fit-content;
+ }
+ #buttonvalue
+ {
+	  margin:0 auto;
+	 
+ }
+  .registration {
+    background: none repeat scroll 0 0 #aed1ed;
+    color: #f0f0f0;
+    float: left;
+    height: 60px;
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+  }
+#graphtable{
+	float: none;
+    width: -webkit-fit-content;
+    margin: 0 auto;
+}
+#graphtable > td{
+	border: 1px solid black;
+}
+    
