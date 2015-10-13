@@ -1,0 +1,15 @@
+<web-app>
+	<display-name>RegistrationForm</display-name>
+	<servlet>
+		<display-name>myservlet</display-name>
+		<servlet-name>FormRegister</servlet-name>
+		<servlet-class>com.servlets.FormRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FormRegister</servlet-name>
+		<url-pattern>/FormRegister</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Assignment1.html</welcome-file>
+	</welcome-file-list>
+</web-app>
