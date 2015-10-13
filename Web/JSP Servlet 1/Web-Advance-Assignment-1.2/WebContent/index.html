@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Howdy, User | Web-Advance-Assignment-1.2</title>
+<link href="./css/custom.css" rel="Stylesheet">
+</head>
+<body>
+	<div id="form">
+			<table>
+				<form action="./Form" method="post" onsubmit="return validate()">
+				<legend><h2>New User! Register Here</h3></legend><hr>
+					<tr>
+						<td>Enter Name:</td>
+						<td><input type="text" id="name" name="name" placeholder="Enter Full Name"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="center"><label id="nameError"></label></td>
+					</tr>
+					<tr>
+						<td>Enter Password</td>
+						<td><input type="password" id="password"name="password" placeholder ="Enter Password" ></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="center"><label id="passwordError"></label></td>
+					</tr>
+					<tr>
+						<td>Confirm Password</td>
+						<td><input type="password" id="cPassword" name="cPassword" placeholder ="Confirm Password" ></td>
+					<tr>
+						<td></td>
+						<td align="center"><label id="cPasswordError"></label></td>
+					</tr>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="email" name="email" id="email" placeholder ="Enter Email" ></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="center"><label id="emailError"></label></td>
+					</tr>
+					<tr>
+						<td>Phone Number</td>
+						<td><input type="number" name="pNumber" id="pNumber" placeholder ="Primary Phone Number" ></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align="center"><label id="phoneNumberError"></label></td>
+					</tr>
+					<tr>
+						<td> <input type="submit" value="Signup"></td>
+						<td> <input type="reset" value="Reset Form"></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+</body>
+<script src="./js/script.js"></script>
+</html>
