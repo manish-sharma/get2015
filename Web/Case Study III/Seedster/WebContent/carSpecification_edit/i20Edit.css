@@ -1,0 +1,255 @@
+@font-face {
+	font-family: heading-font;
+	src: url(C:/Users/.hp/workspace/Seedster/WebContent/fonts/Tr2n.ttf);
+}
+
+.head {
+	background-color: #333333;
+	height: 20%;
+	opacity: 0.9;
+	width: 100%;
+	position: absolute;
+}
+
+#logo {
+	margin: 10px;
+	float: left;
+}
+
+#websitename {
+	margin-top: 40px;
+	color: #FFFFFF;
+	font-family: 'heading-font';
+}
+
+img {
+	width: 130px;
+	height: 100px;
+}
+
+h1 {
+	left: 20%;
+	float: left;
+}
+
+#container {
+	display: flex;
+	min-height: 100%;
+	/*width:900px;*/
+}
+
+input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+}
+
+#menu_button {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 1;
+	display: block;
+	font-size: 3em;
+	color: #000000;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	transform: translate3d(0, 0, 0);
+	transition: transform .4s;
+}
+
+input[type=checkbox]:checked ~ #menu_button {
+	transform: translate3d(-250px, 0, 0) rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ .slide-menu {
+	transform: translate3d(0, 0, 0);
+}
+
+input[type=checkbox]:checked ~ .slide-menu .menu li {
+	width: 100%;
+}
+
+.slide-menu {
+	transform: translate3d(250px, 0, 0);
+	position: fixed;
+	width: 250px;
+	background: #4f6b81;
+	color: #ddd;
+	right: 0px;
+	height: 100%;
+	transition: all .4s;
+}
+
+.slide-menu h1 {
+	margin: 10px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.1em;
+	padding: 15px;
+	background: linear-gradient(#628297, #4f6b81);
+	border-bottom: 1px solid #1e222b;
+	box-shadow: inset 0px 1px 1px #8b9db3;
+}
+
+.menu a:hover {
+	background: linear-gradient(#3b3f48, #3c434d);
+	box-shadow: inset 0px 1px 1px #475059;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #2E3740;
+	color: #435160;
+	font-family: "Open Sans", sans-serif;
+}
+
+section {
+	height: 624px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+section ul {
+	width: 300px;
+	margin-left: 250px;
+	list-style-type: none;
+}
+
+section ul li {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+section ul li a {
+	text-decoration: none;
+}
+
+section ul li a:HOVER {
+	background-color: olive;
+}
+
+main {
+	margin: 0 auto;
+	width: 850px;
+	height: 780px;
+	border: thin solid black;
+}
+
+p {
+	margin-left: 310px;
+}
+
+section {
+	height: 624px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+section ul {
+	width: 300px;
+	margin-left: 250px;
+	list-style-type: none;
+}
+
+section ul li {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+section ul li a {
+	text-decoration: none;
+}
+
+section ul li a:HOVER {
+	background-color: olive;
+}
+
+footer {
+	background-color: #c9c1c1;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+form {
+	position:relative;
+	margin: 0px auto;
+	width: 700px;
+	height: 530px;
+	background:transparent;
+	font-size: 18px;
+	padding: 10px 0px 10px 0px;
+	float: left;
+	left:-200px;
+}
+
+.left {
+	position: relative;
+	width: 300px;
+	float: left;
+	left: 80px;
+}
+
+.input {
+	position: relative;
+	width: 230px;
+	float: right;
+	right: 150px;
+	background:none;
+	color:#fff;
+}
+
+input[type="submit"] {
+position:relative;
+  background: #1FCE6D;
+  border: 0;
+  width: 350px;
+  height: 30px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  left:150px;
+  float:left;
+}
+input[type="submit"]:hover {
+  background: #16aa56;
+  animation-name: shake;
+}
+.availabel_car {
+  width: 700px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -175px;
+}
+
+h2 {
+  color: #6D7781;
+  font-family: "Sofia", cursive;
+  font-size: 13px;
+  font-weight: bold;
+  font-size: 3.6em;
+  margin-bottom: 20px;
+  float:left;
+  left:-100px;
+  position:relative
+}

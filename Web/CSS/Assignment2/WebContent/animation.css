@@ -1,0 +1,38 @@
+body{
+	 background:#E5E1D6;
+}
+header{
+	height:50px;
+	 border: 2px solid black;
+	 background:#AED1ED;
+	text-align:center;
+	padding:10px;
+	font-weight:bold;
+	font-size:30px;
+}
+section{
+	height:800px;
+	margin:30px;
+	 border: 2px solid black;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:20%; top:53%;border-radius:100px 100px;}
+    50%  {background-color:blue; left:40%; top:0px;border-radius:0 100%}
+    75%  {background-color:green; left:60%; top:53%;}
+    100% {background-color:red; left:80%; top:0px;}
+}

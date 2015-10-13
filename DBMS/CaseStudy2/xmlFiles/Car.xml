@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<car>
+	
+	<row type="car">
+		<vehicleId>1</vehicleId>
+		<make>Wayne Industries</make>
+		<model>BatMobile</model>
+		<engineInCC>8000</engineInCC>
+		<fuelCapacity>200</fuelCapacity>
+		<mileage>10</mileage>
+		<price>850000.41f</price>
+		<roadTax>40000.21f</roadTax>
+		<ac>true</ac>
+		<powerSteering>true</powerSteering>
+		<accessoryKit>Radio,Cd Player</accessoryKit>
+	</row>
+
+	<row type="car">
+		<vehicleId>2</vehicleId>
+		<make>Ford</make>
+		<model>Figo</model>
+		<engineInCC>2000</engineInCC>
+		<fuelCapacity>50</fuelCapacity>
+		<mileage>22</mileage>
+		<price>850000.41f</price>
+		<roadTax>40000.21f</roadTax>
+		<ac>true</ac>
+		<powerSteering>true</powerSteering>
+		<accessoryKit>Radio,Cd Player</accessoryKit>
+	</row>
+</car>
+  
+  

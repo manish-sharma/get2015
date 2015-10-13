@@ -1,0 +1,20 @@
+h1{
+	margin-left: 500px;
+}
+Section{
+	margin-left: 400px;
+}
+
+.rangeTable{
+	border-bottom: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+.rangeTable td{
+	border-bottom: 1px solid black;
+	min-width: 22px;
+}
+#nameCol{
+	border-right: 1px solid black;
+}

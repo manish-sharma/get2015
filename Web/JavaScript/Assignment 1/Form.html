@@ -1,0 +1,41 @@
+<html>
+<head>
+<script type="text/javascript" src="javascript.js" ></script>
+</head>
+<title>
+Registration
+</title>
+<body>
+<h1>Please enter registration details</h1>
+<form>
+<p>Enter the First Name & Last Name</p>
+<input type="text" id="fname" required>
+<input type="text" id="lname" required>
+<p>Enter the password</p>
+<input type="password" name="pass" required>
+<p>Re-enter the password</p>
+<input type="password" id="ConfirmPassword">
+<p>Enter age (Only numbers and . value allowed)</p>
+<input type="number" id="age" min="18" max="25" step=".1">
+<p>State</p>
+<Select id="state" onchange="selectCity()">
+<option selected="selected" disable value="null">Select</option>
+<option value="Rajasthan">Rajasthan</option>
+				
+				<option value="UP">UP</option>
+				
+				<option value="MP">MP</option>
+				
+				<option value="Maharastra">Maharastra</option>
+<label>City:</label>
+<select id="city" disabled="disabled">
+<option  selected="selected" disabled value="null">Select</option>
+				</select><br><br>
+<label>Address Line1:</label><textarea id="addressLine1" cols="22" ></textarea><br><br><br>
+				
+				<label><input type="checkbox" id="accept" onchange="selectBox()">I accept conditions.</label><br><br>
+				
+				<input type="submit" id="submit" value="Create" disabled="disabled" onclick="validation()">
+				</form>
+</body>
+</html>

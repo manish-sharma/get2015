@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+body
+{
+		
+	background-color: #CEB69E;
+}
+
+
+table {
+	
+}
+
+.form {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin: auto;
+	margin-top: 200px;
+	width: 350px;
+
+	border: solid 1px;
+}
+
+.form_heading {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	width: 345px;
+	background-color: #5C2E00;
+	color: #ffffff;
+	text-align: center;
+	font-size: 20px;
+	padding: 3px;
+	
+}
+
+.btn
+{
+	background-color:  #5C2E00;
+	color: #ffffff;
+	margin-left:100%;
+	width:100px;
+	height:30px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	
+}
