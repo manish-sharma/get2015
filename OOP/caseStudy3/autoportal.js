@@ -15,7 +15,7 @@ a.add(option);
 else{
 var a=document.getElementById("make");
 a.length=1;
-var lowerprice=["50000","60000","700000"];
+var lowerprice=[50000,60000,700000];
 for(var i=0;i<lowerprice.length;i++){
 var option=document.createElement("option");
 option.text=lowerprice[i];
@@ -30,7 +30,7 @@ function addModels(){
 var a=document.getElementById("make");
 var b=document.getElementById("model");
 b.length=1;
-if(isNaN(a)==true){
+if(isNaN(a.value)==true){
 var carBMW=["x1","X2","X3"];
 var carJaguar=["J1","J2","J3"];
 if(a.value=="BMW"){
@@ -51,15 +51,14 @@ b.add(option);
 }
 }
 else{
-		alert("aaaa");
-	var higherprice=["150000","160000","1700000"];
-
+var higherprice=[150000,160000,1700000];
 for(var i=0;i<higherprice.length;i++){
-	if(higherprice[i]>a.value){
+	if((higherprice[i])>(a.value)){
+		alert(a.value);
 var option=document.createElement("option");
 option.text=higherprice[i];
 option.value=higherprice[i];
-a.add(option);
+b.add(option);
 	}
 }
 }
