@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 1</title>
+		<link href = "stylesheet2.css" rel = "stylesheet" />
+		<script>
+			function addCity(){
+				var cityObject = document.getElementById("city-list");
+				var stateObject = document.getElementById("state");
+				switch(stateObject.value) {
+					case "Rajasthan" :
+						cityObject.innerHTML = "<Option>Jaipur</option><Option>Bikaner</option><Option>Kota</option><Option>Ajmer</option>";
+						break;
+					case "gujarat" :
+						cityObject.innerHTML = "<Option>Ahmedabad</option><Option>Surat</option><Option>Vadodara</option><Option>Rajkot</option>";
+						break;
+					case "Uttar pradesh" :
+						cityObject.innerHTML = "<Option>Agra</option><Option>Kanpur</option><Option>Aligarh</option><Option>Mathura</option>";
+						break;
+					case "uttarakhand":
+						cityObject.innerHTML = "<Option>Dehradun</option><Option>Haridwar</option><Option>Roorkee</option><Option>Rishikesh</option>";
+						break;
+					case "Haryana":
+						cityObject.innerHTML = "<Option>Bhiwani</option><Option>Gurgaon</option><Option>Kurukshetra</option><Option>Faridabad</option>";
+						break;
+					case "punjab":
+						cityObject.innerHTML = "<Option>Amritsar</option><Option>Jalandhar</option><Option>Patiala</option><Option>chandigarh</option>";
+						break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Form Submission</h1>
+		</header>
+		<section>
+			<fieldset>
+				<legend>Registration1</legend>
+				<div class = "form_name">
+					<span>First-Name: </span>
+					<span>last-Name: </span>
+					<span>Password: </span>
+					<span>Confirm Password: </span>
+					<span>Age:</span>
+					<span>State:</span>
+					<span>City:</span>
+					<span>Address Line 1</span>
+				</div>
+				<form style = "width: 50%; float:left;" action = "RegistrationForm" >
+					<input id = "fname-text-box" class = "form_input" type = "text" name = "firstname"  placeholder = "First Name">
+					<input id = "lname-text-box" class = "form_input" type = "text" name = "lastname"  placeholder = "Last name">
+					<input id = "password-text-box" class = "form_input" type = "password" name = "password"  placeholder = "password">
+					<input id = "confirmpassword-text-box" class = "form_input" type = "password" name = "confirm-password"  placeholder = "confirm-password">
+					<input id = "age"  class = "form_input" type="number" name="age" placeholder = "age ">
+					<input id = "state" class = "form_input" name="state" onselect = "addCity()" type="text" list="state-list" />
+						<datalist id="state-list" >
+						   <option value="Rajasthan">
+						   <option value="gujarat">
+						   <option value="Uttar pradesh">
+						   <option value="uttarakhand">
+						   <option value="Haryana">
+						   <option value="punjab">
+						</datalist>
+					<input id = "city" class = "form_input" name="city" onclick = "addCity()" type="text" list="city-list" />
+						<datalist id="city-list" >
+						</datalist>
+					<input id = "address" class = "form_input" type="text" name="address"  placeholder = "Address line 1">
+					<input type="checkbox" id="acceptCondition"/>
+                    <label>*  I accept the <a href="#">Terms and Conditions</a></label>
+					<input type = "submit" id  = "button" value = "register">
+				</form>
+			</fieldset>
+		</section>
+		
+	</body>
+</html>
