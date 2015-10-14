@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Car Dekho | Home</title>
+		<link rel="stylesheet" type="text/css" href="../css/Home-CSS.css">
+	</head>
+
+	<body>
+	
+		<header>
+		
+			<div id="site_logo">Car Dekho</div>
+			
+			<a href="#login" id="login_button">Login</a>
+			
+			<div id="login" class="popup_box">
+			
+				<div>
+				
+					<a href="#close" title="Close" class="close">X</a>
+        			<h3>Login as administrator to create and edit vehicles.</h3>
+					<hr>
+					<form>
+						<table id="login_table">
+							<tr>
+								<td>Email: </td>
+								<td>
+									<input type="email" class="text_field" required placeholder="Enter your Email">
+								</td>
+							</tr>
+							<br>
+							<tr>
+								<td>Password: </td>
+								<td><input type="password" class="text_field" required placeholder="Enter your Password"></td>
+							</tr>
+							<br>
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" formaction="Admin_Home.html" value="Login" class="submit_button">
+								</td>
+							</tr>
+						</table>
+					</form>
+				
+				</div>
+			
+			</div>
+			
+			<nav>
+
+				<ul>
+					<li> <a href=#> Home </a> </li>
+					<li> <a href="About_Us.html"> About Us </a> </li>
+				</ul>
+
+			</nav>
+			
+		</header>
+		
+		<div id="content_wrapper">
+		
+			<div class="slideshow">
+				<img class="photo" src="../images/bmw1.jpg" alt="" />
+				<img class="photo" src="../images/bmw2.jpg" alt="" />
+				<img class="photo" src="../images/bmw3.jpg" alt="" />
+				<img class="photo" src="../images/bmw4.jpg" alt="" />
+			</div>
+		
+			<div id="search_box">
+			
+				<div id="search_header"> Search your new car </div>
+			
+				<form>
+					<table id="search_table">
+						<tr>
+							<td>Select Brand: </td>
+							<td>
+								<select class="select_list">
+									<option>BMW</option>
+									<option>Mercedes Benz</option>
+									<option>Aston Martin</option>
+									<option>Jaguar</option>
+								</select>
+							</td>
+						</tr>
+						<br>
+						<tr>
+							<td>Select Model: </td>
+							<td>
+								<select class="select_list">
+									<option>M5</option>
+									<option>SLS AMG</option>
+									<option>One 77</option>
+									<option>XF</option>
+								</select>
+							</td>
+						</tr>
+						<br>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" value="Search Car" class="submit_button" formaction="Car_Details.html">
+							</td>
+						</tr>
+					</table>
+				</form>
+					
+			</div>
+			
+			<div id="working">
+				<h1>How It Works?</h1>
+				
+				<div id="working_steps">
+				
+					<div class="step">
+						<img src="../images/how_it_works_1.jpg">
+						<h2>Browse!</h2>
+						<p>Browse through our available cars.</p>
+					</div>
+					
+					<div class="step">
+						<img src="../images/how_it_works_2.jpg">
+						<h2>Select!</h2>
+						<p>Select the car of your choice.</p>
+					</div>
+					
+					<div class="step">
+						<img src="../images/how_it_works_3.jpg">
+						<h2>Buy!</h2>
+						<p>Buy the car from your nearest dealer.</p>
+					</div>
+					
+				</div>
+				
+				<h2>Now, your new car just a few clicks away!</h2>
+			</div>
+			
+			<div id="carousel_wrapper">
+				<h2>Browse Cars By Most Popular Brands.</h2>
+				
+				<div class=carousel>
+					<ul class=panes>
+						<li> <a href="Browse.html" id="pane1"> <img src="../images/logos/1.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane2"> <img src="../images/logos/2.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane3"> <img src="../images/logos/3.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane4"> <img src="../images/logos/4.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane5"> <img src="../images/logos/5.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane6"> <img src="../images/logos/6.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane7"> <img src="../images/logos/7.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane8"> <img src="../images/logos/8.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane9"> <img src="../images/logos/9.png" class="pane_image"> </a> </li>
+						
+						<li> <a href="Browse.html" id="pane10"> <img src="../images/logos/10.png" class="pane_image"> </a> </li>
+					</ul>
+				</div>
+			
+			</div>
+			
+			<div id="about">
+				<h2 align="center">About Us</h2>
+				<p>
+					CarDekho is not just a web portal that lists cars in India,
+					but is a rich automotive platform that brings to its readers
+					to-the-minute insights from around the world.
+					Be it a newbie, an auto freak, or a layman in terms of complex
+					car engine and performance terminologies.
+				</p>
+				To know more, Click <a href="About_Us.html" id="read_more">here..</a>
+			</div>
+		
+		</div>
+		
+		<footer>
+			
+			<div class="footer_part">
+				<h3>Contact Us:</h3>
+				<ul>
+					<li> Support: <a href=#> support@cardekho.com </a> </li>
+					<li> Customer Care: <a href=#> +91-8233249261 </a> </li>
+					<li> Toll free:<a href=#> 1800-100-1010 </a> </li>
+				</ul>
+			</div>
+			
+			<div class="footer_part">
+				<h3>Find us on:</h3>
+				<ul>
+					<li> <a href=#> Facebook </a> </li>
+					<li> <a href=#> Google+ </a> </li>
+					<li> <a href=#> Twitter </a> </li>
+				</ul>
+			</div>
+			
+			<div class="footer_part">
+				Copyright &copy <a href=#> Metacube Softwares Pvt. Ltd. </a> 2015. All rights reserved.
+				<br>
+				Designed & Developed by <a href=#> Gaurav Saini </a>.
+				<hr>
+				<a href="About_Us.html"> Privacy Policy. </a>
+				<br>
+				<a href="About_Us.html"> T & C </a>
+			</div>
+			
+		</footer>
+		
+	</body>
+
+</html>
