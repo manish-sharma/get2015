@@ -96,6 +96,8 @@ function myFunction()
 	
 	
 }
+<img src="find_car-512.png"/>
+<img src="Car.png"/>
 
 var states = new Array();
 
@@ -108,19 +110,27 @@ states['Maharashtra'] = new Array('Pune', 'Nagpur', 'Nashik', 'Aurangabad' ,'Sol
 
 function setStates() {
   cntrySel = document.getElementById('State');
-  stateList = states[cntrySel.value];
-  changeSelect('City', stateList, stateList);
+  if(cntrySel.value=='select State')
+  {
+	  
+  }
+  else
+  {
+	   stateList = states[cntrySel.value];
+  }
+ 
+  changeSelect('City', stateList);
   
 }
 
 
 
 
-function changeSelect(fieldID, newOptions, newValues) {
+function changeSelect(fieldID, newOptions) {
   selectField = document.getElementById(fieldID);
   selectField.options.length = 0;
   for (i=0; i<newOptions.length; i++) {
-    selectField.options[selectField.length] = new Option(newOptions[i], newValues[i]);
+    selectField.options[selectField.length] = new Option(newOptions[i]);
   }
 }
 
