@@ -1,0 +1,28 @@
+body{
+	background:gray;
+}
+#left,#right{
+	width:350px;
+	height:350px;;
+    margin-top:200px;
+	text-align:center;
+	vertical-align: middle;
+	padding:30px;
+	border-radius: 50%;
+	border: 3px solid white;
+	font-size:40px;
+	
+	
+}
+#left{
+	float:left;
+	
+	
+	margin-left:250px;
+}
+#right{
+	float:right;
+	
+	
+	 margin-right:300px;
+}
