@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel = "stylesheet" href="css/Search.css">
+<script type = "text/javascript" src = "js/Script.js"></script>
+</head>
+<body>
+	<header>
+		<h1 id = "siteTitle">Car Dekho</h1>
+		<div id = "logo"><img src = "images/Logo1.png" alt = "Car Logo" /></div>
+		<div id = "login">
+		<a href = "login.html">Logout</a> /
+		<a href = "AdminSearch.html">Search</a> / 
+		<a href = "create.html">Create</a> /
+		<a href = "AdminSearch.html">Edit</a></div>
+		<div id = "socialMedia">
+			<ul>
+				<li class = "socialMediaLogo"><a href ="javascript:;"><img src = "images/facebook.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javascript:;"><img src = "images/twitter.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javascript:;"><img src = "images/linkedIn.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javascript:;"><img src = "images/googlePlus.png"/></a></li>
+			</ul>
+		</div>
+	</header>
+	<nav>	
+		<ul>
+			<li class = "navBar"><a href = "AdminHome.html">Home</a></li>
+			<li class = "navBar"><a href = "AdminAboutUs.html">About Us</a></li>
+			<li class = "navBar"><a href = "AdminContactUs.html">Contact Us</a></li>
+			<li class = "navBar"><a href = "AdminCareers.html">Careers</a></li>		
+		</ul>
+	</nav>
+	<div class = "section">
+		<div id = "create">
+			<form>
+				
+					
+					<table>
+					<caption>Create</caption>
+						<tr>
+							<td>Make : </td>
+							<td><input class = "text" type = "text" name = "make" id = "make" placeHolder = "Enter Make" required /></td>
+						</tr>  
+						<tr>
+							<td>Created By:  </td>
+							<td><input class = "text" type = "text" name = "createdBy" id = "createdBy" value = "Amit" disabled/></td>
+						</tr>
+						<tr>
+							<td>Model : </td>
+							<td><input class = "text" type = "text" name = "model" id = "model" placeHolder = "Enter Make" required/></td>
+						</tr>
+						<tr>
+							<td>Engine CC : </td>
+							<td><input class = "text" type = "number" name = "engineCC" id = "engineCC" placeHolder = "Enter Engine CC" min = "500" max = "5000"required/></td>
+						</tr>
+						<tr>
+							<td>Fuel Capacity : </td>
+							<td><input class = "text" type = "number" name = "fuelCapacity" id = "fuelCapacity" placeHolder = "Enter FuelCapacity" min = "40" max = "65"required/></td>
+						</tr>
+						<tr>
+							<td>Mileage : </td>
+							<td><input class = "text" type = "number" name = "mileage" id = "mileage" placeHolder = "Enter mileage" min = "5" max = "30"required/></td>
+						</tr>
+						<tr>
+							<td>Price : </td>
+							<td><input class = "text" type = "number" name = "price" id = "price" placeHolder = "Enter Price" min = "150000"required/></td>
+						</tr>
+						<tr>
+							<td>Road Tax(in %) : </td>
+							<td><input class = "text" type = "number" name = "raodTax" id = "roadTax" placeHolder = "Enter RoadTax in % of Price" min = "8" max = "20"required/></td>
+						</tr>
+						<tr>
+							<td colspan = "2" align = "center"><input class = "submit" type = "submit" name = "createCarSubmit" id = "createCarSubmit" value = "Create Car" formaction = "carCreated.html"/></td>
+						</tr>
+					</table>
+			
+			</form>
+		</div>
+		
+	</div>
+	<footer>
+		<p> &copy Copyright 2015. All Rights Reserved.</p>
+		<ul>
+			<li class = "navBar"><a href = "AdminHofme.html">Home</a></li>
+			<li class = "navBar"><a href = "AdminAboutUs.html">About Us</a></li>
+			<li class = "navBar"><a href = "AdminContactUs.html">Contact Us</a></li>
+			<li class = "navBar"><a href = "AdminCareers.html">Careers</a></li>		
+		</ul>
+	</footer>
+</body>
+</html>	
