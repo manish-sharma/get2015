@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/Script.js"></script>
+<link rel="stylesheet" href="css/Search.css">
+</head>
+<body onload = "searchScript1()" onload = "searchScript2()">
+	<header>
+		<h1 id = "siteTitle">Car Dekho</h1>
+		<div id = "logo"><img src = "images/Logo1.png" alt = "Car Logo" /></div>
+		<div id = "login">
+		<a href = "login.html">Login</a> /
+		<a href = "search.html">Search</a></div>
+		<div id = "socialMedia">
+			<ul>
+				<li class = "socialMediaLogo"><a href ="javaScript:;"><img src = "images/facebook.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javaScript:;"><img src = "images/twitter.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javaScript:;"><img src = "images/linkedIn.png"/></a></li>
+				<li class = "socialMediaLogo"><a href ="javaScript:;"><img src = "images/googlePlus.png"/></a></li>
+			</ul>
+		</div>
+	</header>
+	<nav>	
+		<ul>
+			<li class = "navBar"><a href = "index.html">Home</a></li>
+			<li class = "navBar"><a href = "aboutUs.html">About Us</a></li>
+			<li class = "navBar"><a href = "contactUs.html">Contact Us</a></li>
+			<li class = "navBar"><a href = "careers.html">Careers</a></li>		
+		</ul>
+	</nav>
+	<div class = "section">
+		<div id = "searchWindow">
+			<form>
+
+					<table cellspacing="15">
+					<caption style="font-size:40px">
+						FIND THE RIGHT CAR..<br>
+					</caption>
+					<tr>
+					<td><label id = "searchMake">Make :</label></td>
+					<td>
+						<select id = "firstList" name = "selectMake" class = "text" onchange = "selectModel1(this.value)">
+							<option value ="">- -  Select Make - -</option>		
+							<option value ="Hyundai">Hyundai</option>
+							<option value ="Porsche">Porsche</option>
+
+					</td>
+					<td><label id = "searchModel">Model :</label></td>
+					<td>
+						<select id = "secondList" name = "selectModel" class = "text">
+							<option value ="">- -  Select Model - -</option>
+					</td>
+					</tr>
+					<tr>
+						<td><input type = "radio" name = "searchCriteria" value = "model" checked onchange="searchScript1()"/>By Model</td>
+						<td><input type = "radio" name = "searchCriteria" value = "Budget" onchange="searchScript2()"/>By Budget</td>
+					</tr>
+					<tr>
+					<td colspan = "2" align = "center"><input class = "submit" id = "submitSearch" type = "submit" value = "Search" onclick = "validateSearch()" formaction = "searchResultUser.html" disabled/></td>
+					</tr>
+					</table>
+
+			</form>
+		</div>
+		
+	</div>
+	<footer>
+		<p> &copy Copyright 2015. All Rights Reserved.</p>
+		<ul>
+			<li class = "navBar"><a href = "index.html">Home</a></li>
+			<li class = "navBar"><a href = "aboutUs.html">About Us</a></li>
+			<li class = "navBar"><a href = "contactUs.html">Contact Us</a></li>
+			<li class = "navBar"><a href = "careers.html">Careers</a></li>		
+		</ul>
+	</footer>
+</body>
+</html>
