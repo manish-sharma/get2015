@@ -20,13 +20,13 @@ public class RegistrationForm extends HttpServlet {
 		boolean flag=true;
 		res.setContentType("text/html");
 		pw.println("This is servlet page.<br>");
-		if(req.getParameter("firstName") == "")
+		if(req.getParameter("firstName").trim() == "")
 		{
 			pw.println("First Name not entered<br>");
 			flag=false;
 		} 
 		
-		if(req.getParameter("lastName")== "") 
+		if(req.getParameter("lastName").trim()== "") 
 		{
 			pw.println("Last Name not entered<br>");
 		    flag=false;
@@ -38,28 +38,28 @@ public class RegistrationForm extends HttpServlet {
 		     flag=false;
 		}
 		
-		if(!req.getParameter("password").equalsIgnoreCase(req.getParameter("confirmPassword"))) 
+		if(!req.getParameter("password").equals(req.getParameter("confirmPassword"))) 
 		{  
 			pw.println("Password doesn't match<br>");
 			flag=false;
 		}
 		
-		if(req.getParameter("states")=="")
+		if(req.getParameter("states").trim()=="")
 		{ 
 			pw.println("State is not entered<br>");
 			flag=false;
 		}
-		if(req.getParameter("cities")=="") 
+		if(req.getParameter("cities").trim()=="") 
 		{ 
 			pw.println("Cities is not entered<br>");
 			flag=false;
 		}
-		if(req.getParameter("address")=="")
+		if(req.getParameter("address").trim()=="")
 		{
 			pw.println("Address is not entered<br>");
 			flag=false;
 		}
-	   if( req.getParameter("age")=="")
+	   if( req.getParameter("age").trim()=="")
 		{
 		   pw.println("Age is not entered<br>");
 		   flag=false;	
