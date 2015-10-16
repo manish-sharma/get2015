@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+		@CHARSET "ISO-8859-1";
+.container {
+	margin-left:20%;
+	width: 500px;
+	background-color: #ADD8E6;	
+}
+.header {
+	background-color:#B0C4DE;
+	width: 500px;
+	height: 60px;
+	text-align: center;
+	font-size: 45px;
+	font-weight: bold;
+	font-style: italic;
+}
+.content {
+	width: 430px;
+	height: 500px;
+	background-color:#D3D3D3;
+	padding-left: 14%;
+	font-size: large;
+	font-weight: bold;
+}
