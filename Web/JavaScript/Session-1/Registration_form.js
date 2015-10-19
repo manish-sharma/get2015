@@ -112,14 +112,18 @@ function setStates() {
   cntrySel = document.getElementById('State');
   if(cntrySel.value=='select State')
   {
+	  alert("aa");
+	  citySelect=document.getElementById("City");
+	  CitySelect.value="select State";
 	  
   }
   else
   {
 	   stateList = states[cntrySel.value];
+	   changeSelect('City', stateList);
   }
  
-  changeSelect('City', stateList);
+  
   
 }
 
