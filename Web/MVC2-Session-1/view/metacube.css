@@ -226,6 +226,18 @@ header {
 	border-width:0px 0px 0px 0px;
 }
 
+#detailtable {
+	border:solid;
+	margin-left:30%;
+	width:40%;
+}
+#detailtable tr{
+	height:30px;
+}
+#detailh2{
+	margin-left:33%;
+}
+
 footer {
     height: 30px;
     background-color:#36b0b6;

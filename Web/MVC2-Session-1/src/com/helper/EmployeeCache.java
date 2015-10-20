@@ -1,7 +1,9 @@
-package com.model;
+package com.helper;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import com.model.Employee;
 
 public class EmployeeCache {
    private static boolean flag = true;
