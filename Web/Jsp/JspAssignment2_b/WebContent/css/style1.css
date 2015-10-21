@@ -1,0 +1,78 @@
+/* assigns formatting to body */
+body {
+	margin:0 auto;
+	width:700px;
+	background:#FFF;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+}
+
+/* assigns formatting to all input tags */
+input {
+	border-radius:5px;
+	border:1px solid black;
+}
+
+/* assigns formatting to header */
+header {
+	margin-top:150px;
+	background: #D8F1DD;
+	height: 65px;
+	padding-left: 50px;
+	padding-bottom: 25px;
+	color: teal;
+	font-family: sans-serif;
+	//font-size: 30px;
+	font-weight: bold;
+	border: #5F8C8E solid 2px;
+}
+
+/* assigns formatting to section */
+section {
+	background-color: #DCE2DD;
+	height:400px;
+}
+
+/* assigns formatting to td of table */
+table td {
+	width:200px;
+}
+
+/* assigns formatting to checkbox */
+#acceptCondition {
+	margin-left:-245px;
+}
+
+/* assigns formatting to address fiels's label */
+#addrLine {
+	vertical-align: top;
+}
+
+/* assigns formatting to submit button */
+#submitButton {
+	width: 100px;
+	height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/* assigns formatting to footer */
+footer {
+	background:rgba(234, 253, 208, 0.98);
+	text-align:center;
+	padding-top: 25px;
+	height: 80px;
+} 
+
+/* assigns formatting to dropdown */
+select {
+	width: 170px;
+	height: 22px;
+	border-radius: 5px;
+}
+
+/* assigns formatting to * written in span */
+span {
+	color:red;
+}
