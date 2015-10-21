@@ -1,8 +1,0 @@
-create database RegistrationForm;
-use RegistrationForm;
-CREATE TABLE log_in(
-userName VARCHAR (50),
-id VARCHAR(50) NOT NULL,
-password VARCHAR(50),
-PRIMARY KEY(userName));
-show tables;
