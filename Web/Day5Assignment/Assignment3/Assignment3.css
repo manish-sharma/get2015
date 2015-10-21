@@ -1,0 +1,22 @@
+
+
+@keyframes movement {
+    0%   {background-color: #ff7979; left:0px; top:0px;border:4px solid gray;}
+    35%  {background-color: #F7EF83; left:1400px; top:0px;border:4px solid orange;}
+    70%  {background-color:#8CD1FC; left:700px; top:550px;border:4px solid black;}
+    100%  {background-color:#A5FFA9; left:0px; top:0px;border:4px solid gray;}
+   
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: red;
+    animation-name: movement;
+    animation-iteration-count:3;
+    animation-duration: 4s;
+     
+}
+	
+	
