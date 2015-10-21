@@ -1,4 +1,4 @@
-package com.Controller;
+package com.controller;
 
 import java.io.IOException;
 
@@ -9,19 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.helper.EmployeeCache;
-
 /**
- * Servlet implementation class EditEmployee
+ * Servlet implementation class Home
  */
-@WebServlet("/EditEmployee")
-public class EditEmployee extends HttpServlet {
+@WebServlet("/Register")
+public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditEmployee() {
+    public Register() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,11 +28,7 @@ public class EditEmployee extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
-		EmployeeCache employeeCache = EmployeeCache.getInstance();
-		RequestDispatcher requestDispatcher;
-		requestDispatcher = request.getRequestDispatcher("edit-employee-info.jsp");
-		request.setAttribute("employee", employeeCache.getEmployeeForId(id));
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("register.jsp");
 		requestDispatcher.forward(request, response);
 	}
 
