@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: #CBE8F0;
+}
+
+h2 {
+	margin-left: 45%;
+}
+
+#login {
+	background-color: #e9e4e8;
+	border: 2px solid black;
+	width: 40%;
+	height: 40%;
+	position: absolute;
+	left: 30%;
+	border-radius: 20px;
+}
+
+#lable {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 5%;
+	margin-top: :5%
+}
+
+#login input[type=text] {
+	background-color: white;
+	margin-left: 20%;
+	margin-top: 5%;
+}
