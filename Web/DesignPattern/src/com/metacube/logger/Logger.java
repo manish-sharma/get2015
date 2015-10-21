@@ -8,14 +8,23 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
+/**
+ * @author Ravika
+ * @since 10/21/2015
+ * /
 public class Logger {
 
 	private static Logger logger = null;
 	private static String logFile = null; 
+	/**
+	 * to make the private to constructor
 	private Logger() {
 	}
 	
+	/**
+	 * to make logger class singleton
+	 * 
+	 * /
 	public static Logger getLogger() {
 		if(logger == null) {
 			synchronized (Logger.class) {
@@ -27,16 +36,21 @@ public class Logger {
 		return logger;
 	}
 	
+	/**
+	 * to get the file name in which the logs will be aadded
+	 * @param cal : to get the time
+	 * /
 	private static String getFileName(Calendar cal) {
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd-MMM-yyyy");
 		String dateString = dateFormat1.format(cal.getTime());
 		logFile = "ExceptionLog-" + dateString + ".log";
 		return logFile;
 	}
-
-
 	
-
+	/**
+	*to add log in the file
+	* @param printStackTrace : to print the exception
+	*/
 	public void log(Object printStackTrace) {
 		try {
 			Calendar cal = Calendar.getInstance() ;
