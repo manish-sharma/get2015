@@ -9,11 +9,11 @@
 		<script type="text/javascript" src="../js/js1.js"></script>
 	</head>
 	<body>
-		<header><h2>Registration</h2></header>
+		<header><h2>Login</h2></header>
   		<section>
 		<center>
   			<br/><br/>
-			<form action="../Registration" name="myform">
+			<form action="../Login" name="myform">
 				<table>
 					<tr>
 						<td><span>*</span> Username : </td>
@@ -24,7 +24,7 @@
 						<td><input type="password" placeholder="Enter password" id="passwd" name="password"/></td>
 					</tr>
 				</table>
-				<input id="submitButton" type="submit" value="Create" onsubmit="validate();" />
+				<input id="submitButton" type="submit" value="Create" disabled onsubmit="validate();" />
 			</form>
 			</center>
   		</section>

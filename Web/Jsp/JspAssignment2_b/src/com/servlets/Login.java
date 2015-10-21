@@ -19,30 +19,25 @@ import java.sql.*;
 /**
  * Servlet implementation class Registration
  */
-@WebServlet("/Registration")
-public class Registration extends HttpServlet {
+@WebServlet("/Login")
+public class Login extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		 Connection con = null;
+		Connection con = null;
 	        Statement stmt = null;
 	        ResultSet rs = null;
 	        ConnectionUtil conUtil = new ConnectionUtil();
 	        RequestDispatcher rd = null;
 	        con = conUtil.getConnection();
-	        int rowCount = 0;
 	        String username = request.getParameter("username");
 	        String password = request.getParameter("passwd");
 	        String query = "SELECT username, password FROM Register WHERE username = '" + username + "' AND password = '" + password + "'";
 	        try {
 	            stmt = con.createStatement();
-	            rs = stmt.executeQuery(query);
-	            while (rs.next()) {
-	                ++rowCount;
-	            }
-	            if (rowCount > 0) {
+	            if(stmt.executeQuery(Query)) {
 					request.setAttribute("Message", "User Successfully logged in");
 					rd=request.getRequestDispatcher("/view/Success.jsp");
 					rd.forward(request, response);
