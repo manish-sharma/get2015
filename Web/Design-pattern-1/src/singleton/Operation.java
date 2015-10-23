@@ -3,6 +3,8 @@
  */
 package singleton;
 
+import java.io.FileWriter;
+
 /**
  * @author Suman
  *
@@ -14,7 +16,10 @@ public class Operation {
 			int quotient = dividend / divisor;
 			System.out.print("dividend/divisor = " + quotient);
 		} catch (Exception ex) {
-			SinglentonLog.getInstance(ex.getMessage());
+			Logger logger = Logger.getInstance();
+			logger.insertIntoLogger(ex.getMessage());
+			System.out.println(ex.getMessage());
+			
 		}
 	}
 }
