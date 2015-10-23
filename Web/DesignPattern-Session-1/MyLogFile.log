@@ -1,0 +1,4 @@
+Oct 23, 2015 12:49:16 PM session1.assignment1.Singleton logException
+INFO: My first log
+Oct 23, 2015 12:49:16 PM session1.assignment1.Singleton logException
+INFO: Throws a ArithmeticException / by zero
