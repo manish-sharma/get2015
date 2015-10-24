@@ -1,0 +1,25 @@
+              Different design patterns in Java Framework:-
+  
+  1. Abstract Factory		:	Creates an instance of several families of classes
+  2. Builder	        	:	Separates object construction from its representation
+  4. Factory Method	    	:	Creates an instance of several derived classes
+  5. Prototype	        	:	A fully initialized instance to be copied or cloned
+  6. Singleton	        	:	A class of which only a single instance can exist
+  7. Adapter	        	:	Match interfaces of different classes
+  8. Bridge	            	:	Separates an object’s interface from its implementation
+  9. Composite	        	:	A tree structure of simple and composite objects
+  10. Decorator	        	:	Add responsibilities to objects dynamically
+  11. Facade	        	:	A single class that represents an entire subsystem
+  12. Flyweight     		:	A fine-grained instance used for efficient sharing
+  13. Proxy	            	:	An object representing another object
+  14. Chain of Responsibility:	A way of passing a request between a chain of objects
+  15. Command	        	:	Encapsulate a command request as an object
+  16. Interpreter	    	:	A way to include language elements in a program
+  17. Iterator	       		:   Sequentially access the elements of a collection
+  18. Mediator	        	:	Defines simplified communication between classes
+  19. Memento	        	:	Capture and restore an object's internal state
+  20. Observer	        	:	A way of notifying change to a number of classes
+  21. State	          		:    Alter an object's behavior when its state changes
+  22. Strategy	      		:    Encapsulates an algorithm inside a class
+  23. Template Method		:    Defer the exact steps of an algorithm to a subclass
+  24. Visitor	  		    :    Defines a new operation to a class without change
