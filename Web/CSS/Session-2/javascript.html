@@ -1,0 +1,57 @@
+<html>
+<body>
+<script type="text/javascript">
+function myFunction()
+{
+var x = document.getElementById("box").value;
+if(x=="")
+{
+alert("please fill the name");
+}
+var pass=document.getElementById("password").value;
+var len=pass.length;
+if(len <8)
+{
+alert("please fill the password mimimum of eight character");
+
+}
+var Rpass=document.getElementById("Rpassword").value;
+if(pass!=Rpass)
+{
+alert("Both password must be same");
+
+}
+
+}
+</script>
+
+
+<table style="margin:100px; "cellpadding=10px cellspacing=10px;>
+	<tr>
+	<td> FirstName </td>
+	<td><input type="text" id="FName"/></td>
+	</tr>
+	
+	<tr>
+	<td> LastName </td>
+	<td><input type="text" id="LName"/></td>
+	</tr>
+	
+	
+	
+	<tr>
+	<td>Password</td>
+	<td><input type="password" id="password"/></td>
+	
+	</tr>
+	<tr>
+	<td>Retype Password</td>
+	<td><input type="password" id="Rpassword"/></td>
+	</tr>
+
+
+</table>
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>
