@@ -1,0 +1,5 @@
+package com.metacube.webservices;
+
+public class HelloWorld {
+
+}

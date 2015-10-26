@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login</title>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	<header>
+		<span class="brand"><a href="index.html">yourFirstVehicle</a></span>
+		<form method="post" class="searchForm">
+			<input type="text" placeholder="Enter Model Name" name="model">
+			<input src="./images/search.png" type="image">
+		</form>
+		<a href = "#" onClick="showLogin()">Login</a>
+		<a href = "#" onClick="showSignup()">Sign Up</a>
+	</header>
+	<div class = "signupBackground" id="signupBackground" >
+		<div id="form">
+			<table>
+				<form action="insertvehicle.jsp" method="post">
+				<legend><h2>Signup</h3></legend><hr>
+					<tr>
+						<td>Enter Name:</td> <td><input type="text" name="name" placeholder="Enter Full Name" required></td>
+					</tr>
+					<tr>
+						<td>Enter Password</td><td><input type="password" name="password" placeholder ="Enter Password" required></td>
+					</tr>
+					<tr>
+						<td>Confirm Password</td><td><input type="password" name="cpassword" placeholder ="Confirm Password" required></td>
+					</tr><tr>
+						<td>Email</td><td><input type="email" name="email" placeholder ="Enter Email" required></td>
+					</tr><tr>
+						<td>Phone Number</td><td><input type="number" name="pNumber" placeholder ="Primary Phone Number" required></td>
+					</tr>
+					<tr>
+						<td> <input type="submit" value="Signup"></td>
+						<td> <input type="button" value="Close"onclick="hide()"></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+	</div>
+	<div class = "loginBackground" id="loginBackground" >
+		<div id="form">
+			<table>
+				<form action="console.html" method="post">
+				<legend><h2>Login</h3></legend><hr>
+					<tr>
+						<td>Enter Email:</td> <td><input type="text" name="email" placeholder="Enter Email Id" required></td>
+					</tr>
+					<tr>
+						<td>Enter Password</td><td><input type="password" name="password" placeholder ="Enter Password" required></td>
+					</tr>
+					<tr>
+						<td> <input type="submit" value="Login"></td>
+						<td> <input type="button" value="Close"onclick="hide()"></td>
+					</tr>
+				</form>
+			</table>
+		</div>
+	</div>
+	<article id="mainArticle">
+		<span class="articleMain">Going to buy vehicle?</span><br>
+		<span class= "articleContent">We understand that your vehicle is very important thing 
+		for you<br> that's we are here to provide you the best
+		</span>		
+		<a href="#">How It Works?</a>
+	</article>
+	<footer>
+			Copyright (c)  <a href="http://www.metacube.com">Metacube Software Pvt. Ltd.</a> From 2015 - 20xx <br>
+			Design & Developed By <a href="#">Dheeraj Kumar </a>
+	</footer>
+</body>
+<script src="./js/script.js"></script>
+</html>
+

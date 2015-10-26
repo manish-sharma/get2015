@@ -1,0 +1,18 @@
+<%@page import="com.db.ConnectionFactory"%>
+<%@page import="com.db.helper.VehicleDBHelper"%>
+<%@page import="java.sql.Connection" %>>
+<html>
+	<head>
+		<title>get and set properties Example</title>
+	</head>
+	<body>
+	<jsp:useBean id="car" class="com.model.Car" scope="page">
+		<jsp:setProperty name="car" property="*"/>
+	</jsp:useBean>
+	<%
+		VehicleDBHelper vehicleDBHelper = new VehicleDBHelper();
+		Connection connection =ConnectionFactory.getConnection();
+		Boolean isInserted = vehicleDBHelper.create(connection ,car);
+	%>
+	</body>
+</html>

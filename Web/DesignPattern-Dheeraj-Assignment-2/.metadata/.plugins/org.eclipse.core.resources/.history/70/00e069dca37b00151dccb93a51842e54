@@ -1,0 +1,87 @@
+package com.db.helper;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.MetaHRMSystemException;
+import com.db.ConnectionFactory;
+import com.model.Car;
+
+
+
+
+
+public class CarDBHelper extends VehicleDBHelper {
+	
+	private static String INSERT_CAR_QUERY = "INSERT INTO car( has_ac, has_power_steering, has_accessory_kit  ) VALUES(?,?,?)";
+	
+	//private static String SELECT_FOR_EMAIL_ID_QUERY = "Select EMP.ID EMPLOYEE_ID, EMP.FIRST_NAME FIRST_NAME, EMP.LAST_NAME LAST_NAME, EMP.SALARY SALARY, "
+		//											+ " SP.ID ID, SP.BONUS_PER_CLIENT BONUS_PER_CLIENT, SP.CREATED_BY CREATED_BY, SP.CREATED_TIME CREATED_TIME "
+			//										+ " from SALES_PERSON SP INNER JOIN  EMPLOYEE EMP ON SP.EMPLOYEE_ID =  EMP.ID where EMP.EMAIL_ID=?";
+	
+	
+	public boolean create(Car car) throws MetaHRMSystemException  {
+		boolean created = false;
+		int flag=0;
+		Connection connection = ConnectionFactory.getConnection();
+		if(connection != null) {
+			PreparedStatement preparedStatement = null;
+			try {
+				super.create(connection, car);
+				//int employeeId = getEmployeeIdByEmail(connection, car.getEmail());
+				//if(employeeId > 0) {
+					preparedStatement = connection.prepareStatement(INSERT_CAR_QUERY);
+					String input =car.getHasAC().toString();
+					if(input.equalsIgnoreCase("yes"))
+						flag=1;
+					preparedStatement.setInt(1, flag);
+					flag=0;
+					input = car.getHaspowerSteering().toString();
+					if(input.equalsIgnoreCase("yes"))
+						flag=1;
+					preparedStatement.setInt(2, flag);
+					flag=0;
+					input = car.getHasaccessoryKit().toString();
+					if(input.equalsIgnoreCase("yes"))
+						flag=1;
+					preparedStatement.setInt(3, flag);
+					created=preparedStatement.execute();
+					connection.commit();
+				//}
+			} catch(MetaHRMSystemException e) {
+				try {
+					connection.rollback();
+				} catch (SQLException e1) {
+					System.out.println("Could not roleback.");
+				}
+				throw e;
+			} catch (SQLException e) {
+				try {
+					connection.rollback();
+				} catch (SQLException e1) {
+					System.out.println("Could not roleback.");
+				}
+				throw new MetaHRMSystemException("Could not create SalesPerson, [" + e.getMessage() + "]");
+			} finally {
+				if(preparedStatement != null) {
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						System.out.println("Could not close prepared statement, [" + e.getMessage() + "]");
+					}
+				}
+				ConnectionFactory.closeConnection(connection);
+			}
+		}
+		
+		return created;
+	}
+	
+//	public Car getSalesPersonByEmailId(Car salesPerson) {
+//		Car returnValue = null;
+//		
+//		return returnValue;
+//	}
+	
+}

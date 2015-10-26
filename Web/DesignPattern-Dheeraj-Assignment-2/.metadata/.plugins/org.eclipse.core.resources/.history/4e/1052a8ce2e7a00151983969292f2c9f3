@@ -1,0 +1,26 @@
+<%@page import="com.model.Car"%>
+<%@page import="java.lang.reflect.Field"%>
+<%@page import="com.db.helper.CarDBHelper"%>
+<%@page import="java.sql.Connection" %>>
+<html>
+	<head>
+		<title>get and set properties Example</title>
+	</head>
+	<body>
+	<jsp:useBean id="car" class="com.model.Car" scope="page">
+		<jsp:setProperty name="car" property="*"/>
+	</jsp:useBean>
+	<%
+		for(Field field : Car.class.getField(name))
+		{
+			
+		}
+		CarDBHelper carDBHelper = new CarDBHelper(); 
+		Boolean isInserted = carDBHelper.create(car);
+		if(isInserted)
+			out.print("successfully inserted");
+		else
+			out.print("not inserted");
+	%>
+	</body>
+</html>

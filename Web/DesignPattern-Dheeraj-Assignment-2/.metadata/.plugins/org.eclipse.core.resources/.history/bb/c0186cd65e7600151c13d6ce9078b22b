@@ -1,0 +1,12 @@
+package com.mypac;
+
+public class Demo {
+	
+	
+	public static void main ()
+	{
+		int data;
+		System.out.println(((Object) data).getClass().getName());;
+	}
+
+}

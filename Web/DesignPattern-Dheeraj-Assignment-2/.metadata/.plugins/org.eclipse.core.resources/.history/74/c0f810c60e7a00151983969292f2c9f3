@@ -1,0 +1,12 @@
+package com.db.helper;
+
+import lombok.Data;
+
+@Data
+public class ConnectionAttributes {
+	
+	private final static String url ="jdbc:mysql://localhost/metahrm";
+	private final String driver="com.mysql.jdbc.Driver";
+	private final static String username="mysql";
+	private final static String password="mysql";
+}

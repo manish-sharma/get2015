@@ -1,0 +1,18 @@
+package ProjectCompany.Factory;
+
+import ProjectCompany.Model.Developer;
+import ProjectCompany.Model.Engineer;
+import ProjectCompany.Model.EngineerType;
+
+public class DeveloperFactory extends Developer{
+
+	protected DeveloperFactory() {
+	}
+	
+	protected DeveloperFactory(String name , EngineerType type) {
+		super(name , type);
+	}
+
+	
+
+}

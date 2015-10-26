@@ -1,0 +1,19 @@
+package com.model;
+
+import lombok.Data;
+
+@Data
+public class Car extends Vehicle
+{
+	private IsAvailable hasAC;  /*IsAvailable is a enum define yes or no*/
+	private IsAvailable haspowerSteering;
+	private IsAvailable hasaccessoryKit;
+
+
+	@Override
+	public double calculateOnRoadPrice() {
+		return super.calculateOnRoadPrice() + 2000;
+	}
+	
+	
+}

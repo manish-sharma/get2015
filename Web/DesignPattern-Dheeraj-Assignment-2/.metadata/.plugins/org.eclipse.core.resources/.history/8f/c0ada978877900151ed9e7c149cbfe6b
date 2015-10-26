@@ -1,0 +1,73 @@
+package com.metahrm.db.helper;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+import com.metahrm.MetaHRMSystemException;
+import com.metahrm.db.ConnectionFactory;
+import com.metahrm.model.SalesPerson;
+
+public class SalesPersonDBHelper extends EmployeeDBHelper {
+	
+	private static String INSERT_SALES_PERSON_QUERY = "insert into SALES_PERSON (EMPLOYEE_ID, BONUS_PER_CLIENT, CREATED_BY, CREATED_TIME) VALUES (?, ?, ?, ?)";
+	
+	private static String SELECT_FOR_EMAIL_ID_QUERY = "Select EMP.ID EMPLOYEE_ID, EMP.FIRST_NAME FIRST_NAME, EMP.LAST_NAME LAST_NAME, EMP.SALARY SALARY, "
+													+ " SP.ID ID, SP.BONUS_PER_CLIENT BONUS_PER_CLIENT, SP.CREATED_BY CREATED_BY, SP.CREATED_TIME CREATED_TIME "
+													+ " from SALES_PERSON SP INNER JOIN  EMPLOYEE EMP ON SP.EMPLOYEE_ID =  EMP.ID where EMP.EMAIL_ID=?";
+	
+	
+	public boolean create(SalesPerson salesPerson)  {
+		boolean created = false;
+		Connection connection = ConnectionFactory.getConnection();
+		if(connection != null) {
+			PreparedStatement preparedStatement = null;
+			try {
+				super.create(connection, salesPerson);
+				int employeeId = getEmployeeIdByEmail(connection, salesPerson.getEmail());
+				if(employeeId > 0) {
+					preparedStatement = connection.prepareStatement(INSERT_SALES_PERSON_QUERY);
+					preparedStatement.setInt(1, employeeId);
+					preparedStatement.setInt(2, salesPerson.getBonusPerClient());
+					preparedStatement.setString(3, salesPerson.getCreatedBy());
+					preparedStatement.setTimestamp(4, new Timestamp(salesPerson.getCreatedTime().getTime()));
+					created = preparedStatement.execute();
+					connection.commit();
+				}
+			} catch(MetaHRMSystemException e) {
+				try {
+					connection.rollback();
+				} catch (SQLException e1) {
+					System.out.println("Could not roleback.");
+				}
+				throw e;
+			} catch (SQLException e) {
+				try {
+					connection.rollback();
+				} catch (SQLException e1) {
+					System.out.println("Could not roleback.");
+				}
+				throw new MetaHRMSystemException("Could not create SalesPerson, [" + e.getMessage() + "]");
+			} finally {
+				if(preparedStatement != null) {
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						System.out.println("Could not close prepared statement, [" + e.getMessage() + "]");
+					}
+				}
+				ConnectionFactory.closeConnection(connection);
+			}
+		}
+		
+		return created;
+	}
+	
+	public SalesPerson getSalesPersonByEmailId(SalesPerson salesPerson) {
+		SalesPerson returnValue = null;
+		
+		return returnValue;
+	}
+	
+}

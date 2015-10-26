@@ -1,0 +1,9 @@
+package model;
+
+public class Bike extends Vehicle {
+
+	private IsAvailable isSelfStart; /* IsAvailable is a enum define yes or no */
+	private int helmetPrice;
+
+	
+}

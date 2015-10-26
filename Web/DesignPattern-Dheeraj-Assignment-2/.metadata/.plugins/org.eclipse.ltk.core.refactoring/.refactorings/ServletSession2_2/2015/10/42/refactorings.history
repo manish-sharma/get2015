@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ServletSession2_2/src/com/servlets/Registration.java&apos; to &apos;Signin.java&apos;" description="Rename resource &apos;Registration.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/servlets/Registration.java" name="Signin.java" stamp="1444819274584" updateReferences="true"/>
+</session>

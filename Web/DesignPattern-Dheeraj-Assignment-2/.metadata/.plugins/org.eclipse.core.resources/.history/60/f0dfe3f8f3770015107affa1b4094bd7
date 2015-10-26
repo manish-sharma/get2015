@@ -1,0 +1,11 @@
+package ProjectCompany.Factory;
+
+import ProjectCompany.Model.Engineer;
+import ProjectCompany.Model.EngineerType;
+
+
+
+public interface EngineerFactory {
+	
+	public Engineer createEngineerFactory(String name ,EngineerType type);
+}

@@ -1,0 +1,9 @@
+package com.metacube;
+
+public class WSClient {
+	
+	public static void main (String args[]) {
+		
+	}
+
+}

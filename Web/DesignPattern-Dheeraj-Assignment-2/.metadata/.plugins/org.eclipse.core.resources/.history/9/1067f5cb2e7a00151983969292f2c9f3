@@ -1,0 +1,20 @@
+<%@page import="com.db.helper.CarDBHelper"%>
+<%@page import="java.sql.Connection" %>>
+<html>
+	<head>
+		<title>get and set properties Example</title>
+	</head>
+	<body>
+	<jsp:useBean id="car" class="com.model.Car" scope="page">
+		<jsp:setProperty name="car" property="*"/>
+	</jsp:useBean>
+	<%
+		CarDBHelper carDBHelper = new CarDBHelper(); 
+		Boolean isInserted = carDBHelper.create(car);
+		if(isInserted)
+			out.print("successfully inserted");
+		else
+			out.print("not inserted");
+	%>
+	</body>
+</html>

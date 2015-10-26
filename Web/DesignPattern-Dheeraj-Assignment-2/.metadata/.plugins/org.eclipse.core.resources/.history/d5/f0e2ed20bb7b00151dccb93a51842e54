@@ -1,0 +1,55 @@
+package com.metacube;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.metacube.webservices.HelloWorld;
+import com.metacube.webservices.HelloWorldServiceLocator;
+
+public class WSClient {
+	
+	public static void main (String args[]) {
+		HelloWorldServiceLocator helloWorldServiceLocator = new HelloWorldServiceLocator();
+		System.out.println("Enter 1 for Fahrenheit to celsius and 2 for  celsius to Fahrenheit Converter");
+		int data = readInt(1,2);
+		
+		helloWorldServiceLocator.setHelloWorldEndpointAddress("http://localhost:8080/SimpleSOAPExample/services/HelloWorld");
+		try {
+		HelloWorld helloWorld= helloWorldServiceLocator.getHelloWorld();
+		String output = helloWorld.sayHelloWorld("Dheeraj");
+			System.out.println(output);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	private static int readInt (int min , int max) {
+		int data =0;
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		do {
+			try {
+			data = Integer.parseInt(bufferedReader.readLine().trim());
+			}
+			catch (NumberFormatException nf) {
+				System.out.println("Please enter numbers");
+				continue;
+			}
+			catch(IOException io) {
+				System.out.println("Error Occrued please enter input again");
+				continue;
+			}
+			if(data<min||data>max){
+				System.out.println("please enter valid input");
+				continue;
+			}
+			break;
+		}while(true);
+		return data;
+	}
+}
+
+

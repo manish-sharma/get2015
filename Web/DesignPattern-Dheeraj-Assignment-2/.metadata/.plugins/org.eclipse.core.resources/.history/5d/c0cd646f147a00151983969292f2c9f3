@@ -1,0 +1,17 @@
+package com.model;
+
+import lombok.Data;
+
+@Data
+public abstract class Vehicle extends BaseModel {
+	
+	protected int makeYear;
+	protected String  model;
+	protected int  engineInCC;
+	protected int fuelCapacity;
+	protected double milage;
+	protected double price;
+	protected double roadTax;
+
+
+}

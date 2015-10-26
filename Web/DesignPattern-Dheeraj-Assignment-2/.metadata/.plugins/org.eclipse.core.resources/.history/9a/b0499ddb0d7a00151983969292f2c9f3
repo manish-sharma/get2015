@@ -1,0 +1,12 @@
+package db.helper;
+
+import lombok.Data;
+
+@Data
+public class ConnectionAttributes {
+	
+	private String url;
+	private String driver;
+	private String username;
+	private String password;
+}

@@ -1,0 +1,14 @@
+package com.metacube;
+
+import com.metacube.webservices.HelloWorldServiceLocator;
+
+public class WSClient {
+	
+	public static void main (String args[]) {
+		HelloWorldServiceLocator helloWorldServiceLocator = new HelloWorldServiceLocator();
+		helloWorldServiceLocator.setCalculatorWSEndpointAddress("http://localhost:8080/CalculatorWebService/services/CalculatorWS");
+
+		
+	}
+
+}

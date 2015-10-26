@@ -1,0 +1,69 @@
+package com.db.helper;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+import com.MetaHRMSystemException;
+import com.model.Vehicle;
+
+
+public class EmployeeDBHelper {
+	
+	private static String INSERT_VEHICLE_QUERY = "INSERT INTO vehicle (make_year, modal, engine_in_cc, fuel_capacity, milage, price, road_tax, created_by ,created_time ,vehicle_type )" 
+    		+ "values(?,?,?,?,?,?,?,?,?,?)";
+	
+	//private static String SELECT_FOR_EMAIL_ID_QUERY = "select id from EMPLOYEE where EMAIL_ID=?";
+	
+	protected void create(Connection connection, Vehicle vehicle) throws MetaHRMSystemException {
+		PreparedStatement preparedStatement = null;
+		try {
+			preparedStatement = connection.prepareStatement(INSERT_VEHICLE_QUERY);
+			preparedStatement.setString(1, vehicle.getMakeYear());
+			preparedStatement.setString(2, vehicle.getModel());
+			preparedStatement.setInt(3, vehicle.getEngineInCC());
+			preparedStatement.setInt(4, vehicle.getFuelCapacity());
+			preparedStatement.setDouble(5, vehicle.getMilage());
+			preparedStatement.setDouble(6, vehicle.getPrice());
+			preparedStatement.setDouble(7, vehicle.getRoadTax());
+			preparedStatement.setString(8, vehicle.getCreatedBy());
+			preparedStatement.setTimestamp(9,  new Timestamp(vehicle.getCreatedTime().getTime()));
+			preparedStatement.setInt(10, 1);
+			preparedStatement.execute();
+		} catch (SQLException e) {
+			throw new MetaHRMSystemException("Could not create Employee, [" + e.getMessage() + "]");
+		} finally {
+			if(preparedStatement != null) {
+				try {
+					preparedStatement.close();
+				} catch (SQLException e) {
+					System.out.println("Could not close prepared statement, [" + e.getMessage() + "]");
+				}
+			}
+		}
+	}
+	
+	
+//	protected int getEmployeeIdByEmail(Connection connection, String emailId) throws MetaHRMSystemException {
+//		int id = -1;
+//		if(connection != null) {
+//			PreparedStatement preparedStatement = null;
+//			ResultSet resultSet = null;
+//			try {
+//				//preparedStatement = connection.prepareStatement(SELECT_FOR_EMAIL_ID_QUERY);
+//				preparedStatement.setString(1, emailId);
+//				resultSet = preparedStatement.executeQuery();
+//				while(resultSet.next()) {
+//					id = resultSet.getInt(1);
+//				}
+//			} catch(SQLException e) {
+//				throw new MetaHRMSystemException("Could not find Employee by email id, [" + e.getMessage() + "]");
+//			}
+//		}
+//		return id;
+//	}
+	
+
+}

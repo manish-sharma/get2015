@@ -1,0 +1,23 @@
+package com.metacube;
+
+import com.metacube.webservices.HelloWorld;
+import com.metacube.webservices.HelloWorldServiceLocator;
+
+public class WSClient {
+	
+	public static void main (String args[]) {
+		HelloWorldServiceLocator helloWorldServiceLocator = new HelloWorldServiceLocator();
+		helloWorldServiceLocator.setHelloWorldEndpointAddress("http://localhost:8080/SimpleSOAPExample/services/HelloWorld");
+		try {
+		HelloWorld helloWorld= helloWorldServiceLocator.getHelloWorld();
+			
+			System.out.println(calcCTCWebService.addition(1, 2));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+	}
+
+}

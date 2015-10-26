@@ -1,0 +1,13 @@
+package ProjectCompany.Factory;
+
+import ProjectCompany.Model.Engineer;
+import ProjectCompany.Model.EngineerType;
+
+
+
+public abstract class EngineerFactory {
+	
+	public abstract Engineer createEngineer(String name ,EngineerType type);
+	
+	
+}
