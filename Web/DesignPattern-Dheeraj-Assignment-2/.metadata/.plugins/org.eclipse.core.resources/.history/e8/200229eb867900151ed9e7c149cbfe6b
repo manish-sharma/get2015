@@ -1,9 +1,0 @@
-package db.helper;
-
-public class MetaHRMSystemException extends Exception {
-
-	public MetaHRMSystemException(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-}

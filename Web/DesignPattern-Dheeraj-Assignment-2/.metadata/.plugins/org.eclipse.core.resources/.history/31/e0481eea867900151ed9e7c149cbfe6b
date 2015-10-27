@@ -1,5 +1,0 @@
-package db.helper;
-
-public class MetaHRMSystemException extends Exception {
-
-}

@@ -1,2 +1,0 @@
-<jsp:useBean id="car" class="com.model.Car" scope="page"/>
-<jsp:setProperty name="car" property="*"/>
