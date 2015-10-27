@@ -1,0 +1,83 @@
+@CHARSET "ISO-8859-1";
+body{
+	width:100%;
+	height:100%;
+	background-color: #a2bbba;
+}
+#header{
+	width:100%;
+	height:3%;
+	border:3px solid black;
+	background-color:white;
+}
+div.MVC{
+    width: 100%;
+    height: 100px;
+  
+ }
+
+h1,h2,h3,h4,h5,h6{
+	margin-left:10px;
+	margin-top:5px;
+}
+#head{
+	width:100%;
+	height:50px;
+	background-color:#DCCCCC;
+	border:3px solid black;
+}
+ul  li{
+	width:3%;
+	height:20px;
+	display:inline;
+	border:1px solid black;
+	margin:0px 10px;
+	padding:1%;
+	background-color:#D8D8D8;
+	text-align:center;
+}
+ul li :HOVER{
+	border:1px solid black;
+	padding:1%;
+	background-color:white;
+	-webkit-transform: scale(1,10);
+}
+article{
+	height:70%px;
+	border: 5px solid black;
+}
+aside{
+	width:70%;
+	height:1650px;
+	margin-top:2%;
+	margin-left:15%;
+	padding:3%;
+	background-color:white;
+	border:1px solid black;
+	font-size:18px;
+}
+#maincontainer{
+	width:95%;
+	height:80%;
+	margin:10px;
+	border:0px solid black;
+}
+#table1{
+	border:2px solid black;
+	margin:auto ;
+}
+#table1 tr td{
+	width : 15%;
+	color : red;
+	height : 10%;
+	font-size : 2em;
+	border-left:1px solid black;
+	border-bottom : 1px solid black;
+	text-align : center;
+	padding:2px;
+}
+#table1 tr td input{
+	font-size :20px;
+	height: 30px;
+	color : red;
+	}
