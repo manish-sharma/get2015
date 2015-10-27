@@ -8,7 +8,7 @@ name varchar(30),
 email varchar(100) UNIQUE KEY
 );
 SELECT * FROM login;
-INSERT INTO login VALUES("parul","1","Parul Joshi", "parul.joshi@metacube.com");
+INSERT INTO login VALUES("Amit","1","Amit Natani", "amit.natani@metacube.com");
 
 CREATE TABLE Vehicle (
     id INTEGER UNSIGNED NOT NULL auto_increment PRIMARY KEY,
