@@ -14,7 +14,13 @@
 		<header>
 			<img src="images/logo.png" alt="car dekho logo" width="400px"
 				height="100px" align="left">
-			
+			<aside>
+			<ul>
+				<li><a href="/CaseStudy4/CreateCarController">CREATE </a></li>
+				<li><a href="/CaseStudy4/AdminSearchController">SEARCH</a></li>
+				<li><a href="/CaseStudy4/LogOutController">LOGOUT</a></li>
+			</ul>
+		</aside>
 		</header>
   <section>
   <div id="heading"><h3>Specifications</h3></div>

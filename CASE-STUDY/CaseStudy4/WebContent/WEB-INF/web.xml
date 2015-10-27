@@ -67,6 +67,6 @@
   </filter-mapping>
   
   <welcome-file-list>
-    <welcome-file>view/vehicleHomePage.html</welcome-file>
+    <welcome-file>view/UserSearch.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

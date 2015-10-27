@@ -50,9 +50,9 @@ a {
 }
 
 a:hover {
-	
-	color:orange;
-	font-size: 25px;
+	color: #FFF;
+	background-color:LightSlateGray ;
+	border-radius:4px;
 }
 
 section {

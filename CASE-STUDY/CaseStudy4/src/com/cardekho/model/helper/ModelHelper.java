@@ -86,7 +86,7 @@ public class ModelHelper {
 		car.setAccessoryKit(request.getParameter("accessorykit"));
 		car.setCreatedBy("Admin");
 		car.setCreatedTime(Calendar.getInstance().getTime());
-		car.setImageUrl(request.getParameter("imageURL"));
+		car.setImageUrl(request.getParameter("imageUrl"));
 		return car;
 	}
 	

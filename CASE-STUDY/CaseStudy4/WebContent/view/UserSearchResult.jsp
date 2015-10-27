@@ -1,6 +1,6 @@
 <%@page import="java.util.List,com.cardekho.model.Vehicle"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,12 +10,19 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header>
-			<img src="images/logo.png" alt="car dekho logo" width="400px"
-				height="100px" align="left">
+		<header> <img src="images/logo.png" alt="car dekho logo"
+			width="400px" height="100px" align="left">
+
+		<div class="login">
+			<ul>
+				<li><a href="/CaseStudy4/LoginController">LOGIN</a></li>
+
+			</ul>
+		</div>
+
 		</header>
 		<nav>
-		<table >
+		<table>
 			<% List<Vehicle> vehicleList = (List)request.getAttribute("vehicleList"); 
 			if(vehicleList != null){
 				for(Vehicle vehicle:vehicleList){
@@ -39,8 +46,9 @@
 			%>
 
 		</table>
-	</nav>
-	<footer><label>Copyright &copy 2015.&nbsp; All rights reserved.</label></footer>
+		</nav>
+		<footer>
+		<label>Copyright &copy 2015.&nbsp; All rights reserved.</label></footer>
 	</div>
 </body>
 </html>

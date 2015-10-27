@@ -16,7 +16,12 @@
 		<header>
 			<img src="/CaseStudy4/images/logo.png" alt="car dekho logo" width="400px"
 				height="100px" align="left">
-			
+		<div class="login">
+			<ul>
+				<li><a href="/CaseStudy4/LoginController">LOGIN</a></li>
+				
+			</ul>
+		</div>
 		</header>
    <form action="/CaseStudy4/UserSearchController" method="post">
 	    <div class="heading">

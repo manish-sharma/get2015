@@ -18,7 +18,7 @@
 		
 		<aside>
 			<ul>
-				<li><a href="/CaseStudy4/view/AdminHome.jsp">HOME</a></li>
+				<li><a href="/CaseStudy4/AdminSearchController">SEARCH</a></li>
 				<li><a href="/CaseStudy4/LogOutController">LOGOUT</a></li>
 			</ul>
 		</aside>

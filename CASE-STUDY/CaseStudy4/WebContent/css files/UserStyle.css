@@ -39,6 +39,40 @@ nav {
 	overflow: auto;
 }
 
+.login {
+	margin-left: 10px;
+	margin-top: 50px;
+	background-color: #E7E7E7;
+	width: 200px;
+	font-size: 20px;
+	float:right;
+	position: relative;
+}
+
+.login ul {
+	padding: 20px;
+	
+}
+
+.login ul li {
+	padding: 30px;
+	list-style-type: none;
+	padding-left:55px; 
+	width: 40px;
+}
+
+.login ul li a {
+	text-decoration: none;
+	color:#6B6767;
+}
+
+.login ul li a:hover {
+	padding:5px;
+	color: #FFF;
+	background-color:LightSlateGray ;
+	border-radius:4px;
+}
+
 table {
 	position :relative;
 	width: 700px;
@@ -53,9 +87,11 @@ a {
 }
 
 table a:hover {
-	color: orange;
+	color: LightSlateGray;
 	font-size: 18px;
 }
+
+
 
 aside {
 	margin-left: 10px;
@@ -83,6 +119,7 @@ li a {
 }
 
 li a:hover {
-	
-	color:orange;
+	color: #FFF;
+	background-color:LightSlateGray ;
+	border-radius:4px;
 }		

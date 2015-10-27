@@ -35,7 +35,7 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/AdminHome.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/AdminSearch.jsp");
 		requestDispatcher.forward(request, response);
 		/*if(request.getParameter("email").trim().equals("admin@gmail.com") && request.getParameter("password").trim().equals("admin")) {
 			 HttpSession session = request.getSession(true); 

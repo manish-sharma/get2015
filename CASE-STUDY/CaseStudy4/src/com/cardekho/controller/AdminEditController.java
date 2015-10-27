@@ -62,6 +62,7 @@ public class AdminEditController extends HttpServlet {
 		else {
 			String forwardUrl = "/UserSearchResultController";
 			Car car = ModelHelper.createCar(request);
+			car.setId(Integer.parseInt(request.getParameter("vehicleId")));
 			request.setAttribute("car", car);
 			CarDBHelper carDBHelper = new CarDBHelper();
 			try {

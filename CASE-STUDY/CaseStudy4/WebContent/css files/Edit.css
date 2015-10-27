@@ -73,7 +73,7 @@ form {
 }
 
 .button:HOVER {
-	background-color: orange;
+	background-color: LightSlateGray;
 }
 
 aside {
@@ -102,6 +102,7 @@ a {
 }
 
 a:hover {
-	
-	color:orange;
+	color: #FFF;
+	background-color:LightSlateGray ;
+	border-radius:4px;
 }		
