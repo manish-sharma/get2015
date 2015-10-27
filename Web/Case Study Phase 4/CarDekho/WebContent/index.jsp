@@ -65,10 +65,10 @@
 			New Arrivals
 		</h3>
 		<marquee onmouseover="stop();"  onmouseout="start();">
-			<div class ="newArrival"><img src="images/car1.jpg" width ="200" height="200"><br><a href = "fullSpecification.html">Creta</a></div>
-			<div class ="newArrival"><img src="images/car2.jpg" width ="200" height="200"><br><a href = "fullSpecification2.html">Porsche</a></div>
-			<div class ="newArrival"><img src="images/car3.jpg" width ="200" height="200"><br><a href = "fullSpecification3.html">Benz2.3</a></div>
-			<div class ="newArrival"><img src="images/car4.jpg" width ="200" height="200"><br><a href = "fullSpecification4.html">WagonR</a></div>
+			<div class ="newArrival"><img src="images/car1.jpg" width ="200" height="200"><br><a href = "javascript:;">Creta</a></div>
+			<div class ="newArrival"><img src="images/car2.jpg" width ="200" height="200"><br><a href = "javascript:;">Porsche</a></div>
+			<div class ="newArrival"><img src="images/car3.jpg" width ="200" height="200"><br><a href = "javascript:;">Benz2.3</a></div>
+			<div class ="newArrival"><img src="images/car4.jpg" width ="200" height="200"><br><a href = "javascript:;">WagonR</a></div>
 		
 		</marquee>
 	</div>
