@@ -54,8 +54,8 @@ else {
 	</nav>
 	<div class = "section">
 		<div id ="contactUs">
-			<p>Phone : 9928070709 </p>
-			<p>Email : parul.joshi@gmail.com</p>
+			<p>Phone : 8559818925 </p>
+			<p>Email : amit.natani@metacube.com</p>
 			<p>Address: Metacube Softwares, Phase 4, EPIP, Sitapura</p>
 		</div>
 	</div>
