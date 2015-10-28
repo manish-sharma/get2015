@@ -1,0 +1,29 @@
+//Selects all SPAN with class name: “message”
+	$('span.message')
+	
+	//Selects first DIV in a document that has class: “box”
+	$('div.box').first()
+	
+	//Selects all BUTTONS in a document.
+	$(':button')
+	
+	//Selects all IMAGES having alternate text as: “hello”
+	$("img[alt='hello']")
+	
+	//Selects all TEXT BOXES under a div having Id = “myDiv”
+	$("#myDiv :text")
+	
+	//Selects all TEXT BOXES with name starting by: “txt”
+	$("input[name^='txt']")
+	
+	//Selects all PARAGRAPHS element, not having class “box”
+	$("p :not(.box)")
+	
+	//Selects all the DIVS having either “box” or “error” class.
+	$("div .box,.error")
+	
+	//Selects all the DIVS having both “box” and “error” class.
+	$("div .box.error")
+	
+	//Find all the SPAN having “info” class in a DIV with id = “myDiv”
+	$("div#myDiv span.info")
