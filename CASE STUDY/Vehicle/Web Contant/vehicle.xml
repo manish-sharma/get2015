@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Car>
+	<Model>EcoSport</Model>
+	<Make>Ford</Make>
+	<EngineInCC>2000</EngineInCC>
+	<FuelCapacity>50</FuelCapacity>
+	<Milage>22</Milage>
+	<Price>850000</Price>
+	<RoadTax>40049</RoadTax>
+	<AC>true</AC>
+	<PowerSteering>true</PowerSteering>
+	<AccessoryKit>Radio , Cd Player</AccessoryKit>
+</Car>
+
