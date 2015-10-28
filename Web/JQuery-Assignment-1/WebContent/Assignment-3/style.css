@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+body {
+		background-color: gray;
+	
+	}
+	
+div {
+	border: solid darkGray 1px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+header {
+	padding: 20px;
+}
+
+
+
+table {
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	color: pink;
+}

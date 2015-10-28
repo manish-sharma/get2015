@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment 3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+<header>
+<div>----Div without any class----</div><br>
+<div  class="box">----First div with class "box"----</div><br>
+<div  class="box">----Second div with class "box"----</div><br>
+<div>
+----Div without any class----<br>
+<span class="message">----Span with class "message"----</span><p>----Paragraph without any class----</p></div><br>
+	<div>----Div without any class----<br><span class="message">----Span with class "message"----</span><br></div><br>
+	<div>
+	<br>
+	<input type="image" id="" class="" alt="hello" src="image1.jpg" />
+	<br>
+	<input type="image" id="" class="" alt="hii" src="image2.jpg" />
+	<br>
+	<input type="image" id="" class="" alt="hello" src="image3.jpg" />
+	<br>
+	<button>----Button----</button>
+	<br>
+	<button>----Button----</button>
+</div><br>
+<div id="myDiv">----Div with id "myDiv"----
+<p>----Paragraph without any class----</p>
+<p>----paragraph without class "box"----</p>
+<span class="info">----Span with class "info"----</span>
+<p class="box">----Paragraph with class "box"----</p>
+<span>----Span without class "info"----</span><br><br><span class="info">----Span with class "info"----</span>
+<br><input type="text" name="txtFirstName" placeholder="----starting with txt, within div myDiv----"><br>
+<br><input type="text" placeholder="----within div myDiv----"><br>
+</div><br>
+<div class="error box">----Div with classes "error" & "box"---- <br>
+<input type="text" name="txtLastName" placeholder="----name starting with txt----"><br><br>
+<input type="text"><br>
+</div><br>
+</header>
+
+
+<section>
+	<table>
+		<tr><td>all SPAN with class name: "message"</td><td><input type="button" id="one" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td> first DIV in a document that has class: "box"</td><td><input type="button" id="two" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all BUTTONS in a document</td><td><input type="button" id="three" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all IMAGES having alternate text as: "hello"</td><td><input type="button" id="four" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all TEXT BOXES under a div having Id = "myDiv"</td><td><input type="button" id="five" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all TEXT BOXES with name starting by: "txt"</td><td><input type="button" id="six" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all PARAGRAPHS element, not having class "box"</td><td><input type="button" id="seven" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all the DIVS having either "box" or "error"" class</td><td><input type="button" id="eight" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all the DIVS having both "box" and "error" class</td><td><input type="button" id="nine" class="button" value="Click Me!" onclick="show()"/></td></tr>
+		<tr><td>all the SPAN having "info" class in a DIV with id = "myDiv"</td><td><input type="button" id="ten" class="button" value="Click Me!" onclick="show()"/></td></tr>
+	</table>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+
+#span {
+	padding: 40px 80px;
+	margin-top: 50px;
+	margin-left: 500px;
+	background-color: white;
+	border: 2px dashed blue;
+	position: absolute;
+}
+
+#button {
+	margin-top: 150px;
+	margin-left: 590px;
+	padding:6px 12px;;
+}
