@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Jquery Assignment 1.2</title>
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#button1").click( function() {
+				$("#sampleText").show();
+				$("#button3").attr("value", "Hide");
+			});
+			$("#button2").click( function() {
+				$("#sampleText").hide();
+				$("#button3").attr("value", "Show");
+			});
+			
+			$("#button3").click(function(){
+			$("#sampleText").toggle();
+			if($("#sampleText").attr("value") == "Show")
+				$("#button3").attr("value", "Hide");
+			else
+				$("#button3").attr("value", "Show");
+			});
+		});
+		</script>
+	</head>
+	<body>
+	<span id="sampleText">This is a sample text for JQuery assignment 1</span>
+	<input type="button" id="button1" value="Show">
+	<input type="button" id="button2" value="Hide">
+	<input type="button" id="button3" value="Hide">
+	</body>
+</html>
