@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insert title here</title>
+</head>
+
+<body>
+<form>
+    <table>
+        <h1>Metagurukul Account Registration:</h1>
+        <tr>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input required type="text" placeholder="First Name" name="firstName" style="width:48%;">
+                <input required type="text" placeholder="Last Name" style="width:49%;" name="lastName">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <select name="Gender" style="width:100%;">
+                    <option>- Select One -</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                    <option value="O">Other</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td>
+                <select name="Month">
+                    <option>- Select Month -</option>
+                </select>
+                <input type="text" name="day" placeholder="Day">
+                <input type="text" name="Year" placeholder="Year">
+            </td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>
+                <select name="Country" style="width:100%;">
+                    <option value="IND">India</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Select an ID and Password</b> 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td>Metagurukul ID:</td>
+            <td>
+                <input required type="text" name="username">@
+                <select>
+                    <option>metagurukul.com</option>
+                </select>
+                <input type="button" value="check" name="checkValidity">
+            </td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td>
+                <input required type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>Re-Type Password :</td>
+            <td>
+                <input required type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>In case you forget your ID or password</b> 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td>Alternate Email (Optional):</td>
+            <td>
+                <input type="email" name="alternateEmail" style="width:100%;">
+            </td>
+        </tr>
+        <tr>
+            <td>Secret Question 1 :</td>
+            <td>
+                <select name="secretQuestion1" style="width:100%;">
+                    <option>- Select One -</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Your Answer:</td>
+            <td>
+                <input required type="text" name="secretAnswer1" style="width:100%;">
+            </td>
+        </tr>
+        <tr>
+            <td>Secret Question 2 :</td>
+            <td>
+                <select name="secretQuestion2" style="width:100%;">
+                    <option>- Select One -</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Your Answer:</td>
+            <td>
+                <input required type="text" name="secretAnswer2" style="width:100%;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Create My Account">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

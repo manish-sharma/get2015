@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+		$('td').width(350);
+		$('td').height(50);
+		$('td').css({"border-color": "black", 
+             "border-width":"1px", 
+             "border-style":"solid"});
+		$('#fillColor').click(function(){
+        $('tr:even').css('background-color','lightblue');
+		$('tr:odd').css('background-color','grey');
+    });
+});
+</script>
+</head>
+<body>
+<h1>Alternate colour for table rows</h1>
+<table>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<button id="fillColor" >Fill Color</button>
+</body>
+</html>

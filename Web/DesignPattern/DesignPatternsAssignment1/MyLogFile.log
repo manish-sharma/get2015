@@ -1,0 +1,4 @@
+Oct 21, 2015 5:15:43 AM question1.Singleton doSomething
+INFO: My first log
+Oct 21, 2015 5:15:43 AM question1.Singleton doSomething
+INFO: Throws an arithmetic Exception / by zero
