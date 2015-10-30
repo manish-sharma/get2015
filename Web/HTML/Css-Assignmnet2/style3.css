@@ -1,0 +1,30 @@
+section{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s; 
+    -webkit-animation-iteration-count: 3; 
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+	left:600px;
+	top:100px;
+}
+
+@keyframes example {
+    0%   {background-color:red; left:600px; top:100px;}
+    25%  {background-color:yellow; left:900px; top:100px;}
+    50%  {background-color:blue; left:900px; top:300px;}
+    75%  {background-color:green; left:600px; top:300px;}
+    100% {background-color:red; left:600px; top:100px;}
+}
+
+header{
+background-color:skyblue;
+height:10%;
+text-align:center;
+font-size:50px;
+font-family:san-serif;
+}
