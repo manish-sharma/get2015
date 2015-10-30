@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: white;
+}
+#block {
+	position : absolute;
+	margin:200px;
+	background-color: blue;
+	border : 2px solid black;
+	height: 100px;
+	width: 100px;
+}

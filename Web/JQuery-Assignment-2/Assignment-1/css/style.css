@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+.div{
+	width: 95%;
+	position: absolute;
+}
+
+.hello{
+	text-align: center;
+	background-color: pink;
+	width: 100%;
+	position: absolute;
+}
+
+.align{
+	text-align: center;
+}
