@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="cardekho.css">
+</head>
+
+<body>
+    <header class="upper">
+    </header>
+    <nav class="upper">
+        <ul>
+            <li><a href="index.html">LOGOUT</a>
+            </li>
+            <li><a href="adminsearch.html">SEARCH</a>
+            </li>
+            <li><a href="create.html">CREATE</a>
+            </li>
+            <li><a href="adminindex.html">HOME</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="upper" id="middleContainer">
+        <div id="create">
+            <h2>CREATE CAR</h2>
+            <form>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Make Name</td>
+                        <td>
+                            <input type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Model Name</td>
+                        <td>
+                            <input type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Engine In CC</td>
+                        <td>
+                            <input type="number" min="0" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fuel Capacity(Liters)</td>
+                        <td>
+                            <input type="number" min="0" max="5000" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Milage</td>
+                        <td>
+                            <input type="number" min="0" max="5000" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>
+                            <input type="number" min="0" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AC</td>
+                        <td>
+                            <select>
+                                <option selected disabled>select</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Accessory Kit</td>
+                        <td>
+                            <select>
+                                <option selected disabled>select</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Power Steering</td>
+                        <td>
+                            <select>
+                                <option selected disabled>select</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button type="submit">CREATE</button>
+            </form>
+        </div>
+    </div>
+    <footer class="upper">
+        <p>Copyright &copy; 2001 - 2015. DM Driver Motors.
+            <p>
+    </footer>
+</body>
+
+</html>
