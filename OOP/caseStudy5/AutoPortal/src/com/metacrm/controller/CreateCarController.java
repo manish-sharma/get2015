@@ -4,17 +4,12 @@
  */
 package com.metacrm.controller;
 
-import com.metacrm.db.helper.CarDBHelper;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.sql.Blob;
-import java.sql.SQLException;
+import com.metacrm.service.MetaCRMService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,8 +17,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
-
 /**
  *
  * @author admin
@@ -84,6 +77,7 @@ public class CreateCarController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		// redirects to edit.jsp page
 		RequestDispatcher dispatcher = request.getRequestDispatcher("edit.jsp");
 		request.setAttribute("objOfCar", null);
 		dispatcher.forward(request, response);
@@ -104,16 +98,19 @@ public class CreateCarController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
 		String forwardUrl = "";
+		MetaCRMService service = new MetaCRMService();
 		Car objCar = createCar(request);
-		CarDBHelper carDBHelper = new CarDBHelper();
 		try {
-			if (carDBHelper.create(objCar) > 0) {
+			if (service.createCar(objCar) > 0) {
+				// if more than zero rows are affected than the updated car
+				// object is set and forwarded to details.jsp
 				request.setAttribute("objOfCar", objCar);
 				forwardUrl = "details.jsp";
 			} else {
-				forwardUrl = "edit.jsp";
+				// if car not updated than remains at same page and error
+				// message is displayed
+				forwardUrl = "create.jsp";
 				request.setAttribute("message", "Enter correct values");
 			}
 		} catch (MetaCRMSystemException e) {
@@ -122,7 +119,7 @@ public class CreateCarController extends HttpServlet {
 						+ e.getMessage() + "]");
 			} catch (MetaCRMSystemException e1) {
 				forwardUrl = "edit.jsp";
-				request.setAttribute("message", e.getMessage() );
+				request.setAttribute("message", e.getMessage());
 			}
 		} finally {
 
@@ -131,13 +128,13 @@ public class CreateCarController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	// object is created of car model class
 	private Car createCar(HttpServletRequest request) throws IOException,
 			ServletException {
 		Car objCar = new Car();
 		objCar.setMake(request.getParameter("make"));
 		objCar.setModel(request.getParameter("model"));
-		objCar.setAC(Boolean.parseBoolean(request
-				.getParameter("ac")));
+		objCar.setAC(Boolean.parseBoolean(request.getParameter("ac")));
 		objCar.setPowerSteering(Boolean.parseBoolean(request
 				.getParameter("powerSteering")));
 		objCar.setAccessoryKit(Boolean.parseBoolean(request
@@ -148,7 +145,7 @@ public class CreateCarController extends HttpServlet {
 		objCar.setMilage(Double.parseDouble(request.getParameter("milage")));
 		objCar.setPrice(Integer.parseInt(request.getParameter("price")));
 		objCar.setRoadTax(Integer.parseInt(request.getParameter("roadTax")));
-		objCar.setImagePath("images/"+request.getParameter("photo"));
+		objCar.setImagePath("images/" + request.getParameter("photo"));
 		return objCar;
 	}
 

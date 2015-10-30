@@ -4,28 +4,28 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.metacrm.model.User;
-import com.metacrm.db.ConnectionFactory;
 
+/**
+ * This class is responsible for login the admin into the website
+ * 
+ * @author Riddhi
+ *
+ */
 public class LoginDBHelper {
-
+	// query to check whether the username of the person trying to login in
+	// exists or not
 	private String query = "SELECT password FROM user where userName = ?";
 
-	public String authenticate(HttpServletRequest request) {
-		User objUser = (User) request.getAttribute("user");
-		Connection connection = ConnectionFactory.getConnection();
+	public String authenticate(Connection connection, User objUser) {
 		ResultSet rs = null;
 		if (connection != null) {
-			
 			try {
 				PreparedStatement preparedStatement = connection
 						.prepareStatement(query);
 				preparedStatement.setString(1, objUser.getUserName());
 				rs = preparedStatement.executeQuery();
-				if(rs.next()) {
+				if (rs.next()) {
 					if (rs.getString("password").equals(objUser.getPassword()))
 						return objUser.getUserName();
 					else

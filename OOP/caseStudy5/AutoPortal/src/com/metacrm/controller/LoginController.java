@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import com.metacrm.db.helper.LoginDBHelper;
+import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.User;
+import com.metacrm.service.MetaCRMService;
 
 /**
  * Servlet implementation class LoginController
@@ -34,6 +34,7 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		// redirects to login page
 		RequestDispatcher dispatcher = request
 				.getRequestDispatcher("login.jsp");
 		dispatcher.forward(request, response);
@@ -47,23 +48,29 @@ public class LoginController extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		String forwardUrl = null;
 		User objOfUser = createUser(request);
-		request.setAttribute("user", objOfUser);
-		LoginDBHelper objOfLoginDBHelper = new LoginDBHelper();
-		String result = objOfLoginDBHelper.authenticate(request);
-
-		if (result.equals(objOfUser.getUserName())) {
-			// Create a session object if it is already not created.
-			HttpSession session = request.getSession();
-			session.setAttribute("userName", objOfUser.getUserName());
-			forwardUrl = "home.jsp";
-		} else {
-			forwardUrl = "login.jsp";
-			request.setAttribute("msg", "Invalid Username Or Password");
+		String result = "";
+		MetaCRMService service = new MetaCRMService();
+		try {
+			result = service.loginAdmin(objOfUser);
+			if (result.equals(objOfUser.getUserName())) {
+				// Create a session object if it is already not created.
+				HttpSession session = request.getSession();
+				// sets the user name and attribute is get on the jsp page
+				session.setAttribute("userName", objOfUser.getUserName());
+				forwardUrl = "home.jsp";
+			} else {
+				//if the username and password doesnot match than user remains on same page and message is displayed
+				forwardUrl = "login.jsp";
+				request.setAttribute("msg", "Invalid Username Or Password");
+			}
+		} catch (MetaCRMSystemException e) {
+			e.printStackTrace();
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
 		dispatcher.forward(request, response);
 	}
 
+	// user model class object is created
 	private User createUser(HttpServletRequest request) {
 		User objOfUser = new User();
 		objOfUser.setUserName(request.getParameter("username"));

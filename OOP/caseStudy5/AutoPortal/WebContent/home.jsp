@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@page import="com.metacrm.db.helper.SearchDBHelper"%>
+<%@page import="com.metacrm.service.MetaCRMService"%>
 <%@page import="java.util.ArrayList,java.util.HashMap,java.util.Map;"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
@@ -54,22 +54,22 @@
 				<center>
 					<form action="SearchCarController" method="post">
 						<input type="radio" name="search" id="brand" value="brand"
-							onclick="callSearchDBHelper();" />Search By Brand <input
-							type="radio" name="search" id="budget" value="budget" onclick="addPriceMin();" />Search
+							onclick="callService();" />Search By Brand <input type="radio"
+							name="search" id="budget" value="budget" onclick="addPriceMin();" />Search
 						By Budget <br> <br>
 						<script>
 							var myObject;
 							var str = "";
 
-							function callSearchDBHelper() {
+							function callService() {
 								document.getElementById("submit").disabled = false;
 								myObject =
-						<%=SearchDBHelper.getMap()%>
+						<%=MetaCRMService.getMap()%>
 							var make = document.getElementById("make");
-							make.length=0;
-							var option=document.createElement("option");
-							option.text="---Select Make---";
-							make.add(option);
+								make.length = 0;
+								var option = document.createElement("option");
+								option.text = "---Select Make---";
+								make.add(option);
 								for ( var i in myObject) {
 									var newOption = document
 											.createElement("option");
@@ -84,8 +84,9 @@
 								var model = document.getElementById("model");
 								model.length = 0;
 								if (isNaN(make) == false) {
-									var option=document.createElement("option");
-									option.text="---Select Maximum---";
+									var option = document
+											.createElement("option");
+									option.text = "---Select Maximum---";
 									model.add(option);
 									var higherprice = [ 150000, 160000, 1700000 ];
 									for (var i = 0; i < higherprice.length; i++) {
@@ -97,27 +98,30 @@
 											model.add(option);
 										}
 									}
-								}else{
-									var option=document.createElement("option");
-									option.text="---Select Model---";
-									model.add(option);
-								for ( var i in myObject[make]) {
-									var newOption = document
+								} else {
+									var option = document
 											.createElement("option");
-									newOption.text = myObject[make][i];
-									model.add(newOption);
+									option.text = "---Select Model---";
+									model.add(option);
+									for ( var i in myObject[make]) {
+										var newOption = document
+												.createElement("option");
+										newOption.text = myObject[make][i];
+										model.add(newOption);
 
-								}
+									}
 								}
 							}
 						</script>
 						<select id="make" name="make" class="make" onchange="addModel();">
-							
+							<option>---Select---</option>
 
 						</select> <select id="model" class="model" name="model">
-							
+							<option>---Select---</option>
 
-						</select> <br> <br> <input type="submit" id="submit" disabled value="Search" >
+
+						</select> <br> <br> <input type="submit" id="submit" disabled
+							value="Search">
 					</form>
 				</center>
 			</div>

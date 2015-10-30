@@ -34,6 +34,7 @@ public class AuthenticationFilter implements Filter {
 		String uri = req.getRequestURI();
 		this.context.log("Requested Resource::" + uri);
 
+		//checks if the user withour login tries to open these webpages than it redirects it to the login page
 		HttpSession session = req.getSession();
 		if (session == null
 			|| (uri.endsWith("create.jsp") || uri.endsWith("edit.jsp"))) {

@@ -9,10 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.metacrm.db.helper.SearchDBHelper;
 import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
+import com.metacrm.service.MetaCRMService;
 
 /**
  * Servlet implementation class SearchCarController
@@ -44,16 +43,17 @@ public class SearchCarController extends HttpServlet {
 		String model = request.getParameter("model");
 		String value = request.getParameter("search");
 		ArrayList<Car> carList = null;
+		MetaCRMService service= new MetaCRMService();
 		try {
-			if(value.equals("brand")){
-				carList = SearchDBHelper.getDetailsByBrand(make, model);
-			}
-			else if(value.equals("budget")){
-				carList = SearchDBHelper.getDetailsByBudget(make, model);
-			}
+			//returns the list of cars returned by the search query
+			carList = service.searchCar(make, model, value);
 		} catch (MetaCRMSystemException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			try {
+				throw new MetaCRMSystemException("Could not search Car, ["
+						+ e.getMessage() + "]");
+			} catch (MetaCRMSystemException e1) {
+				e1.printStackTrace();
+			}
 		}
 		request.setAttribute("carList", carList);
 		RequestDispatcher rd = request.getRequestDispatcher("search.jsp");

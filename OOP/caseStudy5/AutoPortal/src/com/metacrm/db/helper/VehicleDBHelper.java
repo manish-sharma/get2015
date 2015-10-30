@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 
 
 /**
- *
+ *This class is responsible for inserting vehicle into the vehicle table
  * @author Riddhi
  */
 public class VehicleDBHelper {
@@ -24,7 +24,7 @@ public class VehicleDBHelper {
 
     private static String SELECT_FOR_VEHICLE_ID_QUERY = "SELECT vehicle_id FROM vehicle WHERE make=? AND model=?";
     
-    protected void create(Connection connection, Vehicle objVehicle) throws MetaCRMSystemException {
+    public void create(Connection connection, Vehicle objVehicle) throws MetaCRMSystemException {
 		PreparedStatement preparedStatement = null;
 		try {
 			preparedStatement = connection.prepareStatement(INSERT_VEHICLE_QUERY);
@@ -38,6 +38,7 @@ public class VehicleDBHelper {
 			preparedStatement.setString(8, "Admin");
 			preparedStatement.setTimestamp(9, new Timestamp(System.currentTimeMillis()));
 			preparedStatement.setString(10,objVehicle.getImagePath());
+			//calls the insert vehicle query in the system
 			preparedStatement.execute();
 		} catch (SQLException e) {
 			throw new MetaCRMSystemException("Could not create Vehicle, [" + e.getMessage() + "]");
@@ -52,7 +53,8 @@ public class VehicleDBHelper {
 		}
 	}
     
-    protected static int getVehicleIdByMakeModel(Connection connection, String make, String model) throws MetaCRMSystemException {
+    //return vehicle id based on make and model
+    public static int getVehicleIdByMakeModel(Connection connection, String make, String model) throws MetaCRMSystemException {
 		int vehicleId = -1;
 		if(connection != null) {
 			PreparedStatement preparedStatement = null;

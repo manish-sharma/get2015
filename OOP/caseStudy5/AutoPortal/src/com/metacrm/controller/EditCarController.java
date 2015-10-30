@@ -9,12 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import com.metacrm.db.helper.CarDBHelper;
-import com.metacrm.db.helper.EditCarDBHelper;
 import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
-import com.sun.xml.internal.bind.v2.util.EditDistance;
+import com.metacrm.service.MetaCRMService;
+
 
 /**
  * Servlet implementation class EditCarController
@@ -37,6 +35,7 @@ public class EditCarController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		//redirects to edit jsp page
 		RequestDispatcher dispatcher = request.getRequestDispatcher("edit.jsp");
 		HttpSession session=request.getSession();
 		Car objCar=(Car)session.getAttribute("objOfCar");
@@ -52,16 +51,19 @@ public class EditCarController extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		String forwardUrl = "";
 		String oldMake = request.getParameter("oldMake");
-		String oldModel = request.getParameter("oldModel");
-		EditCarDBHelper objOfEditCarDBHelper = new EditCarDBHelper();
+		String oldModel = request.getParameter("oldModel");	
 		Car objCar = createCar(request);
+		MetaCRMService service = new MetaCRMService();
 		try {
-			if(objOfEditCarDBHelper.create(objCar,oldMake,oldModel)>0){
+			if(service.editCar(objCar,oldMake,oldModel)>0){
+				//creates a session object if not created
 				HttpSession session = request.getSession(false);
+				//sets the object of the updated car in session attribute
 				session.setAttribute("objOfCar", objCar);
 				forwardUrl = "details.jsp";
 			}else
 			{
+				//if the car details are not edited than user remains on same page and message is displayed
 				request.setAttribute("message", "Could not Edit Car details, Please enter again");
 				forwardUrl = "edit.jsp";
 			}
@@ -74,6 +76,7 @@ public class EditCarController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	// object is created of car model class
 	private Car createCar(HttpServletRequest request) throws IOException,
 			ServletException {
 		Car objCar = new Car();

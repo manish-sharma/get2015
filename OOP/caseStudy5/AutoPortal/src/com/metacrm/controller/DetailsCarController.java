@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.metacrm.db.helper.SearchDBHelper;
 import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
+import com.metacrm.service.MetaCRMService;
 
 /**
  * Servlet implementation class DetailsCarController
@@ -35,11 +36,10 @@ public class DetailsCarController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String make = request.getParameter("make");
 		String model = request.getParameter("model");
-		System.out.println(make);
-		System.out.println(model);
 		ArrayList<Car> carList = null;
+		MetaCRMService service = new MetaCRMService();
 		try {
-			carList = SearchDBHelper.getDetailsByBrand(make, model);
+			carList = service.carDetails(make, model);
 		} catch (MetaCRMSystemException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

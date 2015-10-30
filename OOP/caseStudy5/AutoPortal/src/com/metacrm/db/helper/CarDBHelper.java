@@ -14,22 +14,23 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**
- *
+ *this class is responsible for inserting car into the database
  * @author Riddhi
  */
 public class CarDBHelper extends VehicleDBHelper {
 	private static String INSERT_CAR_QUERY = "INSERT INTO car (vehicle_id, ac, power_stering, accessory_kit ) VALUES (?, ?, ?, ?)";
 
-	public int create(Car objCar) throws MetaCRMSystemException {
+	public int create(Connection connection,Car objCar) throws MetaCRMSystemException {
 		int created = -1;
-		Connection connection = ConnectionFactory.getConnection();
 		if (connection != null) {
 			PreparedStatement preparedStatement = null;
 			try {
+				//calls the vehicle db helper create function
 				super.create(connection, objCar);
+				//gets the vehicle id of the vehicle object created
 				int vehicleId = getVehicleIdByMakeModel(connection,
 						objCar.getMake(), objCar.getModel());
-
+				//if vehicle is inserted than car is also inserted in the car database
 				if (vehicleId > 0) {
 					preparedStatement = connection
 							.prepareStatement(INSERT_CAR_QUERY);
@@ -40,11 +41,7 @@ public class CarDBHelper extends VehicleDBHelper {
 					created = preparedStatement.executeUpdate();
 				}
 			} catch (SQLException e) {
-				try {
-					connection.rollback();
-				} catch (SQLException e1) {
-					System.out.println("Could not roleback.");
-				}
+				
 				throw new MetaCRMSystemException(
 						"Could not create SalesPerson, [" + e.getMessage()
 								+ "]");
