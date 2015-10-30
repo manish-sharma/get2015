@@ -1,0 +1,11 @@
+#sampleDIV {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: #E9967A;
+}
+
+.controls {
+	position: absolute;
+	top: 300px;
+}
