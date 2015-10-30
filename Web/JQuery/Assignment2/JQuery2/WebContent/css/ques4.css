@@ -1,0 +1,20 @@
+#outer{
+	width: 30%;
+    margin-top: 200px;
+    margin-left: 500px;
+    background-color:#F3D9DC;
+    padding-left:150px;
+    border:3px solid #E6A1A9;
+}
+
+#inner{
+	width: 40%;
+	position:relative;
+    top:50px;
+    margin-left: 500px;
+    height:100px;
+    background-color:#B4DEE2;
+    text-align: center;
+    border:3px solid #329CA7;
+}
+
