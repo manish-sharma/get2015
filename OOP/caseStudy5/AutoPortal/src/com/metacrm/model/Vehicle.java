@@ -7,7 +7,7 @@ package com.metacrm.model;
 
 /**
  *
- * @author admin
+ * @author Riddhi
  */
 public class Vehicle extends BaseModel {
 
