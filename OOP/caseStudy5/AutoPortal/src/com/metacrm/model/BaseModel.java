@@ -5,6 +5,10 @@ import java.util.Date;
 //import lombok.Data;
 //
 //@Data
+/**
+ *
+ * @author Riddhi
+ */
 public class BaseModel {
 
     private int id;
