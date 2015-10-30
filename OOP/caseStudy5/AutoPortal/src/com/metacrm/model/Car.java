@@ -6,7 +6,7 @@ package com.metacrm.model;
 
 /**
  *
- * @author Kajal
+ * @author Riddhi
  */
 public class Car extends Vehicle {
 
