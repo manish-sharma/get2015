@@ -1,6 +1,9 @@
 package com.metacrm.model;
 
-
+/**
+ *
+ * @author Riddhi
+ */
 public class User {
 
 	private String userName;
