@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+#parent{
+	margin: auto;
+	width:600px;
+
+	border: 1px solid gray;  
+	padding: 10px;
+	
+}
+
+p, h2, h3 {
+	color:orange;
+	font-size: 25px;
+	border: 1px solid gray;
+}
+
+section {
+	margin: auto;
+		margin-top:10%;
+		color: brown;
+		text-align: center;
+		font-weight: bold;
+		font-size: large;
+}
+
+body {
+		background-color: white;
+	
+}
+
+h4 {
+	width:600px;
+	margin: auto;
+	margin-top:10px;
+	
+	
+}
