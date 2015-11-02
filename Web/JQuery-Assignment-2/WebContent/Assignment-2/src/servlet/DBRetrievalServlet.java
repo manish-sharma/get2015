@@ -22,19 +22,14 @@ public class DBRetrievalServlet extends HttpServlet {
 
 		// we are able to differentiate the requests and call the appropriate
 
-		// method. We can always use more classes for more use-cases.
+		// method.
 
-		// The response object returns the information (as a JSON object in
-		// String form)
-
-		// to the browser.
-
-		String buttonID = request.getParameter("name");
+		String name = request.getParameter("name");
 		response.setContentType("text/plain");
 
 		response.setCharacterEncoding("UTF-8");
 
-		switch (buttonID) {
+		switch (name) {
 
 		case "Suman":
 			response.getWriter().write("Name: Suman Sharma<br><br>Email:  ssumansharma04@gmail.com<br><br>Dob:  22 july<br><br>Address : Gopal pura<br><br>");

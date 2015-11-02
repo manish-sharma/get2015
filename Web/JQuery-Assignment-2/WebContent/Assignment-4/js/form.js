@@ -11,9 +11,6 @@ $(document).ready(function() {
 		$("#name").delay(100).fadeOut();
 		$("#name").delay(100).fadeIn();
 		
-		
-		
-		
 		var previousDivValue = $("div").html();
 		var newName = $("#name").val();
 		$("div").html(previousDivValue + "<br>Name : " + newName);
@@ -26,6 +23,7 @@ $(document).ready(function() {
 		$("#age").addClass('border');
 		$("#age").delay(100).fadeOut();
 		$("#age").delay(100).fadeIn();
+		
 		var previousDivValue = $("div").html();
 		var newAge = $("#age").val();
 		$("div").html(previousDivValue + "<br>Age : " + newAge);
