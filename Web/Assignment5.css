@@ -1,0 +1,11 @@
+.divisionClock{
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	width: 18%;
+	background-color: #696969
+}
+
+.clock {
+	padding: 20px;
+}

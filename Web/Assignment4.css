@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+#emptyDiv
+{
+ margin-top: 100px;	
+ border:1px black solid;
+ width: 100px;
+ height: 100px;
+}
