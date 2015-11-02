@@ -1,0 +1,9 @@
+.focus {
+    border: 2px solid #AA88FF;
+    background-color: red;
+}
+#result {
+border:2px solid black;
+width:200px;
+min-height:100px; 
+}
