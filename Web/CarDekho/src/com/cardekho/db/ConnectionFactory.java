@@ -6,20 +6,14 @@ import java.sql.SQLException;
 
 import com.cardekho.CarDekhoException;
 import com.cardekho.CarDekhoSystemException;
-/**
- * jdbc connection class
- * @author Ankur
- * @since 26 october 2015
- * class that makes connection with database
- *
- */
+
 public class ConnectionFactory {
 	
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/Vehicle";
 	private static final String USER = "root";
 	private static final String PASSWORD = "mysql";
 	
-	private static Connection connection = null;
+	public static Connection connection = null;
 	public static Connection getConnection() throws CarDekhoSystemException {
 		
 		try {

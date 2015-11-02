@@ -22,9 +22,9 @@ public class CarDBHelper extends VehicleDBHelper {
 //			+ " SP.ID ID, SP.BONUS_PER_CLIENT BONUS_PER_CLIENT, SP.CREATED_BY CREATED_BY, SP.CREATED_TIME CREATED_TIME "
 //			+ " from SALES_PERSON SP INNER JOIN  EMPLOYEE EMP ON SP.EMPLOYEE_ID =  EMP.ID where EMP.EMAIL_ID=?";
 	
-	public boolean create(Car car) throws CarDekhoSystemException {
+	public boolean create(Car car,Connection connection) throws CarDekhoSystemException {
 		boolean created = false;
-		Connection connection = ConnectionFactory.getConnection();
+		//Connection connection = ConnectionFactory.getConnection();
 		if(connection != null) {
 			PreparedStatement preparedStatement = null;
 			try {
