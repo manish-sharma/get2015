@@ -1,11 +1,14 @@
 $(document).ready(function(){
                   $("#start").click(function(){
+					   $("#mobile").stop();
 	                  $("#mobile").animate( { marginLeft:'1200px' },5000 );
                   });
 			     $("#stop").click(function(){
+					 
                        $("#mobile").stop();
                   });
 				  $("#back").click(function(){
+					   $("#mobile").stop();
 	                  $("#mobile").animate( { marginLeft:'0px' },3000 );
                   });
 				  
