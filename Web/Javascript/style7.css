@@ -1,0 +1,31 @@
+body{
+	background-color:#FFF5EE;
+}
+
+header{
+	font-size:40px;
+	background-color:#FFC0CB;
+	font-family:"Cosmic Sans";
+	text-shadow:20%;
+	text-style:italic;
+	text-align:center;
+	margin-top:1%;
+	color:#FF69B4;
+}
+
+section{
+	
+	text-align:center;
+
+}
+
+table{
+	font-size:20px;
+	text-align:left;
+	height:60%;
+	padding:4% 4% 4% 4%;
+}
+
+alert{
+	background-color:light blue;
+}
