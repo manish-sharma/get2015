@@ -1,0 +1,26 @@
+body{background-color:gray;}
+
+#wrapper{
+	
+	width:30%;
+	height:30px;
+	background-color: #f1ca8f;
+	color:blue;
+	padding:10px;
+	margin-top:500px;
+
+	}
+	
+#animatedDiv
+{
+	margin:100px;
+	width:100px;
+	height:100px;
+	position:absolute;
+	background-color:blue;
+	
+}	
+	
+
+	
+	
