@@ -1,0 +1,83 @@
+<HTML>
+<head>
+<title>Javascript Assignment 1</title>
+</head>
+<!-- Link To java Script -->
+<script type="text/javascript" src="script.js">
+</script>
+<style>
+#span {
+	color: red;
+}
+</style>
+<body>
+	<section>
+		<h2>INFORMATION</h2>
+		<form onSubmit="validate()">
+		<!-- Table For Data To Symmetric -->
+			<table align="center">
+				<tr>
+					<!-- Name Label -->
+					<td>Enter First Name<span id="span"> *</span></td>
+					<td><input type="text" id="firstName"></td>
+				</tr>
+				<tr>
+					<!-- Last Name -->
+					<td>Enter Last Name<span id="span"> *</span></td>
+					<td><input type="text" id="lastName"></td>
+				</tr>
+				<tr>
+					<!-- Password -->
+					<td>Enter Password <span id="span"> *</span></td>
+					<td><input type="password" id="password"></td>
+				</tr>
+				<tr>
+					<!--  Confirm Password -->
+					<td>Confirm Password<span id="span"> *</span></td>
+					<td><input type="password" id="confirmPassword"></td>
+				</tr>
+				<tr>
+					<!--  Age Field -->
+					<td>Enter Your Age <span id="span"> *</span></td>
+					<td><input type="number" id="age" min="12" max="75" step="any"></td>
+				</tr>
+				<tr>
+					<!--  State Name -->
+					<td>Select State<span id="span"> *</span></td>
+					<td><Select id="state" required onchange="createCity()">
+							<option>Select State</option>
+							<option value="Rajasthan">Rajasthan</option>
+							<option value="MP">Madhya Pradesh</option>
+							<option value="Maharastra">Maharastra</option>
+							<option value="UP">Uttar Pradesh</option>
+					</Select></td>
+				</tr>
+				<tr>
+					<!-- City Name -->
+					<td>Select City <span id="span"> *</span></td>
+					<td><select id="city">
+							<option>Select City</option>
+					</select></td>
+				</tr>
+				<tr>
+					<!--  Address -->
+					<td>Enter Your Address <span id="span"> *</span></td>
+					<td><textarea id="addressLine1" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="checkbox" id="acceptCondition"
+						onChange="activateSubmit()"><label for="acceptCondition">
+							I Accept all <a href="#">Terms & Conditions</a>
+					</label></td>
+				</tr>
+				<tr>
+					<!-- Submission Button -->
+					<td colspan="2"><input type="Submit" value="Create!!"
+						id="submitButton" disabled></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+</body>
+
+</html>
