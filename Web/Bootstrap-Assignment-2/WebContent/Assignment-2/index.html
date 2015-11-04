@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Bootstrap Navigation</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="CSS/jquery-1.11.3.js"></script>
+	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<link rel="styleSheet" href="CSS/style.css">
+	
+</head>
+<body>
+		<nav class="nabbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+			
+			 <div class="navbar-header">
+				<a class="navbar-brand hidden-sm" href="#">Metacube</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#id">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+		
+					<div class="collapse navbar-collapse" id="id">
+						<ul class="nav navbar-nav hidden-sm">
+							<li><a class="hidden-sm hidden-xm" href="#">HOME </a></li>
+							<li><a href="#">ABOUT</a></li>
+							<li><a href="#">CONTACT US</a></li>
+							<li><a href="#">MOVIE FORM</a></li>
+							<li><a href="#">MOVIE REVIEWS</a></li>
+							<li class="dropdown">
+								 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">CSS<span class="caret"></span></a>
+								  <ul class="dropdown-menu">
+								       <li><a href="#">Button</a></li>
+								       <li><a href="#">Panel</a></li>
+								       <li><a href="#">Grid</a></li>
+								       <li><a href="#">Link</a></li>
+								       <li><a href="#">Pagination</a></li>
+								       <li><a href="#">Progress Bar</a></li>
+								 </ul>
+							</li>	
+						</ul>
+						<div class="search visible-lg visible-md"><input type="text"><button><span class="glyphicon glyphicon-search"></span></button></div>
+					</div>
+				
+					<ul class="nav navbar-nav visible-sm">
+						<li> <a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-eye-open"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-earphone"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+							<li class="dropdown">
+							    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-th-list"></span><span class="caret"></span></a>
+							    <ul class="dropdown-menu">
+							       <li><a href="#">Button</a></li>
+							       <li><a href="#">Panel</a></li>
+							       <li><a href="#">Grid</a></li>
+							       <li><a href="#">Link</a></li>
+							       <li><a href="#">Pagination</a></li>
+							       <li><a href="#">Progress Bar</a></li>
+							 </ul>
+						</li>	
+					</ul>
+					<div class="search visible-sm"><input type="text"><button><span class="glyphicon glyphicon-search"></span></button></div>
+				</div>
+		</nav>
+</body>
+</html>

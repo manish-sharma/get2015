@@ -1,0 +1,29 @@
+
+.outer{
+	border: 2px solid blue;
+	padding: 5px;
+	background: off-white;
+}
+
+.row{
+	background: Silver;
+	padding-top: 20px;
+}
+.main{
+	padding-top:20px;
+	border: 2px solid blue;
+	background: gray;
+}
+
+.font1{
+	font-size: 20px;
+	text-align: center;
+}
+.fullwidth{
+	width: 100%;
+}
+
+#vali8date {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
