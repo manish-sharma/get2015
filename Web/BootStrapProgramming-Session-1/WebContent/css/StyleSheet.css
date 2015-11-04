@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+/* class left for setting first column's properties*/
+.left{
+	border:2px solid black; 
+	text-align:center;
+	background-color: #F6E6DD;
+}
+
+/* class right for setting first column's properties*/
+.right{
+	border:2px solid black; 
+	text-align:center; 
+	background-color: #9BDDEE;
+}
+
+/* class left for setting first column's properties*/
+.left1{
+	border:2px solid black; 
+	background-color: #F6E6DD;
+}
+
+/* class right for setting first column's properties*/
+.right1{
+	border:2px solid black;  
+	background-color: #9BDDEE;
+}
+
+/* set property of h3 text*/
+h3 {
+	text-align:center;
+}
