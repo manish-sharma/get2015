@@ -1,0 +1,44 @@
+.trans{
+
+	width: 200px;
+	height: 200px;
+	border: 1px solid gray;
+	float: left;
+	margin-top: 50px;
+	 margin-left: 50px;
+	 background-color: #FDFACD;
+}
+
+#rotate{
+
+	width: 200px;
+	height: 200px;
+	border: 1px solid gray;
+	transform: rotate(-10deg);
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #63B140;
+}
+#scale{
+	
+	width: 200px;
+	height: 200px;
+	border: 1px solid gray;
+	transform:scale(1,1.5);
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+		 background-color: #2388DB;
+	
+}
+#skew{
+	width: 200px;
+	height: 200px;
+	border: 1px solid gray;
+	transform:skew(10deg,15deg);
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+	background-color: #DEE7CE;
+}

@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<script src="jquery-1.11.3.js"></script>
+<script>
+$(document).ready(init);
+
+function init(){
+    $('#selectSpan').click(function(){
+        $('span.message').toggle();
+    });
+	 $('#selectDiv').click(function(){
+        $('div.box:first').toggle();
+    });
+		 $('#selectButton').click(function(){
+        $('button').width(150);
+    });
+		 $('#selectTextBoxes').click(function(){
+        $('#mydiv').find('input[type="text"]').toggle();
+    });
+	
+	$('#selectImages').click(function(){
+		 //Uses the attribute contains selector  //$('img[alt*="hello"]').css("width","300");
+		 //$('img[alt="hello"]').css("width","300");
+		// $('input[type="text"][name^="txt"]').toggle();
+		//$("p:not(.box)").hide();
+		// <element class="a b">      So, only the elements that have both classes.
+		//If you want an intersection, just write the selectors together without spaces in between. 
+		//So for an element that has an ID of a with classes b and c, you would write:$('#a.b.c')
+		//$("div .box,.error").toggle();
+		$("div.box.error").toggle();
+		//$("div#myDiv span.info").toggle();
+    });
+	
+}
+
+
+</script>
+</head>
+<body>
+<h1>Show and hide buttton function</h1>
+	<div class="box">
+	<img src="" alt="hello"/>
+		<br>
+	<span class="message">Hii, my name is akshat</span>
+	<br>
+	<input type="text" ></input>
+	</div>
+	
+	
+	<div id="mydiv" class="error box">
+		<img src="" alt="hii"/>
+		<br>
+		<span class="m">Hii again</span>
+		<br>
+		<input type="text" name="txt1"></input>
+		<p class="boxccc">ROhit</p>
+		<p class="box">helllllllllloooooooo</p>
+		<span class="info">Akshat Mathur</span>
+	</div>
+
+<div class="box111">
+<img src="" alt="hello"/>
+<br>
+<span class="message">Hii once again</span>
+</div>
+<br>
+<button id="selectSpan" >Select Span</button>
+<br>
+<button id="selectDiv" >Select First Div</button>
+<br>
+<button id="selectButton" >Select All Button</button>
+<br>
+<button id="selectTextBoxes" >Select All TextBoxes</button>
+<br>
+<button id="selectImages" >Select All Images</button>
+</body>
+</html>
