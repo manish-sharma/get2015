@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/ques4.css" type="text/css">
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#name').on('change',function(){
+		$(this).blur(function() {
+			$(this).css({'background-color':'pink','border':'1px solid blue'}).animate(2000);
+			$('#empty').html("Name : "+$(this).val());
+		});
+		function explode() {
+			$('#name').css({'background-color':'white','border':'1px solid grey'}).animate().stop();
+		}
+		setTimeout(explode, 3000);
+	});
+	
+	$('#age').on('change',function(){
+	$(this).blur(function() {
+		$(this).css({'background-color':'pink','border':'1px solid blue'}).animate(2000);
+		$('#empty').html("Age : "+$(this).val());
+	});
+	function explode() {
+		$('#age').css({'background-color':'white','border':'1px solid grey'}).animate().stop();
+	}
+	setTimeout(explode, 3000);
+});
+	
+	$('#addr').on('change',function(){
+		$(this).blur(function() {
+			$(this).css({'background-color':'pink','border':'1px solid blue'}).animate(2000);
+			$('#empty').html("Address : "+$(this).val());
+		});
+		function explode() {
+			$('#addr').css({'background-color':'white','border':'1px solid grey'}).animate().stop();
+		}
+		setTimeout(explode, 3000);
+	});
+});
+</script>
+</head>
+<body>
+	<div id="outer">
+		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input type="text" id="name" style="background-color:white;" autocomplete="off"/></td>
+			</tr>
+			<tr>
+				<td>Age :</td>
+				<td><input type="text" id="age" autocomplete="off"/></td>
+			</tr>
+			<tr>
+				<td>Address :</td>
+				<td><textarea rows="3" cols="21" id="addr" autocomplete="off"></textarea></td>
+			</tr>
+		</table>
+	</div>
+	<div id="inner" >
+	<p>Changed Values</p>
+
+	<div id="empty"></div>
+		</div>
+</body>
+</html>

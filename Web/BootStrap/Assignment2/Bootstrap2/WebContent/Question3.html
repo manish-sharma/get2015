@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Question3</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="css/ques1.css" type="text/css">
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<h1 class="text-center hidden-xs">Sample Form</h1>
+	<br />
+	<br />
+	<nav class="navbar navbar-inverse" role="navigation">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle visible-xs"
+				data-toggle="collapse" data-target="#example-navbar-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Metacube</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#" class="visible-sm"><span
+						class="glyphicon glyphicon-home"></span></a><a href="Question3.html"
+					class="hidden-sm">Home</a></li>
+				<li><a href="#" class="visible-sm"><span
+						class="glyphicon glyphicon-user"></span></a><a href="#"
+					class="hidden-sm">About</a></li>
+				<li><a href="#" class="visible-sm"><span
+						class="glyphicon glyphicon-phone-alt"></span></a><a href="#"
+					class="hidden-sm">Contact us</a></li>
+				<li><a href="#" class="visible-sm"><span
+						class="glyphicon glyphicon-off"></span></a><a href="#"
+					class="hidden-sm">Logout menu</a></li>
+				<li><a href="#" class="visible-sm"><span
+						class="glyphicon glyphicon-pencil"></span></a><a href="#"
+					class="hidden-sm">Movie form</a></li>
+				<li><a href="MovieReview.html" class="visible-sm"><span
+						class="glyphicon glyphicon-star"></span></a><a href="MovieReview.html"
+					class="hidden-sm">Movie reviews</a></li>
+				<li class="dropdown"><a href="#"
+					class="dropdown-toggle visible-sm" data-toggle="dropdown"><span
+						class="glyphicon glyphicon-edit"><span class="caret"></span></span></a><a
+					href="#" class="dropdown-toggle hidden-sm" data-toggle="dropdown">CSS<span
+						class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Button</a></li>
+						<li><a href="#">Panel</a></li>
+						<li><a href="#">Grid</a></li>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Pagination</a></li>
+						<li><a href="#">Progress Bar</a></li>
+					</ul></li>
+			</ul>
+			<div class="col-sm-3 col-md-3 pull-right">
+				<form class="navbar-form" role="search"
+					action="Search.html?title=<script>document.getElementById('srch-term').value</script>"
+					method="get">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search"
+							name="srch-term" id="srch-term">
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<div id="search">
+		<form class="form-horizontal" role="form">
+			<img src="images/clapperBoard.png"
+				class="hidden-lg hidden-md hidden-sm" width="50px" height="50px" />
+			<div class="container well">
+				<div class="form-group row">
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">MovieTitle</label>
+					<div class="col-lg-5 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="movieTitle"
+							placeholder="Enter movie title" />
+					</div>
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">genre</label>
+					<div class="col-lg-5 col-md-5 col-sm-11 col-xs-12">
+						<select class="form-control" id="genre">
+							<option>Choose a genre</option>
+							<option>genre 1</option>
+							<option>genre 2</option>
+							<option>genre 3</option>
+							<option>genre 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Director</label>
+					<div class="col-lg-2 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="director"
+							placeholder="Enter director" />
+					</div>
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Writer</label>
+					<div class="col-lg-2 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="writer"
+							placeholder="Enter writer" />
+					</div>
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Producer</label>
+					<div class="col-lg-2 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="producer"
+							placeholder="Enter producer" />
+					</div>
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Composer</label>
+					<div class="col-lg-2 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="composer"
+							placeholder="Enter composer" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Website</label>
+					<div class="col-lg-5 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="website"
+							placeholder="Enter website" />
+					</div>
+					<label
+						class="control-label col-lg-1 col-md-1 col-sm-1 col-xs-12 hidden-xs">Youtube
+						Trailer</label>
+					<div class="col-lg-5 col-md-5 col-sm-11 col-xs-12">
+						<input type="text" class="form-control" id="trailer"
+							placeholder="Enter trailer">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label
+						class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label hidden-xs">Review</label>
+				</div>
+				<div class="form-group row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<textarea class="form-control" rows="5" id="review"></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-xs"
+						id="rating">Rating</label> <label
+						class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-danger hidden-xs"><input
+						type="radio" id="terrible" name="radioBtn" class="text-left" />&nbsp;Terrible</label>
+					<label
+						class=" col-lg-3 col-md-3 col-sm-4 col-xs-12 text-primary hidden-xs"><input
+						type="radio" id="watchable" name="radioBtn" class="text-left" />&nbsp;Watchable</label>
+					<label
+						class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-success hidden-xs"><input
+						type="radio" id="bestEver" name="radioBtn" class="text-left" />&nbsp;Best
+						ever</label>
+				</div>
+				<div class="form-group row">
+					<div
+						class="col-lg-offset-3 col-lg-9 col-md-offset-3 col-md-9 col-sm-9 col-xs-9">
+						<button type="button" class="btn btn-default">Cancel</button>
+						<button type="button" class="btn btn-primary">Validate</button>
+						<button type="button" class="btn btn-success">Submit</button>
+						<button type="button" class="btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
