@@ -3,9 +3,10 @@ $(document).ready(function() {
 	paging();
 });
 
+var movieData={};
+
 function addTable(){
-	alert("1");
-	var movieData={};
+	
 	movieData=[{MovieTitle: 'Goosebumps',Genre: 'Action',Director: 'DirectorA'},
 	           {MovieTitle: 'Dinosaur Adventure',Genre: 'Action',Director: 'Director B'},
 	           {MovieTitle: 'Wild Roller Coaster',Genre: 'Action',Director: 'Director C'},
@@ -26,7 +27,6 @@ function addTable(){
 	
 	
 	var table=$('#movieTable').children();
-	alert("2");
 	table.append('<tr><td>'+"MovieTitle"+'</td><td>'+"Genre"+
 			'</td><td>'+"Director"+'</td></tr>');
 	for(var i=0;i< movieData.length;i++)
@@ -41,7 +41,7 @@ function paging(){
     var numPages = rowsTotal/rowsShown;
     for(i = 0;i < numPages;i++) {
         var pageNum = i + 1;
-        $('#nav').append('<div style="width:40px;border:2px solid gray;float:left;text-align:center;margin-left:5px;"><a href="#" rel="'+i+'">'+pageNum+'</a><div>');
+        $('#nav').append('<div style="width:40px;border:2px solid gray;float:left;text-align:center;margin-left:5px;"><a href="#" id="'+i+'" rel="'+i+'">'+pageNum+'</a><div>');
     }
     $('#movieTable tbody tr').hide();
     $('#movieTable tbody tr').slice(0, rowsShown).show();
@@ -56,4 +56,26 @@ function paging(){
         $('#movieTable tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
                 css('display','table-row').animate({opacity:1}, 300);
     });
+}
+
+function search(){
+	var result;
+	
+	var newtable1=document.getElementById("searchTable");
+	
+	var rowCount = newtable1.rows.length;
+	for (var i=0; i < rowCount; i++) {
+		newtable1.deleteRow(i);	
+	}
+	
+	var val=document.getElementById("input").value;
+	for( var i = 0, len = movieData.length; i < len; i++ ) {
+	    if(movieData[i].MovieTitle === val ) {
+	        result = movieData[i];
+	        var table=$('#searchTable').children();
+	    	table.append('<tr><td>'+movieData[i].MovieTitle+'</td><td>'+movieData[i].Genre+
+					'</td><td>'+movieData[i].Director+'</td></tr>');	
+	        break;
+	    }
+	}
 }
