@@ -1,0 +1,268 @@
+/*---------------main-image starts---------------------------------------------------*/
+.main-image{
+	padding:0px !important;
+	height: 425px;
+	background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.brand1{
+	font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+	font-size:30px;
+	font-variant: small-caps;
+	color:#000;
+	
+	
+
+}
+.brand2{
+	font-family:"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+	font-size:30px;
+	color:rgb(157,211,175);
+}
+.nav_bar_search{
+	background: transparent !important;
+	border:none !important;
+	box-shadow: none !important;
+}
+.menu_search{
+	color:#000 !important;
+	font-weight:bold;
+}
+.navbar-nav > li > a {
+    color: #000 !important;
+}
+.tag-line-search{
+	background-color: #ffffff;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 9%;
+    opacity: 0.5;
+    text-align: center;
+}
+.tag-text-caption{
+	font-size:25px;
+	text-align:center;
+	font-weight:normal !important;
+	
+}
+.search_body{
+	background-color:rgb(157,211,175);
+
+}
+.search_span{
+	font-size:29px;
+	background-color:#fff;
+	vertical-align:middle;
+}
+.form-control{
+	background-color: #fff;
+    background-image: none;
+    border: 0px !important;
+    border-radius: 0 !important;
+    box-shadow: 0px !important;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.btn-search{
+	border-radius: 0px!important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px !important;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 0px 25px !important;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	box-shadow:none !important;
+	background-color:#FFF !important;
+	background-image:none !important;
+}
+.btn-search:focus,
+.btn-search:hover{
+	background-color:#fff !important;
+	background-image:none !important;
+}
+.form-row{
+	width:680px !important;
+	margin:auto !important;
+	float:none !important;
+	
+}
+@media(max-width: 767px) {
+.search_span{
+	display:none !important;
+}
+.form-control{
+	background-color: #fff;
+    background-image: none;
+    border: 0px !important;
+    border-radius: 0 !important;
+    box-shadow: 0px !important;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.btn-search{
+	border-radius: 0px!important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px !important;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 0px 25px !important;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	box-shadow:none !important;
+	background-color:#FFF !important;
+	background-image:none !important;
+	width:100%;
+}
+.btn-search:focus,
+.btn-search:hover{
+	background-color:#fff !important;
+	background-image:none !important;
+	width:100%;
+}
+.form-row{
+	width:100% !important;
+	margin:auto !important;
+	float:none !important;
+	
+}
+}
+#search-by-price{
+	display:none;
+}
+
+.tab-option:focus,
+.tab-option:hover{
+	background-color: rgb(157,211,175);
+	opacity:0.5;
+}
+.tab-option{
+	text-align: center;
+	padding:5px;
+	float:left;
+}
+.upcoming-car{
+	font-size: 24px;
+    line-height: 40px;
+    color: #3e3e3e;
+    font-family: 'robotomedium';
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.gallery-container{
+	border:1px solid rgb(157,211,175);
+	padding:2% 0;
+}
+.main-car-details{
+	margin-left:15%;
+}
+.main-car-image img {
+   height: 100%;
+   width: 100%;
+}
+.car-name > a{
+	color: #414141;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'robotobold';
+}
+.car-price{
+	margin-top: 15px;
+    color: #6e6e6e;
+    font-size: 14px;
+}
+.font-weight: bold;
+    color: #5f5f5f;
+    font-style: normal;
+    padding: 0 10px 0 0;
+    font-size: 19px;
+}
+.fontstyle{
+	font-weight: bold;
+    color: #5f5f5f;
+    font-style: normal;
+    padding: 0 10px 0 0;
+    font-size: 19px;
+}
+.orgbutton {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: rgb(157,211,175);
+    font-family: 'robotoregular';
+    font-size: 13px;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    letter-spacing: .1em;
+    -moz-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .5s ease-in;
+    margin-top: -1px;
+    width: auto;
+    overflow: visible;
+}
+.footer{
+	margin-top:3%;
+	background-color: #e4e4e4;
+	opacity:;
+	color:black !important;
+	font: 12px Arial,Tahoma,Geneva,sans-serif;
+	padding-bottom:1%;
+}
+.footer-line{
+	background: #d2d2d2;
+    border-top: solid 1px #c4c4c4;
+    padding: 4px 0;
+    color: #767676;
+	text-align:center;
+}
+.copyright{
+	float: left;
+    margin-top: 8px;
+	width:100%;
+	text-align:center;
+}
+.logo-spell{
+	font-size:46px;
+}
+.vehicle-name{
+	color: #353535;
+    font-family: "robotobold";
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 32px;
+}
+.vehicle-attribute{
+	font-weight: bold;
+    text-align: left;
+}
+.specification{
+	margin: 20px 0;
+	padding: 5px 0;
+}
+
+
+
