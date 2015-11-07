@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehicle>
+	<Car>
+		<make>Hundai</make>
+		<model>i20</model>
+		<engineInCC>1300cc</engineInCC>
+		<fuelCapacity>30</fuelCapacity>
+		<milage>21.17</milage>
+		<price>821405</price>
+		<roadTax>21</roadTax>
+		<AC>true</AC>
+		<powerSteering>true</powerSteering>
+		<accessoryKit>true</accessoryKit>
+	</Car>
+	<Car>
+		<make>Honda</make>
+		<model>City</model>
+		<engineInCC>1596cc</engineInCC>
+		<fuelCapacity>30</fuelCapacity>
+		<milage>19.18</milage>
+		<price>1090863</price>
+		<roadTax>21</roadTax>
+		<AC>true</AC>
+		<powerSteering>true</powerSteering>
+		<accessoryKit>true</accessoryKit>
+	</Car>
+	<Car>
+		<make>Hundai</make>
+		<model>Verna</model>
+		<engineInCC>1596cc</engineInCC>
+		<fuelCapacity>35</fuelCapacity>
+		<milage>20.15</milage>
+		<price>1350496</price>
+		<roadTax>21</roadTax>
+		<AC>true</AC>
+		<powerSteering>true</powerSteering>
+		<accessoryKit>true</accessoryKit>
+	</Car>
+	<Bike>
+		<make>Honda</make>
+		<model>Activa</model>
+		<engineInCC>124cc</engineInCC>
+		<fuelCapacity>8</fuelCapacity>
+		<milage>60.04</milage>
+		<price>56000</price>
+		<roadTax>11</roadTax>
+		<selfStart>true</selfStart>
+		<helmetPrice>1199</helmetPrice>
+		<selfStart>true</selfStart>
+	</Bike>
+	<Bike>
+		<make>Hero MotoCorp</make>
+		<model>Pleasure</model>
+		<engineInCC>109cc</engineInCC>
+		<fuelCapacity>7</fuelCapacity>
+		<milage>63.2</milage>
+		<price>55490</price>
+		<roadTax>11</roadTax>
+		<selfStart>true</selfStart>
+		<helmetPrice>1199</helmetPrice>
+		<selfStart>true</selfStart>
+	</Bike>
+
+</Vehicle>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 2</title>
+		<link href = "stylesheet2.css" rel = "stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1>Form Submission</h1>
+		</header>
+		<section>
+			<fieldset>
+				<legend>Registration</legend>
+				<div class = "form_name">
+					<span>Name: </span>
+					<span>Email: </span>
+					<span>Mobile Number: </span>
+					<span>DOB: </span>
+					<span style = "margin-top: 8%;">Rate Yourself: </span>
+					<span style = "margin-top: 5%;">Country Name: </span>
+				</div>
+				<form style = "width: 50%; float:left;">
+					<input class = "form_input" type = "text" name = "name" required placeholder = "Full Name">
+					<input class = "form_input" type="email" name="email" required placeholder = "Email">
+					<input class = "form_input" type="tel" name="tel" id="tel" required placeholder = "Number">
+					<input class = "form_input" name="startdate"  required type="date">
+					<input class = "form_input" type="range" min="0" max="5" step = "1"value="0">
+					<input class = "form_input" name="country_name" required type="text" list="country" />
+						<datalist id="country" required>
+						   <option value="India">
+						   <option value="Albania">
+						   <option value="Algeria">
+						   <option value="Andorra">
+						   <option value="Angola">
+						   <option value="Bhutan">
+						   <option value="USA">
+						   <option value="UK">
+						   <option value="UAE">
+						   <option value="Srilanka">
+						   <option value="Swedan">
+						</datalist>
+					<input type = "submit" value = "Submit" id = "submit"/>
+				</form>
+			</fieldset>
+		</section>
+	</body>
+</html>

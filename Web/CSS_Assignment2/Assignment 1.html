@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html style = "height:100%">
+	<head>
+		<style>
+			body{
+				padding: 0px;
+				margin: 0px;
+			}
+			.background-example{
+				background-image: url(non-repeat_background.jpg), url(repeat_background.jpg);
+				background-position: right bottom, left top;
+				background-repeat: no-repeat, repeat;
+				padding: 15px;
+				height: 100%;
+			}
+
+			#rcorners1 {
+				border-radius: 0px 218px;
+				background: #8AC007;
+				padding: 20px; 
+				width: 200px;
+				height: 150px; 
+			}
+			
+		</style>
+	</head>
+	<body style = "height: 100%;">
+		<div class = "background-example">
+			<p>Two values - border-radius: 15px 50px:</p>
+			<p id="rcorners1"></p>
+		</div>
+	</body>
+</html>

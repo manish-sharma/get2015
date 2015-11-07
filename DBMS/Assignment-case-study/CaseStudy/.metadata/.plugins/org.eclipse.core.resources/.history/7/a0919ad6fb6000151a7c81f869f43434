@@ -1,0 +1,187 @@
+package com.metacampus.vehiclemanagement.model;
+
+public class Vehicle {
+	
+	//created_by is the name of creator of vehicle
+	private String created_by;
+	
+	//created_time is the time of creation of vehicle
+	private String created_time;
+	
+	//make is the company of vehicle
+	private String make;
+	
+	//model is the model of vehicle
+	private String model;
+	
+	//cubic capacity of engine
+	private String engineInCC;
+	
+	//fuel capacity of fuel tank
+	private int fuelCapacity;
+	
+	//Mileage of vehicle
+	private String mileage;
+	
+	//price of vehicle
+	private float price;
+	
+	//road tax of vehicle
+	private float roadTax;
+	
+	//getter of created_by
+	public String getCreated_by() {
+		return created_by;
+	}
+
+	//setter of created_by
+	public void setCreated_by(String created_by) {
+		this.created_by = created_by;
+	}
+	
+	//getter of created time.
+	public String getCreated_time() {
+		return created_time;
+	}
+
+	//setter of created time.
+	public void setCreated_time(String created_time) {
+		this.created_time = created_time;
+	}
+	//getter of make
+	public String getMake() {
+		return make;
+	}
+	
+	//setter of make
+	public void setMake(String make) {
+		this.make = make;
+	}
+
+	//getter of model
+	public String getModel() {
+		return model;
+	}
+
+	//setter of make
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	//getter of cubic capacity
+	public String getEngineiInCC() {
+		return engineInCC;
+	}
+
+	//setter of cubic capacity
+	public void setEngineInCC(String engineInCC) {
+		this.engineInCC = engineInCC;
+	}
+
+	//getter of fuel capacity
+	public int getFuelCapacity() {
+		return fuelCapacity;
+	}
+
+	//setter of fuel capacity
+	public void setFuelCapacity(int fuelCapacity) {
+		this.fuelCapacity = fuelCapacity;
+	}
+
+	//getter of mileage
+	public String getMileage() {
+		return mileage;
+	}
+
+	//setter of mileage
+	public void setMileage(String mileage) {
+		this.mileage = mileage;
+	}
+
+	//getter of price
+	public float getPrice() {
+		return price;
+	}
+
+	//setter of price
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+	//getter of road tax
+	public float getRoadTax() {
+		return roadTax;
+	}
+
+	//setter of road tax
+	public void setRoadTax(float roadTax) {
+		this.roadTax = roadTax;
+	}
+	
+	//calculation of on road price of vehicle
+	public float calculateOnRoadPrice() {
+		return getPrice()+getPrice()*getRoadTax()/100;
+	}
+	
+	//returning specification of vehicle in form of string
+	public String toString() {
+		String vehicleSpecification = "Make:"+getMake()+", Model:"+getModel()+" ,engineInCC:"+getEngineiInCC()+
+				", fuelCapacity:"+getFuelCapacity()+", mileage:"+getMileage()+", Price:"+getPrice()+", roadTax:"+getRoadTax()+", ";
+		return vehicleSpecification;			
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((engineInCC == null) ? 0 : engineInCC.hashCode());
+		result = prime * result + fuelCapacity;
+		result = prime * result + ((make == null) ? 0 : make.hashCode());
+		result = prime * result + ((mileage == null) ? 0 : mileage.hashCode());
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + Float.floatToIntBits(price);
+		result = prime * result + Float.floatToIntBits(roadTax);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vehicle other = (Vehicle) obj;
+		if (engineInCC == null) {
+			if (other.engineInCC != null)
+				return false;
+		} else if (!engineInCC.equals(other.engineInCC))
+			return false;
+		if (fuelCapacity != other.fuelCapacity)
+			return false;
+		if (make == null) {
+			if (other.make != null)
+				return false;
+		} else if (!make.equals(other.make))
+			return false;
+		if (mileage == null) {
+			if (other.mileage != null)
+				return false;
+		} else if (!mileage.equals(other.mileage))
+			return false;
+		if (model == null) {
+			if (other.model != null)
+				return false;
+		} else if (!model.equals(other.model))
+			return false;
+		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
+			return false;
+		if (Float.floatToIntBits(roadTax) != Float
+				.floatToIntBits(other.roadTax))
+			return false;
+		return true;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.metacampus.vehiclemanagement.printer;
+
+public class VehicleDetailPrinter {
+
+}

@@ -1,0 +1,30 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 1px solid black;
+	float:left;
+}
+
+.rotate-div:hover {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg); /* Standard syntax */
+	transition-duration : 5s;
+}
+.scale-div:hover {
+	
+    border: 1px solid black;
+    border: 1px solid black;
+    -ms-transform: scale(2,2); /* IE 9 */
+    -webkit-transform: scale(2,2); /* Safari */
+    transform: scale(2,2); /* Standard syntax */
+	margin-top:100px;
+	transition-duration : 5s;
+}
+.skew-div:hover{
+	-ms-transform: skewX(20deg); /* IE 9 */
+    -webkit-transform: skewX(20deg); /* Safari */
+    transform: skewX(20deg); /* Standard syntax */
+	transition-duration : 5s;
+}
