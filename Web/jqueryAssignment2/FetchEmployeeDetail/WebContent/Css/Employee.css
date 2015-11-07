@@ -1,0 +1,30 @@
+
+.table{
+margin:0 auto;
+}
+label
+{ padding-top:10px;
+}
+#wrapper {
+	padding-top : 20px;
+	position : relative;
+	float : left;
+	left : 400px;
+	height: 550px;
+	width:  600px;
+	border: 2px dashed red;
+	text-align:  center;
+	 background-color: #FFFFCC;
+}
+.demo
+{   margin-top:50px;
+    padding-bottom:10px;
+	color:red;
+}
+#demo
+{	border: 3px dotted blue;
+margin:0 auto;
+width:300px;
+height:90px;
+
+}

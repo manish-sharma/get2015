@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Fetching Employee Data Using AJAX</title>
+<script type="text/javascript" src="Js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="Js/Employee.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="Js/Assignment4.js"></script>
+<link rel="stylesheet" href="Css/Employee.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1 align="center" style="color: red">
+			<u>Fetch Employee Detail </u>
+		</h1>
+		<table class="table">
+			<div class="div">
+				<tr>
+					<td><label>Name: <label></td>
+					<td><input type="text" id="name" /></td>
+				</tr>
+			</div>
+			<div class="div">
+				<tr>
+					<td><label>Age: <label></td>
+					<td><input type="text" id="age" />
+					<td>
+				</tr>
+			</div>
+			<div class="div">
+				<tr>
+					<td><label>Address:</label></td>
+					<td><input type="text" id="address" /></td>
+				</tr>
+			</div>
+			<div class="list">
+				<tr>
+					<td><label>Employee's Name :<label></td>
+					<td><select id="empName" step="any">
+							<option selected="selected" disabled>--Select--</option>
+							<option value="NikhilTinkar">Nikhil Tinkar</option>
+							<option value="AkshatMathur">Akshat Mathur</option>
+							<option value="KhemanshuRao">Khemanshu Rao</option>
+							<option value="SanjayNainani">Sanjay Nainani</option>
+							<option value="AmitNatani">Amit Natani</option>
+					</select></td>
+				</tr>
+			</div>
+		</table>
+		<div>
+			<h2 align="center" class="demo">Employee Detail</h2>
+			<div id="demo"></div>
+		</div>
+	</div>
+</body>
+
+</html>
+
