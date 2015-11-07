@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <display-name>RegistrationForm</display-name>
+  <servlet>
+    <display-name>Register</display-name>
+    <servlet-name>RegistrationForm</servlet-name>
+    <servlet-class>com.Controller.RegistrationForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationForm</servlet-name>
+    <url-pattern>/RegistrationForm</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>Register</display-name>
+    <servlet-name>EmployeeList</servlet-name>
+    <servlet-class>com.Controller.EmployeeList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeList</servlet-name>
+    <url-pattern>/EmployeeList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>List</display-name>
+    <servlet-name>ListController</servlet-name>
+    <servlet-class>com.Controller.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListController</servlet-name>
+    <url-pattern>/ListController</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>Index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
