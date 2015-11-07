@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ToolTip And PopUp</title>
+<!-- Links to the JQuery and bootstrap  -->
+<script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<style type="text/css">
+.check1
+ {
+	margin-top: 20px;
+}
+</style>
+<!-- Java Script -->
+<script>
+	/*On Load this Function Is called  */
+	$(document).ready(function() 
+	{
+		$('[data-toggle="tooltip"]').tooltip();
+		$('[data-toggle="popover"]').popover();
+
+	});
+</script>
+</head>
+<body>
+	<!-- Icon to be displayed when in extra small -->
+	<h1 align="center" class="hidden-xs">Sample Form</h1>
+	<div class="row">
+		<div class="col-xs-12 hidden-lg hidden-md hidden-sm">
+			<span class="glyphicon glyphicon-facetime-video "
+				style="font-size: 4em;"></span>
+		</div>
+	</div>
+	<!--Container For the details  -->
+	<div class="container well">
+		<!-- Movie Title  -->
+		<div class="row check1">
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover"
+					title="Movie Title" data-content="Enter Movie tilte here">MovieTitle
+				</label>
+			</div>
+			<!-- Text box for Movie Title -->
+			<div class="col-lg-5  col-md-4 col-sm-8 col-xs-12 ">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Movie Title" data-placement="right">
+			</div>
+			<!-- Genre Title -->
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Genre"
+					data-content="Enter Genre here">Genre</label>
+			</div>
+			<!-- Select tag -->
+			<div class="col-lg-5 col-md-4 col-sm-8 col-xs-12">
+				<select  style="width: 100%"
+					data-toggle="tooltip" title="Genre" data-placement="right"></select>
+			</div>
+		</div>
+		<!-- Director Label -->
+		<div class="row check1">
+			<div class="col-lg-1 col-md-2  col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Director"
+					data-content="Enter Movie Director name here">Director</label>
+			</div>
+			<!-- TextBox for director-->
+			<div class="col-lg-2  col-md-4 col-sm-8 col-xs-12">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Director" data-placement="right">
+			</div>
+			<!-- Label for Writer  -->
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Writer"
+					data-content="Enter Movie Writer name here">Writer</label>
+			</div>
+			<!-- TextBox for writer -->
+			<div class="col-lg-2  col-md-4 col-sm-8 col-xs-12 ">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Writer" data-placement="right">
+			</div>
+			<!-- Producer Label  -->
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Producer"
+					data-content="Enter Movie Producer name here">Producer</label>
+			</div>
+			<!-- TextBox for Producer -->
+			<div class="col-lg-2 col-md-4  col-sm-8 col-xs-12">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Producer" data-placement="right">
+			</div>
+			<!-- Composer Label  -->
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Composer"
+					data-content="Enter Movie Composer here">Composer</label>
+			</div>
+			<!-- TextBox for Website -->
+			<div class="col-lg-2 col-md-4  col-sm-8 col-xs-12">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Composer" data-placement="right">
+			</div>
+		</div>
+		<!--Label for website  -->
+		<div class="row check1">
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover" title="Website"
+					data-content="Enter Movie Website here">Website</label>
+			</div>
+			<!-- TextBox for Website  -->
+			<div class="col-lg-5  col-md-4 col-sm-8 col-xs-12">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Website" data-placement="right">
+			</div>
+			<!-- Label for youtube Trailer  -->
+			<div class="col-lg-1 col-md-2 col-sm-4 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover"
+					title="Youtube trailer" data-content="Youtube trailer is here">Youtube
+					trailer</label>
+			</div>
+			<!-- TextBox for youtube -->
+			<div class="col-lg-5 col-md-4 col-sm-8 col-xs-12">
+				<input type="text" style="width: 100%" data-toggle="tooltip"
+					title="Youtube trailer" data-placement="right">
+			</div>
+		</div>
+		<!-- Review label -->
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check1">
+				<label data-toggle="popover" data-trigger="hover" title="Review"
+					data-content="Enter Movie Review here">Review</label>
+			</div>
+		</div>
+		<!-- Text Area for Review -->
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 check1">
+				<textarea rows="4" style="width: 100%; height: 20%"
+					data-toggle="tooltip" title="Review" data-placement="right"></textarea>
+			</div>
+		</div>
+		<!-- Rating label -->
+		<div class="row check1">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<label data-toggle="popover" data-trigger="hover"
+					data-trigger="hover" title="Rating"
+					data-content="Movie Rating is here">Rating</label>
+			</div>
+			<!--option  -->
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-danger">
+				<input name="icon" type="radio" data-toggle="tooltip"
+					title="Terrible" data-placement="bottom">Terrible
+			</div>
+			<!--option  -->
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-primary">
+				<input name="icon" type="radio" data-toggle="tooltip"
+					title="Watchable" data-placement="bottom">Watchable
+			</div>
+			<!--option  -->
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-success">
+				<input name="icon" type="radio" data-toggle="tooltip"
+					title="Best Ever" data-placement="bottom">Best Ever
+			</div>
+		</div>
+		<!--Buttons  -->
+		<div class=row>
+			<div
+				class="col-lg-12 col-lg-push-3 col-md-12 col-md-push-3 col-sm-12 col-xs-12 ">
+				<button type="button" class="btn btn-default">Cancel</button>
+				<button type="button" class="btn btn-primary">Validate</button>
+				<button type="button" class="btn btn-success">Submit</button>
+				<button type="button" class="btn btn-danger">Delete</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
