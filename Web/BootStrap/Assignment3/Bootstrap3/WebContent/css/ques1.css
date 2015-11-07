@@ -1,0 +1,17 @@
+/*.container-fluid .row div{
+	border:1px solid black;
+}
+
+body{
+	text-align:center;
+}*/
+
+.carousel-indicators {
+	top: 0;
+	bottom: auto;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	width: 70%;
+	margin: auto;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Question3</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+<link rel="stylesheet" href="css/ques3.css" type="text/css">
+<script src="js/jquery-1.11.3.js"></script>
+<!-- <script src="js/bootstrap.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.ques').addClass('col-lg-1 col-md-1 col-sm-1 col-xs-1');
+		$('.quesText').addClass('col-lg-11 col-md-11 col-sm-11 col-xs-12');
+		$('#submitbtn').click(function(){
+			var ans1 = $("input[name=radioBtn1]:checked").val();
+			var ans2 = $("input[name=radioBtn2]:checked").val();
+			var ans3 = $("input[name=radioBtn3]:checked").val();
+			var ans4 = [];
+			var ans5 = [];
+			$("input[name=checkBtn1]:checked").each(function(i){
+	            ans4[i] = this.value;
+	        });
+			$("input[name=checkBtn2]:checked").each(function(i){
+	            ans5[i] = this.value;
+	        });
+			$('.modal-body p').html("Answer1 : "+ans1+"<br>Answer2 : "+ans2+"<br>Answer3 : "+ans3+"<br>Answer4 : "+ans4+"<br>Answer5 : "+ans5+"");
+		});
+		
+		
+	});
+	
+</script>
+</head>
+
+<body>
+	<h1 class="text-center hidden-xs">Multiple Choice Questions</h1>
+	<br />
+	<form class="form-horizontal" role="form">
+		<div class="container well">
+			<div class="form-group row">
+				<label class="ques">Ques1: </label> <label class="quesText">Which of the following class is required to be added to form tag to make it inline?</label>
+			</div>
+			<div class="form-group row">
+				<label class=" col-lg-1 col-md-1 col-sm-1 col-xs-1" id="answer">Answer</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary " ><input
+					type="radio" id="terrible" name="radioBtn1" class="text-left " value=".inline" required/>&nbsp;.inline</label>
+				<label class=" col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary" ><input
+					type="radio" id="watchable" name="radioBtn1" class="text-left" value=".form-inline" required />&nbsp;.form-inline</label>
+				<label class="col-lg-2 col-md-2 col-sm-offset-1 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn1" class="text-left" value=".horizontal" required/>&nbsp;.horizontal</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn1" class="text-left" value="None of the above" required/>&nbsp;None of the above</label>					
+			</div>
+			
+			<div class="form-group row">
+				<label class="ques">Ques2: </label> <label class="quesText">Which of the following bootstrap style of button makes the button size extra small?</label>
+			</div>
+			<div class="form-group row">
+				<label class=" col-lg-1 col-md-1 col-sm-1 col-xs-1" id="answer">Answer</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="terrible" name="radioBtn2" class="text-left" value=".btn-lg"/>&nbsp;.btn-lg</label>
+				<label class=" col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="watchable" name="radioBtn2" class="text-left" value=".btn-sm" />&nbsp;.btn-sm</label>
+				<label class="col-lg-2 col-md-2 col-sm-offset-1 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn2" class="text-left" value=".btn-xs" />&nbsp;.btn-xs</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn2" class="text-left" value=".btn-block" />&nbsp;.btn-block</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="ques">Ques3: </label> <label class="quesText">Which of the following bootstrap style makes a set of buttons appear vertically stacked rather than horizontally?</label>
+			</div>
+			<div class="form-group row">
+				<label class=" col-lg-1 col-md-1 col-sm-1 col-xs-1" id="answer">Answer</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="terrible" name="radioBtn3" class="text-left" value=".btn-group"/>&nbsp;.btn-group</label>
+				<label class=" col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="watchable" name="radioBtn3" class="text-left" value=".btn-toolbar"/>&nbsp;.btn-toolbar</label>
+				<label class="col-lg-2 col-md-2 col-sm-offset-1 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn3" class="text-left" value=".btn-group-lg" />&nbsp;.btn-group-lg</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="radio" id="bestEver" name="radioBtn3" class="text-left" value=".btn-group-vertical" />&nbsp;.btn-group-vertical</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="ques">Ques4: </label> <label class="quesText"> Which of the following bootstrap styles are used to create a tabbed navigation?</label>
+			</div>
+			<div class="form-group row">
+				<label class=" col-lg-1 col-md-1 col-sm-1 col-xs-1" id="answer">Answer</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="terrible" name="checkBtn1" class="text-left" value=".nav"/>&nbsp;.nav</label>
+				<label class=" col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="watchable" name="checkBtn1" class="text-left" value=".nav-tabs"/>&nbsp;.nav-tabs</label>
+				<label class="col-lg-2 col-md-2 col-sm-offset-1 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="bestEver" name="checkBtn1" class="text-left" value=".nav-pills"/>&nbsp;.nav-pills</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="bestEver" name="checkBtn1" class="text-left" value=".nav-stacked"/>&nbsp;.nav-stacked</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="ques">Ques5: </label> <label class="quesText">Which of the following bootstrap styles can be used to create progress bars with different styles?</label>
+			</div>
+			<div class="form-group row">
+				<label class=" col-lg-1 col-md-1 col-sm-1 col-xs-1" id="answer">Answer</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="terrible" name="checkBtn2" class="text-left" value=".progress-bar-success" />&nbsp;.progress-bar-success</label>
+				<label class=" col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="watchable" name="checkBtn2" class="text-left" value=".progress-bar-warning"/>&nbsp;.progress-bar-warning</label>
+				<label class="col-lg-2 col-md-2 col-sm-offset-1 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="bestEver" name="checkBtn2" class="text-left" value=".progress-bar-info" />&nbsp;.progress-bar-info</label>
+				<label class="col-lg-2 col-md-2 col-sm-4 col-xs-12 text-primary"><input
+					type="checkbox" id="bestEver" name="checkBtn2" class="text-left" value=".progress-bar-danger" />&nbsp;.progress-bar-danger</label>
+			</div>
+
+			<div class="form-group row">
+				<div
+					class="col-lg-offset-4 col-lg-9 col-md-offset-4 col-md-9 col-sm-12 col-xs-12">
+				<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" id="submitbtn">Submit</button>
+					 <button class="btn btn-danger" type="reset" value="Reset">Reset</button>
+				</div>
+				 <!-- Modal -->
+				  <div class="modal fade" id="myModal" role="dialog">
+				    <div class="modal-dialog">
+				    
+				      <!-- Modal content-->
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <h4 class="modal-title">Answers</h4>
+				        </div>
+				        <div class="modal-body">
+				          <p></p>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+				      </div>
+      				</div>
+    			 </div>
+  			</div>
+  
+</div>
+			</form>
+</body>
+</html>
