@@ -1,0 +1,15 @@
+#box {
+	top:100px;
+	left:200px;
+	background-color: lightpink;
+	border: 3px solid #D685A0;
+	width:300px;
+	height:300px;
+	position: relative;
+	box-shadow: 0 0 50px #B55072 inset;
+}
+
+#outer{
+	width: 50%;
+    margin: 0 auto;
+}

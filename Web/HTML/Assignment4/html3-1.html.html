@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<TITLE>Canvas</TITLE>
+		<link rel="stylesheet" href="Assignment1style.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;">
+		</canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(100,100,150,75);
+		</script>
+		
+	</BODY>
+</HTML>
