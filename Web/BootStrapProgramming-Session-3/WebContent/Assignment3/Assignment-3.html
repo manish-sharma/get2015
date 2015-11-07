@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <script type="text/javascript" src="jquery-1.11.3.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script type="text/javascript" src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+ <script type="text/javascript" src="Q3.js">
+ 
+ </script>
+<title>Quiz</title>
+</head>
+<body>
+<div class="Container">
+
+<table align="center">
+<tr>
+<td>Question 1</td>
+</tr>
+<tr>
+<td>
+<div class = "btn-group" data-toggle = "buttons" class="Q1">
+   <label class = "btn btn-primary">
+      <input type = "radio" name ="Q1" value="A." id = "option1">A.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q1" value="B." id = "option2">B.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q1" value="C." id = "option3">C.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q1" value="D." id = "option3">D.
+   </label>
+</div>	
+</td>
+</tr>
+
+<tr>
+<td>Question 2</td>
+</tr>
+<tr>
+<td>
+<div class = "btn-group" data-toggle = "buttons" class="Q2">
+   <label class = "btn btn-primary">
+      <input type = "radio" name =" Q2" value="A." id = "option1">A.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q2" value="B." id = "option2">B.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q2"  value="C." id = "option3">C.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q2" value="D." id = "option3">D.
+   </label>
+</div>	
+</td>
+</tr>
+
+<tr>
+<td>Question 3</td>
+</tr>
+<tr>
+<td>
+<div class = "btn-group" data-toggle = "buttons" class="Q3">
+   <label class = "btn btn-primary">
+      <input type = "radio" name ="Q3" value="A." id = "option1">A.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q3"  value="B." id = "option2">B.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q3" value="C." id = "option3">C.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "radio" name = "Q3"  value="D." id = "option3">D.
+   </label>
+</div>	
+</td>
+</tr>
+
+<tr>
+<td>Question 4</td>
+</tr>
+<tr>
+<td>
+<div class = "btn-group" data-toggle = "buttons" class="Q4">
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="A." name="Q4">A.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="B." name="Q4">B.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="C." name="Q4">C.
+   </label>
+   
+    <label class = "btn btn-primary">
+      <input type = "checkbox" value="D." name="Q4">D.
+   </label>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Question 5</td>
+</tr>
+<tr>
+<td>
+<div class = "btn-group" data-toggle = "buttons" class="Q5">
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="A." name="Q5">A.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="B." name="Q5">B.
+   </label>
+   
+   <label class = "btn btn-primary">
+      <input type = "checkbox" value="C." name="Q5">C.
+   </label>
+   
+    <label class = "btn btn-primary">
+      <input type = "checkbox" value="D." name="Q5">D.
+   </label>
+</div>
+</td>
+</tr>
+
+</table>
+
+<!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"  id="submit">Submit</button>
+  
+   <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Selected Options</h4>
+        </div>
+        <div class="modal-body">
+          <p id="content">Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+ <button type="button" class="btn btn-info btn-lg" style="margin-right: 10px;" id="reset">Reset</button>
+
+</div>
+
+
+
+</body>
+</html>

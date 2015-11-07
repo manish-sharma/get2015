@@ -3,7 +3,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Form</title>
-<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script type="text/javascript" src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="ToolTip.js"></script>
 </head>
 <body>
 <h2 class="text-center hidden-xs">Sample Form</h2>
@@ -16,13 +19,13 @@
 			<label for="movietitle" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label" >Movie title</label>
 			
 			<div class="col-lg-5 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="movietitle">
+				<input type="text" class="form-control" id="movietitle" data-placement="right" title="Write Movie title" data-toggle="tooltip">
 			</div>
 			
-			<label for="genre" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Genre</label>
+			<label for="genre" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label" >Genre</label>
 			
 			<div class="col-lg-5 col-md-5 col-sm-9 col-xs-12">
-			<select class="form-control" id="genre" >
+			<select class="form-control" id="genre" data-placement="right" title="Write Genre" data-toggle="tooltip">
 			    <option disabled="disabled" selected="selected">Choose a Genre</option>
 				<option>Horror/Thriller</option>
 				<option>Comedy</option>
@@ -38,25 +41,25 @@
 			<label for="director" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Director</label>
 			
 			<div class="col-lg-2 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="director">
+				<input type="text" class="form-control" id="director" data-placement="right" title="Write Director" data-toggle="tooltip">
 			</div>
 			
 			<label for="writer" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Writer</label>
 			
 			<div class="col-lg-2 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="writer">
+				<input type="text" class="form-control" id="writer" data-placement="right" title="Write Writer" data-toggle="tooltip">
 			</div>
 
 			<label for="producer" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Producer</label>
 			
 			<div class="col-lg-2 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="producer">
+				<input type="text" class="form-control" id="producer" data-placement="right" title="Write Producer" data-toggle="tooltip">
 			</div>
 			
 			<label for="composer" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Composer</label>
 			
 			<div class="col-lg-2 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="composer">
+				<input type="text" class="form-control" id="composer" data-placement="right" title="Write Composer" data-toggle="tooltip">
 			</div>
 	 </div>
 	
@@ -64,13 +67,13 @@
 			<label for="website" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Website</label>
 			
 			<div class="col-lg-5 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="website">
+				<input type="text" class="form-control" id="website" data-placement="right" title="Write Website" data-toggle="tooltip">
 			</div>
 			
 			<label for="youtube" class="col-lg-1 col-md-1 col-sm-3 col-xs-12 control-label">Youtube trailer</label>
 			
 			<div class="col-lg-5 col-md-5 col-sm-9 col-xs-12">
-				<input type="text" class="form-control" id="youtube">
+				<input type="text" class="form-control" id="youtube" data-placement="right" title="Youtube trailer" data-toggle="tooltip">
 			</div>
 	</div>
 	
@@ -78,7 +81,7 @@
 		<label for="review" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label">Review</label>
 			
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<textarea rows="5" class="form-control" id="review"></textarea>
+			<textarea rows="5" class="form-control" id="review" data-placement="right" title="Write Review" data-toggle="tooltip"></textarea>
 		</div>
 	</div>
 	
