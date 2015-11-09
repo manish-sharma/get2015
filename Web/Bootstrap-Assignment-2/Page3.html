@@ -1,0 +1,190 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Bootstrap Assignment 2.2</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<style>
+			.margin-top {
+				margin-top : 5%;
+			}
+		</style>
+	</head>
+	<body>
+	
+		
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+						<a href="#" class="navbar-brand">Metacube</a>
+					<div class="navbar-header                                                                                                                                                                                                                                                                                                                           ">
+						<button type="button" data-toggle="collapse" class="navbar-toggle" data-target="#menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav visible-sm big-glyphicon">
+							<li><a href="#"><span class="glyphicon glyphicon-home"></a></span></li>
+							<li><a href="#"><span class="glyphicon glyphicon-phone"></a></span></li>
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></a></span></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></a></span></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-out"></a></span></li>
+						</ul>
+						<ul class="nav navbar-nav visible-lg visible-md visible-xs">
+							
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Movie Form</a></li>
+							<li><a href="moviereview.html">Movie Reviews</a></li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">CSS <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><input type="button" value="This is a button"class="btn btn-default center-block"></li>
+									<li class="divider"></li>
+									<li>
+										<div class="panel panel-default center-block">
+											<div class="panel-heading">This is panel header</div>
+											<div class="panel-body">This is panel body</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li><a href="#">This is a link</a></li>
+									<li class="divider"></li>
+									<li>
+										<ul class="pagination">
+											<li>
+											  <a href="#" aria-label="Previous">
+												<span aria-hidden="true">&laquo;</span>
+											  </a>
+											</li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li>
+											  <a href="#" aria-label="Next">
+												<span aria-hidden="true">&raquo;</span>
+											  </a>
+											</li>
+										  </ul>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<div class="progress">
+										  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+											<span class="sr-only">60% Complete</span>
+										  </div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Account Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="pull-right">	
+						<form class="navbar-form" role="search">
+										<div class="input-group">
+											<input type="text" class="form-control"name="Search" placeholder="Search this site">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default ">
+													<i class="glyphicon glyphicon-search"></i>&nbsp
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+					</div>
+				</div>
+			</div>
+	<div class="container jumbotron margin-top">
+		<form role="form" class="form">
+			<div class="glyphicon glyphicon-film visible-xs" style="font-size: 50px;"></div>
+			<div class="row">
+				<div class="form-group">
+					<label for="movieTitle" class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Movie Title</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="movieTitle" class="form-control" placeholder="Enter Movie Title">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="genre" class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Genre</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<select value="genre" class="form-control">
+							<option>Choose a genre</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Director</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="director" class="form-control" placeholder="Enter Director">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Writer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="writer" class="form-control" placeholder="Enter Writer">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Producer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="producer" class="form-control" placeholder="Enter Producer">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Composer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="composer" class="form-control" placeholder="Enter Composer">
+					</div>
+				</div>
+		</div>
+			<div class="row">
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Website</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="website" class="form-control" placeholder="Enter Website">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2 visible-lg visible-md visible-sm">Youtube Trailer</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="trailer" class="form-control col-lg-4" placeholder="Enter Youtube Trailer">
+					</div>
+				</div>
+			</div>
+						<div class="form-group row col-lg-12 col-md-12 col-sm-12">
+				<label class="control-label visible-lg visible-md visible-sm">Review
+				<textarea name="review" class="form-control" placeholder="Enter Some Review"></textarea></label>
+			</div>
+			<div class="form-group row">
+				<label class="col-lg-3 col-md-3 col-sm-12">Rating</label>
+				<label for="terrible" class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><input type="radio" name="rating" id="terrible"> Terrible</label>
+				<label for="watchable" class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><input type="radio" name="rating" id="watchable"> Watchable</label>
+				<label for="bestever" class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><input type="radio" name="rating" id="bestever"> Best Ever</label>
+			</div>
+			<div class="col-lg-12 col-lg-push-3 col-md-12 col-md-push-3 col-sm-12 col-xs-12 ">
+				<button type="button" class="btn btn-default">Cancel</button>
+				<button type="button" class="btn btn-primary">Validate</button>
+				<button type="button" class="btn btn-success">Submit</button>
+				<button type="button" class="btn btn-danger">Delete</button>
+			</div>
+		</form>
+		</div>
+	</body>
+</html>
+	

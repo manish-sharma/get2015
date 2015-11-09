@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Bootstrap Assignment 2.1</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	<div class="container well">
+		<form role="form" class="form">
+			<div class="glyphicon glyphicon-film visible-xs" style="font-size: 50px;"></div>
+			<div class="row">
+				<div class="form-group">
+					<label for="movieTitle" class="control-label col-lg-1 col-md-2 col-sm-2">Movie Title</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="movieTitle" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="genre" class="control-label col-lg-1 col-md-2 col-sm-2">Genre</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<select value="genre" class="form-control">
+							<option>Choose a genre</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Director</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="director" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Writer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="writer" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Producer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="producer" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Composer</label>
+					<div class="col-lg-2 col-md-4 col-sm-10">
+						<input type="text" name="composer" class="form-control">
+					</div>
+				</div>
+		</div>
+			<div class="row">
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Website</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="website" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-1 col-md-2 col-sm-2">Youtube Trailer</label>
+					<div class="col-lg-5 col-md-4 col-sm-10">
+						<input type="text" name="trailer" class="form-control col-lg-4">
+					</div>
+				</div>
+			</div>
+						<div class="form-group row col-lg-12 col-md-12 col-sm-12">
+				<label>Review</label>
+				<textarea name="review" class="form-control"></textarea>
+			</div>
+			<div class="form-group row">
+				<label class="col-lg-3 col-md-3 col-sm-12">Rating</label>
+				<label for="terrible" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-danger"><input type="radio" name="rating" id="terrible"> Terrible</label>
+				<label for="watchable" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-info"><input type="radio" name="rating" id="watchable"> Watchable</label>
+				<label for="bestever" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-success"><input type="radio" name="rating" id="bestever"> Best Ever</label>
+			</div>
+			<div class="col-lg-12 col-lg-push-3 col-md-12 col-md-push-3 col-sm-12 col-xs-12 ">
+				<button type="button" class="btn btn-default">Cancel</button>
+				<button type="button" class="btn btn-primary">Validate</button>
+				<button type="button" class="btn btn-success">Submit</button>
+				<button type="button" class="btn btn-danger">Delete</button>
+			</div>
+		</form>
+		
+	</body>
+</html>
