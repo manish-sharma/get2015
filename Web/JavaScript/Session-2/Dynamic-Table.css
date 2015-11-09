@@ -1,0 +1,58 @@
+body {
+    background:#E5E1D6;
+}
+#wrapper {
+    margin:0 auto;
+	width:60%;
+	background:#FFF;
+	height:80%;
+	
+ }
+ #header {
+    background:lightgray;
+    height:10%;
+    padding-top:20px;
+	padding-left:15px;
+    font-size:24px;
+    color:SlateBlue;
+	
+}
+table {
+		border-collapse:collapse;
+	}
+#footer {
+	
+	
+}
+#myTable{
+	border:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

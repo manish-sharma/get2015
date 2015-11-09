@@ -1,0 +1,10 @@
+11,SUV
+22,SUV
+33,Sedan
+44,Hatchback
+55,Sedan
+66,Sedan
+77,Hatchback
+88,Sedan
+99,Sedan
+100,SUV

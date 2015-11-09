@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="Dynamic-Table.css" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="Dynamic-Table.js">
+     	</script>
+		<div id="wrapper">
+			<div id="header">
+				Dynamic Table
+			</div>
+			<p>Click the buttons to create and delete row(s) for the table.</p>
+			<table id="myTable">
+				<th>Name</th>
+				<th>Minimum</th>
+				<th>Maximum</th>
+				<tr>
+					<td><input type="text" id="txtName" /></td>
+					<td><input type="number" id="txtMin0" min="1" max="10"/></td>
+					<td><input type="number" id="txtMax0" min="1" max="10" /></td>
+					<td> <p id="P0"> </p> </td>
+				</tr>
+			</table>
+			<button onclick="createRow()" id="create">Create row</button>
+			<button onclick="deleteRow()" id="delete" disabled>Delete row</button>
+			<input type="button" onclick="myFunction()"  id="ok" value="OK">
+    	</div>
+		<table id="dynamicTable" align="center">
+		</table>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+	background-color: #f0eff1;
+}
+
+form {
+	width: 700px;
+	height: 400px;
+	margin: 0 auto;
+	border: thick;
+	border-color: blue;
+	background-color: #B0C4DE;
+}
+
+.left {
+	position: absolute;
+	margin-left: 10px;
+}
+
+.input {
+	position: absolute;
+	margin-left: 150px;
+}
+
+header {
+	background-color:#778899;
+}
+
+section {
+	position: relative;
+	top: 0px; height : 400px;
+	background-color: #B0C4DE;
+	height: 400px;
+}

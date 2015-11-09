@@ -1,0 +1,26 @@
+body{background-color:gray;}
+
+#wrapper{
+	
+	width:30%;
+	height:200px;
+	background-color: white;
+	color:blue;
+	padding:10px;
+	margin:0px auto;
+
+	}
+	
+#output
+{
+	margin-top:100px;
+	width:350px;
+	height:100px;
+	
+	background-color:AliceBlue;
+	
+}	
+	
+
+	
+	

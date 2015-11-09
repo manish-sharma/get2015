@@ -1,0 +1,72 @@
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+function login(showhide){
+if(showhide == "show"){
+    document.getElementById('popupbox').style.visibility="visible";
+}else if(showhide == "hide"){
+    document.getElementById('popupbox').style.visibility="hidden"; 
+}
+}
+function loginClicked()
+{
+	var userName = document.getElementById("username").value;
+	var Password = document.getElementById("password").value;
+	if(userName == "admin")
+	{
+		window.location="searchAndCreateForAdmin.html";
+		 document.getElementById("alertmsg").innerHTML="";
+		
+	}
+	else
+	{
+	 document.getElementById("alertmsg").innerHTML="Username can be admin only";
+	}
+
+}
+</script>
+<link rel="stylesheet" href="../CSS/page1.css" type="text/css">
+</head>
+<body>
+	<div id="wrapper">
+	<div id="header">
+		<img src="../images/images.png" />
+		<div id="asideLeft">
+		<ul><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Contact Us</a></li>
+		</div>
+		<div id="asideRight">
+		 <ul><li><a href="searchUser.html">USER</a></li><li><a href="javascript:login('show');">ADMIN</a></li>
+		</div>
+	</div>
+		<div id="popupbox"> 
+<form name="login" action="" method="post">
+<center>Username:</center>
+<center><input name="username" size="14" id="username"/></center>
+<center>Password:</center>
+<center><input name="password" type="password" id="password"size="14" /></center>
+<center><input type="button" name="submit" value="login" onclick="loginClicked()" /></center>
+<p id="alertmsg"></p>
+</form>
+<br />
+<center><a href="javascript:login('hide');">Close</a></center> 
+</div> 
+
+	 
+	
+	 
+	</div>
+</body>
+</html>
+
+
+<servlet>
+  <servlet-name>LoginController</servlet-name>
+  <servlet-class>com.cardekho.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginController</servlet-name>
+  <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  
+  <%@include file="/CSS/login.css"%>
+	

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bike>
+<item type="bike">
+<vehicleId>103</vehicleId>
+<make>tvs</make>
+<model>apache</model>
+<engineInCC>280</engineInCC>
+<fuelCapacity>12</fuelCapacity>
+<milage>30</milage>
+<price>80000</price>
+<roadTax>5000</roadTax>
+<createdBy>chetna</createdBy>
+<selfStart>true</selfStart>
+<helmetPrice>1000</helmetPrice>
+</item>
+
+<item type="bike">
+<vehicleId>104</vehicleId>
+<make>Honda</make>
+<model>Twister</model>
+<engineInCC>125</engineInCC>
+<fuelCapacity>10</fuelCapacity>
+<milage>60</milage>
+<price>60000.41</price>
+<roadTax>40000.21</roadTax>
+<createdBy>richa</createdBy>
+<selfStart>true</selfStart>
+<helmetPrice>950</helmetPrice>
+</item>
+</bike>
+

@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel="stylesheet" href="Registration_form.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="Registration_form.js">
+</script>
+
+<div id="wrapper">
+<div id="header">
+Registration Form
+</div>
+<form action="Validation" method="post">
+<table style="margin:50px; "cellpadding=2px;>
+    
+	<tr>
+	<td  valign="top"> FirstName </td>
+	<td><input type="text" id="FName" name="firstName"/></td>
+	</tr>
+	
+	
+	
+	<tr>
+	<td  valign="top"> LastName </td>
+	<td><input type="text" id="LName" name="lastName"/></td>
+	</tr>
+	
+	
+	
+	<tr>
+	<td valign="top">Password</td>
+	<td><input type="password" id="Password" name="password"/></td>
+	
+	</tr>
+	
+	
+	<tr>
+	<td  valign="top">Retype Password</td>
+	<td><input type="password" id="RPassword" name="confirmPassword"/></td>
+	</tr>
+
+	
+	<tr>
+	<td valign="top">Age</td>
+	<td><input type="text" id="Age" name="age"></td>
+	</tr>
+
+	
+	<tr>
+    <td>State:</td>
+    <td>
+		<select name="states" id="State" onchange="setStates();">
+		  <option value="Select State" selected>Select State</option>
+		  <option value="Rajasthan">Rajasthan</option>
+		  <option value="Madhya Pradesh">Madhya Pradesh</option>
+		  <option value="Uttar Pradesh">Uttar Pradesh</option>
+		  <option value="Maharashtra">Maharashtra</option>
+		  
+		</select>
+    </td>
+    </tr>
+	
+	<tr>
+	<td>City:</td>
+	<td>
+	<select name="cities" id="City" >
+	  <option value="">Please select a State</option>
+	</select>
+	</td>
+	</tr>
+	
+	<tr>
+	<td valign="top">AddressLine1:</td>
+	<td>
+	<textarea rows="3" cols="25" name="address" placeholder="Enter your Address"></textarea>
+	</td>
+	</tr>
+	
+	<tr>
+	<td colspan="2">
+	<input type="checkbox" id="Accept" "/>
+	 I have read and understood and agree to the Terms and Conditions governing the use
+	</td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" align="center">
+	<input type="submit" value="Try it">
+	</td>
+	</tr>
+	
+	
+
+
+</table>
+</form>
+</div>
+
+
+</body>
+</html>

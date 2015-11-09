@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="HTML-Session-2-ass2.css">
+<title>FormUsingSementic</title>
+</head>
+<body>
+	<form>
+	    <header><h1>SURVEY FORM</h1></header>
+	    
+	    <section>
+		<label class="left">Name : </label> 
+		<input class="input" type="text" placeholder="First Name" name="firstname" required> 
+		<input style="margin-left:350px" type="text" placeholder="Last Name" name="lastname" required><br><br><br>
+		
+		<label class="left">E-Mail Id</label>
+		<input class="input" type="email" name="email" required><br> <br><br>
+		
+		<label class="left">Rating</label>
+		<input class="input" id="amount" name="amount" type="range"><br><br><br>
+		
+		<label class="left">DOB</label> 
+		<input class="input" type="date" name="bday"><br><br><br>
+		
+	    <label class="left">Location</label> 
+		<input class="input" list="Location" name="Location">
+		
+		<datalist id="Location">
+			<option value="Ajmer">
+			<option value="Agra">
+			<option value="Jaipur">
+			<option value="Gujrat">
+			<option value="Udaipur">
+		</datalist><br><br><br> 
+		
+		<input class="input" type="submit" value="Submit">
+		</section>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car>
+<item type="car">
+<vehicleId>101</vehicleId>
+<make>Honda</make>
+<model>City</model>
+<engineInCC>2000</engineInCC>
+<fuelCapacity>50</fuelCapacity>
+<milage>18</milage>
+<price>1200000</price>
+<roadTax>40000.00</roadTax>
+<createdBy>neha</createdBy>
+<AC>true</AC>
+<powerStearing>true</powerStearing>
+<accessoryKit>Radio,Cd Player</accessoryKit>
+</item>
+
+<item type="car">
+<vehicleId>102</vehicleId>
+<make>Suzuki</make>
+<model>Dezire</model>
+<engineInCC>2500</engineInCC>
+<fuelCapacity>50</fuelCapacity>
+<milage>20</milage>
+<price>800000</price>
+<roadTax>35000.00</roadTax>
+<createdBy>neha</createdBy>
+<AC>true</AC>
+<powerStearing>true</powerStearing>
+<accessoryKit>Radio,Cd Player</accessoryKit>
+</item>
+</car>   
