@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+ <h2 class="text-center hidden-xs">Sample Form</h2>
+ <div class = "visible-xs " > 
+ <a class = "glyphicon glyphicon-film" data-toggle="collapse" href="#demo" data-target=".panel-collapse"></a>
+ </div>
+ 
+ <div class="panel-collapse collapse in" id="demo">
+<div class="container-fluid well  " id="back">
+ 
+  <form class="form-horizontal " role="form">
+  
+    <div class="form-group " >
+    
+      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      <label class="control-label" >Movie Title:</label>
+      </div>
+      
+      <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+        <input type="text" class="form-control" placeholder="Movie Title" >
+      </div>
+      
+       <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      		<label class="control-label" >GENRE:</label>
+       </div>
+      <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+	       <select class="form-control " >
+	        <option>Choose a Genre</option>
+	        <option>Action</option>
+	        <option>Adventure</option>
+	        <option>Comedy</option>
+	        <option>Crime</option>
+	        <option>Fantasy</option>
+	        <option>Horror/Thriller</option>
+	      </select>
+      </div>
+      
+    </div>
+    
+    <div class="form-group ">
+    
+	      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      		<label class="control-label" >Director</label>
+          </div>
+	      <div class="col-lg-2 col-md-2 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Director" >
+	      </div>
+	      
+	      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      		<label class="control-label" >Writer</label>
+          </div>
+	      <div class="col-lg-2 col-md-2 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Writer">
+	      </div>
+	      
+	      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      		<label class="control-label" >Producer</label>
+          </div>
+	      <div class="col-lg-2 col-md-2 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Producer">
+	      </div>
+	      
+	      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+      		<label class="control-label" >Composer</label>
+          </div>
+	      <div class="col-lg-2 col-md-2 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Composer">
+	      </div>
+      
+     </div>
+    
+    <div class="form-group">   
+          <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+          <label class="control-label" >website:</label>
+          </div>
+      
+	      <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Website">
+	      </div>
+	      
+	      <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 hidden-xs">
+          <label class="control-label">Youtube trailer:</label>
+          </div>
+	      <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+	        <input type="text" class="form-control" placeholder="Youtube trailer">
+	      </div>     
+    </div>
+    
+    <div class="form-group">
+	      <label for="comment" class="control-label hidden-xs">Comment:</label>
+	      <div >
+	      <textarea class="form-control" rows="5" id="comment"placeholder="comments"></textarea>
+	      </div>
+      
+    </div>
+    
+    <div class="form-group">
+    
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+         <label class="control-label  " >Rating:</label>
+        </div>
+	   
+	    
+	     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	     <label class="radio-inline text-danger">
+	      <input type="radio" name="optradio">Terrible
+	    </label>
+	    </div>
+	    
+	    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	     <label class="radio-inline text-primary">
+	      <input type="radio" name="optradio">Watchable
+	    </label>
+	    </div>
+	    
+	    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	     <label class="radio-inline text-success">
+	      <input type="radio" name="optradio">Best Ever
+	    </label>
+	    </div>
+    
+    </div>
+    
+    <div class="form-group ">
+    <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0"></div>
+    <button type="button" class="btn btn-default">Cancel</button>
+    <button type="button" class="btn btn-primary">Validate</button>
+    <button type="button" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-danger">Delete</button>
+    </div>
+    
+    
+    
+  </form>
+</div>
+</div>
+
+</body>
+</html>
+
