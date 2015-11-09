@@ -7,23 +7,23 @@ function loadData(){
 var contentArray=[];
 
 
-var movie1 = {Title:"StepUp", Genere:"3d Dance", Director:"xyz", Review  : "Good", Rating : "Best ever"};
+var movie1 = {Title:"ABCD", Genere:"Romantic", Director:"Amit", Review  : "Good", Rating : "Best ever"};
 
-var movie2 = {Title:"Journey to the Centre", Genere:"Thriller", Director:"Jignesh", Review  : "Good", Rating : "Best ever"};
+var movie2 = {Title:"ABCD2", Genere:"Thriller", Director:"Jignesh", Review  : "Good", Rating : "Best ever"};
 
-var movie3 = {Title:"Inception", Genere:"Drama", Director:"Ankur", Review  : "Good", Rating : "Best ever"};
+var movie3 = {Title:"Golmaal", Genere:"Drama", Director:"Ankur", Review  : "Good", Rating : "Best ever"};
 
-var movie4 = {Title:"Black Friday", Genere:"Comedy", Director:"Anurag", Review  : "Good", Rating : "Best ever"};
+var movie4 = {Title:"Golmaal returns", Genere:"Comedy", Director:"Anurag", Review  : "Good", Rating : "Best ever"};
 
-var movie5 = {Title:"Blood Diamond", Genere:"Thriller", Director:"Nikhil", Review  : "Good", Rating : "Best ever"};
+var movie5 = {Title:"Sholey", Genere:"Thriller", Director:"Nikhil", Review  : "Good", Rating : "Best ever"};
 
-var movie6 = {Title:"The Conjuring", Genere:"Horror", Director:"Rohit", Review  : "Good", Rating : "Best ever"};
+var movie6 = {Title:"Pyar ka Panchnama", Genere:"Horror", Director:"Rohit", Review  : "Good", Rating : "Best ever"};
 
-var movie7 = {Title:"The Martian", Genere:"Romantic", Director:"Khemanshu", Review  : "Good", Rating : "Best ever"};
+var movie7 = {Title:"DDLJ", Genere:"Romantic", Director:"Khemanshu", Review  : "Good", Rating : "Best ever"};
 
-var movie8 = {Title:"The Walk", Genere:"Documentation", Director:"Girdhari", Review  : "Good", Rating : "Best ever"};
+var movie8 = {Title:"MP3", Genere:"Romantic", Director:"Girdhari", Review  : "Good", Rating : "Best ever"};
 
-var movie9 = {Title:"Expandables", Genere:"Action", Director:"Sanjay", Review  : "Good", Rating : "Best ever"};
+var movie9 = {Title:"Wanted", Genere:"Action", Director:"Sanjay", Review  : "Good", Rating : "Best ever"};
 
 var movie10 = {Title:"Ready", Genere:"Comedy-Action", Director:"Pulkit", Review  : "Good", Rating : "Best ever"};
 
@@ -35,7 +35,7 @@ var movie13 = {Title:"Dhoom2", Genere:"Action", Director:"Gaurav", Review  : "Go
 
 var movie14 = {Title:"Dhoom3", Genere:"Action", Director:"Dheeraj", Review  : "Good", Rating : "Best ever"};
 
-var movie15 = {Title:"Koi Mil Gaya", Genere:"Action", Director:"xyz", Review  : "Good", Rating : "Best ever"};
+var movie15 = {Title:"Dhoom4", Genere:"Action", Director:"Macontennish", Review  : "Good", Rating : "Best ever"};
 
 var movie16 = {Title:"Dhoom5", Genere:"Action", Director:"Banwari", Review  : "Good", Rating : "Best ever"};
 
