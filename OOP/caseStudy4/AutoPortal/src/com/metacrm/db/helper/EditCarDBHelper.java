@@ -11,26 +11,20 @@ import com.metacrm.db.ConnectionFactory;
 import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
 
-/**
- * This class is responsible for updating car entry in the database
- * @author Riddhi
- *
- */
 public class EditCarDBHelper extends EditVehicleDBHelper {
 	private static String UPDATE_CAR_QUERY = "UPDATE car SET  ac=?, power_stering=?, accessory_kit=? WHERE car_id=?";
 
 	private static String SELECT_FOR_CAR_ID_QUERY = "SELECT car_id FROM car WHERE vehicle_id=?";
 
-	public int create(Connection connection,Car objCar, String oldMake, String oldModel)
+	public int create(Car objCar, String oldMake, String oldModel)
 			throws MetaCRMSystemException {
 		int created = -1;
+		Connection connection = ConnectionFactory.getConnection();
 		if (connection != null) {
 			PreparedStatement preparedStatement = null;
 			try {
-				// get the vehicle id of the vehicle to be updated
 				int vehicleId = super.create(connection, objCar, oldMake,
 						oldModel);
-				//gets the car id of the car to be updated
 				int carId = getCarIdByVehicleId(connection, vehicleId);
 				if (carId > 0) {
 					preparedStatement = connection
@@ -65,7 +59,6 @@ public class EditCarDBHelper extends EditVehicleDBHelper {
 		return created;
 	}
 
-	//function used to get the car id from the car table by vehicle id
 	protected int getCarIdByVehicleId(Connection connection, int vehicleId)
 			throws MetaCRMSystemException {
 		int carId = -1;
