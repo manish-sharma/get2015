@@ -20,6 +20,8 @@ import java.sql.Timestamp;
  */
 public class VehicleDBHelper {
 
+	 private static String UPDATE_VEHICLE_QUERY = "UPDATE vehicle SET engineIncc = ?, fuelcapacity = ?, milage = ?, price = ?, road_tax = ?, image = ? WHERE vehicle_id = ?";
+	 
     private static String INSERT_VEHICLE_QUERY = "INSERT INTO vehicle (make, model, engineIncc, fuelcapacity, milage, price,road_tax,created_by,created_time,image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static String SELECT_FOR_VEHICLE_ID_QUERY = "SELECT vehicle_id FROM vehicle WHERE make=? AND model=?";
@@ -73,5 +75,41 @@ public class VehicleDBHelper {
 		}
 		return vehicleId;
 	}
+    
+   
+	protected int edit(Connection connection, Vehicle objVehicle,
+			int id) throws MetaCRMSystemException {
+		PreparedStatement preparedStatement = null;
+		// get the vehicle id of the vehicle to be updated
+		int vehicleId = id;
+
+		try {
+			preparedStatement = connection
+					.prepareStatement(UPDATE_VEHICLE_QUERY);
+			preparedStatement.setString(1, objVehicle.getEngineInCC());
+			preparedStatement.setDouble(2, objVehicle.getFuelCapacity());
+			preparedStatement.setDouble(3, objVehicle.getMilage());
+			preparedStatement.setDouble(4, objVehicle.getPrice());
+			preparedStatement.setDouble(5, objVehicle.getRoadTax());
+			preparedStatement.setString(6, objVehicle.getImagePath());
+			preparedStatement.setInt(7, vehicleId);
+			// calls update query of the system
+			preparedStatement.execute();
+		} catch (SQLException e) {
+			throw new MetaCRMSystemException("Could not update Vehicle, ["
+					+ e.getMessage() + "]");
+		} finally {
+			if (preparedStatement != null) {
+				try {
+					preparedStatement.close();
+				} catch (SQLException e) {
+					System.out.println("Could not close prepared statement, ["
+							+ e.getMessage() + "]");
+				}
+			}
+		}
+		return vehicleId;
+	}
+
     
 }

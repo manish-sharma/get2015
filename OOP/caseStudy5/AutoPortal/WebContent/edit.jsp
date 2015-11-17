@@ -25,7 +25,7 @@
 				<li>
 					<%
 						if( session.getAttribute("userName") != null)
-								out.write("<a href='CreateCarController'>Create</a>");
+								out.write("<a href='EditCarController?type=create'>Create</a>");
 					%>
 				</li>
 				<li>
@@ -46,7 +46,7 @@
 			<center>
 				<%Car objCar=(Car)request.getAttribute("objOfCar");%>
 				<center>
-					<form action=<%=(objCar != null)?"EditCarController":"CreateCarController"%> method="post">
+					<form action="EditCarController" method="post">
 
 						<h3>Specifications</h3>
 						<div>
@@ -56,21 +56,27 @@
 										out.write("<tr><td>Portrait Photo:</td><td><input type='file' name='photo' size='50' /></td></tr>");
 									}else{
 										out.write("<div><img src="+objCar.getImagePath()+" name='photo' id='photo' height='30%' width=20%' /></div>");
-										out.write("<tr><td></td><td><input type='file' name='uploadPhoto' size='50' id='uploadPhoto' onchange='changePic();'/></td></tr>");
+										out.write("<tr><td></td><td><input type='file' value="+objCar.getImagePath()+" name='uploadPhoto' size='50' id='uploadPhoto' onchange='changePic();'/></td></tr>");
 									}
 								%>
-								<input type="hidden" name="oldMake" value="<%=(objCar != null)?objCar.getMake():""%>"/>
-								<input type="hidden" name="oldModel" value="<%=(objCar != null)?objCar.getModel():""%>"/>
+								<input type="hidden" name="id" value="<%=(objCar != null)?objCar.getId():"0"%>"/>
 								<tr>
 									<td>Make</td>
-									<td><input type="text" name="make"
-										value="<%=(objCar != null)?objCar.getMake():""%>" class="editInput" required /></td>
+									<td><%if(objCar == null){
+										out.write("<input type='text' name='make' value='' class='editInput' required />");
+										}
+										else{
+											out.write("<input type='text' readonly name='make' value="+objCar.getMake()+" class='editInput' required />");
+										}%></td>
 								</tr>
 								<tr>
 									<td>Model</td>
-									<td><input type="text" name="model"
-										value="<%=(objCar != null)?objCar.getModel():""%>"
-										class="editInput" required /></td>
+									<td><%if(objCar == null){
+										out.write("<input type='text' name='model' value='' class='editInput' required />");
+										}
+										else{
+											out.write("<input type='text' readonly name='model' value='"+objCar.getModel()+"' class='editInput' required />");
+										}%></td>
 								</tr>
 								<tr>
 									<td>AC</td>

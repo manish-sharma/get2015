@@ -24,7 +24,7 @@
 				<li>
 					<%
 						if (session.getAttribute("userName") != null)
-							out.write("<a href='CreateCarController'>Create</a>");
+							out.write("<a href='EditCarController?type=create'>Create</a>");
 					%>
 				</li>
 				<li>
@@ -44,14 +44,13 @@
 		<div id="contents1">
 			<center>
 			<%
+					Car objCar = (Car)request.getAttribute("objOfCar");
 					String actionUrl = "";
-					if (session.getAttribute("userName") == null)
-						actionUrl = "details.jsp";
-					else {
-						//session.setAttribute("", "");
+					if (session.getAttribute("userName") != null){
+						session.setAttribute("objOfCar", objCar);
 						actionUrl = "EditCarController";
 					}
-					Car objCar = (Car)request.getAttribute("objOfCar");
+					
 				%>
 				<form action=<%=actionUrl%>>
 				<div>

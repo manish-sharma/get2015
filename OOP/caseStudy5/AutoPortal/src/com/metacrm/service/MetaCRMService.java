@@ -64,13 +64,13 @@ public class MetaCRMService {
 	 * @throws MetaCRMSystemException
 	 * 			throws MetaCRMException if any error occurs while fetching values from database
 	 */
-	public int editCar(Car objCar, String oldMake, String oldModel)
+	public int editCar(Car objCar, int id)
 			throws MetaCRMSystemException {
 		Connection connection = ConnectionFactory.getConnection();
 		int result = -1;
 		MetaCRMFacade facade = new MetaCRMFacade();
 		try {
-			result = facade.editCar(connection, objCar, oldMake, oldModel);
+			result = facade.editCar(connection, objCar, id);
 		} finally {
 			ConnectionFactory.closeConnection(connection);
 		}

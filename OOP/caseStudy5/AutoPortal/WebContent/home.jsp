@@ -27,7 +27,7 @@
 				<li>
 					<%
 						if (session.getAttribute("userName") != null)
-							out.write("<a href='CreateCarController'>Create</a>");
+							out.write("<a href='EditCarController?type=create'>Create</a>");
 					%>
 				</li>
 				<li>
@@ -52,7 +52,7 @@
 
 			<div id="search">
 				<center>
-					<form action="SearchCarController" method="post">
+					<form action="SearchCarController" method="get">
 						<input type="radio" name="search" id="brand" value="brand"
 							onclick="callService();" />Search By Brand <input type="radio"
 							name="search" id="budget" value="budget" onclick="addPriceMin();" />Search

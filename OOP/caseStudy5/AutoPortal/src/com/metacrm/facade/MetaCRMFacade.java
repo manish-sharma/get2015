@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
 import com.metacrm.db.helper.CarDBHelper;
-import com.metacrm.db.helper.EditCarDBHelper;
 import com.metacrm.db.helper.LoginDBHelper;
 import com.metacrm.db.helper.SearchDBHelper;
 import com.metacrm.exception.MetaCRMSystemException;
@@ -57,6 +56,7 @@ public class MetaCRMFacade {
 	}
 	
 	/**
+	 * 
 	 *@param connection
 	 * 			connection object from service class
 	 * @param objCar
@@ -70,11 +70,11 @@ public class MetaCRMFacade {
 	 * @throws MetaCRMSystemException
 	 * 			throws MetaCRMException if any error occurs while fetching values from database
 	 */
-	public int editCar(Connection connection, Car objCar,String oldMake, String oldModel)
+	public int editCar(Connection connection, Car objCar,int id)
 			throws MetaCRMSystemException {
 		int result = -1;
-		EditCarDBHelper objOfEditCarDBHelper = new EditCarDBHelper();
-		result = objOfEditCarDBHelper.create(connection, objCar,oldMake,oldModel);
+		CarDBHelper objOfCarDBHelper = new CarDBHelper();
+		result = objOfCarDBHelper.edit(connection, objCar,id);
 		return result;
 	}
 

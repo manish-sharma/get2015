@@ -25,7 +25,7 @@
 				<li>
 					<%
 						if (session.getAttribute("userName") != null)
-							out.write("<a href='CreateCarController'>Create</a>");
+							out.write("<a href='EditCarController?type=create'>Create</a>");
 					%>
 				</li>
 				<li>
@@ -59,6 +59,7 @@
 						<%=objCar.getPrice()%>/-
 					</h2>
 					<br/>
+					
 					<a href="DetailsCarController?make=<%=objCar.getMake()%>&model=<%=objCar.getModel()%>">View Details</a>
 					<%
 						}

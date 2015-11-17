@@ -13,7 +13,6 @@ import com.metacrm.exception.MetaCRMSystemException;
 import com.metacrm.model.Car;
 import com.metacrm.service.MetaCRMService;
 
-
 /**
  * Servlet implementation class EditCarController
  */
@@ -35,11 +34,20 @@ public class EditCarController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		//redirects to edit jsp page
+		// redirects to edit jsp page
 		RequestDispatcher dispatcher = request.getRequestDispatcher("edit.jsp");
-		HttpSession session=request.getSession();
-		Car objCar=(Car)session.getAttribute("objOfCar");
-		request.setAttribute("objOfCar", objCar);
+		HttpSession session = request.getSession();
+		Car objCar = (Car) session.getAttribute("objOfCar");
+		String type=request.getParameter("type");
+		if(type == "create"){
+			objCar = null;
+		}
+		
+		if (objCar == null) {
+			request.setAttribute("objOfCar", null);
+		} else {
+			request.setAttribute("objOfCar", objCar);
+		}
 		dispatcher.forward(request, response);
 	}
 
@@ -49,41 +57,56 @@ public class EditCarController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
 		String forwardUrl = "";
-		String oldMake = request.getParameter("oldMake");
-		String oldModel = request.getParameter("oldModel");	
+		int id = Integer.parseInt(request.getParameter("id"));
 		Car objCar = createCar(request);
 		MetaCRMService service = new MetaCRMService();
 		try {
-			if(service.editCar(objCar,oldMake,oldModel)>0){
-				//creates a session object if not created
-				HttpSession session = request.getSession(false);
-				//sets the object of the updated car in session attribute
-				session.setAttribute("objOfCar", objCar);
-				forwardUrl = "details.jsp";
-			}else
-			{
-				//if the car details are not edited than user remains on same page and message is displayed
-				request.setAttribute("message", "Could not Edit Car details, Please enter again");
-				forwardUrl = "edit.jsp";
+			if (id == 0) {
+				if (service.createCar(objCar) > 0) {
+					// if more than zero rows are affected than the updated car
+					// object is set and forwarded to details.jsp
+					request.setAttribute("objOfCar", objCar);
+					forwardUrl = "details.jsp";
+				} else {
+					// if car not updated than remains at same page and error
+					// message is displayed
+					forwardUrl = "edit.jsp";
+					request.setAttribute("message", "Enter correct values");
+				}
+			} else {
+				if (service.editCar(objCar, id) > 0) {
+					// creates a session object if not created
+					HttpSession session = request.getSession(false);
+					// sets the object of the updated car in session attribute
+					request.setAttribute("objOfCar", objCar);
+					forwardUrl = "details.jsp";
+				} else {
+					// if the car details are not edited than user remains on
+					// same
+					// page and message is displayed
+					request.setAttribute("message",
+							"Could not Edit Car details, Please enter again");
+					forwardUrl = "edit.jsp";
+				}
 			}
+			RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
+			dispatcher.forward(request, response);
 		} catch (MetaCRMSystemException e) {
 			forwardUrl = "edit.jsp";
-			request.setAttribute("message", 
-					 e.getMessage() );
+			request.setAttribute("message", e.getMessage());
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(forwardUrl);
-		dispatcher.forward(request, response);
 	}
 
 	// object is created of car model class
 	private Car createCar(HttpServletRequest request) throws IOException,
 			ServletException {
 		Car objCar = new Car();
+		objCar.setId(Integer.parseInt(request.getParameter("id")));
 		objCar.setMake(request.getParameter("make"));
 		objCar.setModel(request.getParameter("model"));
-		objCar.setAC(Boolean.parseBoolean(request
-				.getParameter("ac")));
+		objCar.setAC(Boolean.parseBoolean(request.getParameter("ac")));
 		objCar.setPowerSteering(Boolean.parseBoolean(request
 				.getParameter("powerSteering")));
 		objCar.setAccessoryKit(Boolean.parseBoolean(request
@@ -94,8 +117,8 @@ public class EditCarController extends HttpServlet {
 		objCar.setMilage(Double.parseDouble(request.getParameter("milage")));
 		objCar.setPrice(Double.parseDouble(request.getParameter("price")));
 		objCar.setRoadTax(Double.parseDouble(request.getParameter("roadTax")));
-		objCar.setImagePath("images/"+request.getParameter("uploadPhoto"));
-		
+		objCar.setImagePath("images/" + request.getParameter("uploadPhoto"));
+
 		return objCar;
 	}
 
