@@ -1,0 +1,252 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<title>Responsive Form</title>
+<script>
+$(document).ready(function() {
+
+	$('[data-toggle="tooltip"]').tooltip();
+
+	$('[data-toggle="popover"]').popover();
+});
+	
+</script>
+</head>
+<body>
+	<h1 align="center" class="hidden-xs ">Sample Form</h1>
+	<div class="row">
+		<div class="col-xs-12 visible-xs">
+			<span class="glyphicon glyphicon-facetime-video"></span>
+		</div>
+	</div>
+	<div class="container-fluid lavender well">
+
+
+
+		<form role="form">
+
+			<div class="row form-group">
+
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+
+
+
+					<label for="title" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Movie Title" data-placement="top" 
+						data-content="Enter Movie title here">Movie Title</label>
+				</div>
+
+				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 ">
+
+
+
+					<div>
+						<input type="text" class="form-control" id="txtTitle"
+							placeholder="Enter Movie Title" data-toggle="tooltip"
+							title="Movie Title" data-placement="top">
+					</div>
+				</div>
+
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="Genre " class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Genre" data-content="Enter Genre here">Genre</label>
+
+				</div>
+
+				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+
+
+					<div>
+						<select class="form-control" id="genre" data-toggle="tooltip"
+							title="Genre" data-placement="top">
+							<option>Choose a genre</option>
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-group">
+
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="director" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Director"
+						data-content="Enter Movie Director name here">Director</label>
+				</div>
+				<div class="col-lg-2 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtDirector"
+							placeholder="Enter Director name" data-toggle="tooltip"
+							title="Director name" data-placement="top">
+					</div>
+
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="writer" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Writer"
+						data-content="Enter Movie Writer name here">Writer</label>
+				</div>
+				<div class="col-lg-2 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtWritter"
+							placeholder="" data-toggle="tooltip" title="Writer name"
+							data-placement="top">
+					</div>
+
+				</div>
+
+
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="producer" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Producer"
+						data-content="Enter Movie Producer name here">Producer</label>
+				</div>
+				<div class="col-lg-2 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtProducer"
+							data-toggle="tooltip" title="Producer name" data-placement="top">
+					</div>
+
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="composer" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Composer"
+						data-content="Enter Movie Composer here">Composer</label>
+				</div>
+				<div class="col-lg-2 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtComposer"
+							data-toggle="tooltip" title="Composer name" data-placement="top">
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="row form-group">
+
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="website" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Website"
+						data-content="Enter Movie Website here">Website</label>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtWebsite"
+							data-toggle="tooltip" title="website" data-placement="top">
+					</div>
+
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-12 ">
+
+					<label for="trailer" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Youtube trailer"
+						data-content="Enter Youtube trailer here">You Tube Trailer</label>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 ">
+					<div>
+						<input type="text" class="form-control" id="txtYouTube"
+							data-toggle="tooltip" title="You Tube Trailor"
+							data-placement="top">
+					</div>
+
+				</div>
+
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+					<label for="review" class="hidden-xs" data-toggle="popover"
+						data-trigger="hover" title="Review"
+						data-content="Enter Movie Review here">Review</label>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+					<textarea class="form-control" rows="5" id="txtAreaReview"
+						data-toggle="tooltip" title="Review" data-placement="top"></textarea>
+				</div>
+
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+
+					<label for="rating" data-toggle="popover" data-trigger="hover"
+						data-trigger="hover" title="Rating"
+						data-content="Enter Movie Rating here">Rating</label>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+
+					<div class="radio text-danger">
+						<label><input type="radio" name="optradio"
+							data-toggle="tooltip" title="Terrible" data-placement="top">Terrible
+						</label>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+
+					<div class="radio text-primary">
+						<label><input type="radio" name="optradio"
+							data-toggle="tooltip" title="Watchable" data-placement="top">Watchable
+						</label>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+
+					<div class="radio text-success">
+						<label><input type="radio" name="optradio"
+							data-toggle="tooltip" title="Best Ever" data-placement="top">Best
+							ever </label>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div class="row form-group">
+
+				<div
+					class="col-lg-12 col-lg-push-3 col-md-12 col-md-push-3 col-sm-12 col-xs-12 ">
+
+					<button type="button" class="btn btn-default responsive-width">Cancle</button>
+					<button type="button" class="btn btn-primary responsive-width">Validate</button>
+					<button type="button" class="btn btn-success responsive-width">Submit</button>
+
+					<button type="button" class="btn btn-danger responsive-width">Delete</button>
+
+
+
+				</div>
+			</div>
+
+
+
+
+		</form>
+
+	</div>
+
+
+
+
+
+</body>
+</html>
