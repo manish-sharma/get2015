@@ -1,0 +1,11 @@
+body {
+	text-align :center;
+}
+
+.demoDiv {
+	border : 3px solid black;
+	margin-left : 40%;
+	height : 100px;
+	width : 200px;
+	word-wrap: break-word;	
+}
