@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<!-- Link to the bootstrap files and java script file -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--  Style Sheet Of the Carousel -->
+<style>
+/* carouse items  */
+.carousel-inner>.item>img, .carousel-inner>.item>a>img 
+{
+	margin: auto;
+}
+/* The image to be shown css */
+.item {
+	overflow: hidden;
+}
+/*Carousel indiactors to place it to the top  */
+.carousel-indicators 
+{
+	top: 10px;
+}
+</style>
+</head>
+<!--Body of the Html Page-->
+<body>
+	<!--Container  -->
+	<div class="container">
+		<br>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel"
+			data-interval="2000">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+				<li data-target="#myCarousel" data-slide-to="6"></li>
+				<li data-target="#myCarousel" data-slide-to="7"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<!--  First Image  -->
+				<div class="item active">
+					<img src="images/1.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!-- Second Image -->
+				<div class="item">
+					<img src="images/2.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!-- Third Image -->
+				<div class="item">
+					<img src="images/3.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!--  Fourth Image -->
+				<div class="item">
+					<img src="images/4.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!--  Fifth Image -->
+				<div class="item ">
+					<img src="images/5.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!--  Sixth Image -->
+				<div class="item">
+					<img src="images/6.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!-- Seventh Image -->
+				<div class="item">
+					<img src="images/7.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+				<!--Eight Image -->
+				<div class="item">
+					<img src="images/8.jpg" alt="Scenery">
+					<div class="carousel-caption"></div>
+				</div>
+
+			</div>
+
+			<!-- Left controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button"
+				data-slide="prev">
+				 <span class="glyphicon glyphicon-chevron-left" style="padding-top: 100%"
+				aria-hidden="true"></span> 
+				<span class="sr-only">Previous</span>
+			</a>
+			<!--Right Controls  -->
+			 <a class="right carousel-control" href="#myCarousel" role="button"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right" style="padding-top: 100%"
+				aria-hidden="true"></span> <span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
