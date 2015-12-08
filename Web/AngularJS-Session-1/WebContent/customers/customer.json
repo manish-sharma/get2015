@@ -1,0 +1,82 @@
+[
+ 	{
+	 	"firstName": "Suman",
+	 	"lastName": "Sharma",
+	 	"email": "suman@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Richa",
+	 	"lastName": "Mittal",
+	 	"email": "richa@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Nidhi",
+	 	"lastName": "Sharma",
+	 	"email": "nidhi@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 25
+    },
+	{
+	   "firstName": "Chetna",
+	 	"lastName": "Sharma",
+	 	"email": "chetna@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+		"address": "Jaipur Rajsthan",
+		"orders": 30
+	},
+	{
+		"firstName": "anjita",
+	 	"lastName": "maheshwari",
+	 	"email": "anjita@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+		"address": "Jaipur Rajsthan",
+		"orders": 35
+	},
+	{
+	 	"firstName": "Suman",
+	 	"lastName": "Sharma",
+	 	"email": "suman@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Richa",
+	 	"lastName": "Mittal",
+	 	"email": "richa@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Nidhi",
+	 	"lastName": "Sharma",
+	 	"email": "nidhi@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+  		"address": "Jaipur Rajsthan",
+  		"orders": 25
+    },
+	{
+	   "firstName": "Chetna",
+	 	"lastName": "Sharma",
+	 	"email": "chetna@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+		"address": "Jaipur Rajsthan",
+		"orders": 30
+	},
+	{
+		"firstName": "anjita",
+	 	"lastName": "maheshwari",
+	 	"email": "anjita@gmail.com",
+	    "imageUrl": "images/user1.jpg",
+		"address": "Jaipur Rajsthan",
+		"orders": 35
+	}	
+]

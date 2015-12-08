@@ -1,0 +1,32 @@
+ul {
+	list-style-type: none;
+}
+
+#add{
+	margin-left: 110px;
+}
+
+#heading{
+	background-color: #66b2ff;
+}
+
+
+#img{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+#mid{
+	width: 100px;
+}
+
+#main{
+	border: 2px solid black;	
+}
+
+.left{
+	float: left;
+	width: 200px;
+	margin:15px;
+}
