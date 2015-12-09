@@ -86,7 +86,7 @@
 
 		<div class="container customerlist">
 			<div class="panel panel-default" id="panel{{$index}}" ng-class="listview ? 'col-lg-10' : 'col-lg-4'"	ng-repeat="customer in customers | filter : filtering">
-				<div data-toggle="modal" data-target="#detailModal">
+				<div data-toggle="modal" data-target="#detailModal" ng-click="setDetails($index)">
 					<button type="button" class="close" data-target="panel{{$index}}"	data-dismiss="alert" ng-click="deletecustomer($index)">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
@@ -110,9 +110,10 @@
 						<h4 class="modal-title">Details </h4>
 					</div>
 					<div class="modal-body">
-						<h1>{{customer.fname+' '+customer.lname}}
-						Total Orders {{customer.order}}
-						Address is : {{customer.address}}
+						<h1>{{detail.fname+' '+detail.lname}}<br></h1>
+						Total Orders {{detail.orders}}
+						Email : {{detail.email}}
+						Address is : {{detail.address}}
 					</div>
 
 				</div>

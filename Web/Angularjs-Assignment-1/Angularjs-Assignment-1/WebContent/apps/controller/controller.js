@@ -21,4 +21,7 @@ module.controller('customermanagement', function($scope) {
 			if(fullname.indexOf($scope.searchFilter) != -1) return true;
 			return false;
 		}
+		$scope.setDetails = function(index) {
+		$scope.detail = $scope.customers[index];
+		}
 });
