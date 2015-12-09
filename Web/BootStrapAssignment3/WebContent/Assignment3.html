@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment-3</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="Script1.js"> </script>
+  <script type="text/javascript">$(function() { 
+      $("#reset1 .btn").click(function(){
+         $(this).button('loading').delay(1000).queue(function() {
+            $(this).button('reset');
+         });        
+      });
+   });
+  </script> 
+</head>
+<body>
+  <div class="container well">
+  	<div class="container" style="background-color:#BFBFBF;">
+	<form role="form" >
+		<div class="form-group" style="margin:5%;">
+		<div class=" text-center"><h1>Quiz</h1></div>
+		<div class  = "row  ">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;"  >
+		<label >Q.1 The Bootstrap grid system is based on how many columns?</label>
+		</div>
+		</div>
+		<div class = "row">
+		<div class = "btn-group" data-toggle = "buttons">
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 " >
+      <input type = "radio" name ="Q1" id = "option1" value="A">  6
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12" >
+      <input type = "radio" name = "Q1" id = "option2" value="B"> 12
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12" >
+      <input type = "radio" name = "Q1" id = "option3" value="C">8
+   </label>
+    <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12" >
+      <input type = "radio" name = "Q1" id = "option3" value="D">4
+   </label>
+</div>	
+</div>
+		
+		
+		<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;"  >
+		<label >Q.2 Which class adds zebra-stripes to a table?</label>
+		</div>
+		<div class = "btn-group" data-toggle = "buttons">
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name ="Q2" id = "option1" value="A">  .table-striped
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q2" id = "option2" value="B"> .table-zebra
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q2" id = "option3" value="C">.table-bordered
+   </label>
+    <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q2" id = "option3" value="D">.even and .odd
+   </label>
+</div>	
+		</div>
+				<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;">
+		<label  >Q.3 Which class shapes an image to a circle?</label>
+		</div>
+		<div class = "btn-group" data-toggle = "buttons">
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name ="Q3" id = "option1" value="A"> .img-round
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q3" id = "option2" value="B"> .img-circle
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q3" id = "option3" value="C">.img-thumbnail
+   </label>
+    <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "radio" name = "Q3" id = "option3" value="D">.img-rounded
+   </label>
+</div>	</div>		
+		
+						<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;">
+		<label  >Q.4 Which class is not used for table?</label>
+		</div>
+				<div class = "btn-group" data-toggle = "buttons">
+		
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 " >
+      <input type = "checkbox" name = "Q4" id = "option1" value="A"> .table-striped
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q4" id = "option2" value="B"> .table-zebra
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q4" id = "option3" value="C"> .table-bordered
+   </label>
+    <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q4" id = "option4" value="D"> .even and .odd
+   </label>
+</div>
+		</div>
+		<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;">
+		<label  >Q.5 Which class is not used in bootstrao.css?</label>
+		</div>
+				<div class = "btn-group" data-toggle = "buttons">
+		
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q5" id = "option1" value="A"> .table-striped
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q5" id = "option2" value="B"> .table-zebra
+   </label>
+   
+   <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q5" id = "option3" value="C"> .table-bordered
+   </label>
+    <label class = "btn btn-primary col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+      <input type = "checkbox" name = "Q5" id = "option4" value="D"> .even and .odd
+   </label>
+</div> </div>
+<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;">
+		<button type="button" id="submit" class = "btn btn-success col-lg-2 col-md-6 col-sm-6 col-xs-12  " data-toggle="modal" data-target="#myModal">
+     Submit
+   </button>
+		</div></div>
+		<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:25px;" id="reset1">
+		<button type="reset" id="reset" class = "btn btn-danger col-lg-2 col-md-6 col-sm-6 col-xs-12  ">
+    Reset
+   </button>
+		</div></div>
+		</div>
+	
+		
+		 <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Your Response</h4>
+        </div>
+        <div class="modal-body" >
+          <p id="content" ></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </form>
+</div>
+			
+		</div>
+</body>
+</html>
