@@ -1,0 +1,58 @@
+[
+ 	{
+	 	"firstName": "Suman",
+	 	"lastName": "Sharma",
+	 	"email": "suman@gmail.com",
+	 	"url": "images/user1.jpg",
+  		"address": "Jaipur",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Richa",
+	 	"lastName": "Mittal",
+	 	"email": "richa@gmail.com",
+	 	"url": "images/user1.jpg",
+  		"address": "Jaipur",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Nidhi",
+	 	"lastName": "Sharma",
+	 	"email": "nidhi@gmail.com",
+	 	"url": "images/user1.jpg",
+  		"address": "Jaipur",
+  		"orders": 25
+    },
+	{
+	   "firstName": "Chetna",
+	 	"lastName": "Sharma",
+	 	"email": "chetna@gmail.com",
+	 	"url": "images/user1.jpg",
+		"address": "Jaipur",
+		"orders": 30
+	},
+	{
+		"firstName": "anjita",
+	 	"lastName": "maheshwari",
+	 	"email": "anjita@gmail.com",
+	 	"url": "images/user1.jpg",
+		"address": "Jaipur",
+		"orders": 35
+	},
+	{
+	 	"firstName": "Neha",
+	 	"lastName": "Bansal",
+	 	"email": "neha@gmail.com",
+	 	"url": "images/user1.jpg",
+  		"address": "Jaipur",
+  		"orders": 20
+ 	},
+    {
+	   "firstName": "Pooja",
+	 	"lastName": "Khandelwal",
+	 	"email": "pooja@gmail.com",
+	 	"url": "images/user1.jpg",
+  		"address": "Jaipur",
+  		"orders": 20
+ 	}	
+]
