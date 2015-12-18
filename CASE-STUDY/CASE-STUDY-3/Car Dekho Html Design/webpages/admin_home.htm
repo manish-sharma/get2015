@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css" type="text\css"/>
+		<title>Admin Home</title>
+		<style>
+			form{
+				margin:0px auto;
+   				background-color: white;
+   				padding: 0px;
+			}
+			
+			table{
+				width:500px;
+				height:400px;
+				margin-left: 160px;
+				padding:20px;
+				
+			}
+			
+			select{
+				width:300px;
+				height:30px;
+			}
+		</style>	
+	</head>
+	<body>
+		<main>
+			<header>
+				<img  src="../images/logo.png" alt="car dekho logo" width="200px" height="58px" />
+			</header>
+			<section>
+				<p>Admin Home</p>
+				<ul>
+					<li><a href="create_car.htm">Create Car</a></li>
+				</ul>
+				<form name="searchform" action="admin_search.htm">
+					<table id="table">
+						<tr>
+							<td><input type="radio" name="filter">By Budget</td>
+							<td><input type="radio" name="filter">By Brand</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<select>
+								<option selected disabled>Select one</option>
+								<option>1 lac-5 lac</option>
+								<option>5 lac-10 lac</option>
+								<option>10 lac-20 lac</option>
+								<option>20 lac-50 lac</option>
+								<option>50 lac-1 cr</option>
+								<option>above 1 cr</option>
+							</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<select>
+								<option selected disabled>All Vehicle Types</option>
+								<option>Hatchback</option>
+								<option>Sedans</option>
+								<option>MUV</option>
+								<option>SUV</option>
+								<option>Luxury</option>
+								<option>Minivans</option>
+							</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5" >
+							<input  type="submit" value="Search Car" id="button"  style="width: 400px; height: 59px"/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</section>
+			<footer><label>Copyright &copy 2015.&nbsp All rights reserved.</label></footer>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+P,P1,Delhi Express,Delhi,Jaipur,5,500,50
+P,P2,chennai Express,Delhi,Chennai,15,1500,60
+P,P3,Mumbai Express,Mumbai,Jaipur,8,900,70
+P,P4,Delhi Express,Delhi,Jaipur,6,500,50
+P,P5,chennai Express,Delhi,Chennai,16,1500,60
+G,G1,Delhi Express,Delhi,Jaipur,4,300,100
+G,G2,chennai Express,Delhi,chennai,12,1000,100
+G,G3,Mumbai Express,Mumbai,Jaipur,6,700,150

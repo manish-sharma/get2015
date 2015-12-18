@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bike>
+<vehicleDetail type="BIKE">
+<ID>1</ID>
+<createdBy>Bajaj</createdBy>
+<createdTime>12</createdTime>
+<make>Bajaj</make>
+<model>120</model>
+<engineInCC>180</engineInCC>
+<fuelCapacity>15</fuelCapacity>
+<milage>10</milage>
+<price>80000</price>
+<roadtax>1000</roadtax>
+<selfStart>true</selfStart>
+<helmetPrice>1000</helmetPrice>
+</vehicleDetail>
+<vehicleDetail type="BIKE">
+<ID>2</ID>
+<createdBy>Bajaj</createdBy>
+<createdTime>12</createdTime>
+<make>Bajaj</make>
+<model>120</model>
+<engineInCC>180</engineInCC>
+<fuelCapacity>15</fuelCapacity>
+<milage>10</milage>
+<price>80000</price>
+<roadtax>1000</roadtax>
+<selfStart>false</selfStart>
+<helmetPrice>1000</helmetPrice>
+</vehicleDetail>
+</Bike>
+
+

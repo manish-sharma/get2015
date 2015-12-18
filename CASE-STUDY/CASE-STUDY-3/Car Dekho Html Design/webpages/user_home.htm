@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css" type="text\css"/>
+		<title>User Home</title>
+		<style>
+			form{
+				margin:0px auto;
+   				background-color: white;
+   				padding: 0px;
+			}
+			table{
+				width:500px;
+				height:400px;
+				margin-left: 130px;
+				padding:20px;
+				
+			}
+			select{
+				width:300px;
+				height:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<img  src="../images/logo.png" alt="car dekho logo" width="200px" height="58px" />
+			</header>
+			<section>
+				<p>User Home</p>
+				<form name="searchform" action="user_search.htm">
+			<table id="table">
+				<tr>
+					<td><input type="radio" name="filter">By Budget</td>
+					<td><input type="radio" name="filter">By Brand</td>
+				</tr>
+				<tr>
+					<td colspan="2"><select>
+							<option selected disabled>Select one</option>
+							<option>1 lac-5 lac</option>
+							<option>5 lac-10 lac</option>
+							<option>10 lac-20 lac</option>
+							<option>20 lac-50 lac</option>
+							<option>50 lac-1 cr</option>
+							<option>above 1 cr</option>
+					</select>
+				</tr>
+				<tr>
+					<td colspan="2"><select>
+							<option selected disabled>All Vehicle Types</option>
+							<option>Hatchback</option>
+							<option>Sedans</option>
+							<option>MUV</option>
+							<option>SUV</option>
+							<option>Luxury</option>
+							<option>Minivans</option>
+					</select>
+				</tr>
+				<tr>
+					<td colspan="5" >
+						<input  type="submit" value="Search Car" id="button"  style="width: 400px; height: 59px"/>
+				</tr>
+			</table>
+
+
+		</form>
+			</section>
+			<footer><label>Copyright &copy 2015.&nbsp All rights reserved.</label></footer>
+		</main>
+	</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search</title>
+<style>
+header{
+text-align:center;
+}
+section{
+width:500px;
+height:600px;
+margin:0px auto;
+border:1px solid black;
+background-color: #F2F1F7;
+}
+table{
+width:500px;
+height:400px;
+margin-left: 80px;
+padding:20px;
+}
+select{
+width:300px;
+height:30px;
+}
+</style>
+</head>
+<body>
+ <section>
+  <header>
+  <h2>Search</h2>
+  <h3>your new car at CarDekho</h3>
+  </header>
+  <table>
+  <tr>
+  <td><input type="radio" name="filter">By Budget</td>
+  <td><input type="radio" name="filter">By Brand</td>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <select >
+  <option selected disabled>Select one</option>
+  <option>1 lac-5 lac</option>
+  <option>5 lac-10 lac</option>
+  <option>10 lac-20 lac</option>
+  <option>20 lac-50 lac</option>
+  <option>50 lac-1 cr</option>
+  <option>above 1 cr</option>
+  </select>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <select>
+  <option selected disabled>All Vehicle Types</option>
+  <option>Hatchback</option>
+  <option>Sedans</option>
+  <option>MUV</option>
+  <option>SUV</option>
+  <option>Luxury</option>
+  <option>Minivans</option>
+  </select>
+  </tr>
+
+  <tr>
+  <td colspan="2">
+  <button id="button" onclick="search()">SEARCH</button>
+  </tr>
+  </table>
+ </section>
+ 
+ <script >
+ function search(){
+location.href="file:///D:/CaseStudy/CaseStudyPhase-3/src/User.html";  
+ }
+ </script>
+ 
+</body>
+</html>
+-->

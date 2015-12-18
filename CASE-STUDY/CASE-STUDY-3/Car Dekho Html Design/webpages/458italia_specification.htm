@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css" type="text\css"/>
+		<title>458 Italia Specification</title>
+		<script>
+			function goBack() {
+    		window.history.back();
+			}
+		</script>
+	</head>
+	<body>
+		<main>
+			<header>
+				<img  src="../images/logo.png" alt="car dekho logo" width="200px" height="58px" />
+			</header>
+			<section>
+				<p>458 Italia Specification</p>
+
+				<form name="createCarForm"  action="#">
+ 	
+					<label class="left">Make*</label> 
+					<input class="input" type="text" value="Ferrari" pattern="[a-zA-Z ]+" name="make" disabled="disabled"><br><br><br> 
+			
+					<label class="left">Model*</label> 
+					<input class="input" type="text" name="model" value="458 Italia" pattern="[a-zA-Z1-9 ]+" disabled="disabled"><br><br><br>
+		
+			 		<label class="left">EngineInCC*</label> 
+			 		<input class="input" type="number" name="engineInCc" value="3500" min="500" max="4000" disabled="disabled"><br><br> <br>
+			 
+			 		<label class="left">FuelCapacity*</label>
+			  		<input class="input" type="number" name="fuelCapacity" value="150" min="25" max="200" disabled="disabled"><br><br><br>
+			 
+			 		<label class="left">Mileage*</label>
+			 		<input class="input" type="number" name="mileage" value="5" min="1" max="100" disabled="disabled"><br><br><br>
+			 
+			 
+			 		<label class="left">Ex-Showroom Price*</label>
+			 		<input class="input" type="number"  name="exShowroomPrice" value="48000000" min="100000" max="100000000" disabled="disabled"><br><br><br>
+			
+			 		<label class="left">roadTax*</label> 
+			 		<input class="input" type="number" name="roadTax" value="1000000" min="2000" max="1000000" disabled="disabled"><br><br><br>
+			
+			 		<label class="left">onRoadPrice*</label> 
+			 		<input class="input" type="number" name="onRoadPrice" value="49000000" min="102000" max="101000000" disabled="disabled"><br><br><br>
+			 
+			  		<input class="submit" type="submit" name="submit" value="Back" onclick="goBack()" >
+				</form>
+			</section>
+			<footer><label>Copyright &copy 2015.&nbsp All rights reserved.</label></footer>
+		</main>
+	</body>
+</html>
