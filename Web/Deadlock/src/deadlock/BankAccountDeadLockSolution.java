@@ -27,11 +27,12 @@ public class BankAccountDeadLockSolution {
     	 System.out.println("transferring amount from " + from.id +" to "+ to.id);
         synchronized(from) {
         	 System.out.println("withdrawing amount from " + from.id);
-            from.withdraw(amount);
-            synchronized(to) {
-            	System.out.println("adding to " + to.id);
-                to.deposit(amount);
-            }
+            from.withdraw(amount);     
+        }
+        
+        synchronized(to) {
+        	System.out.println("adding to " + to.id);
+            to.deposit(amount);
         }
     }
      
@@ -49,7 +50,7 @@ public class BankAccountDeadLockSolution {
         new Thread() {
             public void run() {
             	 System.out.println(currentThread().getName()+" starts..");
-                BankAccountDeadLockSolution.transfer(fooAccount,barAccount,10d);
+                BankAccountDeadLockSolution.transfer(barAccount,fooAccount,10d);
             }
         }.start();
          
