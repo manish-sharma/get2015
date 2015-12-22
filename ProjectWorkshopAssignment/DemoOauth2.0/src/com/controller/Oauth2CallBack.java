@@ -25,14 +25,6 @@ import com.model.GooglePojo;
 @WebServlet("/Oauth2CallBack")
 public class Oauth2CallBack extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Oauth2CallBack() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,8 +38,8 @@ public class Oauth2CallBack extends HttpServlet {
 	            // format parameters to post
 	            String urlParameters = "code="
 	                    + code
-	                    + "&client_id=838182657674-hh996isltlr5nt5bk63ngcgn2jdspj9a.apps.googleusercontent.com"
-	                    + "&client_secret=DRjemI5iE_LQVIqG-9_mxryM"
+	                    + "&client_id=598785687253-prifmvsdtgm4419b8m6bebqutua3r4a8.apps.googleusercontent.com"
+	                    + "&client_secret=LLkq32ADd1RcjBPAhHZaADCq"
 	                    + "&redirect_uri=http://localhost:8080/DemoOauth2.0/Oauth2CallBack"
 	                    + "&grant_type=authorization_code";
 	            
@@ -101,6 +93,7 @@ public class Oauth2CallBack extends HttpServlet {
 	            System.out.println( e);
 	        }
 	        System.out.println("leaving doGet");
+	        response.sendRedirect("home.html");
 	    }
 	
 
