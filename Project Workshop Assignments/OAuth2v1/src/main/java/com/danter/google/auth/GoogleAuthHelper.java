@@ -51,7 +51,7 @@ public final class GoogleAuthHelper {
 	 */
 	public GoogleAuthHelper() {
 		flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT,
-				JSON_FACTORY, CLIENT_ID, CLIENT_SECRET, SCOPE).build();
+				JSON_FACTORY, CLIENT_ID, CLIENT_SECRET, SCOPE).setAccessType("online").setApprovalPrompt("auto").build();
 		
 		generateStateToken();
 	}
