@@ -1,0 +1,5 @@
+2015-12-23 11:28:07 ERROR InvalidDataException:12 - Name is null
+2015-12-23 11:29:08 ERROR InvalidDataException:12 - No enum constant com.mkyong.EmployeeType.
+2015-12-23 11:34:08 ERROR InvalidDataException:12 - No enum constant com.metacube.EmployeeType.
+2015-12-23 11:35:56 INFO  InvalidDataException:12 - No enum constant com.metacube.EmployeeType.
+2015-12-23 18:15:04 INFO  InvalidDataException:12 - No enum constant com.metacube.EmployeeType.com.metacube.MainClass
