@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="DatabaseDeadlock">
+    <wb-module deploy-name="LoggerAssignment">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="DatabaseDeadlock"/>
-        <property name="java-output-path" value="/DatabaseDeadlock/build/classes"/>
+        <property name="java-output-path" value="/LoggerAssignment/build/classes"/>
+        <property name="context-root" value="LoggerAssignment"/>
     </wb-module>
 </project-modules>
