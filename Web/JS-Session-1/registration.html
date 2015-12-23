@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="regcss.css">
+  <script src="regjs.js"></script>
+ </head>
+<body>
+  <center>
+  <div id= "wrapper">
+    <div id="header">
+      <h1>MY FORM</h1>
+    </div>
+    <form>
+      <table>
+        <tr>
+          <td class="tdfirst">First Name: </td>
+          <td><input type="text" name="fname" placeholder="Enter First Name" required></td>
+        </tr>
+		
+		<tr>
+          <td class="tdfirst">Last Name: </td>
+          <td><input type="text" name="lname" placeholder="Enter Last Name" required></td>
+        </tr>
+        
+        <tr>
+          <td class="tdfirst">Enter Password: </td>
+          <td><input type="password" id="pass1" name="pass" placeholder="Enter password" onblur="isValidPassword()" required></td>
+        </tr>
+		
+		<tr>
+          <td class="tdfirst">Re-Enter Password: </td>
+          <td><input type="password" id="pass2" placeholder="Re-Enter password" onblur="equalPassword()" required></td>
+        </tr>
+        
+        <tr>
+          <td class="tdfirst">Age: </td>
+          <td><input type="number" name="age" min="0" required></td>
+        </tr>
+        
+        <tr>
+          <td class="tdfirst">State: </td>
+          <td>
+            <select id="state" onchange="setCities()">
+			  <option value="" selected disabled>select</option>
+              <option value="MP">Madhya Pradesh</option>
+              <option value="RJ">Rajashthan</option>
+			  <option value="UP">Uttar Pradesh</option>
+             </select>            
+          </td>
+        </tr>
+		
+		 <tr>
+          <td class="tdfirst">City: </td>
+          <td>
+            <select id="city" disabled>
+			  <option selected>select</option>
+             </select>            
+          </td>
+        </tr>
+		
+		<tr>
+          <td class="tdfirst">Adress: </td>
+          <td><textarea></textarea></td>
+        </tr>
+		<tr>
+		  <td colspan="2" class="colspan"> <input id="chekbox1" type="checkbox" onchange="createenable()" >I accept terms and conditions</td>
+		</tr>
+		<tr>
+          <td colspan="2" class="colspan"><button id="button1" type="submit" onclick="finalAlert()" disabled >Create</button></td>
+        </tr>
+        
+      </table>  
+    </form>
+ 
+	
+    
+     <div id="footer">
+     <font color="#ffffff"> C© Copyright 2015 Banwari kevat</font>  
+    </div>
+  
+  </div>
+  </center> 
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+article
+{
+    padding:5px;
+    border:dotted 3px #ff006e;
+    margin-top:20px;
+	background-color:#D7D9DE;
+	padding:20px;
+	margin-left:30px;
+	margin-right:30px;
+}
+
+
+aside
+{
+    margin-top:5px;
+    background-color:#D7D9DE;
+    padding:5px;
+    text-align:center;
+    font-style:italic;
+    border:double 3px #b200ff;
+	margin-left:30px;
+	margin-right:30px;
+}
+
+section
+{
+    padding:10px;
+	margin-left:30px;
+	margin-right:30px;
+	background-color:#D7D9DE;
+    border:dashed 3px #0026ff;
+    margin-top:5px;
+	
+}
+
+
+#navigationlink
+{
+    text-align:center;
+}
+ul li
+{
+    display:inline;
+    padding-left:5px;
+    padding-right:5px;
+    text-align:left;
+    font-size:16px;
+    font-weight:bold;
+}

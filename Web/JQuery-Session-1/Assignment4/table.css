@@ -1,0 +1,9 @@
+
+#table {
+	border-collapse:collapse;
+	margin:0 auto;
+	margin-top: 10%;
+	border: 1px solid black;
+	background-color:black;
+	padding: 5%;
+}

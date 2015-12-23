@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+#mainform {
+	margin: 0 auto;
+	width:30%;
+	border:3px solid black;
+	min-width:300px;
+	background-color:#E5FFE5;
+}
+#miantable {
+	
+	height:600px;
+	margin:3%;
+}
+#miantable td {
+	font-weight:bold;
+	font-size:25px;
+}
+
+#miantable tr input {
+	height:30px;
+	width:70%;
+	font-size:25px;
+	border:1px solid black;
+}

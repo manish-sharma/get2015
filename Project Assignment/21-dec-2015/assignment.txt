@@ -1,0 +1,33 @@
+1. int and Integer
+     --> int is primitive datatype and Integer is object type
+	 --> int uses stack as memory and Integer uses heap allocation strategy
+	 --> int is immutable  whereas Integer is mutable datatype 
+	        e.g.
+			     
+
+					Integer i = new Integer(6);
+					String s = i.toString();//sets s the string representation of i
+					Whereas with an int:
+
+					int i = 6;
+					You cannot call any methods on it, because it is simply a primitive. So:
+					String s = i.toString();//will not work!!!
+					would produce an error, because int is not an object.
+					
+============================================================================================================================
+
+2. Need of Transaction Annotation after we have single database operation
+
+         --> Because take the advantage of trasaction rollback
+					
+============================================================================================================================
+
+3. 
+       *throw
+	          --> used to explicitly throw an exception
+			  --> can not use multiple throw
+		  
+		          void mymethod(){  
+                        throw new ArithmeticException("arithmetic exception occured");  
+                    }
+	       
