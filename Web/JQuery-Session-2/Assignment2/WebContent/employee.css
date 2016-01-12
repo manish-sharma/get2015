@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+body {
+background-color:#FAD2F3;
+margin: 0 auto;
+}
+	
+div {
+	margin:0 auto;
+    border:1px solid red;
+    width:30%;
+	background-color:pink;
+}
+#input{
+	font-size:30px;
+	text-align:center;
+}
+#input select {
+	height:30px;
+	width:170px;
+	background-color:brown;
+	color:white;
+	font-size:22px;
+	padding-left:10px;
+	letter-spacing:2px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+#output {
+	margin-top:10px;
+	height:100px;
+	padding:10px;
+	
+}

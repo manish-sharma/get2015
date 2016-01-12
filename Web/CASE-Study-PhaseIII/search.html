@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="cardekho.css">
+    <script src="cardekho.js"></script>
+</head>
+
+<body>
+    <header class="upper">
+    </header>
+    <nav class="upper">
+        <ul>
+            <li><a href="login.html">LOGIN</a>
+            </li>
+            <li><a href="search.html">SEARCH</a>
+            </li>
+            <li><a href="index.html">HOME</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="upper" id="middleContainer">
+        <div id="search">
+            <form action="searchresult.html">
+                <h2>SEARCH CAR</h2>
+                <table>
+                    <tr>
+                        <td> Make: </td>
+                        <td>
+                            <select id="make" onchange="setModel()">
+                                <option value="" selected disabled>select</option>
+                                <option value="m1">make1</option>
+                                <option value="m2">make2</option>
+                                <option value="m3">make3</option>
+                            </select>
+                            <td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            Model: </td>
+                        <td>
+                            <select id="model" disabled>
+                                <option selected>select</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit">SEARCH</button>
+            </form>
+        </div>
+    </div>
+    <footer class="upper">
+        <p>Copyright &copy; 2001 - 2015. DM Driver Motors.
+            <p>
+    </footer>
+</body>
+
+</html>

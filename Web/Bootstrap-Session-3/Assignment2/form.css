@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+.row {
+	margin:30px;
+}
+
+.container-fluid {
+	border:4px solid #4FACF7;
+	margin:1%;
+} 
+.glyphicon-film {
+	font-size:80px;
+}

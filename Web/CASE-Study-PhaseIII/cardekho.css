@@ -1,0 +1,137 @@
+body {
+    background-color: #EBDFEB;
+}
+header {
+    background-image: url("head.jpg");
+    height: 120px;
+    background-size: 100%;
+}
+nav {
+    height: 40px;
+}
+nav ul {
+    margin-top: 3px;
+}
+nav ul li {
+    display: inline;
+    float: right;
+    margin-left: 20px;
+    margin-right: 15px;
+    border: 0px solid;
+    padding: 6px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: "Courier New";
+    font-size: 19px;
+    background-color: #D9ADBF;
+    border-radius: 5px;
+}
+#middleContainer {
+    background-image: url("back.jpg");
+    background-size: 100%;
+    height: 600px;
+}
+#search {
+    background-color: #E8DFE3;
+    margin: 20px;
+    margin-right: 10%;
+    min-height: 10%;
+    width: 25%;
+    border: solid black;
+    padding: 10px;
+}
+#search h2 {
+    text-align: center;
+    margin-top: 5px;
+    font-family: "Times New Roman";
+}
+#searchresult {
+    background-color: #E8DFE3;
+    margin: 20px;
+    min-height: 10%;
+    border: solid black;
+    padding: 10px;
+    width: 50%;
+}
+#searchresult table {
+    width: 90%;
+}
+#searchresult table,
+#searchresult tr,
+#searchresult td,
+#searchresult th {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+#login {
+    background-color: #E8DFE3;
+    margin: 20px;
+    margin-right: 10%;
+    min-height: 10%;
+    width: 25%;
+    border: solid black;
+    padding: 10px;
+}
+#create {
+    background-color: #E8DFE3;
+    margin: 20px;
+    margin-right: 10%;
+    width: 30%;
+    border: solid black;
+    padding: 10px;
+}
+#update {
+    background-color: #E8DFE3;
+    margin: 20px;
+    margin-right: 10%;
+    width: 30%;
+    border: solid black;
+    padding: 10px;
+}
+#detail {
+    background-color: #E8DFE3;
+    margin: 20px;
+    margin-right: 10%;
+    width: 50%;
+    border: solid black;
+    padding: 10px;
+    min-height: 40%;
+}
+#detail div {
+    height: 98%;
+    width: 48%;
+    min-height: 200px;
+    float: left;
+}
+#detaildiv1 img {
+    width: 100%;
+    height: 100%;
+}
+.firsttd {
+    font-weight: bold;
+    font-family: "Courier New";
+}
+footer {
+    background-color: #36424a;
+    height: 60px;
+    color: white;
+    text-align: center;
+}
+#create input,
+#update input {
+    width: 98%;
+}
+#create option {
+    width: 98%;
+}
+footer p {
+    padding-top: 0px;
+}
+.upper {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid green;
+    max-width: 1200px;
+    min-width: 500px;
+}
