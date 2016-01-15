@@ -1,0 +1,2 @@
+Hello {!Student__c.First_Name__c} {!Student__c.Name} ,
+     Your account has been changed.Your belongs to {!Student__c.Class__c} class. Your contact name is : {!Contact.Name}.

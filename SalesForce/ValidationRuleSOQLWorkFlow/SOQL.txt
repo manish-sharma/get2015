@@ -1,0 +1,21 @@
+1:Write SOQL Select all strudent Name,Dob,Sex where LastName starts with “S”
+2:Select All students where ClassName starts with “X”
+3:Select all Student and ClassName
+4:Select all Classes with students in every class as sub query.
+5:Select all students where class teacher name starts with “S”
+6:All students where DOB > Year 2000
+7:All Leads Where ModifiedDate in current month
+8:All Classes with Students as sub query where student Name Starts with “S"
+9:All Teachers who have Hindi and English both subject
+10:All students who have hindi or maths 
+
+1:select Name,Last_Name__c,DOB__C,Sex__c from Student__c where Student__C.Last_Name__c like 'S%'
+2:select Class__r.Name,Name from Student__c where Class__r.Name like 'X%'
+3:select Name,Class__r.Name from Student__c
+4:select Name,(Select Name from Class_Student__r) from Class__c
+5:select (select Name from Class_Student__r) from Class__c where ClassTeacher__r.Name like 'S%'
+6:select Name from Student__c where Calendar_Year(DOB__c) > 2000
+7:SELECT FirstName FROM Lead WHERE LastModifiedDate = THIS_MONTH
+8:select Name,(select First_Name__c,Name from Class_Student__r where Name like 'S%') from class__c
+9:select Name from Contact where Subjects__c includes('Hindi;English')
+10:select (Select Name From Class_Student__r) from Class__c where 	ClassTeacher__r.Subjects__c includes('Hindi;English')

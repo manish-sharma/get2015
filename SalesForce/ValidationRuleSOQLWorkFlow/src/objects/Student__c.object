@@ -108,44 +108,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Last_Name__c</fullName>
-        <externalId>false</externalId>
-        <label>Last Name</label>
-        <length>20</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Married__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Married</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>MaxSize__c</fullName>
-        <externalId>false</externalId>
-        <label>MaxSize</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>MyCount__c</fullName>
-        <externalId>false</externalId>
-        <label>MyCount</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Sex__c</fullName>
@@ -182,7 +150,7 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Student  Name</label>
+        <label>Last Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Students</pluralLabel>
