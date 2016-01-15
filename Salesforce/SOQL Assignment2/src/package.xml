@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Soql_Assignment2</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Soql_Assignment2__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Student__c</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>Account.annualrevenue</members>
+        <members>Contact.Birthday_Notification</members>
+        <members>Contact.Teacher_Experience_Notification</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <version>35.0</version>
+</Package>
