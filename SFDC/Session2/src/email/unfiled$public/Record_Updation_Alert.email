@@ -1,0 +1,4 @@
+Hi {!NullValue(Contact.Name, "'Sir'")},
+    Your information has been updated. You class is {!Class__c.Name}
+
+Thanks and Regards
