@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountUpdate</members>
+        <members>Assignment_1_1</members>
+        <members>BusinessDays</members>
+        <members>ContactIdCheck</members>
+        <members>ListOfOrganization</members>
+        <members>OpportunityUpdateEmail</members>
+        <members>Stack</members>
+        <members>StudentMap</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>UpdateOpportunity</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Opportunity</members>
+        <name>CustomObject</name>
+    </types>
+    <version>35.0</version>
+</Package>
