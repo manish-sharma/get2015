@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ClassStudends</members>
+        <members>ClassStudentsMap</members>
+        <members>OrgSobjects</members>
+        <members>RelatedAccounts</members>
+        <members>RelatedContactId</members>
+        <members>Stack</members>
+        <members>WorkingDays</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>RelatedAccounts</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Salesforce_Assignment</members>
+        <name>CustomApplication</name>
+    </types>
+    <version>35.0</version>
+</Package>
