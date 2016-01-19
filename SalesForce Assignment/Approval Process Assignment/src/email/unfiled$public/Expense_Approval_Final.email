@@ -1,0 +1,5 @@
+Hello {!Expense__c.OwnerFullName}
+
+Your request has been approved for the expenses.Your expenses will be added to the next salary
+
+Thank You
