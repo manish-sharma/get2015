@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<div  ng-controller="todoController">
+  <header id="header">
+					<h1>todos</h1>
+					<form id="todo-form" ng-submit="addTodo()">
+						<input id="new-todo" placeholder="What needs to be done?" ng-model="newTodo" ng-disabled="saving" autofocus>
+            <h1> {{newTodo}} <h1>
+					</form>
+				</header>
+				<section id="main" ng-show="todoList.length" ng-cloak>
+					<input id="markAll" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+					<label for="markAll">Mark all as complete</label>
+					<ul id="todolist">
+						<li ng-repeat="todo in todoList| filter:{done:status}" ng-class="{completed: todo.done, editing: todo == editedTodo}">
+							<div>
+
+								<input class="toggle" type="checkbox" ng-model="todo.done" ng-change="toggleCompleted(todo)">
+								<label ng-dblclick="editTodo(todo)">{{todo.todoText}}</label>
+								<button class="destroy" ng-click="removeTodo(todo)" ></button>
+							</div>
+							<form ng-submit="saveEdits(todo)">
+								<input class="edit" ng-trim="false" ng-model="todo.todoText">
+							</form>
+						</li>
+					</ul>
+				</section>
+				<footer id="footer" ng-show="remaining()>0" ng-cloak>
+					<span id="todo-count"><strong>{{remaining()}}</strong>
+						<ng-pluralize count="remaining()" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+					</span>
+					<ul id="filters"  ng-model="status">
+						<li>
+							<button ng-click="showAll()"><a ng-class="{selected:status ==''} " href="/">All</a></button>
+						</li>
+						<li>
+						<button ng-click="showActive()">	<a ng-class="{selected: status == 'false'}" href="#/active">Active</a></button>
+						</li>
+						<li>
+						<button ng-click="showCompleted()">	<a ng-class="{selected: status == 'true'}" href="#/completed">Completed</a></button>
+						</li>
+					</ul>
+					<button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="todoList.length - remaining()>0">Clear completed</button>
+				</footer>
+
+</div>
