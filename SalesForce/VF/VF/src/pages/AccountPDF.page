@@ -1,0 +1,10 @@
+<apex:page standardController="Student__c" renderAs="pdf">
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!Student__c}" var="acc">
+    	<apex:column value="{!acc.Name}" />
+        <apex:column value="{!acc.Id}" />
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

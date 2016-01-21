@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountPDFController</members>
+        <members>AccountWithFilterAndPaginationController</members>
+        <members>AccountWithFilterController</members>
+        <members>ClassController</members>
+        <members>CustomLookupController</members>
+        <members>JSONData</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountPDF</members>
+        <members>AccountWithFilter</members>
+        <members>AccountWithFilterAndPagination</members>
+        <members>Class</members>
+        <members>ClassAndStudent</members>
+        <members>CustomLookupScreen</members>
+        <members>JSONData</members>
+        <members>ManageClass</members>
+        <members>RecordType</members>
+        <name>ApexPage</name>
+    </types>
+    <version>35.0</version>
+</Package>
