@@ -1,0 +1,25 @@
+<apex:page controller="SearchRecordFilter">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+                BillingCity<apex:inputText value="{!billingCity}" id="billingCity"/>
+                BillingState<apex:inputText value="{!billingState}" id="billingState"/>
+                BillingCountry<apex:inputText value="{!billingCountry}" id="billingCountry"/>
+            </apex:pageBlockSection> 
+            <apex:pageBlockButtons >
+            	<apex:commandButton action="{!searchRecords}" value="Search" /> 
+            </apex:pageBlockButtons>
+        
+    
+    <apex:outputPanel rendered="{!IF(createAccountList!=null, true, false)}">
+               
+               <apex:pageBlocktable value="{!createAccountList}" var="records"> 
+                   <apex:column value="{!records.name}" headerValue="Name"/>
+                   <apex:column value="{!records.BillingCity}" headerValue="Billing City"/>
+                   <apex:column value="{!records.BillingState}" headerValue="Billing State"/>
+                   <apex:column value="{!records.BillingCountry}" headerValue="Billing Country"/>
+               </apex:pageBlocktable>
+   </apex:outputPanel>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,20 @@
+<apex:page standardController="Class__c">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection title="Create/Edit">
+       		<apex:inputField value="{!Class__c.Name}" required="true"/>
+            <apex:inputField value="{!Class__c.Name__c}" required="true"/>
+            <apex:inputField value="{!Class__c.ClassTeacher__c}"/>
+            <apex:inputField value="{!Class__c.DetailedDescription__c}"/>
+            <apex:inputField value="{!Class__c.Board__c}"/>
+            <apex:inputField value="{!Class__c.Fee__c}"/>
+            <apex:inputField value="{!Class__c.MaxCount__c}"/>
+            <apex:inputField value="{!Class__c.MyCount__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+        	<apex:commandButton action="{!save}" value="Submit" /> 
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </apex:form>    
+</apex:page>

@@ -1,0 +1,3 @@
+<apex:page controller="JsonPageView" action="{!parseJson}">
+   {!text1}
+</apex:page>
