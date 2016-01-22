@@ -1,5 +1,0 @@
-<apex:page standardController="Contact">
-    <div>
-        {!Contact.RecordType.name}
-    </div>
-</apex:page>

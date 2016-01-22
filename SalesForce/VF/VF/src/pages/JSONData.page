@@ -1,3 +1,0 @@
-<apex:page controller="JSONData" showHeader="false" standardStylesheets="false" sidebar="false">
-    {!jsonData}
-</apex:page>
