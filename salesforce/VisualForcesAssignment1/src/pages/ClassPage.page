@@ -1,0 +1,38 @@
+<apex:page standardController="Class__c" renderAs="pdf">
+  <apex:form >
+      <apex:pageBlock title="Class Detail">
+       
+             <apex:pageMessages />
+         <apex:pageBlockSection >   
+        <Apex:inputField value="{!Class__c.Name__c}" />
+            </apex:pageBlockSection>
+             <apex:pageBlockSection >
+           <Apex:inputField value="{!Class__c.Board__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                 <Apex:inputField value="{!Class__c.ClassTeacher__c}" />
+            </apex:pageBlockSection>
+           
+                <apex:pageBlockSection >
+ <Apex:inputField value="{!Class__c.DetailedDescription__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+
+         <Apex:inputField value="{!Class__c.RAJ_CBSE_BIHAR__c}" />
+            </apex:pageBlockSection><apex:pageBlockSection >
+
+            <Apex:inputField value="{!Class__c.MaxSize__c}" />
+            </apex:pageBlockSection>
+
+<apex:pageBlockSection >
+
+    <Apex:inputField value="{!Class__c.MyCount__c}" />
+</apex:pageBlockSection>
+      
+            <apex:pageBlockButtons >
+        <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+          
+    </apex:pageBlock>
+       </apex:form>
+</apex:page>

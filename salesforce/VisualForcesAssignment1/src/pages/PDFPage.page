@@ -1,0 +1,2 @@
+<apex:page standardController="Student__c" extensions="PDFAttachOFStudent" action="{!savePdf}">
+</apex:page>

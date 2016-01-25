@@ -1,0 +1,5 @@
+<apex:page standardController="Contact">
+     <apex:sectionHeader >
+   {!Contact.RecordType.name}
+  </apex:sectionHeader>
+</apex:page>

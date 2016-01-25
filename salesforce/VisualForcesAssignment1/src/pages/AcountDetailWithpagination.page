@@ -1,0 +1,36 @@
+<apex:page controller="AccountDetailWithPagination">
+   <apex:form >
+   	<apex:pageBlock id="pb" >
+       	<apex:pageBlockSection >
+               BillingCity<apex:inputText value="{!billingCity}" id="billingCity"/>
+               BillingState<apex:inputText value="{!billingState}" id="billingState"/>
+               BillingCountry<apex:inputText value="{!billingCountry}" id="billingCountry"/>
+           </apex:pageBlockSection> 
+           <apex:pageBlockButtons >
+           	<apex:commandButton action="{!search}" value="Search" /> 
+           </apex:pageBlockButtons>
+       
+   
+   <apex:outputPanel rendered="{!IF(Accounts!=null, true, false)}">
+              
+              <apex:pageBlocktable value="{!Accounts}" var="records"> 
+                  <apex:column value="{!records.name}" headerValue="Name"/>
+                  <apex:column value="{!records.BillingCity}" headerValue="Billing City"/>
+                  <apex:column value="{!records.BillingState}" headerValue="Billing State"/>
+                  <apex:column value="{!records.BillingCountry}" headerValue="Billing Country"/>
+              </apex:pageBlocktable>
+       <apex:panelGrid columns="7">
+              <apex:commandButton status="fetchStatus" reRender="pb" value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+               <apex:commandButton status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+               <apex:commandButton status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+               <apex:commandButton status="fetchStatus" reRender="pb" value=">|" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+               <apex:outputText >{!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!noOfRecords}</apex:outputText>
+               <apex:commandButton status="fetchStatus" reRender="pb" value="Refresh" action="{!refresh}" title="Refresh Page"/>
+               <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                   <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+               </apex:outputPanel>
+           </apex:panelGrid>
+  </apex:outputPanel>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>
