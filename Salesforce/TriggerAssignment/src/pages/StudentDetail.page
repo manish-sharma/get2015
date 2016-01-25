@@ -1,0 +1,5 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  HYPERLINK("http://www.yahoo.com","Yahoo!","_top" )
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

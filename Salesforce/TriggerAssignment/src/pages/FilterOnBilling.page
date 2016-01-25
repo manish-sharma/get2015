@@ -1,0 +1,29 @@
+<apex:page controller="SearchRecords">
+    <apex:form >
+        <apex:pageblock id="details" >
+            <!-- Page Block section for input -->
+            <apex:pageBlockSection >
+                Billing City <apex:inputText value="{!getBillingCitystring}" id="BillingCity" />
+                Billing State <apex:inputText value="{!getBillingStatestring}" id="BillingState"/>
+                Billing Country <apex:inputText value="{!getBillingCountrystring}" id="BillingCountry"/>
+                <apex:commandButton action="{!searchRecords}" value="Search" id="Search"/>
+            </apex:pageBlockSection>
+            <!-- Output panel for Displaying value -->
+            <apex:outputPanel rendered="{!IF(createAccountList!=null, true, false)}">
+                <apex:pageBlocktable value="{!createAccountList}" var="records"> 
+                    <apex:column value="{!records.name}" headerValue="Name"/>
+                    <apex:column value="{!records.BillingCity}" headerValue="Billing City"/>
+                    <apex:column value="{!records.BillingState}" headerValue="Billing State"/>
+                    <apex:column value="{!records.BillingCountry}" headerValue="Billing Country"/>
+                </apex:pageBlocktable>
+            </apex:outputPanel>
+            <!-- Buttons for Pagination -->
+            <apex:pageblockButtons >
+                <apex:commandButton value="First Page" rerender="details" action="{!FirstPage}" disabled="{!prev}"/>
+                <apex:commandButton value="Previous" rerender="details" action="{!previous}" disabled="{!prev}"/>
+                <apex:commandButton value="Next" rerender="details" action="{!next}" disabled="{!nxt}"/>
+                <apex:commandButton value="Last Page" rerender="details" action="{!LastPage}" disabled="{!nxt}"/>
+            </apex:pageblockButtons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

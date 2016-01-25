@@ -1,0 +1,17 @@
+<apex:page standardController="contact">
+        <style type="text/css">
+        #recordHeader
+        { 
+           background-color: black;
+           color:white;
+           text-align:center;
+           width:100%;
+        }
+    </style>
+   
+    <div id="recordHeader">
+         {!contact.RecordType.Name}
+    </div>
+       
+    
+</apex:page>
