@@ -1,0 +1,15 @@
+<apex:page standardController="Student__c"  extensions="DeleteStudentController" recordSetVar="Students" action="{!bumpCases}">
+    <apex:form >
+      <apex:pageBlock title="Selected Student">
+           <apex:pageBlockTable value="{!selectedsts}" var="student">
+               <apex:column value="{!student.name}"/>
+               <apex:column value="{!student.Class__c}"/>
+               <apex:column value="{!student.Id}"/> 
+           </apex:pageBlockTable> 
+          <apex:pageBlockButtons >
+          <apex:commandButton action="{!deleteStudent}" value="confirm"  />
+          <apex:commandButton action="{!cancel}" value="cancel"/>
+          </apex:pageBlockButtons>
+       </apex:pageBlock>
+   </apex:form>  
+</apex:page>

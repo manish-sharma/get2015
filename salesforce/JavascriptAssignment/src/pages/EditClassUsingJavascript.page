@@ -1,0 +1,44 @@
+<apex:page standardController="Class__c">
+   <apex:includescript value="/soap/ajax/30.0/connection.js"></apex:includescript>
+   <apex:includescript value="/soap/ajax/30.0/apex.js"></apex:includescript> 
+   
+   
+   <apex:form >
+       <apex:pageBlock >
+           <apex:pageBlockSection >
+               Class Name:
+               <input title="id" id="classId" value="{!Class__c.Name__c}"/>
+               <br/><br/>
+               
+           </apex:pageBlockSection>
+           <apex:pageBlockButtons >
+               <apex:commandButton value="SaveMe" onclick="SaveMe();" />
+           </apex:pageBlockButtons>
+           
+           
+       </apex:pageBlock>
+   </apex:form>
+   
+   <script>
+   parent=window.parent;
+   
+   function SaveMe(){  
+       sforce.connection.sessionId = "{!$Api.Session_ID}";
+       var class1 = new sforce.SObject("Class__c");
+       class1.Name__c =document.getElementById('classId').value; 
+       class1.Id='{!Class__c}';
+       result = sforce.connection.upsert("Id", [class1]);
+       
+window.close(); 
+
+          
+       }
+       
+       
+       
+   
+   
+   
+
+   </script>
+</apex:page>

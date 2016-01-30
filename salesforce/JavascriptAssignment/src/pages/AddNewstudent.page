@@ -1,0 +1,49 @@
+<apex:page standardController="Class__c" sidebar="false" showHeader="false" id="Page">
+   <script src="/soap/ajax/20.0/connection.js" type="text/javascript">
+   </script>
+   <script>
+   function saveStudent() {
+       sforce.connection.sessionId = "{!$Api.Session_ID}";
+         //Creating New Account Record.
+       var student = new sforce.SObject("student__c");
+       //Getting Account Name from inputText.
+       var name = document.getElementById('{!$Component.FM.PB.PBS.PBSI.Name}').value;
+       alert('{!Class__c}');
+       if(name==null || name.trim()=='')
+       {
+           return false;
+       }
+       student.First_Name__c = name;
+       student.LastName__c = 'test';
+       student.Class__c ='{!Class__c}';
+       alert(student);
+       // This is the line where magic happens, calling Create() method.
+       var result = sforce.connection.create([student]);
+       
+       if (result[0].getBoolean("success")) {
+           alert("New student is created with id " + result[0].id);
+       } else {
+           alert("failed to create new student " + result[0]);
+       }    
+       
+       
+   }
+   
+   
+   </script>
+   <apex:form id="FM">
+       
+       <apex:pageBlock id="PB">
+           <apex:pageBlockSection id="PBS">
+               <apex:pageBlockSectionItem id="PBSI">
+                   <apex:inputText id="Name"  ></apex:inputText>
+                   
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+           <apex:pageBlockButtons >
+               <apex:commandButton onclick="return saveStudent()" value="save" />
+               
+           </apex:pageBlockButtons>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>
