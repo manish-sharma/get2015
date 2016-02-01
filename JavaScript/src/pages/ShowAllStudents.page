@@ -1,0 +1,26 @@
+<apex:page standardController="Contact">
+    <script src="/soap/ajax/11.0/connection.js"></script>
+	<script src="/soap/ajax/11.0/apex.js"></script>
+    <script type = "text/javascript">
+        window.onload=function(){   
+            try {
+                sforce.connection.sessionId = "{!$Api.Session_ID}";
+                queryResult= null; 
+               	queryResult= sforce.connection.query("select (select Name from Class_Student__r) from Class__c where ClassTeacher__r.ID = '{!Contact.ID}'"); 
+                alert(queryResult);
+                if(queryResult != null && queryResult.size >0){ 
+					var crecords = queryResult.getArray("records");
+                    alert(crecords);
+					for (var i=0; i<crecords.length; i++) { 
+                        alert(crecords[i]);
+                         var srecord = crecords[i].getArray("records");
+                        alert(srecord);
+                     }
+				}
+				}
+            catch(error){
+                alert(error.faultstring);
+            }
+		};
+	</script>
+</apex:page>

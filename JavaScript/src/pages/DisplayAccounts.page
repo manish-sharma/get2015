@@ -1,0 +1,54 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false">
+    <script src="{!$Resource.jQuery}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/css/ui.jqgrid.min.css "/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/js/i18n/grid.locale-de.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/js/jquery.jqgrid.min.js"></script>
+    <script src="/soap/ajax/11.0/connection.js"></script>
+    <script src="/soap/ajax/11.0/apex.js"></script>
+    <style type="text/css">
+       .ui-jqgrid tr.jqgrow td {
+        height:auto;
+        vertical-align:text-top;
+        padding:6px 6px;
+        text-overflow:ellipsis;
+    }
+    </style>
+    <script type="text/javascript">
+        var toggle ;
+        window.onload=function() { 
+            toggle = false;
+        	document.getElementById("tab").style = "";
+            sforce.connection.sessionId = "{!$Api.Session_ID}";
+            display();
+       	}
+        function display() {
+        	try {
+        		var gridData;
+        		var obj;
+              	queryResult = sforce.connection.query("select Id,Name,Owner.name,Phone,(select Id from Contacts) from Account order by isActive__C desc,name"); 
+                var crecords = queryResult.getArray("records");
+                $("#tab").jqGrid("GridUnload");
+                gridData = JSON.stringify(crecords);
+                alert(gridData);
+                obj = JSON.parse(gridData);    
+                jQuery("#tab").jqGrid({
+                data: crecords,
+                datatype: 'local',
+                colNames:['Id','Name','Manager','Phone','Number Contact'],
+                colModel:[
+                    {name:'Id',index:'Id', width:100,sortable:false},
+                    {name:'Name',index:'Name', width:100},
+                    {name:'Owner.Name',index:'Owner.Name', width:100,sortable:false},
+                    {name:'Phone',index:'Phone', width:100,sortable:false},
+                    {name:'Contacts.size',index:'Number Contact', width:100,sortable:false}],
+                    multiSort:false,
+                });   
+        	}catch(error) {
+           		alert(error); 
+     	 	}	
+        }
+        function addLink(){
+        }
+    </script>
+    <table id='tab'></table>
+</apex:page>
