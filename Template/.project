@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>VF2</name>
+	<name>Template</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,8 +10,15 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>com.salesforce.ide.builder.upgrade</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>com.salesforce.ide.nature.default</nature>
+		<nature>com.salesforce.ide.nature.upgrade</nature>
+		<nature>com.salesforce.ide.nature.inactive</nature>
 	</natures>
 </projectDescription>
