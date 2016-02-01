@@ -1,0 +1,26 @@
+<apex:page standardController="Student__c" recordSetVar="students" extensions="DeleteStudentsController" >
+    <script src="/soap/ajax/11.0/connection.js"></script>
+	<script src="/soap/ajax/11.0/apex.js"></script>
+        <script type = "text/javascript">
+       	function cancle(){  
+            try{ var ids = {!GETRECORDIDS($ObjectType.Event)};
+            alert('ids');
+                }catch(error){alert(error.faultstring);}
+            window.history.back();
+      	 };
+	</script>
+    <apex:form >
+        <apex:outputText value="{!callfunc}"></apex:outputText> 
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:dataTable value="{!studentList}" var="std">
+                    <apex:column value="{!std.Id}" headerValue="ID" />
+                    <apex:column value="{!std.Name}" headerValue="Name" />
+                    <apex:column value="{!std.Class__c}" headerValue="Class" />
+                </apex:dataTable>
+                <apex:commandButton value="Continue" action="{!deleteAll}" oncomplete="cancle()" />
+                <apex:commandButton value="Cancle" onclick="cancle()" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

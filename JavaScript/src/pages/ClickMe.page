@@ -1,0 +1,30 @@
+<apex:page standardController="Student__c" extensions="ClickMeController" showHeader="false" sidebar="false">
+    <script src="/soap/ajax/11.0/connection.js"></script>
+	<script src="/soap/ajax/11.0/apex.js"></script>
+    <script type = "text/javascript">
+        window.onload=function(){   
+            try {
+                sforce.connection.sessionId = "{!$Api.Session_ID}";
+                queryResult= null; 
+               	queryResult= sforce.connection.query("select Name,Class__c from Student__c where id = '{!recordID}'"); 
+                if(queryResult != null && queryResult.size >0){ 
+					var records = queryResult.getArray("records");
+					for (var i=0; i<records.length; i++) { 
+                        var record = records[i];
+                        document.getElementById('{!$Component.block1.block2.name}').innerText = record.Name;
+                        document.getElementById('{!$Component.block1.block2.className}').innerText = record.Class__c;
+					}
+				}
+            }
+            catch(error){
+                alert(error.faultstring);
+            }
+		};
+	</script>
+    <apex:pageBlock id="block1">
+    	<apex:pageBlockSection id="block2">
+        	<apex:outputText id="name"  ></apex:outputText>
+            <apex:outputText id="className"></apex:outputText>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,31 @@
+<apex:component controller="ComponentController" >
+    <apex:form >
+        <apex:panelGrid columns="2"  id="pb">
+            <apex:commandLink value="Id" status="fetchStatus" style="font-weight: bold" action="{!sort}" reRender="pb" >
+            	<apex:param value="ID" assignTo="{!sortField}" name="sortField" />
+            </apex:commandLink>
+            <apex:commandLink status="fetchStatus" value="Name" style="font-weight: bold" action="{!sort}"  reRender="pb" >
+            	<apex:param value="Name" assignTo="{!sortField}" name="sortField" />
+            </apex:commandLink>
+            <apex:repeat value="{!accList}" var="acc">
+                <apex:outputText value="{!acc.id}"/><br/>
+            </apex:repeat>
+            <apex:repeat value="{!accList}" var="acc" >
+                <apex:outputText value="{!acc.Name}" /><br/>
+            </apex:repeat>
+            <apex:panelGrid columns="7" width="100%">
+                    <apex:commandButton status="fetchStatus" reRender="pb" value="first" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+                    <apex:commandButton status="fetchStatus" reRender="pb" value="previous" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                    <apex:commandButton status="fetchStatus" reRender="pb" value="next" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+                    <apex:commandButton status="fetchStatus" reRender="pb" value="last" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+                    	<apex:outputText >{!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!noOfRecords}</apex:outputText>
+                    <apex:commandButton value="go" action="{!go}" reRender="pb">
+                        <apex:inputText value="{!selectedValue}" ></apex:inputText>
+                    </apex:commandButton>
+            </apex:panelGrid>
+            <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                        <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                    </apex:outputPanel>
+    	</apex:panelGrid>
+    </apex:form>
+</apex:component>
