@@ -1,0 +1,12 @@
+<apex:component controller="ComponentController" >
+        <apex:panelGrid columns="2" border="2" columnClasses="colClass" cellpadding="0" cellspacing="0" >
+            <apex:outputText value="Id"  style="font-weight: bold"/>
+            <apex:outputText value="Name" style="font-weight: bold"/>
+            <apex:repeat value="{!Accounts}" var="acc" >
+                <apex:outputText value="{!acc.id}"/><br/>
+            </apex:repeat>
+            <apex:repeat value="{!Accounts}" var="acc" >
+                <apex:outputText value="{!acc.Name}" /><br/>
+            </apex:repeat>
+    	</apex:panelGrid>
+</apex:component>
