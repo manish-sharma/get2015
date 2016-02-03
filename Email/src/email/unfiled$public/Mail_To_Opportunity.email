@@ -1,3 +1,0 @@
-Hii {!Opportunity.OwnerFullName}
-  Your Current Opportunity Status is : {!Opportunity.Custom_Status__c}
-Thanks
