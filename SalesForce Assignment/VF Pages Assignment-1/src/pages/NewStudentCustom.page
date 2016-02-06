@@ -1,0 +1,21 @@
+<apex:page standardController="Student__c" >
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:pageBlockSection title="Create/Edit">
+       			<apex:inputField value="{!Student__c.Name}" required="true"/>
+            	<apex:inputField value="{!Student__c.First_Name__c}"/>
+            	<apex:inputField value="{!Student__c.Last_Name__c}" required="true"/>
+                <apex:inputField value="{!Student__c.DOB__c}"/>
+            	<apex:inputField value="{!Student__c.Sex__c}"/>
+            	<apex:inputField value="{!Student__c.Email__c}"/>
+            	<apex:inputField value="{!Student__c.Married__c}"/>
+            	<apex:inputField value="{!Student__c.WifeName__c}"/>
+           		 <apex:inputField value="{!Student__c.Class__c}"/>
+        	</apex:pageBlockSection>
+        
+       	 	<apex:pageBlockButtons >
+        		<apex:commandButton action="{!save}" value="Submit" /> 
+        	</apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,38 @@
+<apex:page standardController="Opportunity" extensions="myControllerExtension" sidebar="false" showheader="false">
+   <script language="javascript">
+   
+   
+   function CloseWindow()
+   {
+     var winMain=window.opener;
+     self.close();
+
+   }
+   </script>
+   
+   <apex:messages />
+   <apex:form id="form" >  
+
+        
+           <apex:pageBlock >
+                 <apex:pageBlockSection columns="1">
+                 <apex:inputField value="{!Opportunity.Id}"/>
+                      <apex:inputField value="{!Opportunity.Manager__c}"/>
+               </apex:pageBlockSection>
+                               
+               
+               <apex:pageBlockSection columns="1">
+                   <apex:selectRadio value="{!contactId}">
+                       <apex:selectOptions value="{!items}"/><br/>
+                   </apex:selectRadio><p/>
+                   
+                      
+               </apex:pageBlockSection>
+               <apex:commandButton action="{!setManager1}" value="Save" onclick="CloseWindow();" />
+              <apex:commandButton action="{!clearManager}" value="Clear" onclick="CloseWindow();"  />
+               <apex:commandButton value="Cancel" onclick="CloseWindow();" />
+           </apex:pageBlock>
+   
+  
+   </apex:form>
+</apex:page>

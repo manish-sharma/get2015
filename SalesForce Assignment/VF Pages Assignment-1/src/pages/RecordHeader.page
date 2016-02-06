@@ -1,0 +1,17 @@
+<apex:page standardController="Contact">
+     <style type="text/css">
+         .bPageBlock {
+         background-color: red !important;
+                     }
+        p { font-weight: bold;
+         text-align:center; }
+
+        
+    </style>
+
+    <apex:pageBlock >
+    	<apex:pageBlockSection columns="1" >
+        <p> {!Contact.RecordType.Name}    </p>  
+        </apex:pageBlockSection>
+    </apex:pageBlock>  
+</apex:page>
