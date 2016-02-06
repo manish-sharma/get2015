@@ -1,0 +1,6 @@
+Hi {!Expense__c.OwnerFullName}
+
+Your Application Has been Approved by Manager and Is forwarded to the Project Manager for Final Approval 
+You will be notified as soon as the Final Approval is done.
+
+Thank You

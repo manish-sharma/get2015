@@ -1,0 +1,53 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false">
+    <script src="{!$Resource.jQuery}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/css/ui.jqgrid.min.css "/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/js/i18n/grid.locale-de.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.12.1/js/jquery.jqgrid.min.js"></script>
+    <script src="../../soap/ajax/33.0/connection.js" type="text/javascript"></script>
+    <script src="../../soap/ajax/33.0/apex.js"  type="text/javascript"></script>
+    <style type="text/css">
+    .ui-jqgrid tr.jqgrow td{
+        height:auto;
+        vertical-align:text-top;
+        padding:6px 6px;
+        text-overflow:ellipsis;
+     }
+    </style>
+    <script  type="text/javascript">
+    var toggle
+    window.onload=function(){
+        toggle = false;
+        document.getElementById("tab").style="";
+        sforce.connection.sessionId="{!$Api.Session_ID}";
+        AccountGrid();
+    }
+    function AccountGrid(){
+     try{
+     var gridData;
+     var obj;
+    queryResult = sforce.connection.query("SELECT Name,Phone,BillingAddress,Owner.name,(SELECT Id From Contacts) from Account order by Active__c desc,name");
+     var records = queryResult.getArray("records");
+    $("#tab").jqGrid("GridUnload");
+    gridData = JSON.stringify(records);
+    obj=JSON.parse(gridData);
+    jQuery("#tab").jqGrid({
+        data:records,
+        datatype: 'local',
+        colNames:['Name','Phone','Address','Manager Name','Number OF Contact'],
+         colModel:[
+            {name:'Name',index:'Name', width:100},
+            {name:'Phone',index:'Phone', width:100,sortable:false},
+            {name:'BillingAddress',index:'BillingAddress', width:100,sortable:false},
+            {name:'Owner.Name',index:'Owner.Name', width:100,sortable:false},
+            {name:'Contacts.size',index:'Number Contact', width:100,sortable:false}],
+            multiSort:false,    
+     });
+    }catch(error){
+        alert(error);
+    }
+        }
+    function addLink(){
+     }
+    </script>
+    <table id='tab'></table>
+</apex:page>

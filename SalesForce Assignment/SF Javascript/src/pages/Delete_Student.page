@@ -1,0 +1,20 @@
+<apex:page standardController="Class__c">
+    <script src="../../soap/ajax/33.0/connection.js" type="text/javascript"></script>
+    <script src="../../soap/ajax/33.0/apex.js"  type="text/javascript"></script>
+    <script  type="text/javascript">
+    function updateClass(){
+    sforce.connection.sessionId = '{!$Api.Session_ID}';
+    var newClassName = document.getElementById('{!$Component.form.UpdateName}').value;
+    var classObject = new sforce.SObject("Class__c");
+    classObject.Id = '{!Class__c.ID}';
+    classObject.Name__c= newClassName;
+    sforce.connection.update([classObject]);
+    window.opener.location.href='/{!$CurrentPage.parameters.id}';
+    window.top.close();
+    }
+    </script>
+    <apex:form id="form">
+    	<apex:inputText value="{!Class__c.Name__c}" id="UpdateName"></apex:inputText>
+        <apex:commandButton onclick="updateClass()" value="save"/>
+    </apex:form>
+</apex:page>

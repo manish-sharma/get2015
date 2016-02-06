@@ -1,0 +1,16 @@
+<apex:page standardController="Student__c" renderAs="PDF">
+       <apex:form >
+       <apex:pageBlock title="Contact Summary">
+           Name: {! Student__c.Name}<br/>
+           FirstName: {! Student__c.First_Name__c } <br/>
+           LastName: {! Student__c.Last_Name__c } <br/>
+           DOB: {! Student__c.DOB__c } <br/>
+           Age: {! Student__c.AgeBox__c}<br/>
+           Sex: {! Student__c.Sex__c}<br/>
+           Email: {! Student__c.Email__c}<br/>
+           Married: {! Student__c.Married__c}<br/>
+           Class  : {! Student__c.Class__c}<br/>
+           WifeName: {! Student__c.WifeName__c}<br/>
+       </apex:pageBlock>
+        </apex:form>
+</apex:page>
