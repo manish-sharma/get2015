@@ -1,0 +1,27 @@
+<apex:page sidebar="false" showHeader="false" standardController="Student__c" extensions="SiteHomeController">
+   <apex:pageBlock >
+       <apex:form >
+           <apex:pageBlockSection >
+               <apex:selectList value="{!selectedValue}" size="1" label="Select Student Name" >
+                   <apex:selectOptions value="{!selectList}"></apex:selectOptions>
+                   <apex:actionSupport event="onchange" action="{!getStudent}" reRender="show" />
+               </apex:selectList>
+           </apex:pageBlockSection>
+       </apex:form>
+   </apex:pageBlock>
+   
+    <apex:pageBlock >
+   	<apex:pageBlockSection id="show">
+       	<div>
+                   <tr><th>Id</th><th>Name</th><th>Age</th><th>Class</th><th>DOB</th></tr>
+                   <tr>
+                       <td>{!student.Id}</td>
+                   	<td>{!student.Name}</td>
+                       <td>{!student.Age__c}</td>
+                       <td>{!student.Class__c}</td>
+                       <td>{!student.DOB__c}</td>
+                   </tr>
+               </div>
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+</apex:page>
