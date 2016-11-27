@@ -1,0 +1,19 @@
+#wrapper{
+
+	margin:0 auto;
+	border:1px solid red;
+	width: 900px;
+	height:700px;
+	background-image:url("trees.jpg"),url("water.jpg"); 
+	background-position:center top,center bottom;
+	background-repeat:no-repeat,no-repeat; 
+	background-size:100% 70%,100%,30%;
+}
+
+.leaf{border-radius: 10px 250px 10px;
+    background:#8AC007;
+    padding: 20px; 
+    width: 2px;
+    height:2px;
+   margin:500px;	
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ClassMyCountWhenStudentOperation</members>
+        <members>ClosedOpportunityTrigger</members>
+        <members>CustomStatusChange</members>
+        <members>NotAllowDeleteClass</members>
+        <members>NotAllowInsertStudent</members>
+        <members>NotAllowTeacherToHindi</members>
+        <members>StageOpportunityChangeThenCloseDateToday</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>15.0</version>
+</Package>

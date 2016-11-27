@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountDetail</members>
+        <members>AccountDetailWithPagination</members>
+        <members>ManageClassController</members>
+        <members>MyCustomLookupController</members>
+        <members>PDFAttachOFStudent</members>
+        <members>ReturnJsonString</members>
+        <members>myControllerExtension</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountSearch</members>
+        <members>AcountDetailWithpagination</members>
+        <members>AjaxExample</members>
+        <members>ClassPage</members>
+        <members>CustomAccountLookup</members>
+        <members>JSONformattedPage</members>
+        <members>MyCustomLookup</members>
+        <members>PDFPage</members>
+        <members>RecordTypeShow</members>
+        <members>StudentPage</members>
+        <members>studentDetailPage</members>
+        <name>ApexPage</name>
+    </types>
+    <version>15.0</version>
+</Package>

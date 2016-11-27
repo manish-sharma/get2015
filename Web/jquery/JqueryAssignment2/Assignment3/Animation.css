@@ -1,0 +1,28 @@
+#top{
+	width:100%;
+}
+.topbutton
+{
+	width:33%;
+	float:left;
+}
+
+#div{
+	margin:300px;
+	background:#98bf21;
+	height:100px;
+	width:100px;
+	position:absolute;
+	
+}
+.bottom
+{
+	padding-top: 45%;
+    
+}
+.bottombutton
+{
+	width:25%;
+	float:left;
+	
+}

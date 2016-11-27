@@ -1,0 +1,165 @@
+.navbar{
+	float:left;
+	width: 100%;
+}
+.menu{
+	background-color: #92abb0;
+    width: 100%;
+	float:left;
+}
+.menu_items{
+	
+	float:left;
+	padding: 5px;
+}
+.anchor_menu_items{
+	float:left;
+	color: black;
+    text-decoration: none;
+}
+.menu_items:hover {
+    background-color: #64A7D1;
+}
+
+.homepage
+{
+background-image:url("../Images/cars.jpg");
+ background-size: 1600px 800px;
+}
+.Search
+{
+background-image:url("../Images/Search.jpg");
+ background-size: 1600px 800px;
+}
+.createCar
+{background-image:url("../Images/CreateCar.jpg");
+ background-size: 1600px 800px;
+
+}	
+.carList
+{background-image:url("../Images/roadback.jpg");
+ background-size: 1600px 800px;
+
+}	
+.container {
+  float:right;
+  width: 640px;
+}
+.SearchContainer
+{ padding:80px;
+  width: 250px;
+  float:left;
+ 
+}
+
+.login {
+  position: relative;
+  float:right;
+ // padding: 20px 20px 20px;
+  width: 310px;
+ 
+  border-radius: 3px;
+  @include box-shadow(0 0 200px rgba(white, .5), 0 1px 2px rgba(black, .3));
+}
+.login_detail
+{
+   margin: 0 auto;
+}
+.logout
+{
+float:right;
+}
+h3
+{
+ color: white;
+}
+.CreateCarTable
+{
+   padding-top:50px;
+
+}
+.searchOption
+{
+	float:left;
+	padding-left:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	
+} 
+.selectMenue
+{   height: 30px;
+	width:100%;
+	margin-bottom:20px;
+	
+}
+.SearchButton
+{
+	font-family:robotoregular;
+    font-size: 18px;
+    color: #fff;
+    border: 0;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+	background: #c4390a;
+}
+.availableCars
+{	font-size:50px;
+	color:#c4390a;
+	padding-left:900px;
+}
+table
+{
+margin-left:50px;
+}
+aside{
+				height:557px;
+				width: 845px;
+				overflow:auto;
+				float:right;
+				margin-right:110px;
+				background-color:white;
+				opacity:0.6;
+				
+			}
+		aside table {
+				position:relative;
+				float: left;
+				left:50px;
+				font-size:20px;
+				width:750px;
+				background-color: #F0F0F0;
+				cellspacing: 10px;
+				text-align: center;
+				padding: 10px 0px 10px 0px;
+			}
+
+			a {
+				text-decoration: none;
+				color: #6B6767;
+			}
+
+			a:hover {
+				color: orange;
+				font-size: 18px;
+			}
+ label {
+      font-size: 12px;
+      color: #777;
+      cursor: pointer;
+    }
+	.form
+	{ text-align:center;
+	   width:100%;	
+	}
+	h1 {
+ 
+    line-height: 30px;
+    font-size: 20px;
+
+	color:white;
+	background-color:#c4390a;
+    text-align: center;
+   
+   
+  }

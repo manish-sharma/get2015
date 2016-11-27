@@ -1,0 +1,21 @@
+<apex:page controller="AccountInformation">
+     <apex:includeScript value="/soap/ajax/11.0/connection.js"></apex:includeScript>
+     <apex:includeScript value="/soap/ajax/11.0/apex.js"></apex:includeScript>
+<script>
+window.onload =function(){    alert('{!accountList}');
+    var table="<Table><tr><th>Name</th><th>Phone</th><th>owner Name</th><th>BillingAddress</th></tr><tr>";
+    var act = new sforce.SObject('Account');
+    act.name='nikhil';
+         alert(act);                 
+    var obj = '{!accountList}';
+                          alert(obj.length);
+
+    for(var i=0;i<obj.length;i++)
+        {  act=obj[i];
+          
+           alert(act);
+        count++;
+
+      }}
+    </script>
+</apex:page>

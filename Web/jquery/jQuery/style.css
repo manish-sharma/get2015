@@ -1,0 +1,11 @@
+.parent {
+	width: 400px;
+	height: 300px;
+	border: 1px dashed orange;
+}
+
+p {
+	color: olive;
+	font-size: 30px;
+	border: 1px dashed red;
+}

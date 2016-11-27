@@ -1,0 +1,46 @@
+<apex:page standardController="Account">
+   <script src="/soap/ajax/11.0/connection.js"></script>
+   <script src="/soap/ajax/11.0/apex.js"></script>
+  
+   <script type="text/javascript">
+       
+       queryResult= null; 
+   var flag=false;
+  var table ="<table id='tab' border =' 1 solid black '></table>";    
+   window.onload=function(){  
+       sforce.connection.sessionId = "{!$Api.Session_ID}";
+       queryResult= sforce.connection.query("select Id,Name,Owner.name,Phone from Account order by isActive__C desc,name"); 
+       document.write(table);
+       accountDetail(); 
+   };
+   function accountDetail()
+   {   document.getElementById('tab').innerHTML = "";
+    var str = "<tr><th>ID</th><th><a href ='#' onclick = 'accountDetail()'>Name</th><th>owner Name</th><th>Phone</th></tr>";
+       try {   
+           var count = 0;
+           if(queryResult != null && queryResult.size >0){ 
+               var crecords = queryResult.getArray("records");
+               if(!flag)
+                 {  flag=true;
+                    for (var i=0; i<crecords.length; i++) { 
+                        str = str + "<tr><td  width = '50px' style = 'text-overflow:ellipsis'>"+crecords[i].Id+"</td><td>"+crecords[i].Name+"</td><td>"+crecords[i].Owner.Name+"</td><td>"+crecords[i].Phone+"</td></tr>";
+                   }
+               }
+            
+               else
+               { flag=false;
+                   for (var i=crecords.length-1;i>=0; i--) { 
+                        str = str + '<tr><td>'+crecords[i].Id+'</td><td>'+crecords[i].Name+'</td><td>'+crecords[i].Owner.Name+'</td><td>'+crecords[i].Phone+'</td></tr>';
+                   }
+               }
+           }
+          document.getElementById('tab').innerHTML=str;
+
+       }
+       catch(error){
+           alert(error);
+       }
+   }
+   
+   </script>
+</apex:page>

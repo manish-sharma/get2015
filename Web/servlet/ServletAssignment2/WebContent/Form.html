@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="HTML Assignment2Style.css" type="text/css">
+<script type="text/javascript" src="JavaScriptAssignment1.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<form action="RegistrationForm" class="register">
+			<div class="registration">
+				<b>Registration Form</b>
+			</div>
+			<fieldset>
+				<legend>Account Details </legend>
+				<table style="width: 100%">
+					<tr>
+						<td><label style="width: 90%">First Name *</label></td>
+						<td><input id="firstName" type="text" name="firstName"
+							style="float: left" /></td>
+
+						<td><label>Last Name *</label></td>
+						<td><input id="lastName" name="lastName" type="text"
+							style="float: left" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><span id="fname"><span></td>
+						<td></td>
+						<td><span id="lname"><span></td>
+					</tr>
+					<tr>
+						<td><label>Password *</label></td>
+						<td><input type="password" id="password" name="password" /></td>
+						<td><label>Conform Password *</label></td>
+						<td><input type="password" id="conformpassword"
+							name="conformpassword" /></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td><span id="passwordvalue"><span></td>
+						<td></td>
+						<td><span id="cpasswordvalue"><span></td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Personal Details </legend>
+				<table style="width: 100%">
+					<tr>
+						<td rowspan="3"><label"> Address*</label></td>
+						<td rowspan="3"><textarea id="address" name="address"
+								rows="3" placeholder="Please Enter your current Address"
+								cols="20"></textarea></td>
+						<td><label>Age *</label></td>
+						<td><input id="age" name="age" type="number" min="20"
+							max="75" step="any" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><span id="agevalue"><span></td>
+					</tr>
+					<tr>
+
+						<td><label>Phone No *</label></td>
+						<td><input id="phoneNo" name="phoneNo" type="number" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><span id="addressvalue"><span></td>
+						<td></td>
+						<td><span id="phonevalue"><span></td>
+					</tr>
+					<tr>
+						<td><label>State *</label></td>
+						<td><input id=states type="text" name="states"
+							list="countries" style="margin-left: 10px"
+							onchange="createCity()" /></td>
+
+						<datalist id="countries">
+							<option value="Rajasthan">
+							<option value="gujarat">
+							<option value="Uttar pradesh">
+							<option value="uttarakhand">
+							<option value="punjab">
+							<option value="Haryana">
+						</datalist>
+						<td><label>City *</label></td>
+						<td><input type="text" id="cities" name="cities" list="city"></td>
+						<datalist id="city"></datalist>
+					</tr>
+					<tr>
+						<td></td>
+						<td><span id="statevalue"><span></td>
+						<td></td>
+						<td><span id="cityvalue"><span></td>
+					</tr>
+				</table>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Terms and Mailing </legend>
+				<div class="agreement">
+					<input type="checkbox" id="acceptCondition" name="acceptCondition"
+						onChange="activateSubmit()" /> <label>* I accept the <a
+						href="#">Terms and Conditions</a></label>
+				</div>
+				<div class="agreement">
+					<input type="checkbox" value="" /> <label>I want to
+						receive personalized offers by your site</label>
+				</div>
+				<div class="agreement">
+					<input type="checkbox" value="" /> <label>Allow partners
+						to send me personalized offers and related services</label>
+				</div>
+			</fieldset>
+			<div style="background-color: #F0F0F0">
+				<button id="button" disabled>Register</button>
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active__c</fullName>
+        <label>Active</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Card_Number__c</fullName>
+        <label>Credit_Card_Number</label>
+        <length>20</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CustomerPriority__c</fullName>
+        <label>Customer Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Match_Billing_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Match Billing Address</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mix_Pct__c</fullName>
+        <label>Mix Pct</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>NumberofLocations__c</fullName>
+        <label>Number of Locations</label>
+        <precision>3</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Value__c</fullName>
+        <label>Potential Value</label>
+        <summarizedField>Opportunity.ExpectedRevenue</summarizedField>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SLAExpirationDate__c</fullName>
+        <label>SLA Expiration Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SLASerialNumber__c</fullName>
+        <label>SLA Serial Number</label>
+        <length>10</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>SLA__c</fullName>
+        <label>SLA</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UpsellOpportunity__c</fullName>
+        <label>Upsell Opportunity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Maybe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>multiple_of_five__c</fullName>
+        <label>multiple of five</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>weekday__c</fullName>
+        <label>weekday</label>
+        <type>Date</type>
+    </fields>
+    <validationRules>
+        <fullName>Billing_Zip_format</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR(BillingCountry = &quot;USA&quot;, BillingCountry = &quot;US&quot;),
+NOT(REGEX(BillingPostalCode, &quot;\\d{5}(-\\d{4})?&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>BillingPostalCode</errorDisplayField>
+        <errorMessage>Billing Zip/Postal Code is in 99999 or 99999-9999 format</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Credit_Card_Number_validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(REGEX(Credit_Card_Number__c,&quot;(((\\d{4}-) {3}\\d{4})|\\d{16})?&quot;))</errorConditionFormula>
+        <errorDisplayField>Credit_Card_Number__c</errorDisplayField>
+        <errorMessage>Credit_Card_Number is formatted in 9999-9999-9999-9999 or 9999999999999999.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Mct_pt</fullName>
+        <active>true</active>
+        <errorConditionFormula>Mix_Pct__c &lt; 0 || Mix_Pct__c &gt; 1</errorConditionFormula>
+        <errorDisplayField>Mix_Pct__c</errorDisplayField>
+        <errorMessage>Mix Pct is between 0 and 100%.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Number_should_be_in_numeric</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISBLANK( AccountNumber )), NOT((ISNUMBER(AccountNumber))))</errorConditionFormula>
+        <errorDisplayField>AccountNumber</errorDisplayField>
+        <errorMessage>Account Number should be numeric</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>multiple_of_five_validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>MOD(multiple_of_five__c,5)  &lt;&gt; 0</errorConditionFormula>
+        <errorDisplayField>multiple_of_five__c</errorDisplayField>
+        <errorMessage>number should be multiple of 5</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>weekday_validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(CASE( MOD(  weekday__c  - DATE(1900, 1, 7), 7),
+0, 1,
+6, 1,
+0) = 0)</errorConditionFormula>
+        <errorDisplayField>weekday__c</errorDisplayField>
+        <errorMessage>date must be weekday (not Saturday or Sunday)</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Billing</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Billing</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://www.genwatt.com/genwatt/billing.htm?actname={!Account_Name}</url>
+    </webLinks>
+</CustomObject>
