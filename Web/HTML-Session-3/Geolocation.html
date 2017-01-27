@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 
+{
+  border:solid;
+  width:50%;
+  margin: 0 auto;
+  text-align:center;
+  }
+</style>
+
+</head>
+<body>
+ <div id="div1">
+ Click on "GEO LOCATION" to find your geographical location <br><br>
+<button onclick="getLocation()">GEO LOCATION</button>
+
+<p id="demo"></p>
+</div>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Service is not supported by this browser try into another browser";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "(Latitude, Longitude) = (" + position.coords.latitude + ", " + position.coords.longitude+")";	
+}
+</script>
+
+</body>
+</html>

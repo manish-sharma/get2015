@@ -1,0 +1,3 @@
+Dear {!Account.OwnerFullName},
+   Your Account  has been updated by  {!Account.LastModifiedBy} .
+Thanks

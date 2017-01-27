@@ -1,0 +1,63 @@
+ List various selectors for traversing elements at the same level.
+    		
+	.add()         	: Create a new jQuery object with elements added to the set of matched elements.
+	
+	.addBack()     	: Add the previous set of elements on the stack to the current set, optionally filtered by a selector.
+	
+	.andSelf()     	: Add the previous set of elements on the stack to the current set.
+	
+	.children()    	: Get the children of each element in the set of matched elements, optionally filtered by a selector.
+	
+	.closest()     	: For each element in the set, get the first element that matches the selector by testing the element itself 
+	                 and traversing up through its ancestors in the DOM tree.
+	                 
+	.contents()    	: Get the children of each element in the set of matched elements, including text and comment nodes.
+	
+	.each()        : Iterate over a jQuery object, executing a function for each matched element.
+	
+	.end()         : End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
+	
+	.eq()          : Reduce the set of matched elements to the one at the specified index.
+	
+	.find()        : Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
+	
+	.first()       : Reduce the set of matched elements to the first in the set.
+	
+	.has()         : Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
+	
+	.is()          : Check the current matched set of elements against a selector, element, 
+	                 or jQuery object and return true if at least one of these elements matches the given arguments.
+	                 
+	.last()        : Reduce the set of matched elements to the final one in the set.
+	
+	.map()         : Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.
+	
+	.next()        : Get the immediately following sibling of each element in the set of matched elements.
+	                 If a selector is provided, it retrieves the next sibling only if it matches that selector.
+	                 
+	.filter()      : Reduce the set of matched elements to those that match the selector or pass the function’s test.
+	
+	.nextAll()     : Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
+	
+	.nextUntil()   : Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
+	
+	.not()         : Remove elements from the set of matched elements.
+	
+	.offsetParent(): Get the closest ancestor element that is positioned.
+	
+	.parent()	   : Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+	
+    	.parents()	   : Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
+    
+	.parentsUntil(): Get the ancestors of each element in the current set of matched elements, 
+	                 up to but not including the element matched by the selector, DOM node, or jQuery object.
+	                 
+	.prev()		   : Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector.
+	
+	.prevAll()	   : Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.
+	
+	.prevUntil()   : Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
+	
+	.siblings()    : Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
+	
+	.slice()	   : Reduce the set of matched elements to a subset specified by a range of indices.

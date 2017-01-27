@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+span, .navbar-brand {
+	font-size:20px;
+}
+.navbar-brand{
+	font-weight:bold;
+}

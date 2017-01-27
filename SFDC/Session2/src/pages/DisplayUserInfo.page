@@ -1,0 +1,4 @@
+<apex:page >
+    {! $User.FirstName }
+    {! $User.LastName }
+</apex:page>

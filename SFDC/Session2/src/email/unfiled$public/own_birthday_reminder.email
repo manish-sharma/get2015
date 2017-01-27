@@ -1,0 +1,3 @@
+Dear {!Contact.Name},
+    Hereby you inform that your birthday on {!Contact.Birthdate}.
+Thanks and regards
