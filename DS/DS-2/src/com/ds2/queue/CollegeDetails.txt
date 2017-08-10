@@ -1,0 +1,5 @@
+Poornima College of Engineering,2
+JECRC,3
+GIT,2
+SKIT,2
+MBM,1

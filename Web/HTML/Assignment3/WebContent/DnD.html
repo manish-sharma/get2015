@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#div1 {
+	width: 350px;
+	height: 70px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+}
+
+#div2 {
+	height: 40px;
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+	function drag(ev) {
+		ev.dataTransfer.setData("text/html", ev.target.id);
+	}
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text/html");
+		ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+</head>
+<body>
+	<p>Drag the sample div:</p>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div id="div2" draggable="true" ondragstart="drag(event)" width="200"
+		height="40"></div>
+	<p>Sample</p>
+	</div>
+</body>
+</html>

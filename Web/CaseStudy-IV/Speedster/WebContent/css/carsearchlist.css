@@ -1,0 +1,147 @@
+@font-face {
+	font-family: heading-font;
+	src: url(C:/Users/.hp/workspace/Seedster/WebContent/fonts/Tr2n.ttf);
+}
+
+.head {
+	background-color: #333333;
+	height: 20%;
+	opacity: 0.9;
+	width: 100%;
+	position: absolute;
+}
+
+#logo {
+	margin: 10px;
+	float: left;
+}
+
+#websitename {
+	margin-top: 40px;
+	color: #FFFFFF;
+	font-family: 'heading-font';
+}
+
+img {
+	width: 130px;
+	height: 100px;
+}
+
+h1 {
+	left: 20%;
+	float: left;
+}
+
+#container {
+	display: flex;
+	min-height: 100%;
+	/*width:900px;*/
+}
+
+input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+}
+
+label {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 1;
+	display: block;
+	font-size: 3em;
+	color: #000000;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	transform: translate3d(0, 0, 0);
+	transition: transform .4s;
+}
+
+input[type=checkbox]:checked ~ label {
+	transform: translate3d(-250px, 0, 0) rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ .slide-menu {
+	transform: translate3d(0, 0, 0);
+}
+
+input[type=checkbox]:checked ~ .slide-menu .menu li {
+	width: 100%;
+}
+
+.slide-menu {
+	transform: translate3d(250px, 0, 0);
+	position: fixed;
+	width: 250px;
+	background: #4f6b81;
+	color: #ddd;
+	right: 0px;
+	height: 100%;
+	transition: all .4s;
+}
+
+.slide-menu h1 {
+	margin: 10px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.1em;
+	padding: 15px;
+	background: linear-gradient(#628297, #4f6b81);
+	border-bottom: 1px solid #1e222b;
+	box-shadow: inset 0px 1px 1px #8b9db3;
+}
+
+.menu a:hover {
+	background: linear-gradient(#3b3f48, #3c434d);
+	box-shadow: inset 0px 1px 1px #475059;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #2E3740;
+	color: #435160;
+	font-family: "Open Sans", sans-serif;
+}
+
+.availabel_car {
+	width: 350px;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	margin-left: -175px;
+}
+
+table {
+	position: relative;
+	float: left;
+	left: -210px;
+	font-size: 20px;
+	width: 750px;
+	background:#1FCE6D;
+	cellspacing: 10px;
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+	border: 1px solid;
+}
+#heading{
+	padding-left:92px;
+}
+tr{
+	background:transparent;
+}

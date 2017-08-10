@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-10-21T08:35:47</date>
+  <millis>1445396747531</millis>
+  <sequence>0</sequence>
+  <logger>Assignment_1.Singleton</logger>
+  <level>CONFIG</level>
+  <class>Assignment_1.Singleton</class>
+  <method>getSomeThing</method>
+  <thread>1</thread>
+  <message>Configuration done</message>
+</record>
+<record>
+  <date>2015-10-21T08:35:47</date>
+  <millis>1445396747579</millis>
+  <sequence>1</sequence>
+  <logger>Assignment_1.Singleton</logger>
+  <level>CONFIG</level>
+  <class>Assignment_1.Singleton</class>
+  <method>getSomeThing</method>
+  <thread>1</thread>
+  <message>index is set to 4</message>
+</record>
+<record>
+  <date>2015-10-21T08:35:47</date>
+  <millis>1445396747580</millis>
+  <sequence>2</sequence>
+  <logger>Assignment_1.Singleton</logger>
+  <level>SEVERE</level>
+  <class>Assignment_1.Singleton</class>
+  <method>getSomeThing</method>
+  <thread>1</thread>
+  <message>Exception occur</message>
+  <exception>
+    <message>java.lang.ArrayIndexOutOfBoundsException: 4</message>
+    <frame>
+      <class>Assignment_1.Singleton</class>
+      <method>getSomeThing</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>Assignment_1.MainClass</class>
+      <method>main</method>
+      <line>6</line>
+    </frame>
+  </exception>
+</record>
+</log>

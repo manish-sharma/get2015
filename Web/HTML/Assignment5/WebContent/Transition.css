@@ -1,0 +1,56 @@
+body{
+	 background:#E5E1D6;
+}
+header{
+	height:50px;
+	 border: 2px solid black;
+	 background:#AED1ED;
+	text-align:center;
+	padding:10px;
+	font-weight:bold;
+	font-size:30px;
+}
+section{
+	height:800px;
+	margin:30px;
+	 border: 2px solid black;
+}
+div {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 1px solid black;
+	color:blue;
+	text-align:center;
+	padding:20px;
+	font-size:20px;
+	float:left;
+	margin:20px;
+}
+
+#rotateDiv:hover {
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(20deg); /* Standard syntax */	
+}
+#skewXDiv:hover {
+    -ms-transform: skewX(20deg); /* IE 9 */
+    -webkit-transform: skewX(20deg); /* Safari */
+    transform: skewX(20deg); /* Standard syntax */
+	
+}
+#skewYDiv:hover {
+    -ms-transform: skewY(20deg); /* IE 9 */
+    -webkit-transform: skewY(20deg); /* Safari */
+    transform: skewY(20deg); /* Standard syntax */
+	
+
+}
+
+#scaleDiv:hover {
+    -ms-transform: scale(2,3); /* IE 9 */
+    -webkit-transform: scale(2,3); /* Safari */
+     transform: scale(2,2); /* Standard syntax */
+	 margin-top:150px;
+	 margin-left:200px;
+}
