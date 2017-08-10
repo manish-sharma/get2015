@@ -1,0 +1,11 @@
+package secondprogram;
+
+public class GenerateKey {
+
+	// method to give unique index for mapping
+	public static int hashFunction(int age) {
+		return age % 100;
+
+	}
+
+}
